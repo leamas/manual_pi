@@ -1,0 +1,16 @@
+--- buildwin/win_deps.bat
++++ buildwin/win_deps.bat
+@@ -107,9 +107,10 @@ if not exist "%WXWIN%" (
+       7z x -o%SCRIPTDIR%..\cache\wxWidgets-3.2.4 wxMSW-3.2.4_vc14x_Dev.7z
+       wget -nv !GITHUB_DL!/v3.2.4/wxWidgets-3.2.4-headers.7z
+       7z x -o%SCRIPTDIR%..\cache\wxWidgets-3.2.4 wxWidgets-3.2.4-headers.7z
+-      :: Handle #584
+-      pushd %SCRIPTDIR%..\cache
+-      git apply %SCRIPTDIR%\wxwidgets-3.2.4-584.patch
++      pushd %SCRIPTDIR%..
++      echo "Patching defs.h (#584)"
++      "C:\Program Files\Git\git-bash.exe"  ^
++          -c "cd cache; patch -p1 -i %SCRIPTDIR:\=/%/wxwidgets-3.2.4-584.patch"
+       popd
+ 
+   ) else (
