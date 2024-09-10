@@ -1,6 +1,6 @@
 # ~~~
 # Summary:      Local, non-generic plugin setup
-# Copyright (c) 2020-2021 Mike Rossiter
+# Copyright (c) 2024 ALec Leamas
 # License:      GPLv3+
 # ~~~
 
@@ -13,16 +13,16 @@
 # -------- Options ----------
 
 set(OCPN_TEST_REPO
-    "opencpn/shipdriver-alpha"
+    "alec-leamas/opencpn-plugins-unstable"
     CACHE STRING "Default repository for untagged builds"
 )
 set(OCPN_BETA_REPO
-    "opencpn/shipdriver-beta"
+    "alec-leamas/opencpn-plugins-unstable"
     CACHE STRING
     "Default repository for tagged builds matching 'beta'"
 )
 set(OCPN_RELEASE_REPO
-    "opencpn/shipdriver-prod"
+    "alec-leamas/opencpn-plugins-stable"
     CACHE STRING
     "Default repository for tagged builds not matching 'beta'"
 )
@@ -31,39 +31,28 @@ set(OCPN_RELEASE_REPO
 #
 # -------  Plugin setup --------
 #
-set(PKG_NAME ShipDriver_pi)
-set(PKG_VERSION  3.3.6)
+set(PKG_NAME manual_pi)
+set(PKG_VERSION 0.0.1)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
-set(DISPLAY_NAME ShipDriver)    # Dialogs, installer artifacts, ...
-set(PLUGIN_API_NAME ShipDriver) # As of GetCommonName() in plugin API
-set(PKG_SUMMARY "Simulate ship movements")
+set(DISPLAY_NAME Manual)    # Dialogs, installer artifacts, ...
+set(PLUGIN_API_NAME manual) # As of GetCommonName() in plugin API
+set(PKG_SUMMARY "Plugin and developer manual")
 set(PKG_DESCRIPTION [=[
-Simulates navigation of a vessel. Using the sail option and a current
-grib file for wind data, simulates how a sailing vessel might react in
-those conditions. Using 'Preferences' the simulator is able to record AIS
-data from itself. This can be replayed to simulate collision situations.
+Off-line copy of the plugin and developer manual available at
+https://opencpn-manuals.github.io/main
 ]=])
 
-set(PKG_AUTHOR "Mike Rossiter")
+set(PKG_AUTHOR "Alec Leamas")
 set(PKG_IS_OPEN_SOURCE "yes")
-set(PKG_HOMEPAGE https://github.com/Rasbats/shipdriver_pi)
-set(PKG_INFO_URL https://opencpn.org/OpenCPN/plugins/shipdriver.html)
+set(PKG_HOMEPAGE https://opencpn-manuals.github.io/main)
+set(PKG_INFO_URL https://opencpn-manuals.github.io/main)
 
 set(SRC
-    src/ShipDriver_pi.h
-    src/ShipDriver_pi.cpp
-    src/icons.h
-    src/icons.cpp
-    src/ShipDrivergui.h
-    src/ShipDrivergui.cpp
-    src/ShipDrivergui_impl.cpp
-    src/ShipDrivergui_impl.h
-    src/AisMaker.h
-    src/AisMaker.cpp
-    src/GribRecord.cpp
-    src/GribRecordSet.h
-    src/GribRecord.h
+    src/manual_pi.h
+    src/manual_pi.cpp
+    src/plug_utils.cpp
+    src/plug_utils.h
 )
 
 set(PKG_API_LIB api-18)  #  A dir in opencpn-libs/ e. g., api-17 or api-16
@@ -71,23 +60,23 @@ set(PKG_API_LIB api-18)  #  A dir in opencpn-libs/ e. g., api-17 or api-16
 macro(late_init)
   # Perform initialization after the PACKAGE_NAME library, compilers
   # and ocpn::api is available.
+  add_subdirectory("${CMAKE_SOURCE_DIR}/libs/std_filesystem")
+  target_link_libraries(${PACKAGE_NAME} ocpn::filesystem)
+  if (UNIX AND NOT APPLE AND NOT QT_ANDROID)
+    # Linux. including Flatpak
+    install(DIRECTORY doc DESTINATION "share/opencpn/plugins/${PACKAGE_NAME}")
+  elseif (APPLE)
+    install(
+      DIRECTORY doc
+      DESTINATION "OpenCPN.app/Contents/SharedSupport/plugins/${PACKAGE_NAME}"
+    )
+  elseif (WIN32)
+    install(DIRECTORY doc DESTINATION "plugins/${PACKAGE_NAME}")
+  endif ()
+endif ()
+
 endmacro ()
 
 macro(add_plugin_libraries)
   # Add libraries required by this plugin
-  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/tinyxml")
-  target_link_libraries(${PACKAGE_NAME} ocpn::tinyxml)
-
-  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/wxJSON")
-  target_link_libraries(${PACKAGE_NAME} ocpn::wxjson)
-
-  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/plugin_dc")
-  target_link_libraries(${PACKAGE_NAME} ocpn::plugin-dc)
-
-  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/jsoncpp")
-  target_link_libraries(${PACKAGE_NAME} ocpn::jsoncpp)
-
-  # The wxsvg library enables SVG overall in the plugin
-  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/wxsvg")
-  target_link_libraries(${PACKAGE_NAME} ocpn::wxsvg)
 endmacro ()

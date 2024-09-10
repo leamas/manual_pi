@@ -1,0 +1,8 @@
+= Manuals
+
+link:./user-manual/index.html[User Manual]
+
+link:./plugin-manual/index.html[Plugins Manual]
+
+These are downloaded copies from the on-line manuals available at 
+https://opencpn-manuals.github.io/main/manuals/index.html
