@@ -73,6 +73,9 @@ macro(late_init)
   elseif (WIN32)
     install(DIRECTORY doc DESTINATION "plugins/${PACKAGE_NAME}")
   endif ()
+  if (APPLE)    ## FIXME (leamas) This should go to the library
+    target_compile_definitions(${PACKAGE_NAME} PUBLIC OCPN_GHC_FILESYSTEM)
+  endif ()
 endmacro ()
 
 macro(add_plugin_libraries)
