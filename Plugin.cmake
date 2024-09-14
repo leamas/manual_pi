@@ -73,8 +73,6 @@ macro(late_init)
   elseif (WIN32)
     install(DIRECTORY doc DESTINATION "plugins/${PACKAGE_NAME}")
   endif ()
-endif ()
-
 endmacro ()
 
 macro(add_plugin_libraries)
