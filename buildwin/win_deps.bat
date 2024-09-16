@@ -10,6 +10,7 @@
 :: Fix PATH so it can be used in this script
 ::
 if not exist "%HomeDrive%%HomePath%\.local\bin\pathman.exe" (
+    PATH=%PATH%;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
     pushd "%HomeDrive%%HomePath%"
     curl.exe https://webi.ms/pathman | powershell
     popd
