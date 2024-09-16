@@ -59,7 +59,7 @@ Manual::Manual(void* ppimgr)
   m_parent_window(nullptr)
 {
   // Create  plugin icons
-  auto icon_path = GetPluginIcon("manual-panel-icon", PKG_NAME);
+  auto icon_path = GetPluginIcon("panel-icon", PKG_NAME);
   if (icon_path.type == IconPath::Type::Svg)
     m_panel_bitmap = LoadSvgIcon(icon_path.path.c_str());
   else if (icon_path.type == IconPath::Type::Png)
@@ -73,16 +73,16 @@ Manual::~Manual()  = default;
 
 int Manual::Init() {
   AddLocaleCatalog("opencpn-manual_pi");
-  auto icon = GetPluginIcon("manual-icon", PKG_NAME);
-  auto toggled_icon = GetPluginIcon("manual-icon", PKG_NAME);
+  auto icon = GetPluginIcon("toolbar-icon", PKG_NAME);
+  auto toggled_icon = GetPluginIcon("toolbar-icon", PKG_NAME);
   if (icon.type == IconPath::Type::Svg)
     m_leftclick_tool_id = InsertPlugInToolSVG(
-        "ShipDriver", icon.path, icon.path, toggled_icon.path, wxITEM_CHECK,
-        "ShipDriver", "", nullptr, kToolPosition, 0, this);
+        "Manual", icon.path, icon.path, toggled_icon.path, wxITEM_CHECK,
+        "Manual", "", nullptr, kToolPosition, 0, this);
   else if (icon.type == IconPath::Type::Png) {
     auto bitmap = LoadPngIcon(icon.path.c_str());
     m_leftclick_tool_id =
-        InsertPlugInTool("", &bitmap, &bitmap, wxITEM_CHECK, "ShipDriver", "",
+        InsertPlugInTool("", &bitmap, &bitmap, wxITEM_CHECK, "Manual", "",
                          nullptr, kToolPosition, 0, this);
   }
   return WANTS_TOOLBAR_CALLBACK | INSTALLS_TOOLBAR_TOOL;
