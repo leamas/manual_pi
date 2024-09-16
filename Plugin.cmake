@@ -41,6 +41,8 @@ set(PKG_SUMMARY "Plugin and developer manual")
 set(PKG_DESCRIPTION [=[
 Off-line copy of the plugin and developer manual available at
 https://opencpn-manuals.github.io/main
+
+This is a large download, currently around 170 Mb.
 ]=])
 
 set(PKG_AUTHOR "Alec Leamas")
