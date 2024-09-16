@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/quick_start_guide/connect_to/bt_pair_gnss.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../../quick_start_guide.html">Quick Start Guide</a></li>
+    <li><a href="../connect_to.html">Connect to</a></li>
+    <li><a href="bt_pair_gnss.html">BT Pair GNSS</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/quick_start_guide/connect_to/bt_pair_gnss.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_bt_pair_gnss"><a class="anchor" href="#_bt_pair_gnss"></a>BT Pair GNSS</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bluetooth_pairing_of_gnss_receivers"><a class="anchor" href="#_bluetooth_pairing_of_gnss_receivers"></a>Bluetooth Pairing of GNSS receivers</h3>
+<div class="paragraph">
+<p>Need instructions and screenshots for Bluetooth (possibly a pairing
+device screen)</p>
+</div>
+<div class="paragraph">
+<p>Pairing with a Cell phone via Bluetooth to provide GPS data as a backup
+is a reasonable approach, however the cell phone needs to be charged
+frequently and often has to paired again. Other GPS solutions are better
+for primary use.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install a Cell Phone Bluetooth App.</p>
+</li>
+<li>
+<p>Turn on Bluetooth on both the Cell phone and Computer.</p>
+</li>
+<li>
+<p>Pair the devices.</p>
+</li>
+<li>
+<p>Enable Location services on the cell phone.</p>
+</li>
+<li>
+<p>In Windows, Privacy &amp; Security &gt; Location service may need to be
+turned on.</p>
+</li>
+<li>
+<p>In the Computer Bluetooth settings, if there is an option to share
+location services, turn it on.</p>
+</li>
+<li>
+<p>Authorize Location sharing on the cell phone or on the Computer.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>First consideration, install a mobile phone app that delivers NMEA
+strings via COM port (BlueTooth) such as an Android App named "Bluetooth
+GPS Output" available in Google play. There are likely other similar
+iPhone Apps.
+<a href="https://play.google.com/store/apps/details?id=com.meowsbox.btgps">Link to
+app for GNSS output</a></p>
+</div>
+<div class="sect3">
+<h4 id="_with_windows_or_raspbian_bookworm_64"><a class="anchor" href="#_with_windows_or_raspbian_bookworm_64"></a>with Windows or Raspbian (Bookworm 64)</h4>
+<div class="paragraph">
+<p>Bluetooth Pairing with Windows or Raspbian (Bookworm 64) is basically
+the same procedure.</p>
+</div>
+<div class="paragraph">
+<p>For both Operating Systems, if they have been paired before, delete the
+Bluetooth pairing from the computer and the mobile cell phone. Start the
+Cell Phone App and make the device discover-able and paired with the
+Computer. In windows it will create a SPP COM port and will be the
+connection for GNSS in OpenCPN. In the case of Windows it is straight
+forward, nothing else to do, except to setup a Serial connection in the
+Connection Tab, the GNSS will always be found once the Cell Phone App is
+started, if properly setup in OpenCPN:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture1.png" alt="picture1.png" width="300"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_with_raspberry_pi_4_with_raspbian"><a class="anchor" href="#_with_raspberry_pi_4_with_raspbian"></a>with Raspberry Pi 4 with Raspbian</h4>
+<div class="paragraph">
+<p>For Raspberry Pi 4 with Raspbian: Start the Cell Phone GNSS App and
+allow the Cell to be discoverable.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture2.png" alt="picture2.png" width="250"></span></p>
+</div>
+<div class="paragraph">
+<p>Click on the Raspberry Pi Bluetooth Icon and click on Add Device</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture4.png" alt="picture4.png" width="250"></span></p>
+</div>
+<div class="paragraph">
+<p>Search for the device in question:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture5.png" alt="picture5.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Click on Pair and follow the next screens:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture6.png" alt="picture6.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>If the mobile device shows the same code, click on OK</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture7.png" alt="picture7.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>A message such as the one above appears, but is not a problem. Now
+proceed to setup the COM port, preferably done as “SU” user, otherwise
+the binding won’t be carried out. Open a command window and follow
+commands below:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>su</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>password:</strong> (the os will request your password)</p>
+</div>
+<div class="paragraph">
+<p><strong>hcitool scan</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Something like the following will appear:</p>
+</div>
+<div class="paragraph">
+<p>XX:XX:XX:XX:XX 'Device name'</p>
+</div>
+<div class="paragraph">
+<p>MAC address &amp; device name</p>
+</div>
+<div class="paragraph">
+<p>and possibly other similar information due to connected devices,
+identify your mobile Cell Phone (GNSS featured) and record the data.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>sdptool scan XX:XX:XX:XX:XX</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>This is the MAC address of your device given with hcitool command, it
+will show many services for your mobile Cell phone, search for SPP slave
+and note the channel number (ch).</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p>rfcomm bind 'device name' XX:XX:XX:XX:XX ch**</p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>You won&#8217;t see any output, the device name is the same given in the
+hcitool scan, it&#8217;s MAC address (XX:XX:XX:XX:XX) and ch is the channel
+number given in sdptool scan as SPP slave channel.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>rfcomm</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>it will give you something similar to</p>
+</div>
+<div class="paragraph">
+<p>rfcommX: XX:XX:XX:XX:XX channel ch clean</p>
+</div>
+<div class="paragraph">
+<p>When you know the COM port start OpenCPN go to Connections and make a
+New Connection as per attached. This type of device works with baud 4800
+or 9600, much better to standardize with 4800 baud.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture9.png" alt="picture9.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Connection done with 4800 baud.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/picture10.png" alt="picture10.png" width="250"></span></p>
+</div>
+<div class="paragraph">
+<p>In case you have to release the COM port because of any error, use the
+next command:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>rfcomm release /dev/rfcommX</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>where X is the number that system is given uses to be 0, 1, 2 …</p>
+</div>
+<div class="paragraph">
+<p><em>Note: In the case of Raspbian, the Mobile App GPS uses to exchange the
+SPP channel on every start and Raspberrry Pi won&#8217;t find the GNSS signal,
+so you must release of COM port with the command above, but not do do
+the whole procedure. Just use the sdptool to know again the SPP channel
+and again bind the COM port to the same last channel shown.</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/set_options/connections/autopilot.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../../set_options.html">Set Options</a></li>
+    <li><a href="../connections.html">Connections</a></li>
+    <li><a href="autopilot.html">Autopilots</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/set_options/connections/autopilot.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_autopilots"><a class="anchor" href="#_autopilots"></a>Autopilots</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenCPN is capable of integrating with autopilots, however there are a
+few limitations to be aware of.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_terminology"><a class="anchor" href="#_terminology"></a>Terminology</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Engaging the autopilot. This means to turn on the autopilot, change
+the mode from Standby to Heading (follow a compass bearing), Wind (steer
+to a wind angle) or Navigation (steer towards a waypoint).</p>
+</li>
+<li>
+<p>Controlling the autopilot. When the autopilot is in Navigation mode,
+this means sending navigation data to the autopilot to ensure it stays
+on course.</p>
+</li>
+<li>
+<p>NMEA 0183, a simple ASCII text protocol transmitted using serial
+communications on RS232/RS422 connections. Used on older marine
+equipment.</p>
+</li>
+<li>
+<p>NMEA 2000, a binary protocol transmitted over a CAN Bus. Supercedes
+NMEA 0183 and is used today in most modern marine equipment (Raymarine
+Seatalk<em>ng</em> and Simrad Simnet are also NMEA 2000 albeit with
+proprietary connectors).</p>
+</li>
+<li>
+<p>Seatalk, a proprietary Raymarine system using a binary protocol
+transmitted over a serial connection (Do not confuse Seatalk<em>ng</em> or
+Seatalk<em>HS</em> with Seatalk, aka Seatalk<em>1</em>)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nmea_0183_autopilots"><a class="anchor" href="#_nmea_0183_autopilots"></a>NMEA 0183 Autopilots</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenCPN does not engage NMEA 0183 autopilots. You will still need to use
+your autopilot&#8217;s controller to switch the autopilot mode from standby to
+another mode. However, OpenCPN can control the autopilot when engaged in
+Navigation mode.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Physically connect your autopilot to OpenCPN.</p>
+</li>
+<li>
+<p>Configure an outbound connection. Most NMEA 0183 autopilots use the
+NMEA 0183 sentences APB, RMB, RMC and XTE in order to steer towards a
+waypoint, so it is best practice to filter to send these outbound
+sentences. See below how to arrange the filter.</p>
+</li>
+<li>
+<p>Once underway, activate a route or waypoint in OpenCPN and manually
+engage your autopilot. OpenCPN will then calculate the cross track error
+and bearing and generate the APB, RMB, RMC and XTE sentences that are
+transmitted to the autopilot.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>An NMEA 0183-based autopilot:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/network_autopilot-n183.png" alt="network_autopilot-n183.png" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p><em>Configuring an outbound, NMEA 0183 serial connection for an autopilot.
+Click <span class="underline">More</span>, then three-dot icon to add filters.</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/tb-opt-conn-nmea-out-autopilot.jpg" alt="tb-opt-conn-nmea-out-autopilot.jpg" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>You can confirm that OpenCPN is transmitting navigation data to the
+autopilot via the NMEA Debug Window. Upon activation of a route or
+waypoint you should observe APB, RMB, RMC and XTE sentences in the debug
+window. They are colored blue to indicate they are outbound sentences.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/autopilot-nmea-debug.png" alt="autopilot-nmea-debug.png" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>It is recommended that you also enable an output filter to only send
+autopilot-related sentences and to not overflow the OpenCPN serial port
+or autopilot with unused sentences. When you activate a route, OpenCPN
+will produce NMEA 0183 sentences for that route: $ECAPB, $ECRMB, $ECRMC
+and $ECXTE. A recommended filter would be to only output ECAPB, ECRMB,
+ECRMC and ECXTE sentences. You may need to read your autopilot manual to
+find out what&#8217;s needed and adapt the filter accordingly. If you need
+also "RMC", but remember to use "ECRMC" in the OpenCPN output filter.
+(The "RMC" from the GNSS receiver is not what you want.)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/tb-opt-conn-nmea-out-autopilot-filter.jpg" alt="tb-opt-conn-nmea-out-autopilot-filter.jpg" width="400"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_seatalk_autopilots"><a class="anchor" href="#_seatalk_autopilots"></a>Seatalk Autopilots</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenCPN does not have any native way of supporting Seatalk autopilots.
+You will need to use a gateway to integrate OpenCPN with a Seatalk
+autopilot. In this case, the gateway will convert NMEA 0183 APB, RMB and
+XTE sentences generated by OpenCPN into their Seatalk counterparts in
+order to send navigation information to the autopilot.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nmea_2000_autopilots"><a class="anchor" href="#_nmea_2000_autopilots"></a>NMEA 2000 Autopilots</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Although OpenCPN does not have a native way to integrate with NMEA 2000
+autopilots, there are two methods that can be used. NMEA 2000 autopilots
+use proprietary NMEA 2000 messages to engage the autopilot but they do
+use standard messages to steer towards a waypoint. These necessary
+Parameter Group Numbers (PGN&#8217;s) are 129283 (Cross Track Error) and
+129284 (Navigation Information). The two methods are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use a gateway to connect OpenCPN to a NMEA 2000 autopilot. The gateway
+will convert the NMEA 0183 APB, RMB and XTE sentences generated by
+OpenCPN into PGN&#8217;s 129283 and 129284 and transmit these to the
+autopilot. This requires that the autopilot <em>not</em> be connected to the
+vessel&#8217;s NMEA 0183 network.</p>
+</li>
+<li>
+<p>Use an OpenCPN plugin. The <strong>Autotrack Raymarine</strong> plugin allows you to
+both engage and control a Raymarine EV-1 autopilot. The plugin sends the
+proprietary PGN&#8217;s to engage the autopilot and using navigation data from
+OpenCPN to adjust the course of the EV-1.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For an autopilot on the NMEA 2000 bus:<br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/network_autopilot-n2k.png" alt="network_autopilot-n2k.png" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sending_an_active_route_to_an_autopilot"><a class="anchor" href="#_sending_an_active_route_to_an_autopilot"></a>Sending an Active Route to an Autopilot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em><a href="./../../create_routes/activate_route.html">Activate the
+Route</a></em> and refer to
+<em><a href="./../../create_routes/route_autopilot.html#_sending_an_active_route_to_an_autopilot">Sending
+an Active Route to an autopilot</a></em>for details about configuring an
+active route.</p>
+</div>
+<div class="paragraph">
+<p>Upon <em>Activating a Route</em>, <em>Navigating to a waypoint</em> (right-click
+command), or simply <em>Navigate to here</em> (right-click command), OpenCPN
+sends the ECAPB, ECRMB, ECRMC and ECXTE NMEA sentences to the connected
+autopilot.</p>
+</div>
+<div class="paragraph">
+<p>The basic NMEA 0183 sentences that most autopilots require from a
+chartplotter are XTE and either APB or RMB (or both).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_waypoint_arrival_circle_radius"><a class="anchor" href="#_waypoint_arrival_circle_radius"></a>Waypoint Arrival Circle Radius</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See checkbox for
+<a href="./../../set_options/ships/routes-points.html">Advance route
+waypoint on arrival</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_autopilot_configuration_with_2_udp_connections"><a class="anchor" href="#_autopilot_configuration_with_2_udp_connections"></a>Autopilot Configuration with 2 UDP Connections</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_example_1"><a class="anchor" href="#_example_1"></a>Example 1</h3>
+<div class="paragraph">
+<p><a href="https://github.com/OpenCPN/OpenCPN/discussions/3864#discussioncomment-9284239" class="bare">https://github.com/OpenCPN/OpenCPN/discussions/3864#discussioncomment-9284239</a></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Network UDP NMEA 0183 Receive Input on this port with a default IP
+address 0.0.0.0 or localhost or 127.0.0.1, Port:10101 filtered to reject
+EC.</p>
+</li>
+<li>
+<p>Network UDP NMEA 0183 Output use multicast or specific address.
+Examples: 192.168.1.255 or 192.168.x.255, Port:10101 Filtered to
+transmit EC</p>
+</li>
+<li>
+<p>Reminder: When using the same port in and out you must use filter on
+both to avoid a feedback loop that will "choke" the system.</p>
+</li>
+<li>
+<p>Each filter is noted in the comment:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/autopilot-2-udp-connections-in_out.jpg" alt="autopilot-2-udp-connections-in_out.jpg" width="800"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_2"><a class="anchor" href="#_example_2"></a>Example 2</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Network NMEA 0183 UDP Receive Input data from multiplexer with IP
+address 0.0.0.0 and port 10110, filtered to reject input EC sentences.</p>
+</li>
+<li>
+<p>Network NMEA 0183 UDP output data to multiplexer with its IP address
+192.168.1.2 and port 10110, filtered to send only EC sentences. Note
+that IP Address 192.168.1.2 works to a specific receiver "one to one".
+Using 192.168.1.255 sends to all devices on the 192.168.1 network
+segment who are listening to "localhost" (or 127.0.0.1).</p>
+</li>
+<li>
+<p>These sentences are translated in the multiplexer to SeaTalk for
+autopilot.</p>
+</li>
+<li>
+<p>Activated one route and opened the NMEA debug window.</p>
+</li>
+<li>
+<p>The autopilot in Track mode points to the waypoint.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>(<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/autopilot-2-udp-connections-in_out-corsair.png" alt="autopilot-2-udp-connections-in_out-corsair.png" width="600"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thinking_about_opencpn_and_autopilots"><a class="anchor" href="#_thinking_about_opencpn_and_autopilots"></a>Thinking about OpenCPN and Autopilots</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To send or receive any data, OpenCPN has to be connected to a USB hub,
+joiner, gateway or multiplexer that is connected to a NMEA 0183 network
+or NMEA 2000 network, or some proprietary network via a converter.</p>
+</li>
+<li>
+<p>To receive data there needs to be some form of "receive input"
+connection (from Instruments - Wind direction and speed, Depth and Speed
+Thru the Water).</p>
+</li>
+<li>
+<p>Normally there needs to be a compass instrument connected to the
+network to provide this information to the autopilot.</p>
+</li>
+<li>
+<p>To send data from OpenCPN there needs to be some form of "output"
+connection to USB hub, joiner, gateway or multiplexer (that is received
+by the autopilot).</p>
+</li>
+<li>
+<p>For the autopilot to receive data, it needs to be connected to the USB
+hub, joiner, gateway or multiplexer via NMEA 0183 network or NMEA 2000
+network, or some proprietary network via a converter.</p>
+</li>
+<li>
+<p>For NMEA 0183 autopilots to work, the OpenCPN output connection needs
+to send the sentences required by the particular autopilot, which is
+often ECAPB, ECRMB and ECXTE.</p>
+</li>
+<li>
+<p>For NMEA 2000 autopilots to work, a NMEA 2000 PGN has to be sent out
+from OpenCPN which may be proprietary to the manufacturer of the
+autopilot, although there are generic autopilot PGN. Therefore, OpenCPN
+uses specific autopilot plugins for each manufacturer. The plugin will
+likely require entry of an IP Address to connect to the autopilot.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

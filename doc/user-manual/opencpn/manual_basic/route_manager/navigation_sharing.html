@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/route_manager/navigation_sharing.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../route_manager.html">Manage Routes and Marks</a></li>
+    <li><a href="navigation_sharing.html">Navigation Sharing</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/route_manager/navigation_sharing.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_navigation_sharing"><a class="anchor" href="#_navigation_sharing"></a>Navigation Sharing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Navigation Sharing adds the following features to basic Routes &amp; Tracks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Send to GPS - to send a route or waypoints to a GPS-equipped
+chartplotter.</p>
+</li>
+<li>
+<p>Send to Peer - to send a route or waypoints to another instance of
+OpenCPN on the same network.</p>
+</li>
+<li>
+<p>Import GPX file - to restore old routes or tracks, or to receive from
+another device or boat.</p>
+</li>
+<li>
+<p>Export GPX file - for historical purposes, or to transfer to another
+device or boat.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Sections in the User Manual relevant to navigation sharing include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_export_import_gpx_files">Export
+&amp; Import GPX Files</a></em></p>
+</li>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_export_route">Export
+Route</a></em></p>
+</li>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_export_all_visible">Export
+All Visible</a></em></p>
+</li>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_sending_routes_and_marks_to_a_gps-equipped_chartplotter">Sending
+Routes and Marks to a GPS-equipped Chartplotter</a></em></p>
+</li>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_send_to_new_gps">Send
+to New GPS</a></em></p>
+</li>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_send_to_peer">Send
+to Peer</a></em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition, there is detailed information in these User Manual
+sections:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="./../route_manager/use_gpx_files.html" class="bare">./../route_manager/use_gpx_files.html</a></em></p>
+</li>
+<li>
+<p><em><a href="./../route_manager/navigation_data_backup.html" class="bare">./../route_manager/navigation_data_backup.html</a></em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For convenient access, navigation sharing menus are included with
+various menus:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Route Manager&#8217;s "Tab" Menus. For example
+<em><a href="./../route_manager/routes_tab.html" class="bare">./../route_manager/routes_tab.html</a></em>.</p>
+</li>
+<li>
+<p>"Right-click" interface such as
+<em><a href="./../create_routes/modify_route.html#_modify_a_route">Modify
+a Route</a></em> when hovering over a Route, Track, Mark or Layer.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/route-right-click-on-route-point-intercomm.jpg" alt="route-right-click-on-route-point-intercomm.jpg" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/route-mark-intercommunicate.png" alt="route-mark-intercommunicate.png" width="500"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_managing_routes_and_tracks"><a class="anchor" href="#_managing_routes_and_tracks"></a>Managing Routes and Tracks</h3>
+<div class="paragraph">
+<p>Keeping a lot of active routes in OpenCPN makes for a cluttered chart
+display. It also slows the program and makes it use more system
+resources. Imagine a word processor where every document you ever
+created was displayed unless you made it invisible. The
+<span class="underline">Route &amp; Mark Manager</span> buttons <span class="underline">Export selected</span>
+and <span class="underline">Import GPX</span> work like the "Save" and "Load" options in
+most programs. Just as you wouldn&#8217;t save all your word processing
+documents in a single giant file, it&#8217;s not efficient to export all your
+navigation objects into a single file.</p>
+</div>
+<div class="paragraph">
+<p>It is more efficient to export each route or track to a separate file.
+Click on the object, click on the "Export selected" button, name the
+file, and navigate to the folder in which you want it saved. If you save
+each route and track in its own file you can import them individually.
+There is more discussion of a strategy for creating routes at
+<em><a href="./../create_routes.html" class="bare">./../create_routes.html</a></em>.</p>
+</div>
+<div class="paragraph">
+<p>Another strategy for managing routes is to export them, then load them
+as temporary or persistent layers that can be individually hidden or
+made visible. Read more at
+<em><a href="./../route_manager/layers_tab.html">Route &amp; Mark
+Manager &gt; Layers Tab</a></em>.</p>
+</div>
+<div class="paragraph">
+<p>The <span class="underline">Export All Visible</span> button is useful for making a quick
+backup copy of all your navigation objects but the resulting file is
+cumbersome to work with.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_import_gpx_files"><a class="anchor" href="#_export_import_gpx_files"></a>Export &amp; Import GPX Files</h3>
+<div class="paragraph">
+<p>In <span class="underline">Route &amp; Mark Manager</span>, you can export and import routes,
+tracks, marks, and layers using the GPX file format. This lets you save
+your routes and marks to external files so you may have more than the
+active ones - for example, to do route planning or archive existing
+data.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GPX format is supported by a wide variety of programs.</p>
+</li>
+<li>
+<p>You can have as many external files as you wish, there are no limits
+on the number of external files.</p>
+</li>
+<li>
+<p>Use this for passage planning by saving multiple possible routes for a
+passage.</p>
+</li>
+<li>
+<p>Export routes and tracks for historical-log purposes.</p>
+</li>
+<li>
+<p>Prepare layers as an aid to navigation enroute.</p>
+</li>
+<li>
+<p>Note that marks that are already in an included Layer, even a
+non-visible Layer, will not be imported.</p>
+</li>
+<li>
+<p>Technical Information:
+<em><a href="./../route_manager/navigation_data_backup.html">Navigation
+Data Backup for Routes&#44; Marks&#44; Navobjects&#44; GPX and GUID</a></em></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_route"><a class="anchor" href="#_export_route"></a>Export Route</h3>
+<div class="paragraph">
+<p>Save the route on your computer for later use (e.g. to import later).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_all_visible"><a class="anchor" href="#_export_all_visible"></a>Export All Visible</h3>
+<div class="paragraph">
+<p>Saves all visible routes, marks and layers, in one gpx file. This is
+done through a normal file saving dialog.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sending_routes_and_marks_to_a_gps_equipped_chartplotter"><a class="anchor" href="#_sending_routes_and_marks_to_a_gps_equipped_chartplotter"></a>Sending Routes and Marks to a GPS-equipped Chartplotter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The feature <span class="underline">Send to GPS</span> allows you to send a route or
+marks to a GPS-equipped chartplotter. The feature appears in the
+right-click menus for marks and routes and in the Route Manager.</p>
+</div>
+<div class="paragraph">
+<p><em>Note: this feature is not linked to OpenCPN&#8217;s Connections. The upload
+port does not even need to appear in the Datastream connections list.
+For this reason, users must define a separate upload port which is
+remembered by OpenCPN. The port can be changed by clicking the button in
+the Route Manager.</em></p>
+</div>
+<div class="paragraph">
+<p>NMEA provides no handshake protocol for Route and Marks uploading.
+OpenCPN simply sends the Route/Mark information out on the port, without
+having any way to know if there is actually a device connected to the
+port.</p>
+</div>
+<div class="paragraph">
+<p>The Garmin protocol does provide handshaking, so OpenCPN can be sure
+that the information is uploaded correctly. The Garmin protocol will
+fail if the device is not a Garmin.</p>
+</div>
+<div class="paragraph">
+<p>In the case of standard NMEA, the indication "Route successfully
+uploaded" is not very meaningful. It just means that a port was found,
+and writing to that port succeeded.</p>
+</div>
+<div class="paragraph">
+<p>In the case of simple "hockey puck" GPS receivers with no chart display,
+they will probably ignore route and mark uploads, since there is nothing
+for them to do with this information anyway.</p>
+</div>
+<div class="paragraph">
+<p>The key to remember is that Route and Mark upload process is completely
+independent of normal running Datastream operations. They are two
+separate sub-systems of OpenCPN.</p>
+</div>
+<div class="paragraph">
+<p>It does no harm to assign the Datastream GPS port as an output and input
+device together. Some users might reasonably expect that this would be
+required for Route and Mark uploads. Most simple GPS receivers would
+ignore input sentences other than Route and Mark uploads anyway.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_monitoring_routemark_uploads"><a class="anchor" href="#_monitoring_routemark_uploads"></a>Monitoring Route/Mark Uploads</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, enable the NMEA Debug Window (Options &gt; Connections &gt; check
+<span class="underline">Show NMEA Debug Window</span>), then be sure to CLOSE the
+Connections Menu leaving the NMEA Debug Window up, or nothing will
+happen).</p>
+</div>
+<div class="paragraph">
+<p>In the Chart window, hover over the intended temporary goto Mark and
+right-click, then select, for example, <span class="underline">Send to GPS (Serial
+Com 14)</span>. By quickly looking at the NMEA Debug window you&#8217;ll see the
+sentences sent out. See screenshot below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/connections/tb-opt-conn-autopilot-output-sentences.jpg" alt="tb-opt-conn-autopilot-output-sentences.jpg" width="567" height="351"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Note the active route above was a 4-point route, but the active leg
+and active wp was the 3rd point for the above screen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/connections/tb-opt-conn-activeroute-sent2gps-2.jpg" alt="tb-opt-conn-activeroute-sent2gps-2.jpg" width="559" height="310"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Note the screenshot above is for the same Active Route, but the active
+waypoint is the 2nd point.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Note: There are many techniques for testing and simulation. Using
+NavMonPC to read a previously recorded file is one very good way.
+Another is to use OpenCPN&#8217;s Voyage Data Recorder plugin to read the NMEA
+file, which is in some respects simpler for a new user.</em></p>
+</div>
+<div class="sect2">
+<h3 id="_send_to_gps"><a class="anchor" href="#_send_to_gps"></a>Send to GPS</h3>
+<div class="paragraph">
+<p>Send the Route to your GPS-equipped chartplotter. Pressing the button
+activates a dialog in which an output port is selected. This choice also
+appears in the right-click menu for Routes and Marks.</p>
+</div>
+<div class="paragraph">
+<p>For <strong>Garmin Users</strong>. Older Garmin units may not accept route uploads via
+standard NMEA 0183 but needs to be set in GRMN mode. To use that in
+OpenCPN enable the Tools→Options→Connections→<span class="underline">Use Garmin
+(GRMN) host mode for uploads</span>. When enabled the port does not have to be
+listed in <span class="underline">Connections</span> as it is an independent feature and
+if already listed in Connections these settings are ignored during this
+GRMN transfer.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/tb-opt-conn-garminmode.jpg" alt="tb-opt-conn-garminmode.jpg" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Most modern Garmin chartplotters now accept the NMEA 0183 WPL (Waypoint
+List) and RTE (Route summary) sentences using an output port listed in
+<span class="underline">Connections</span> as usual.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_send_to_new_gps"><a class="anchor" href="#_send_to_new_gps"></a>Send to New GPS</h3>
+<div class="paragraph">
+<p>This menu item is used to change to another GPS-equipped chartplotting
+device.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_send_to_peer"><a class="anchor" href="#_send_to_peer"></a>Send to Peer</h3>
+<div class="paragraph">
+<p><strong>Send a route, track or mark to another OpenCPN instance.</strong></p>
+</div>
+<div class="paragraph">
+<p>When one or more OpenCPN instances are connected to the same local
+network, i.e via the same Gateway, it&#8217;s possible to transfer a single
+waypoint or an entire route to another OpenCPN instance. Also a
+"portable" instance on the same PC is seen as a peer and then a network
+connection is not needed.<br>
+The function <span class="underline">Send to Peer</span> is available on the right-click
+menu when the cursor is over a route or a WP. Also in <span class="underline">Route
+and Mark Manager</span>, one can select a route, track or mark and click the
+button <span class="underline">Send to Peer</span>.</p>
+</div>
+<div class="paragraph">
+<p>When <span class="underline">Send to Peer</span> is activated by a button or a menu item
+a mDNS query is sent on the local network for other OpenCPN instances to
+reply. Those who respond in time are listed in a dialog window and you
+can choose your intended target for transfer. If the desired OpenCPN is
+not found, you can try again by the <span class="underline">Scan again</span> button.<br>
+The target is called <em>server</em> and the one you are sending from is called
+<em>client</em>.<br>
+If it&#8217;s the first time you connect to another OpenCPN the server will
+display a Pin code you must enter on the client to continue. Subsequent
+transfer to this server will not need a Pin code. When the transfer has
+succeeded you will be messaged about that.<br>
+If you send a route to the server it&#8217;s possible get it activated once
+received. Optionally, select the <span class="underline">Activate After Transfer</span>
+option before start the transfer.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/create_route/sendtopeer-menu.png" alt="Menu item" width="200"></span><span class="image"><img src="../../_images/opencpn/manual_basic/create_route/sendtopeer-connect.png" alt="Select a peer on the drop down" width="200"></span><span class="image"><img src="../../_images/opencpn/manual_basic/create_route/sendtopeer-succes.png" alt="Succeded" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>If it&#8217;s the first time to transfer to a server a Pin code is needed.
+Manual handling is therefore necessary.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/create_route/sendtopeer-needpin.png" alt="Enter the Pin on client" width="200"></span><span class="image"><img src="../../_images/opencpn/manual_basic/create_route/sendtopeer-pin-code.png" alt="Server Pin" width="200"></span></p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_garmin_device_transfer"><a class="anchor" href="#_garmin_device_transfer"></a>Garmin Device Transfer</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_transferring_routes_or_waypoints_from_opencpn_to_garmin_handheld_devices"><a class="anchor" href="#_transferring_routes_or_waypoints_from_opencpn_to_garmin_handheld_devices"></a>Transferring routes or waypoints from OpenCPN to Garmin handheld devices</h3>
+<div class="paragraph">
+<p>Over the years Garmin has produced a lot of different devices and
+changed the connection methods to PCs or notebooks. Before and around
+the year 2000 there was the proprietary Garmin round plug with 4 pins
+with a real serial port:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture1.png" alt="/opencpn/manual_basic/route_manager/picture1" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Later Garmin introduced the Universal Serial Bus (USB) with an USB-A
+connector on the PC/notebook side, and an USB-B Mini (starting around
+year 2000), an USB-B Micro (starting around year 2007) or an USB-C
+(starting 2023) connector on device side.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture2.png" alt="/opencpn/manual_basic/route_manager/picture2" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Depending on the connector different methods need to be applied to
+transfer routes and waypoints from OpenCPN to Garmin device.</p>
+</div>
+<div class="paragraph">
+<p>Here a small overview of a selection of Garmin devices by connector:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="underline">Garmin power/data cable (4-pin round plug)</span>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GPS12 (1999)</p>
+</li>
+<li>
+<p>GPS72 (2002)</p>
+</li>
+<li>
+<p>GPSMAP60 (2005) - has both 4-pin round plug and USB-B Mini</p>
+</li>
+<li>
+<p>GPSMAP76 (2006)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><span class="underline">USB-B Mini</span>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GPSMAP60 (2005) - has both 4-pin round plug and USB-B Mini</p>
+</li>
+<li>
+<p>GPSMAP62 (2010)</p>
+</li>
+<li>
+<p>GPSMAP64 (2016)</p>
+</li>
+<li>
+<p>GPSMAP65 (2020)</p>
+</li>
+<li>
+<p>GPSMAP78 (2010)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><span class="underline">USB-B Micro</span>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GPSMAP66 (2018)</p>
+</li>
+<li>
+<p>GPSMAP79 (2021)</p>
+</li>
+<li>
+<p>GPSMAP86 (2019)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><span class="underline">USB-C</span>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GPSMAP67 (2023)</p>
+</li>
+<li>
+<p>most probably further new handheld devices will use USB-C</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All the devices with the 4-pin round plug have a real serial interface
+and should use the transfer method described under 1. below.</p>
+</div>
+<div class="paragraph">
+<p>All the devices with USB connectors have a universal serial bus
+interface and should use the transfer methond described under 2. below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_transfer_method_for_garmin_proprietary_4_pin_round_plug_real_serial_port"><a class="anchor" href="#_1_transfer_method_for_garmin_proprietary_4_pin_round_plug_real_serial_port"></a>1. Transfer method for Garmin proprietary 4-pin round plug (real serial port):</h3>
+<div class="paragraph">
+<p>(a) On your device in setup menu Interface change to GRMN/GRMN
+mode. The device should report "Waiting..…" (b) Connect the device. Two
+different methods exist for establishing the connection:</p>
+</div>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>If a PC/notebook still has a real serial port, a RS232 interface with
+9-pin D-Sub connector) the Garmin device can be connected directly to
+PC/notebook with Garmin’s PC Kit Interface Cable (with 9-pin ‘D‘ serial
+data connector).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>II. If a PC/notebook has the more recent USB-A port, then a
+serial/USB converter cable has to be used, as shown exemplary in the
+picture below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture3.png" alt="/opencpn/manual_basic/route_manager/picture3" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>(d) On a route or mark select “Send to GPS&#8230;&#8203;“ (or “Send to new
+GPS…“), select the COM port that your device is connected to and press
+„Send“.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture4.png" alt="/opencpn/manual_basic/route_manager/picture4" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>(e) The Garmin device should report "Transfer complete" and
+OpenCPN shows that route or mark have been transmitted:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture5.png" alt="/opencpn/manual_basic/route_manager/picture5" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>(f) Remarks:</p>
+</div>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>It is not neccessary to set up an OpenCPN connection for this
+transfer. Also if there is an existing OpenCPN connection for the same
+port these settings are not used for the "Send to GPS" function. Such a
+connection is automatically disabled during this transfer. II. NMEA
+Debug window is not used for the "Send to GPS" transfer. III. In case
+the device does not use GRMN mode to receive a transfer but simply
+accepts NMEA0183 WPL and RTE, an OpenCPN output connection to the port
+in question has to be set-up. Set "Transmit only sentences" to filter
+"WPL" and "RTE" and disable "Use Garmin host mode for uploads". Then it
+looks like this using "Send to GPS":</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture6.png" alt="/opencpn/manual_basic/route_manager/picture6" width="300"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_transfer_method_for_garmin_devices_with_usb_port_b_or_c"><a class="anchor" href="#_2_transfer_method_for_garmin_devices_with_usb_port_b_or_c"></a>2. Transfer method for Garmin devices with USB port B or C:</h3>
+<div class="paragraph">
+<p>(a) On your device in System setup menu Interface change to
+Garmin Spanner mode:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture7.png" alt="/opencpn/manual_basic/route_manager/picture7" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>(b) Connect the device with USB cable to PC or notebook. On the
+Garmin device a notification comes up “USB cable detected. - Would you
+like to go to Mass Storage?“ Choose “Yes“:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture8.png" alt="/opencpn/manual_basic/route_manager/picture8" width="250"></span></p>
+</div>
+<div class="paragraph">
+<p>The device goes into “Mass Storage“ mode and cannot be operated while in
+this mode. On Windows PCs/notebooks the Garmin device should be
+available as a disk drive within a couple of seconds (max. 30 seconds).
+On a Raspberry Pi with bullseye mounting the Garmin device may take up
+to 90 seconds, so some patience is required. The Garmin device must be
+visible as drive in the operating system before the next step can be
+executed!</p>
+</div>
+<div class="paragraph">
+<p>(c) The Garmin is now connected (mounted) as disk drive to the
+PC/notebook. In OpenCPN no specific setting is required in the
+Options/Connections menu, as all transfers take place using underlying
+operating system functionalities.</p>
+</div>
+<div class="paragraph">
+<p>The next step is to open the route/wayoint manager. Mark the route or
+waypoint that you want to transfer and choose “Export selected“ –
+important: do not choose “Send to GPS…“.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture9.png" alt="Pic" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>While the Garmin device is connected/mounted as disk drive the folder
+“Garmin\GPX“ on the device has to be chosen for this export/transfer:</p>
+</div>
+<div class="paragraph">
+<p>Click on “Save“ and the item(s) will be stored on the device. After
+de-connecting the Garmin and booting it up again the route or waypoint
+can be found in the route or waypoint manager on the Garmin device:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/picture10.png" alt="/opencpn/manual_basic/route_manager/picture10" width="200"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transfer_routes_to_bg"><a class="anchor" href="#_transfer_routes_to_bg"></a>Transfer Routes to B&amp;G</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please download this PDF file for information about transfer of routes
+to B&amp;G</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/zeus.pdf" alt="/opencpn/manual_basic/route_manager/zeus"></span></p>
+</div>
+<div class="paragraph">
+<p>Also refer to this CF Thread
+<a href="https://www.cruisersforum.com/forums/f134/opencpn-routes-to-b-and-g-zeus3-mfd-237668.html#post3916256" class="bare">https://www.cruisersforum.com/forums/f134/opencpn-routes-to-b-and-g-zeus3-mfd-237668.html#post3916256</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

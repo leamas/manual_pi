@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/create_routes/modify_route.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../create_routes.html">Create Routes</a></li>
+    <li><a href="modify_route.html">Modify a Route</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/create_routes/modify_route.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_modify_a_route"><a class="anchor" href="#_modify_a_route"></a>Modify a Route</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre> - Modifying Routes
+   - [[opencpn:manual_basic:route_manager:use_routes#move_waypoints_in_a_route|Move Waypoints in a Route (Use Routes}]]
+   - [[opencpn:manual_basic:create_routes:modify_route#insert_waypoint_into_a_route|Insert a Waypoint into a Route (Modify a Route)]]
+   - [[opencpn:manual_basic:route_manager:use_routes#include_existing_wp_in_a_route|Include existing WP in a route (Use Routes)]]
+   - [[opencpn:manual_basic:create_routes:modify_route#append_a_waypoint_into_a_route|Append a Waypoint into a Route]] (Modify a Routes)
+   - [[opencpn:manual_basic:route_manager:use_routes#append_insert_waypoint_and_split_route_around_leg|Append, Insert Waypoint and Split Route around Leg (Use Routes)]]
+   - [[opencpn:manual_basic:route_manager:use_routes#split_a_route_using_the_context_menu|Split a Route using the context menu  (Use Routes)]]
+   - [[opencpn:manual_basic:route_manager:use_routes#combine_routes|Combine Routes (Use Routes)]]
+   - [[opencpn:manual_basic:route_manager:use_routes#delete_route|Delete Route  (Use Routes)]]</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="./../route_manager/navigation_sharing.html#_export_import_gpx_files">Export
+and Import GPX Files (Navigation Sharing)</a></em> Also Send to GPS, Send to
+new GPS and Send to Peer.</p>
+</li>
+<li>
+<p><em><a href="./../create_routes/activate_route.html">Activate
+Route &amp; Active Route Console (Activate a Route)</a></em></p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> * //[[opencpn:manual_basic:create_routes:route_autopilot|Route to Autopilot]]//</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_route_concepts"><a class="anchor" href="#_route_concepts"></a>Route Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Waypoints</em> are independently defined points, not part of a <em>Route</em>.<br>
+<em>Route points</em> exist only as part of a <em>Route</em> definition.<br>
+<em>Routes</em> are a set of two or more points in a given order.<br>
+<em>Route Points</em> may be defined automatically as the <em>Route</em> is created.<br>
+A <em>Route</em> may link existing <em>Waypoints</em> or <em>Route points</em>.<br>
+Multiple <em>Routes</em> may share common <em>Route points</em>.<br>
+When all the <em>Routes</em> which pass through a shared <em>Route point</em> are
+deleted that <em>Route point</em> will be deleted.<br>
+When all the <em>Routes</em> which share a <em>Waypoint</em> are deleted the
+<em>Waypoint</em> will persist independently.<br></p>
+</div>
+<div class="sect2">
+<h3 id="_modify_a_route_2"><a class="anchor" href="#_modify_a_route_2"></a>Modify a Route</h3>
+<div class="paragraph">
+<p>To modify, add to, append a route point, insert waypoints, remove or
+delete waypoints in a Route,<br>
+<em>Right Click</em> on the <strong>Route Segment</strong> or at the <strong>Waypoint</strong> (dependent on
+intent), and select the appropriate command.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route-right-click-when-creating-route-2.jpg" alt="/opencpn/manual_basic/route-right-click-when-creating-route-2" width="300"></span><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_right_click_while_creating_a_route"><a class="anchor" href="#_right_click_while_creating_a_route"></a>Right Click while Creating a Route</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Undo delete Waypoint [Ctrl-Z]</strong> (Always shows last action)</p>
+</li>
+<li>
+<p><strong>End Route [Esc]</strong></p>
+</li>
+<li>
+<p><strong>Object Query</strong></p>
+</li>
+<li>
+<p><strong>Drop Mark [Ctrl-M]</strong></p>
+</li>
+<li>
+<p><strong>New Route [Ctrl-R]</strong></p>
+</li>
+<li>
+<p><strong>Move Boat Here</strong></p>
+</li>
+<li>
+<p><strong>Navigate to Here</strong></p>
+</li>
+<li>
+<p><strong>Center View</strong></p>
+</li>
+<li>
+<p><strong>Course Up Mode</strong></p>
+</li>
+<li>
+<p><strong>Toggle full Screen</strong></p>
+</li>
+<li>
+<p><strong>Chart Groups</strong></p>
+</li>
+<li>
+<p><strong>AIS Chart List</strong></p>
+</li>
+<li>
+<p><strong>Show CPA</strong></p>
+<div class="literalblock">
+<div class="content">
+<pre> +
+image:/opencpn/manual_basic/route-right-click-on-route-point.jpg[/opencpn/manual_basic/route-right-click-on-route-point,width=300]</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_right_click_on_a_route_point"><a class="anchor" href="#_right_click_on_a_route_point"></a>Right Click on a Route Point</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Properties</strong>. The dialog is the same as for an individual mark.</p>
+</li>
+<li>
+<p><strong>Remove from Route</strong> but don&#8217;t delete it.</p>
+</li>
+<li>
+<p><strong>Split Route at Waypoint</strong></p>
+</li>
+<li>
+<p><strong>Copy as kml,</strong> for use with Qtvlm or Google Earth.</p>
+</li>
+<li>
+<p><strong>Delete</strong> Waypoint from Route.</p>
+</li>
+<li>
+<p><strong>Reverse..</strong></p>
+</li>
+<li>
+<p><strong>Hide Waypoint Names</strong></p>
+</li>
+<li>
+<p><strong>Resequence Waypoints..</strong></p>
+</li>
+<li>
+<p><strong>Send to GPS (Serial:)</strong> is seen in the rightclick menus for routes and
+waypoints. If a port is not selected, the case in the picture above, a
+dialog is shown to select an output port. To change the selected port,
+go to the route manager and select "Send to GPS". Refer to
+<a href="./../route_manager/navigation_sharing.html">Navigation
+Sharing</a></p>
+</li>
+<li>
+<p><strong>Send to new GPS</strong> Refer to
+<a href="./../route_manager/navigation_sharing.html">Navigation
+Sharing</a></p>
+</li>
+<li>
+<p><strong>Send to Peer</strong> Refer to
+<a href="./../route_manager/navigation_sharing.html">Navigation
+Sharing</a></p>
+</li>
+<li>
+<p><strong>Route (Route Name)</strong></p>
+</li>
+<li>
+<p><strong>Ctrl + N</strong>, a shortcut that activates the next waypoint in an active
+route.</p>
+<div class="literalblock">
+<div class="content">
+<pre> +
+image:/opencpn/manual_basic/route-right-click-on-leg.jpg[/opencpn/manual_basic/route-right-click-on-leg,width=300]</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_right_click_on_a_route_leg"><a class="anchor" href="#_right_click_on_a_route_leg"></a>Right Click on a Route Leg</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Properties</strong>. The dialog is the same as for an individual mark.</p>
+</li>
+<li>
+<p><strong>Activate </strong>- Gives the direction to the chosen waypoint instead of
+the first waypoint in the route, which is the default. Useful when
+joining, for example, an imported route, at an arbitrary waypoint.</p>
+</li>
+<li>
+<p><strong>Insert Waypoint</strong></p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>*
+* **Remove from Route** but don't delete it.
+* **Copy as kml,**  for use with Qtvlm or Google Earth.
+* **Delete**  Waypoint from Route.
+* **Reverse..**
+* **Hide Waypoint Names**
+* **Resequence Waypoints..**
+* **Send to GPS (Serial:)**  is seen in the rightclick menus for routes and waypoints. If a port is not selected, the case in the picture above, a dialog is shown to select an output port. To change the selected port, go to the route manager and select "Send to GPS". Refer to [[opencpn:manual_basic:route_manager:navigation_sharing|Navigation Sharing]]\\
+* **Send to new GPS**  Refer to [[opencpn:manual_basic:route_manager:navigation_sharing|Navigation Sharing]]
+* **Send to Peer**    Refer to [[opencpn:manual_basic:route_manager:navigation_sharing|Navigation Sharing]]
+* **Ctrl + N**, a shortcut that activates the next waypoint in an active route.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_insert_waypoint_into_a_route"><a class="anchor" href="#_insert_waypoint_into_a_route"></a>Insert Waypoint into a Route</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/waypoint-right-click.jpg" alt="waypoint-right-click.jpg" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p><em>Right Click</em> on an independent <em>Waypoint</em> which is NOT in a route. See
+right-click menu.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/drag-route-point-over-indep-waypoint.jpg" alt="drag-route-point-over-indep-waypoint.jpg" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Drag a <em>Route Point</em> over an independent <em>Waypoint</em> results in prompt to
+replace the <em>Route point</em> with the nearby <em>Waypoint</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/waypoint-added-to-route-right-click.jpg" alt="waypoint-added-to-route-right-click.jpg" width="300"></span><br>
+<em>Right Click</em> on an <em>Waypoint</em> in a Route shows options not otherwise
+available.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> * **Properties**. The dialog is the same as for an individual mark.
+* **Remove from Route**, but don't delete it.
+* **Split route at Waypoint**
+* **Copy as kml,**  for use with Qtvlm or Google Earth.
+* **Delete**  Waypoint from Route.
+* **Send to GPS (Serial:)**  is seen in the Right Click menus for routes and waypoints. If a port is not selected, the case in the picture above, a dialog is shown to select an output port. To change the selected port, go to the route manager and select "Send to GPS". Refer to [[:opencpn:manual_basic:route_manager:navigation_sharing|]]
+* **Send to new GPS**  Refer to [[:opencpn:manual_basic:route_manager:navigation_sharing|]]
+* **Send to Peer**  Refer to [[:opencpn:manual_basic:route_manager:navigation_sharing|]]
+* **Route (Name of Route)**
+* **Main Menu**
+* **Ctrl + N**, a shortcut that activates the next waypoint in an active route.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> +
+image:/opencpn/manual_basic/use-nearby-waypoint.png[use-nearby-waypoint.png,width=300]</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_append_a_waypoint_into_a_route"><a class="anchor" href="#_append_a_waypoint_into_a_route"></a>Append a Waypoint into a Route</h4>
+<div class="paragraph">
+<p>The new appended waypoint is added to the end of the route (last point
+entered).</p>
+</div>
+<div class="paragraph">
+<p>Right click any route leg, and select Append Waypoint.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/create_route/append-wp-to-a-route.jpg" alt="/opencpn/manual_basic/create_route/append-wp-to-a-route" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Drag new appended waypoint to a location.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/create_route/append-wp-to-a-route-drag-new-wp.jpg" alt="/opencpn/manual_basic/create_route/append-wp-to-a-route-drag-new-wp" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Set new waypoint using Left mouse button, and hit escape.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/create_route/append-wp-to-a-route-set-new-wp.jpg" alt="/opencpn/manual_basic/create_route/append-wp-to-a-route-set-new-wp" width="300"></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

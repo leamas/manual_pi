@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../../quick_start_guide.html">Quick Start Guide</a></li>
+    <li><a href="../connect_to.html">Connect to</a></li>
+    <li><a href="global_navigation_satellite_system.html">Global Navigation</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_global_navigation"><a class="anchor" href="#_global_navigation"></a>Global Navigation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/1gps_status.png" alt="GPS Status Icon Link"></span><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/course-up_0.png" alt="Course Up Icon Link" width="28"></span><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/gray-nogps.png" alt="No Location Icon Link" width="18"></span><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/red-gps.png" alt="Good Location Icon Link" width="29"></span></p>
+</div>
+<div class="paragraph">
+<p><em><a href="./../../ui_user_interface/gps_status.html">gps_status</a></em>
+for description of these indicators.</p>
+</div>
+<div class="sect2">
+<h3 id="_global_navigation_satellite_system_gnss"><a class="anchor" href="#_global_navigation_satellite_system_gnss"></a>Global Navigation Satellite System (GNSS)</h3>
+<div class="paragraph">
+<p>OpenCPN requires a connection to a Global Navigation Satellite System
+(GNSS) receiver so that you can plot your position on the chart. There
+are now many different satellite systems in orbit including GPS,
+GLONASS, Galilleo and BeiDou and most modern receivers are capable of
+receiving signals from multiple satellite systems simultaneously,
+increasing accuracy and reliability and also decreasing the amount of
+time to obtain a fix.</p>
+</div>
+<div class="paragraph">
+<p>If your GNSS receiver is connected using a multiplexer or gateway, or if
+it is connected using NMEA 2000 refer to the respective sections in this
+manual. This includes GNSS receivers that include WiFi such as the Quark
+QK-A012 or Comar G300Ni.</p>
+</div>
+<div class="paragraph">
+<p>For GNSS receivers connected using NMEA 0183, there are several ways in
+which they may be directly connected to your PC. This also includes
+using an AIS transceiver or a chartplotter as a position source, where
+the AIS transceiver or chartplotter is also directly connected to your
+PC.</p>
+</div>
+<div class="paragraph">
+<p>1. RS232 Serial port</p>
+</div>
+<div class="paragraph">
+<p><sup><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/rs232-gps.png" alt="rs232-gps.png" width="414" height="250"></span></sup></p>
+</div>
+<div class="paragraph">
+<p>2. USB<br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/usb-gps.png" alt="usb-gps.png" width="295" height="250"></span><br>
+3. Bluetooth</p>
+</div>
+<div class="paragraph">
+<p><sup><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/blutetooth-gps.png" alt="blutetooth-gps.png" width="384" height="250"></span></sup></p>
+</div>
+<div class="paragraph">
+<p>and 4. Integrated GPS (eg. Android phones and tablets)<sup>1</sup></p>
+</div>
+<div class="paragraph">
+<p><sup><span class="image"><img src="../../../_images/opencpn/manual_basic/android-gps.png" alt="android-gps.png" width="264" height="200"></span></sup></p>
+</div>
+<div class="paragraph">
+<p>For options 1 and 2, the most important aspect is determining which
+serial port the GNSS receiver is connected to.</p>
+</div>
+<div class="paragraph">
+<p>Also note that in general most NMEA 0183 devices use the following
+Serial Port settings:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>4800 baud
+8 data bits
+1 stop bit
+No parity</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using an AIS transceiver be aware that they use a higher baud
+rate, 38400 baud. If you are using an existing commercial chartplotter
+as your position source, refer to the manufacturer&#8217;s documentation as
+the baud rates for their devices may be configurable.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_determine_which_serial_port_to_use"><a class="anchor" href="#_determine_which_serial_port_to_use"></a>Determine which serial port to use.</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_windows"><a class="anchor" href="#_using_windows"></a>Using Windows</h3>
+<div class="paragraph">
+<p>Start the Control Panel and Select Device Manager. Note the ports that
+are reported.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/rs232-before.png" alt="rs232-before.png" width="546" height="400"></span></p>
+</div>
+<div class="paragraph">
+<p>For USB devices, follow the manufacturer&#8217;s instructions and install any
+necessary device drivers. (For an example with more detail, see
+<a href="./../../quick_start_guide/connect_to/global_navigation_satellite_system.html#_install_the_gps_device_driver">Install
+the GPS Device Driver</a> below.) Then plug in the device and in Device
+Manager select Action → Scan for Hardware Changes and note the port name
+of the newly inserted device.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/rs232-after.png" alt="rs232-after.png" width="546" height="400"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_debian"><a class="anchor" href="#_using_debian"></a>Using Debian</h3>
+<div class="paragraph">
+<p>For Debian the actual devices connected are updated as soon as the
+drop-down is opened. If you first try the drop-down without anything
+connected, there will be a small set of devices displayed. On most
+laptops it will actually be empty.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/debian-ubuntu-how-to-select-device.png" alt="debian-ubuntu-how-to-select-device.png" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>After connecting a device, it becomes visible in the drop down list.
+This makes it simple to detect the new device.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/debian-ubuntu-how-to-select-device-2.png" alt="debian-ubuntu-how-to-select-device-2.png" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>This also means there is absolutely no need to work on the command line
+for this. The same applies for permissions, as it&#8217;s handled by
+self-explanatory GUI dialogs.</p>
+</div>
+<div class="paragraph">
+<p>The links (opencpn0, opencpn1, etc) are stable names to be used on, for
+example, laptops. From time to time, device names like ttyUSB0 may be
+replaced with ttyUSB1 after a suspend-resume cycle. To avoid these
+problems a link like /dev/opencpn2 can be used instead; this is
+guaranteed to remain stable.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_the_corresponding_opencpn_serial_connection"><a class="anchor" href="#_create_the_corresponding_opencpn_serial_connection"></a>Create the corresponding OpenCPN serial connection</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Connect the USB or Serial GNSS receiver</p>
+</li>
+<li>
+<p>Go to <em>Toolbar → Options → Connections → Add new connection</em>.</p>
+</li>
+<li>
+<p>Select <em>Serial</em></p>
+</li>
+<li>
+<p>Use the drop down control and select the correct serial port</p>
+</li>
+<li>
+<p>Select the baud rate (generally 4800 for RS232 NMEA 0183 devices,
+38400 for RS232 AIS transceivers)</p>
+</li>
+<li>
+<p>Hit OK to finish.</p>
+</li>
+<li>
+<p>Upon reception of a valid position fix the satellite symbol will turn
+green.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
+<div class="paragraph">
+<p>Initially, after plugging in the GPS puck, determining the Com Port and
+setting up the connection in OpenCPN, there was no NMEA 0183 data stream
+in the NMEA 0183 debug window and the GPS Status indicator was red.
+Clearly the puck was not working right. Using the manufacturer&#8217;s
+software "GPS Viewer" this was fixed by pressing "Warm Start" button and
+the satellites appeared on the globe.
+<span class="image unresolved"><img src="/opencpn/manual_basic/quick_start_guide/gpsgrn.png" alt="gpsgrn.png" width="28" height="28"></span><a href="./../../ui_user_interface/gps_status.html">gps_status</a>
+otherwise the satellite symbol will be red.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_windows"><a class="anchor" href="#_for_windows"></a>For Windows</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/rs232-connection.png" alt="rs232-connection.png" width="400"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_debian"><a class="anchor" href="#_for_debian"></a>For Debian</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/linux-connection.png" alt="linux-connection.png" width="458" height="400"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_flatpak"><a class="anchor" href="#_for_flatpak"></a>For Flatpak</h3>
+<div class="paragraph">
+<p>Flatpak works essentially the same way as native Debian packages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_raspberry_pi_os_and_openplotter"><a class="anchor" href="#_for_raspberry_pi_os_and_openplotter"></a>For Raspberry Pi OS and Openplotter</h3>
+<div class="paragraph">
+<p>See Debian</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_mac_osx"><a class="anchor" href="#_for_mac_osx"></a>For Mac OSX</h3>
+<div class="paragraph">
+<p>GPS devices are connected to Mac&#8217;s via USB port (or serial-USB adapter
+or NMEA multiplexer with USB port) and the appropriate GPS OSX driver
+must be installed (probably from FTDI or Prolific), preferably using the
+driver provided with the device, or from the manufacturer&#8217;s website.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start OpenCPN</p>
+</li>
+<li>
+<p>Click on the Options Icon</p>
+</li>
+<li>
+<p>Select “Connections”, and “Add Connection” and “Serial”</p>
+</li>
+<li>
+<p>Under “Data Port” select the GPS port (In general a name starting:
+“/dev/cu.” or “/dev/tty.” or perhaps more obvious, like
+“/dev/cu.MiniPlex-99000125”, or more generic, like: “/dev/cu.usbserial”)</p>
+</li>
+<li>
+<p>Check the baudrate is 4800</p>
+</li>
+<li>
+<p>Choose OK</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Bluetooth GPS devices use the following procedure.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Pair the GPS device with MacOS. Go to MacOS Open Apple &gt; System
+Settings &gt; Bluetooth, enable it, and follow the vendor&#8217;s instructions
+for pairing with MacOS.</p>
+</li>
+<li>
+<p>Select OpenCPN Toolbar &gt; Options &gt; Connections &gt; Add Connection.</p>
+</li>
+<li>
+<p>Select Serial and under "Data Port", then select the name of the GPS
+receiver (In general a name starting with "/dev/cu." or "/dev/tty").</p>
+</li>
+<li>
+<p>Select the Baudrate (see vendor instructions or test operation with
+each value in the drop-down menu). 4800, 38400, or 115200 are common.</p>
+</li>
+<li>
+<p>Select OK. The Connections page should show the Bluetooth serial port
+enabled.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/blutetooth-gps-macos.png" alt="/opencpn/manual_basic/quick_start_guide/connect_to/global_navigation_satellite_system/blutetooth-gps-macos" width="400"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_macos_verify_connection"><a class="anchor" href="#_macos_verify_connection"></a>MacOS Verify Connection</h4>
+<div class="paragraph">
+<p>Once you have successfully connected to your position source, select the
+"Show NMEA Debug Window". You should observe the NMEA 0183 position
+related sentences (GGA, GLL, GSA, GSV, RMC) in the window. If the GPS
+receiver has a fix, the icon in the upper right corner of OpenCPN will
+show green bars.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_android_devices_with_integrated_gps_receiver"><a class="anchor" href="#_for_android_devices_with_integrated_gps_receiver"></a>For Android devices with integrated GPS receiver</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Android Location = On</th>
+<th class="tableblock halign-left valign-top">OpenCPN Connections Location = On</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/android-location.jpg" alt="android-location.jpg" width="250"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/opencpn-connections.jpg" alt="opencpn-connections.jpg" width="250"></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Enable Android Location and OpenCPN Connection Location=on (gps) and
+connection is automatic.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_the_gps_device_driver"><a class="anchor" href="#_install_the_gps_device_driver"></a>Install the GPS Device Driver</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the Manufacturer&#8217;s GPS Device driver required for the
+Operating System.</p>
+</li>
+<li>
+<p>Use the manufacturer&#8217;s GPS Utility Software to check that GPS device
+is working properly.</p>
+</li>
+<li>
+<p>Use the GPS Utility Software to determine the Data Port parameters and
+record them.</p>
+</li>
+<li>
+<p>Then "close the GPS Utility Software, such that the GPS port is no
+longer “captured”.</p>
+</li>
+<li>
+<p>Reboot often solves this issue.</p>
+</li>
+<li>
+<p>Users should complete this segment, getting support from the hardware
+seller or manufacturer.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_example_2"><a class="anchor" href="#_example_2"></a>Example</h3>
+<div class="paragraph">
+<p>If they are not found automatically, the GPS Device manufacturer drivers
+may need to be downloaded and installed following instructions. In this
+example the USB Driver was automatically found via internet and
+installed by the Operating System.</p>
+</div>
+<div class="paragraph">
+<p>Using Windows 11, when the GPS puck was installed, the correct COM port
+was found and connected but OpenCPN GPS was not working, nor receiving
+Nema 0183 GPS sentences in the Nmea 0183 debug window. The GPS status
+indicator was red. Clearly the GPS puck was not working properly.</p>
+</div>
+<div class="paragraph">
+<p>Using manufacturer&#8217;s "GPS Viewer" software, Com Port 7 at 4800 baud was
+found, however there were no satellites shown on the globe, which was
+fixed by hitting "Warm Start" and the globe filled with satellites. (Use
+"Cold Start" as the next alternative, which downloads fresh
+<a href="https://www.navcen.uscg.gov/gps-precise-ephemeris-information">GPS
+Ephemeris Information</a>.) Next be sure to hit "Close GPS" so the com port
+is not captured by "GPS Viewer" software, before actually closing this
+software program.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/1-gps-viewer-com7-no-sats-on-globe.jpg" alt="1-gps-viewer-com7-no-sats-on-globe.jpg" width="350"></span></p>
+</div>
+<div class="paragraph">
+<p>No Satellites on the Globe, so hit "Warm Start" or "Cold Start".</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/2-gps-viewer-com7-warm-start-sats-on-globe.png" alt="2-gps-viewer-com7-warm-start-sats-on-globe.png" width="350"></span></p>
+</div>
+<div class="paragraph">
+<p>Satellites appear on the globe now.<br>
+NOTE: Before closing the program release Com Port with <strong>"Close GPS"</strong>
+button.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/3-gps-device-manager-com-port.jpg" alt="3-gps-device-manager-com-port.jpg" width="350"></span></p>
+</div>
+<div class="paragraph">
+<p>A quick check of the Device Manager (Win+X), shows Com Port 7 is still
+shown as the Prolific USB-Serial GPS puck. If you find no Com Ports in
+the Device List, pick View &gt; "Show hidden devices". Then right click on
+the Prolific UAB-Aerial Comm 7 Port and pick Properties to check if the
+device is working. If not, try "Scan for hardware changes".</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/4-gps-toolbar-options-connect-edit.jpg" alt="4-gps-toolbar-options-connect-edit.jpg" width="450"></span></p>
+</div>
+<div class="paragraph">
+<p>Configuration of <em>Toolbar - Options - Connections</em> Add a new Serial Port
+with the correct parameters, confirm the Nmea 0183 Debug Window streams
+GPS data, that the boat is Red (not grey) and that the GPS status
+indicator in the upper right is Green with green bars.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/5-gps-toolbar-options-connect-edit-2.png" alt="5-gps-toolbar-options-connect-edit-2.png" width="350"></span></p>
+</div>
+<div class="paragraph">
+<p>For different Operating Systems and GPS Devices the software and
+instructions will be different, but the process is similar. We cannot
+provide instructions for all of these conditions. Consult with the
+manufacturer or seller for GPS operation and port settings.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>1. OpenCPN does not natively support Microsoft Surface computers
+which have an integrated GNSS receiver. These models (usually designated
+as "LTE") have a 3G/4G cellular modem with integrated GPS receiver
+however the GPS does not appear as a normal serial communications port.
+Instead it is accessed via the Windows Location Sensor API. Either use
+the
+<a href="https://cloudsmith.io/~steven-adler/repos/windows_sensor-beta/packages/detail/raw/windows_sensor_pi-1.0.1.0-msvc-x86_64-wx32-10.0.17763-MSVC-tarball/1.0.1.0+14.0ed405e/">Windows
+Sensor plugin</a>, or use the
+<a href="/opencpn/supplementary_software/gps_software/win.html8_gnss_sensor" class="bare">/opencpn/supplementary_software/gps_software/win.html8_gnss_sensor</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

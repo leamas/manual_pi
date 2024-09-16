@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/release.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="release.html">Release History</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/release.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_release_history"><a class="anchor" href="#_release_history"></a>Release History</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1.2.0 </strong>2007-04-20</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> - Opencpn was built with the following objectives in mind.
+- Intended use as primary navigation interface for vessels with full-time helm-visible navigational suites.
+- Other tools may be better for offline route planning, tide and current prediction, online logging, etc.
+- Quick startup and shutdown.
+- Those and only those toolbar buttons really needed for daily operation.
+- Portability, thus wxWidgets core components. Currently tested and in production use on W98, XP, and Linux.
+- Conventional ( i.e. popular and modern ) chart format support. In the real world, this means BSB format raster
+- charts, and S57ENC format vector charts.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1.2.2 </strong>2008-01-02</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Improved AIS symbology and diagnostics, including RateOfTurn
+indication.</p>
+</li>
+<li>
+<p>Improved toolbar icon symbology, supporting day/dusk/dark color
+schemes.</p>
+</li>
+<li>
+<p>Rationalized home directory selection for Windows, allowing program
+installation in arbitrary directory/folder.</p>
+</li>
+<li>
+<p>Improved accuaracy of Great Circle distance/bearing calculations.</p>
+</li>
+<li>
+<p>Optional Depth Units displayable on chart as embossed character image.</p>
+</li>
+<li>
+<p>Ownship position indicator on thumbnail charts accurately follow true
+GPS position.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.2.4 </strong>2008-04-20</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Configure/build modifications for Unicode systems, especially Ubuntu.</p>
+</li>
+<li>
+<p>Added Route and Mark property sheets.</p>
+</li>
+<li>
+<p>Improved S57 ENC symbology.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.2.6</strong> 2008-08-31 This is a maintenance and feature update release,</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>containing some S57 ENC symbology improvements,</p>
+</li>
+<li>
+<p>greater compliance with IHO S52 standards,</p>
+</li>
+<li>
+<p>and various enhancements and bug fixes.</p>
+</li>
+<li>
+<p>Especially interesting are the DUSK and NIGHT display modes, for which
+user feedback is highly desired…</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.2.8</strong> 2008-12-25 Mac OS X Support, including installable application
+bundle (OpenCPN.dmg),</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>GNU/gcc compatible system build files, and XCode project files.</p>
+</li>
+<li>
+<p>Garmin USB GPS device support for Windows platforms.</p>
+</li>
+<li>
+<p>Miscellaneous bug fixes and user optimizations.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.3.0</strong> 2009-05-09</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>CM93 worldwide vector chart support, with automatic chart scaling.</p>
+</li>
+<li>
+<p>Improved AIS target tracking with configurable CPA/collision warning
+options.</p>
+</li>
+<li>
+<p>GPX compatible waypoint and route exporting tools.</p>
+</li>
+<li>
+<p>Configurable range rings centered on ownship position.</p>
+</li>
+<li>
+<p>And, as usual, miscellaneous bug fixes and user optimizations.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.3.2</strong> 2009-07-11</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Improved AIS target depiction and collision detection alerts.</p>
+</li>
+<li>
+<p>Hot keys and scroll mouse support.</p>
+</li>
+<li>
+<p>Help File.</p>
+</li>
+<li>
+<p>Various display speed and quality optimizations, especially for CM93
+charts.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.3.4</strong> 2009-10-01</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ship&#8217;s position tracking function, with GPX export and import.</p>
+</li>
+<li>
+<p>Enhanced icons and screen graphics, for improved visibility.</p>
+</li>
+<li>
+<p>Import and export of Routes using GPX interface protocol.</p>
+</li>
+<li>
+<p>Implement CM93 vector chart detail control slider.</p>
+</li>
+<li>
+<p>Assorted usability and reliability improvements.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>1.3.6</strong> 2010-01-07</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add basic GRIB file decoding and chart overlay display.</p>
+</li>
+<li>
+<p>Improve and expand NMEA message type support.</p>
+</li>
+<li>
+<p>Improved documentation.</p>
+</li>
+<li>
+<p>Add modular international language support.</p>
+</li>
+<li>
+<p>Assorted usability and reliability improvements.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>2.1.0</strong> 2010-06-26</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>BSBv3 raster and S57 ENC chart support.</p>
+</li>
+<li>
+<p>CM93 vector chart support.</p>
+</li>
+<li>
+<p>IHO S52 compliant display of S57 vector charts.</p>
+</li>
+<li>
+<p>Single-chart and Quilted display modes.</p>
+</li>
+<li>
+<p>North-up and Course-up display modes.</p>
+</li>
+<li>
+<p>Moving-map display mode.</p>
+</li>
+<li>
+<p>Route navigation with ship tracking functions.</p>
+</li>
+<li>
+<p>Waypoint navigation.</p>
+</li>
+<li>
+<p>NMEA 0183 GPS interface at selectable baud rate.</p>
+</li>
+<li>
+<p>gpsd library support.</p>
+</li>
+<li>
+<p>Autopilot output support.</p>
+</li>
+<li>
+<p>AIS input with full target tracking and collision alerting.</p>
+</li>
+<li>
+<p>Anchor watch/alarm functions.</p>
+</li>
+<li>
+<p>GRIB file input and display for weather forecasting.</p>
+</li>
+<li>
+<p>GPX Waypoint and Route input and output file support.</p>
+</li>
+<li>
+<p>Tide and Current prediction and display by location.</p>
+</li>
+<li>
+<p>Multi-language support.</p>
+</li>
+<li>
+<p>linux and Windows compatible.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>2.3.0 </strong>2010-12-18</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Integrated PlugIn architecture, allowing third-party development and
+deployment of auxiliary features.</p>
+</li>
+<li>
+<p>Two useful PlugIns available immediately</p>
+</li>
+<li>
+<p>Graphical overlay of GRIB (weather)file data</p>
+</li>
+<li>
+<p>Dashboard for configurable on-screen display of ship&#8217;s NMEA data.</p>
+</li>
+<li>
+<p>Enhanced Route, Track, and Waypoint management functions by selectable
+dialog.</p>
+</li>
+<li>
+<p>Many new languages added to basic package, including Portuguese,
+Estonian, Greek, Turkish, Finnish, Norwegian, etc.</p>
+</li>
+<li>
+<p>Support Garmin Host mode Route and Waypoint interchange and upload to
+remote GPS receivers.</p>
+</li>
+<li>
+<p>Advanced internationalized Windows Program Installer.</p>
+</li>
+<li>
+<p>Full support for North-up and Course-Up display of all chart types.</p>
+</li>
+<li>
+<p>Expanded AIS target message decoding to include European Inland AIS
+specifications.</p>
+</li>
+<li>
+<p>AIS Target List Dialog, allowing easy selection and monitoring of all
+active AIS targets.</p>
+</li>
+<li>
+<p>Many, many improvements in the basic User Interface, while maintaining
+the ease-of-use that.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>2.3.1</strong> 2010-12-31</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Correct logic regarding ownship AIS messages (AIVDO)</p>
+</li>
+<li>
+<p>Correct fault closing AIStarget list with target query dialog open
+(FS#310)</p>
+</li>
+<li>
+<p>Correct occasional geolocation problem with routes on BSB chart
+switch.</p>
+</li>
+<li>
+<p>Improve Toolbar refresh logic.</p>
+</li>
+<li>
+<p>Increase maximum chart stack size from 20 to 30. (FS#316)</p>
+</li>
+<li>
+<p>Correct GoTo waypoint and subsequent route delete logic. (FS#244)</p>
+</li>
+<li>
+<p>Various language file updates.</p>
+</li>
+<li>
+<p>Correct Depth unit display for quilted charts, with non-english
+language setting.</p>
+</li>
+<li>
+<p>Correct Win7 Garmin USB Device interface reset in User Mode.</p>
+</li>
+<li>
+<p>Correct Windows vc redistributable installation command in NSIS
+script.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>2.5.0</strong> 2011-07-26</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Per-Cell offset adjustment for cm93 charts</p>
+</li>
+<li>
+<p>Transverse Mercator chart quilting.</p>
+</li>
+<li>
+<p>Selectable full screen quilting option.</p>
+</li>
+<li>
+<p>Configurable lat/lon gid lines.</p>
+</li>
+<li>
+<p>Variable screen dimmer function.</p>
+</li>
+<li>
+<p>Improved Tide/Current information window.</p>
+</li>
+<li>
+<p>Configurable "Layers" function, enabling selectable display of fixed
+objects.</p>
+</li>
+<li>
+<p>Improved and extended AIS functions, including Euro Inland support &amp;
+Base Stations and ATONs</p>
+</li>
+<li>
+<p>Selectable FullScreen display mode.</p>
+</li>
+<li>
+<p>Integrated Route Planner function, with Tide table support.</p>
+</li>
+<li>
+<p>Enhanced GUI functions, with floating transparent Toolbar.</p>
+</li>
+<li>
+<p>Several new language options.</p>
+</li>
+<li>
+<p>Improved internal memory management.</p>
+</li>
+<li>
+<p>Improved Autopilot output support.</p>
+</li>
+<li>
+<p>New Multi-leg Measurement tool.</p>
+</li>
+<li>
+<p>Improved Vector chart symbology.</p>
+</li>
+<li>
+<p>Improved integrated Tide/Current data accuracy.</p>
+</li>
+<li>
+<p>Improved Route definition interface, including selectable Route
+colors.</p>
+</li>
+<li>
+<p>Full conformance for all platforms, especially including Macintosh OS
+X.</p>
+</li>
+<li>
+<p>Greatly improved staility on all platforms, as a result of extended
+Beta testing.</p>
+</li>
+<li>
+<p>Many, many improvements in the basic User Interface, while maintaining
+the ease-of-use that OpenCPN is widely known for.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>3.0.0</strong> 2012-06-05</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>New and Enhanced Features for OpenCPN Version 3.0</p>
+</li>
+<li>
+<p>OpenGL support, for enhanced graphics performance and functionality.</p>
+</li>
+<li>
+<p>Improved ENC object Query interface</p>
+</li>
+<li>
+<p>Portable execution option, allowing easy migration to new systems.</p>
+</li>
+<li>
+<p>Upgrade to wxWidgets 2.8.12.</p>
+</li>
+<li>
+<p>Support ENC Overlay cells.</p>
+</li>
+<li>
+<p>Upgrade gpsd support to Version 2.96</p>
+</li>
+<li>
+<p>Implement enhanced PlugIn system, enabling a wide variety of PlugIn
+types.</p>
+</li>
+<li>
+<p>Implement DSC and GPS_Gate Buddy tracking.</p>
+</li>
+<li>
+<p>Implement user defined Chart Groups.</p>
+</li>
+<li>
+<p>Implement AIS SART transponder display and tracking.</p>
+</li>
+<li>
+<p>Improved ENC object rendering and display.</p>
+</li>
+<li>
+<p>Implement user definable Tide/Current datasets.</p>
+</li>
+<li>
+<p>Full conformance for all platforms, especially including Macintosh OS
+X.</p>
+</li>
+<li>
+<p>Greatly improved stability on all platforms, as a result of extended
+Beta testing.</p>
+</li>
+<li>
+<p>Many, many improvements in the basic User Interface, while maintaining
+the ease-of-use that OpenCPN is widely known for.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>3.0.2</strong> 2012-07-07 This Service Release corrects several small bugs
+found in the recent 3.0.0 field release. It incorporates no new
+features.</p>
+</div>
+<div class="paragraph">
+<p><strong>3.2.0</strong> 2013-02-27</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Complete update of user Options dialogs and context menus,
+incorporating modern graphics and uniform styles.</p>
+</li>
+<li>
+<p>Significantly enhanced navigation instrument input and output options,
+including extensive network connection capabilities supporting TCP, UDP,
+and GPSD data sources.</p>
+</li>
+<li>
+<p>New User Interface theme support, with OpenCPN traditional as well as
+two new low profile themes.</p>
+</li>
+<li>
+<p>Enhanced clipboard support, including interfaces to external KML data
+sources.</p>
+</li>
+<li>
+<p>Enhanced Tide and Current dataset support, including modern fully
+binary datasets.</p>
+</li>
+<li>
+<p>Various improvements in the display and tracking of
+<a href="http://www.cruisersforum.com/forums/tags/ais.html">AIS</a> data targets.</p>
+</li>
+<li>
+<p>Automatic Great Circle route generation options.</p>
+</li>
+<li>
+<p>Significant enhancement of the Dashboard PlugIn, including new user
+interface options and a variety of stylish, new instruments.</p>
+</li>
+<li>
+<p>Improved sound system support for linux hosts.</p>
+</li>
+<li>
+<p>Major update to embedded Users Manual.</p>
+</li>
+<li>
+<p>Measurably improved performance and reliability over all supported
+platforms.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>3.2.2</strong> 2013-05-08 This Service Release corrects several small bugs
+found in the recent 3.2.0 field release. It incorporates a command line
+switch to turn off OpenGL completely.</p>
+</div>
+<div class="paragraph">
+<p><strong>4.0.0</strong> 2015-01-08</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A major release.</p>
+</li>
+<li>
+<p>Increased performance in all modes, particularly when using OpenGL
+graphics acceleration.</p>
+</li>
+<li>
+<p>Additional network interface methods, including TCP/IP client/server
+and UDP broadcast.</p>
+</li>
+<li>
+<p>Support for multiple data source instances,</p>
+</li>
+<li>
+<p>including Filtering and prioritization of messages</p>
+</li>
+<li>
+<p>Output of NMEA data streams for real-time integration into ship
+systems</p>
+</li>
+<li>
+<p>Improved support for Mac OS X systems, including 64 bit native
+support.</p>
+</li>
+<li>
+<p>Integrated Tablet/Touch screen support.</p>
+</li>
+<li>
+<p>AIS Personal Locater Beacon (PLB) configuration and tracking.</p>
+</li>
+<li>
+<p>Enhanced AIS target tracking modes.</p>
+</li>
+<li>
+<p>GRIB PlugIn feature additions.</p>
+</li>
+<li>
+<p>Graphical GRIB email request generation.</p>
+</li>
+<li>
+<p>Moving particle wind overlay.</p>
+</li>
+<li>
+<p>Enhanced GRIB data type support.</p>
+</li>
+<li>
+<p>Dashboard PlugIn feature additions.</p>
+</li>
+<li>
+<p>More selectable instruments.</p>
+</li>
+<li>
+<p>Several new and updated Plug-ins, including</p>
+</li>
+<li>
+<p>Digital Radar overlay for popular radar scanners</p>
+</li>
+<li>
+<p>World Magnetic Model variation compensator</p>
+</li>
+<li>
+<p>Climatology analysis</p>
+</li>
+<li>
+<p>Dynamic route planning</p>
+</li>
+<li>
+<p>Integrated logbook</p>
+</li>
+<li>
+<p>Realtime datastream capture, record and playback</p>
+</li>
+<li>
+<p>Google Earth integration</p>
+</li>
+<li>
+<p>Weatherfax overlay</p>
+</li>
+<li>
+<p>Vector chart object and feature search tool</p>
+</li>
+<li>
+<p>S63 Encrypted vector chart support</p>
+</li>
+<li>
+<p>Major update to embedded Users Manual.</p>
+</li>
+<li>
+<p>Measurably improved performance and reliability over all supported
+platforms.</p>
+</li>
+<li>
+<p>And much more.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>4.2.0 </strong>2016-02-03</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Increased performance in all modes, particularly when using OpenGL
+graphics acceleration.</p>
+</li>
+<li>
+<p>Integrated Chart Downloader PlugIn, allowing systematic tracking and
+donwload of latest online charts from several popular sources.</p>
+</li>
+<li>
+<p>Integrated World Magnetic Model (WMM) PlugIn, providing accuratley
+calculated magnetic variation worldwide.</p>
+</li>
+<li>
+<p>Major update to embedded Users Manual.</p>
+</li>
+<li>
+<p>Measurably improved performance and reliability over all supported
+platforms.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>4.4.0 </strong>2016-06-13</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Support for GRIB V2 format files.</p>
+</li>
+<li>
+<p>Measurably improved performance and reliability over all supported
+platforms.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>5.0.0 </strong>2019-03-23 Release</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://opencpn.org/OpenCPN/about/ver500.html">5.0.0 Release Summary</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>5.2.0 </strong>2020-07-15 Release</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://opencpn.org/OpenCPN/about/ver520.html">5.2.0 Release Summary</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>5.2.6 </strong>2022-04-22 Maintenance Release</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Numerous improvements to performance, usability, and reliability</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>5.8.4</strong> 2023-06-13 released</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Service/maintenance update</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More current Release History is found under
+<a href="https://opencpn.org/OpenCPN/info/newspgC.html">"News" on the website</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

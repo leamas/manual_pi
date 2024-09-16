@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/route_manager/use_routes.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../route_manager.html">Manage Routes and Marks</a></li>
+    <li><a href="use_routes.html">Use Routes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/route_manager/use_routes.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_use_routes"><a class="anchor" href="#_use_routes"></a>Use Routes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="./../route_manager/use_routes.html#_include_existing_wp_in_a_route">Include
+existing WP in a Route</a><br>
+<a href="./../route_manager/use_routes.html#_split_route">Split a
+Route</a><br>
+<a href="./../route_manager/use_routes.html#_append_insert_waypoint_and_split_route_around_leg">Append&#44;
+Insert Waypoint and Split Route around Leg</a><br>
+<a href="./../route_manager/use_routes.html#_move_waypoints_in_a_route">Move
+WP</a><br>
+<a href="./../route_manager/use_routes.html#_combine_routes">Combine
+Routes</a><br>
+<a href="./../route_manager/use_routes.html#_delete_route">Delete
+Route</a><br>
+<a href="./../route_manager/use_routes.html#_split_a_route_using_the_context_menu">Split
+a Route with the Context Menu</a><br>
+<a href="./../create_routes/activate_route.html">activate_route</a><br>
+<a href="./../create_routes/route_autopilot.html#_sending_an_active_route_to_an_autopilot">Send
+an Activated Route to an Autopilot</a><br>
+<a href="./../route_manager/use_routes.html#_route_handling_techniques">Route
+Handling Techniques</a><br>
+* //</p>
+</div>
+<div class="sect2">
+<h3 id="_example_situation"><a class="anchor" href="#_example_situation"></a>Example Situation</h3>
+<div class="paragraph">
+<p>How to fix a routing problem to avoid a shallow bank extending from the
+light. How to use split and extend - an example.</p>
+</div>
+<div class="sect3">
+<h4 id="_include_existing_wp_in_a_route"><a class="anchor" href="#_include_existing_wp_in_a_route"></a>Include existing WP in a route</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt.png" alt="incwpt.png" width="600" height="284"></span></p>
+</div>
+<div class="paragraph">
+<p>Hm…a bit of a miss in the planning. An islet with a shallow bank
+extending southward on our route. We put two marks north of the
+obstruction and would like to include these in our route.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt1.png" alt="incwpt1.png" width="600" height="438"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_split_route"><a class="anchor" href="#_split_route"></a>Split Route</h4>
+<div class="paragraph">
+<p>The waypoint west of the islet is #2. We mark this in "Route
+Properties", from the right-click menu. The Button "Split Route" is
+highlighted, meaning it is available to use. This is exactly what we
+want to do, so we click the button and split the route at waypoint #2.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt2.png" alt="incwpt2.png" width="600" height="245"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_append_insert_waypoint_and_split_route_around_leg"><a class="anchor" href="#_append_insert_waypoint_and_split_route_around_leg"></a>Append, Insert Waypoint and Split Route around Leg</h4>
+<div class="paragraph">
+<p>Right click at #2 and choose "Append Waypoint",</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt3.png" alt="incwpt3.png" width="600" height="429"></span></p>
+</div>
+<div class="paragraph">
+<p>Move the cursor to the first triangle, and answer yes to "Use nearby
+waypoint?".<br>
+Then move the cursor to the second triangle , and answer yes to "Use
+nearby waypoint?".<br>
+Same thing for the original waypoint to the east of the islet.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt4.png" alt="incwpt4.png" width="600" height="114"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_move_waypoints_in_a_route"><a class="anchor" href="#_move_waypoints_in_a_route"></a>Move Waypoints in a Route</h4>
+<div class="paragraph">
+<p>Move the cursor over the waypoint and left mouse click to drag.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_activate_route"><a class="anchor" href="#_activate_route"></a>Activate Route</h4>
+<div class="paragraph">
+<p>Click "Activate Route" to see that this extension worked. For more
+detail see
+<a href="./../create_routes/activate_route.html">Activating
+Routes</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt5.png" alt="incwpt5.png" width="600" height="435"></span></p>
+</div>
+<div class="paragraph">
+<p>Once again mark "Route Properties" in the right-click dialog. #3 is the
+last waypoint in our "new" temporary route. The "Extend Route" button is
+highlighted, so we click it.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt6.png" alt="incwpt6.png" width="600" height="361"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delete_route"><a class="anchor" href="#_delete_route"></a>Delete Route</h4>
+<div class="paragraph">
+<p>Open the Route Manager to view the result. Notice the naming of the
+routes. _B_plus is active. What remains is to delete route _B and to
+rename _B_plus to a suitable name, for example the name of your original
+route.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt7.png" alt="incwpt7.png" width="600" height="172"></span></p>
+</div>
+<div class="paragraph">
+<p>Deleting route _B.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/incwpt8.png" alt="incwpt8.png"></span></p>
+</div>
+<div class="paragraph">
+<p>And here is the finally adjusted route.</p>
+</div>
+<div class="paragraph">
+<p>This was just an exercise…..in real life, it would be easier to just
+move the existing waypoints in the route, to avoid the Islet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_split_a_route_using_the_context_menu"><a class="anchor" href="#_split_a_route_using_the_context_menu"></a>Split a Route Using the Context Menu</h4>
+<div class="paragraph">
+<p>The right-click context menu has a new option : <strong>Split</strong> ….</p>
+</div>
+<div class="sect4">
+<h5 id="_split_route_at_waypoint"><a class="anchor" href="#_split_route_at_waypoint"></a>Split Route at Waypoint</h5>
+<div class="paragraph">
+<p>As an example let&#8217;s start with a route named "Split Route Demo"
+containing Waypoints A, B, C and D.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_1.png" alt="split_route_1.png" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>If we right-click on Waypoint B, then select "Split at Waypoint",<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_2.png" alt="split_route_2.png" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>The first route is named "Split Route Demo_A", between Waypoints A and
+B,<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_3.png" alt="split_route_3.png" width="550"></span><br>
+and the second route is named "Split Route Demo_B" between Waypoints B,
+C and D.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_4.png" alt="split_route_4.png" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>This is exactly what the split function accomplishes in the route
+properties dialog.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_split_route_around_a_leg"><a class="anchor" href="#_split_route_around_a_leg"></a>Split Route Around a Leg</h5>
+<div class="paragraph">
+<p>If we right-click on the leg between Waypoints B and C, then select
+"Split Around Leg"…<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_5.png" alt="split_route_5.png" width="550"></span><br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_6.png" alt="split_route_6.png" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>…The routes are split. The first route is named "Split Route Demo_A",
+between Waypoints A and B, and the second route is named "Split Route
+Demo_B" between Waypoints C and D.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_8.png" alt="split_route_8.png" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>The leg between Waypoints B and C is removed from the chart and the
+Route List.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/split_route_7.png" alt="split_route_7.png" width="550"></span><br>
+<br>
+=== Combine Routes ===</p>
+</div>
+<div class="paragraph">
+<p>Summary: Combine routes by dropping begin or end of route onto another
+route.</p>
+</div>
+<div class="sect5">
+<h6 id="_detailed_functionality_routes_can_be_combined_in_the_following_ways"><a class="anchor" href="#_detailed_functionality_routes_can_be_combined_in_the_following_ways"></a>Detailed functionality: Routes can be combined in the following ways.</h6>
+<div class="paragraph">
+<p>For this discussion we will combine two routes named Route_A and
+Route_B.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>By dragging the end point of Route_A onto a point of Route_B. The
+question will be asked: "Replace this RoutePoint by the nearby
+Waypoint?" Answer "Yes" and the question appears: "(Part of) Route to be
+appended to dragged route?". Answer "Yes" and the part of Route_B from
+the connection point to the end will be appended to Route_A. Any
+waypoints of Route_B between its start and the connection point will be
+deleted. The new route is a combination of Route_A and Route_B. Route_B
+will be deleted and the new combined route will use the name and From/To
+fields of Route_A.</p>
+</li>
+<li>
+<p>By dragging the first point of Route_B onto a waypoint of Route_A (the
+connection point). The question will be asked: "Replace this RoutePoint
+by the nearby Waypoint?" Answer "Yes" and the question appears: "(Part
+of) Route to be inserted in the dragged route?". Answer "Yes" and the
+route part from the start of Route_A until the connection point will be
+inserted into the beginning of Route_B (the dragged route). Route_A will
+be deleted since its points have been inserted into the beginning of
+Route_B. Any waypoints of Route_A between the connection point and the
+end of Route_A will be deleted. The combined route will use the name and
+From/To of Route_B.</p>
+</li>
+<li>
+<p>When creating a detour within Route_A. Start a new route and drop the
+first waypoint a waypoint of Route_A. The question will be asked: "Use
+nearby waypoint?". Answer "Yes" and the question: "Insert first part of
+this route in the new route?" will appear. Answer "Yes" again and the
+part of Route_A from the start to the connection point will be inserted
+in the beginning of the new route. Continue dropping waypoints to
+complete the detour, ending by dropping a waypoint onto an existing
+waypoint of Route_A. The question will be asked: "Use nearby waypoint?".
+Answer "Yes" and the question: "Append the last part of this route to
+the new route?". Answer "Yes" and the remaining waypoints of Route_A
+will be appended to the new route. The New Route tool is still active
+and you can extend the new route from the last waypoint that was added
+from Route_A. Route making continues from the last waypoint in Route_A.
+Route_A will remain unchanged and a new route will exist with the name
+"(Unnamed Route)". Go to Route &amp; Mark Manager to name the new route and
+set its From/To descriptions.</p>
+</li>
+<li>
+<p>When making a new route or appending waypoint(s) to an existing route.
+Drop the new waypoint (not the first one) onto a point of another route,
+the question appears: "Use nearby waypoint?". Answer "Yes" and the
+question follows: "Append (part of) this route to the new route?".
+Answer "Yes" again and part of the other route from the the connection
+point to the end will be appended to the route being made. Route making
+continues at the new last point of the route.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Multiple routes can share common waypoints, such as the case of creating
+a detour route. Changing (dragging) a common waypoint effects all routes
+the waypoint is part of.</p>
+</div>
+<div class="paragraph">
+<p>In case the connection point is a part of multiple routes, the first
+visual route is used for the append or insert. In the case of multiple
+routes sharing a routepoint you wish to drag to, it is best to hide the
+other routes you do not want to use: Route &amp; Mark manager, click the
+"eye" in front of the route.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_example_1"><a class="anchor" href="#_example_1"></a>Example 1:</h5>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/combine-routes-1.png" alt="/opencpn/manual_basic/route_manager/routes/combine-routes-1" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Combine Route_A and Route_B. Both routes must be visible. Drag endpoint
+of Route_A on start of Route_B.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/combine-routes-2.png" alt="/opencpn/manual_basic/route_manager/routes/combine-routes-2" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>A popup appears; select "Yes" to confirm replacing Route_A&#8217;s last
+waypoint with Route_B&#8217;s starting waypoint.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/combine-routes-3.png" alt="/opencpn/manual_basic/route_manager/routes/combine-routes-3" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>Another popup appears; Select "Yes" to append Route_B&#8217;s waypoints to
+Route_A.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/combine-routes-4.png" alt="/opencpn/manual_basic/route_manager/routes/combine-routes-4" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>A single route remains, using the name of Route_A. Route_B will no
+longer exist. OpenCPN can handle waypoints that have the same name.</p>
+</div>
+<div class="paragraph">
+<p>Or: Drag starting waypoint of Route_B on endpoint of Route_A. Click
+"Yes" twice. Route_A&#8217;s waypoints will be pre-pended (inserted) at the
+start of Route_B. Route_A will no longer exist.</p>
+</div>
+<div class="paragraph">
+<p>Note that the name of the remaining route will remain unchanged. You
+should edit the Name and From/To fields of the remaining route to
+reflect the change.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_example_2"><a class="anchor" href="#_example_2"></a>Example 2:</h5>
+<div class="paragraph">
+<p>You have a long route that you want to keep. Call it Route_A.
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/detour-route-1.png" alt="/opencpn/manual_basic/route_manager/routes/detour-route-1" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>However, in the middle part you want to make a detour. Start making a
+new route. Click the first waypoint of the new route on the point of
+Route_A where you want to start the detour.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/detour-route-2.png" alt="/opencpn/manual_basic/route_manager/routes/detour-route-2" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>Insert the beginning part of Route_A in the new route (click "Yes").</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/detour-route-3.png" alt="/opencpn/manual_basic/route_manager/routes/detour-route-3" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Lay out your detour until you reach the point where you want to join
+Route_A again. Click on the rejoin waypoint of Route_A.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/detour-route-4.png" alt="/opencpn/manual_basic/route_manager/routes/detour-route-4" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>Append the remaining part of Route_A (click "Yes"). End making the route
+at the end of Route_A.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/routes/detour-route-5.png" alt="/opencpn/manual_basic/route_manager/routes/detour-route-5" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>The new route you made is a route on its own and will be named "(Unnamed
+Route)". Route_A will remain unchanged and the new route will be added
+to the list of routes. It shares common waypoints with Route_A. If these
+waypoints are changed, both your new route and Route_A will change.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Also depending on which routepoint you select in Route_A, to
+combine routes, other messages will appear such as:<br>
+Yes, to append the last part of the route (You have to know which way
+the route is drawn)<br>
+Yes, to append the first part of the route (You have to know which way
+the route is drawn)<br>
+If you select yes the other part of Route_A disappears and is removed.<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_example_3"><a class="anchor" href="#_example_3"></a>Example 3:</h5>
+<div class="paragraph">
+<p>Sometimes you need to create a circular route that loops back on itself,
+such as in racing on a course that&#8217;s navigated multiple times. Create a
+route that circles back on itself, then continues around the same set of
+waypoints in the required order. If not in route creation mode, select
+"Append waypoint" from the context menu (right-mouse click). At each
+waypoint after the first set, answer "Yes" to the question "Use nearby
+waypoint?" The images below show the sequence of creating such a route.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/circulateroute1.jpg" alt="/opencpn/manual_basic/route_manager/circulateroute1" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/circulateroute2.jpg" alt="/opencpn/manual_basic/route_manager/circulateroute2" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/circulateroute3.jpg" alt="/opencpn/manual_basic/route_manager/circulateroute3" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/circulateroute4.jpg" alt="/opencpn/manual_basic/route_manager/circulateroute4" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/circulateroute5.jpg" alt="/opencpn/manual_basic/route_manager/circulateroute5" width="400"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_route_planning_another_example"><a class="anchor" href="#_route_planning_another_example"></a>Route Planning - another example</h3>
+<div class="paragraph">
+<p>Note: This example used a previous version of OpenCPN but the concept
+still applies. It can be updated later.</p>
+</div>
+<div class="paragraph">
+<p>To understand the Route Properties dialog and its planning features,
+let&#8217;s imagine we plan a route from Ibiza in Balearic Islands to Sao
+Vicente in C. Verde. We will see how this feature includes specific
+options for every stage of the planning process. In the first instance,
+let&#8217;s say we plan the route at home, and we have not set a departure
+date yet. We first trace the route. When it is ready, double click in
+the route to open its Route Properties dialog. This is how it would look
+like</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/planning-1.png" alt="/opencpn/manual_basic/route_manager/planning-1" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>By default there is a plan speed of 6 knots that we can change at any
+time; The Departure Time box is still blank, so for now the table
+includes just an ETE (Expected Time En-route) column where we can check
+the time needed to arrive to every waypoint at that particular planned
+speed. The distance from the current position to the first waypoint is
+shown, but not taken into ETE calculations. That&#8217;s good for planning a
+route well in advance, before even setting a departure date. Now let&#8217;s
+imagine we plan to leave in the near future, and already have an
+intended departure date: we plan to leave Ibiza on May 23rd 2016 at
+10:00. So we first check that "Time shown as" option is set at Local@PC;
+then we enter "5/23/2016 10:00" in the Departure Time box and press
+"Enter". As we can see, the ETE data is changed to ETA (Estimated Time
+of Arrival): for the given planned speed and departure date and time, we
+are presented the date and time of arrival at every waypoint, from the
+first waypoint of the route (Ibiza). Distance to the first waypoint is
+again shown, but not taken into ETA calculations:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/planning-2.png" alt="/opencpn/manual_basic/route_manager/planning-2" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Next, let' say we are already on May 22nd, the day before to the
+intended departure day from Ibiza. We are already on board of our boat,
+berthed in Barcelona, and we are ready to leave to Ibiza and start the
+planned route from there. We connect our GPS so OpenCPN knows the
+current position, or just use the "Move the boat here" option in the
+context menu to ensure the boat is located in Barcelona. Then we can
+enter "&gt;" in the "Departure Time" box. The sign "&gt;" will mean "now" for
+OpenCPN. When we enter "&gt;" and press enter, the Route Properties dialog
+show a slightly different data: we see the ETA to every waypoint leaving
+now, at planned speed, but the calculations now include also the
+distance from the current position to the first waypoint of the route.
+That&#8217;s the difference between entering the departure time manually, and
+using "&gt;" sign. A manually typed departure date indicates we will leave
+at that moment from the first waypoint of the route; instead, "&gt;" means
+leaving "now" FROM THE CURRENT POSITION, so the distance to the first
+waypoint is included in ETA calculations. This is the screenshot</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/planning-3.png" alt="/opencpn/manual_basic/route_manager/planning-3" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Now the most interesting part, we are now sailing. Our route is now set
+as Active, we already passed the first waypoints: Ibiza, C.Palos and C.
+Gata are left behind, and we have an active next waypoint: Gibraltar.
+During the trip we just need to enter "&gt;" in the Departure Time box and
+press enter, and we&#8217;ll get the ETAs for the remaining waypoints of the
+route:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_route_handling_techniques"><a class="anchor" href="#_route_handling_techniques"></a>Route Handling Techniques</h3>
+<div class="paragraph">
+<p>Any navigation object you create is saved by OpenCPN until you delete
+it. Having a lot of navigation objects makes for a cluttered chart
+display and slows down the program.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Export unused objects to GPX files and delete them from OpenCPN.</p>
+</li>
+<li>
+<p>You can import them later when you need them.</p>
+</li>
+<li>
+<p>Create a separate GPX file for each object so you can import only the
+ones you need.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_create_routes_for_one_time_use"><a class="anchor" href="#_create_routes_for_one_time_use"></a>Create routes for one-time use</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Don&#8217;t refer to saved waypoints,</p>
+</li>
+<li>
+<p>Don&#8217;t upload the route to a GPS,</p>
+</li>
+<li>
+<p>Delete the route when you reach the end point</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Route management is pretty simple.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_create_routes_for_future_use"><a class="anchor" href="#_create_routes_for_future_use"></a>Create routes for future use</h4>
+<div class="paragraph">
+<p>If you want to save routes for future use, and want to build on a
+library of waypoints, and will upload routes to a GPS or chart plotter
+life will be simpler if you work out a <em>strategy for naming navigational
+objects and computer files</em>.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a strategy for your consideration.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Build routes in short segments that don&#8217;t duplicate other routes.</p>
+</li>
+<li>
+<p>Routes should not share non-end points with other routes.</p>
+</li>
+<li>
+<p>Route points should have meaningful, unique names related to the route
+name.</p>
+</li>
+<li>
+<p>Routes should be exported to individual GPX files so they can be
+called up individually.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example"><a class="anchor" href="#_example"></a>Example</h4>
+<div class="paragraph">
+<p>You have a home port on Little River with a channel that leads to open
+water. You like to visit Clear Cove and Muddy Harbor, each of which has
+a channel leading from open water to the final destination.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a route from LR1 to your dock. Edit the route to name the route
+points LR1, LR2, LR3, … Dock. If you make the names correspond to the
+numbered channel markers where you need to make turns it will be easier
+to recognize the physical aids to navigation the route points represent.
+Name the route LR1-DOCK. Export the route to a GPX file (LR1-DOCK.gpx).</p>
+</li>
+<li>
+<p>Create a route from CC1 to the Clear Cove anchorage. Rename the route
+points CC1, CC2, CC3, … CCn (where "n" represents the number of the last
+point). Name the route CC1-CCn and export it to CC1-CCn.gpx.</p>
+</li>
+<li>
+<p>Create a route from MH1 to the Muddy Harbor dock. Rename the route
+points MH1, MH2, MH3, … MHn (or MHDOCK). Name the route MH1-MHn and
+export it to MH1-MHn.gpx.</p>
+</li>
+<li>
+<p>Create three more routes, one from LR1 to CC1, one from LR1 to MH1,
+and one from CC1 to MH1. In each case, click on the existing route point
+and select "Yes" in response to "Use nearby waypoint?" Those routes may
+be straight lines with just a beginning and end point or they may be
+more complicated to take you around obstructions. Any obstructions
+should be identified with waypoints given meaningful, unique names.
+Again, each route should be saved to its own GPX file.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_of_the_gpx_routes"><a class="anchor" href="#_use_of_the_gpx_routes"></a>Use of the GPX Routes</h4>
+<div class="paragraph">
+<p>When you want to cruise from your home dock to the Clear Cove anchorage,
+import the LR1-DOCK.gpx file, the LR1-CC1.gpx file, and the CC1-CCn.gpx
+file. Since the LR1-DOCK route goes in the wrong direction you want to
+reverse the route. OpenCPN will offer to rename intermediate waypoint
+for you. Don&#8217;t. Remember, your numbers correspond to channel markers
+whose designations don&#8217;t change when you traverse the channel in a
+different direction.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_advantages"><a class="anchor" href="#_advantages"></a>Advantages</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Because your waypoint and route point names are unique you don&#8217;t have
+to worry that importing one route will damage another.</p>
+</li>
+<li>
+<p>You can also upload these routes to your GPS without worrying about
+duplicate waypoint names.</p>
+</li>
+<li>
+<p>Most GPS receivers build routes on waypoints. They don&#8217;t have the idea
+of route points that are not in the waypoint list.</p>
+</li>
+<li>
+<p>You need your route point names to be unique so that uploading one
+route doesn&#8217;t invalidate a route that was previously uploaded.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_opencpn_import_operation"><a class="anchor" href="#_opencpn_import_operation"></a>OpenCPN Import Operation</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>OpenCPN doesn&#8217;t care about duplicate route or waypoint names.</p>
+</li>
+<li>
+<p>When you create a route by clicking on points on the chart it names
+each route point with a number beginning with 001.</p>
+</li>
+<li>
+<p>If you create a second route which joins the first and you "use nearby
+waypoint" to join the original route you can end up with route points
+named 001, 002, 003, 004, 002.</p>
+</li>
+<li>
+<p>OpenCPN knows the two 002 points are different because they have
+different coordinates and different "guids".</p>
+</li>
+<li>
+<p>Your GPS receiver isn&#8217;t that sophisticated and it will confuse the
+two.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Read <a href="./../route_manager.html">Route &amp; Mark Manager</a> for
+more information on exporting routes to GPX files and importing routes
+from GPX files.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

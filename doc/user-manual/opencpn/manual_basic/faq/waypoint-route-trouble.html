@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/faq/waypoint-route-trouble.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../faq.html">FAQ</a></li>
+    <li><a href="waypoint-route-trouble.html">Route Questions</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/faq/waypoint-route-trouble.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_route_questions"><a class="anchor" href="#_route_questions"></a>Route Questions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_right_click_navigate_to_here_has_a_problem"><a class="anchor" href="#_right_click_navigate_to_here_has_a_problem"></a>Right-click &gt; Navigate &gt; To Here has a problem</h3>
+<div class="paragraph">
+<p>The new Active Route always disappears and I try to recreate it and it
+disappears again.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the distance to waypoint increases slightly then route manager says
+we have "arrived" and it tries to advance to the next waypoint.</p>
+</li>
+<li>
+<p>But in a simple "Navigate to here" scenario there is no next waypoint
+so it just assumes it has arrived at the destination.</p>
+</li>
+<li>
+<p>Also this problem may be due to some "noise" from the GPS position.</p>
+</li>
+<li>
+<p>Try setting <em>Options &gt; Ships &gt; Own Ship</em> in the Routes box check
+"Advance route waypoint on arrival only".</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_many_of_my_navobjects_and_waypoints_disappeared_why"><a class="anchor" href="#_many_of_my_navobjects_and_waypoints_disappeared_why"></a>Many of my Navobjects and waypoints disappeared. Why?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Try using the "V" shortcut key which shows/hides Hides/shows all
+navobjects. The only exceptions being the active route and track which
+are always drawn on the chart canvas.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_causes_spurious_waypoints_which_must_be_deleted"><a class="anchor" href="#_what_causes_spurious_waypoints_which_must_be_deleted"></a>What causes spurious waypoints which must be deleted?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Condition: Multitude of repeated waypoints, which get copied when a
+waypoint is dragged. Sometimes a route WP is shifted, two routes are
+made, one with the name, the other unnamed.</p>
+</li>
+<li>
+<p>Possible Solutions: Determine if the addition of waypoints are from
+inadvertently hitting the wrong keys on the keyboard, or the mouse.</p>
+</li>
+<li>
+<p>The other possiblity is that the navobj change file is corrupted.
+Close O and try to delete the change file In W8.1 it is found in
+C:\ProgramData\opencpn/navobj.xml.changes. Normally, after that O will
+work again.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_causes_random_waypoints_dropped_at_the_cursor"><a class="anchor" href="#_what_causes_random_waypoints_dropped_at_the_cursor"></a>What causes random waypoints dropped at the cursor</h3>
+<div class="paragraph">
+<p>One possibility is that you have the space-bar set to drop a wpt at the
+boats position. This used to be standard behavior some time ago. If this
+is a problem, shut down OpenCPN. Open the file <em>opencpn.ini</em>, find the
+line: &lt;code&gt; SpaceDropMark=1 and change it to SpaceDropMark=0 &lt;/code&gt;
+Save and restart O.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_waypoint_name_waypoint_properties_names_box_is_unchecked_quick_way_to_checked_globally"><a class="anchor" href="#_waypoint_name_waypoint_properties_names_box_is_unchecked_quick_way_to_checked_globally"></a>Waypoint Name: Waypoint properties names box is unchecked. Quick way to checked globally?</h3>
+<div class="paragraph">
+<p>So that the names show up beside each waypoint as it is placed? There is
+not a very easy way, but one at least much easier then you do now.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Run O open the routemanager and select and export the routes you want
+to change.</p>
+</li>
+<li>
+<p>Then open the exported route(s) in a editor (notebook?) and do a text
+find and replace.</p>
+</li>
+<li>
+<p>Search for "&lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;"</p>
+</li>
+<li>
+<p>and replace with " &lt;opencpn:viz_name&gt;1&lt;/opencpn:viz_name&gt;
+&lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt; "</p>
+</li>
+<li>
+<p>Close the editor, run O again and import the altered route(s).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now you should have all waypoint names visible.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_quick_way_to_change_the_scamin_value_ov50_feature_for_a_lot_of_waypoints_andor_layers"><a class="anchor" href="#_the_quick_way_to_change_the_scamin_value_ov50_feature_for_a_lot_of_waypoints_andor_layers"></a>The quick way to change the ScaMin value (ov50 feature) for a lot of waypoints and/or layers?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Export the waypoints to a file and open this file in a text editer
+(Notepad?)</p>
+</li>
+<li>
+<p>Do a search and replace on the ScaleMinvalue (Default = 2147483646) to
+anything you like.</p>
+</li>
+<li>
+<p>Save the file and import again in OpenCPN.</p>
+</li>
+<li>
+<p>This way it doesn&#8217;t take two days but just over two minutes instead</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_the_utility_or_purpose_of_the_guid_box_on_the_waypoint_extended_properties_page"><a class="anchor" href="#_what_is_the_utility_or_purpose_of_the_guid_box_on_the_waypoint_extended_properties_page"></a>What is the utility or purpose of the GUID box on the waypoint extended properties page?</h3>
+<div class="paragraph">
+<p>The GUID box is not useful for anything but knowing the GUID. Knowing
+the GUID is good to be able to find a specific object in OpenCPN&#8217;s GPX
+data when processed in a text editor. Doing things with OpenCPN&#8217;s GPX
+data in a text editor is something you normally don&#8217;t do, but when you
+do, you are most happy that you know the GUID of a certain object.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_waypoint_properties_editing_links"><a class="anchor" href="#_waypoint_properties_editing_links"></a>Waypoint Properties Editing Links</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Opening the properties page, and adding a link to a JPG-image works
+fine. If I now edit the link, the image will no longer be displayed.</p>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    - The button "Edit" changes state. You click on it to switch the links above to "edit mode", each click on any of the links opens the dialog allowing you to change it's parameters. After editing the link, you have to click on the button again and then a click on the links will again start opening whatever they link to. What will happen when you click on the link is explained in the text below the buttons and changes according to the "Edit button". If it says "Links are opened in the default browser", the linked file or internet address should open, given it exists, which gets us to..
+- Similarily, if I export a waypoint with a link to another computer, the link will not open.
+    - The link is just a link, the file you link to is NOT "included" in the waypoint. When you transfer the waypoints to another computer, for links to local files to keep working, the files you link to would have to exist on the exactly same place on your disk there. Eg. The file that on computer A is C:\MyDocuments\MyPicture.jpg would have to exist with exactly the same file name, in the exactly same folder, on the exactly same disk on computer B.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_do_i_save_many_waypoints_to_a_layer"><a class="anchor" href="#_how_do_i_save_many_waypoints_to_a_layer"></a>How do I save many waypoints to a Layer?</h3>
+<div class="paragraph">
+<p>Question: Layers is a good feature, however I need a tool to create a
+layer with many waypoints (say 200 waypoints in Fiji). I&#8217;d like create a
+layer of all visible waypoints in a chart area that I have zoomed into.
+After creating the layer, I&#8217;d like to delete them from the waypoints
+list with a single command.</p>
+</div>
+<div class="paragraph">
+<p>Answer: Using the
+<a href="./../route_manager.html">route_manager</a> Route</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Import the waypoints into the
+<a href="./../route_manager/marks_tab.html">Waypoints Tab</a>.</p>
+</li>
+<li>
+<p>Select all the Waypoints by clicking &amp; highlight the top waypoint,
+scroll to the bottom and while holding the Shift key, click to highlight
+all.</p>
+</li>
+<li>
+<p>Wait for all the waypoints to be highlighted.</p>
+</li>
+<li>
+<p>Click on the button "Export selected …".</p>
+</li>
+<li>
+<p>Browse to choose the directory to save the waypoints, &amp; name the file
+'Fiji Waypoints'.</p>
+</li>
+<li>
+<p>Click on 'Save'.</p>
+</li>
+<li>
+<p>All the waypoints will be in one .gpx file which, when put in the
+Layers folder can be displayed or not in the
+<a href="./../route_manager/layers_tab.html">Layers Tab</a> by
+toggling the 'eyeball'.</p>
+</li>
+<li>
+<p>You can also use the 'List contents' in the Layers Tab to have the
+Waypoints displayed in the Waypoints Tab.</p>
+</li>
+<li>
+<p>When done you can clear the Waypoints Tab from the Layers tab by
+clicking on 'Unlist Contents'.</p>
+</li>
+<li>
+<p>See <a href="./../route_manager/layers_tab.html">Handling
+Layers</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_activating_route_at_desired_waypoint"><a class="anchor" href="#_activating_route_at_desired_waypoint"></a>Activating route at desired waypoint?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Activate the route first. Then you can activate a specific waypoint
+within it.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_import_routes"><a class="anchor" href="#_how_to_import_routes"></a>How to import Routes?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Receive waypoints in GPX-file from an external source which are
+arranged in the intended travel sequence. However, the GPX doesn&#8217;t
+include direct routes between those waypoints.</p>
+</li>
+<li>
+<p>Import the waypoints to OpenCPN and the order in the Waypoint and
+Route Manager is correct.</p>
+</li>
+<li>
+<p>How to create a direct route between those waypoints in OpenCPN
+automatically without editing the gpx-file?</p>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>   - Best way to do this, by "forcing the text file to be generated as route points", then generate Route from track in the Route &amp; mark manager.
+   - Manual Route creation by Start route creation. (Ctrl + r or right mouse click menu), Then click first WP and accept "Use nearby WP" and so on.
+   - [[https://www.gpsbabel.org/htmldoc-development/filter_transform.html|GPS Babel]] may help you out if the handcrafting feels annoying.
+   - Use a Text Editor to form the xml list of waypoints into a route to conform to the xml format.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;CODE&gt; &lt;rte&gt;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  &lt;name&gt;test2edit&lt;/name&gt;
+  &lt;extensions&gt;
+     [DATA}
+  &lt;/extensions&gt;
+  &lt;rtept lat="57.679627692" lon="11.796954074"&gt;
+     [ROUTE DATA]
+  &lt;/rtept&gt;
+  &lt;rtept lat="57.679627692" lon="11.796954074"&gt;
+     [ROUTE DATA]
+  &lt;/rtept&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;rte&gt; &lt;/CODE&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_synchronize_routes_waypoints_marks_with_another_computer"><a class="anchor" href="#_how_to_synchronize_routes_waypoints_marks_with_another_computer"></a>How to synchronize Routes, Waypoints &amp; Marks with another computer?</h3>
+<div class="paragraph">
+<p>Three ways to synchronize:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From the <em>Route &amp; Mark Manager &gt; Route Tab</em>, select "Export all
+visible" or highlight select routes and "Export Selected" to a gpx
+folder. Then use saved gpx file to import the Routes to another
+computer. For Marks pick the Marks Tab, select "Export all visible" or
+highlight select waypoints and "Export selected" to a gpx folder. Then
+import waypoints from the other computer.</p>
+</li>
+<li>
+<p>Copy the navobj.xml file to the second computer&#8217;s navobj.xml file,
+which will overwrite your routes and marks on that computer. If you are
+connected via a network you can make a batch file to do this.</p>
+</li>
+<li>
+<p>To copy all waypoints or routes, make a copy &amp; rename the
+navobject.xml file to .gpx file and import the waypoints, routes and/or
+tracks. This does all waypoints/routes/tracks at once.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The navobj.xml file resides in the same folder as the opencpn.ini
+settings file, under the OpenCPN User folder. For windows this is
+usually "C:\programdata\opencpn\". The navobject.xml file is in in fact
+a .gpx file containing all waypoints/routes/tracks. See
+<a href="./../route_manager/navigation_data_backup.html">navigation_data_backup</a>
+for more information.</p>
+</div>
+<div class="paragraph">
+<p>Make a script or batch file to copy to navobject.xml file. Make an icon
+for the batch file on your desktop. Examples: Make an icon for the batch
+file on your desktop.</p>
+</div>
+<div class="paragraph">
+<p><strong>Copy-Routes-AB.bat</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Copy \\ComputerA-name\C:\ProgramData\opencpn\navobj.xml \\ComputerB-name\C:\ProgramData\opencpn\navobj.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Copy-Routes-BA.bat</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Copy \\ComputerB-name\C:\ProgramData\opencpn\navobj.xml \\ComputerA-name\C:\ProgramData\opencpn\navobj.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more discussion see Cruiser Forum Thread
+<a href="http://www.cruisersforum.com/forums/f134/real-time-sharing-waypoints-and-routes-on-2-devices-198409.html">Real-time
+sharing waypoints and routes</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_can_i_restore_my_route_wpts_or_track_from_backups"><a class="anchor" href="#_can_i_restore_my_route_wpts_or_track_from_backups"></a>Can I restore my Route, Wpts or Track from backups?</h3>
+<div class="paragraph">
+<p>If you did delete the original [route, wpt, track], you may still have
+an automatic backup in an older navobj.xml.[1-5] file. Don&#8217;t restart
+Opencpn again, until you retrieve the data you want. See
+<a href="./../route_manager/navigation_data_backup.html">navigation_data_backup</a>
+for more information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_why_are_routes_tracks_and_anchorwatch_not_saved"><a class="anchor" href="#_why_are_routes_tracks_and_anchorwatch_not_saved"></a>Why are Routes, Tracks and Anchorwatch not saved?</h3>
+<div class="paragraph">
+<p>This problem has been traced to shutdown management. Please see
+<a href="https://opencpn.org/flyspray/index.php?do=details&amp;task_id=2245">Tracker
+FS#2245</a> and
+<a href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:linux_shutdown">OpenCPN
+and Linux powerup/down management</a> For Windows and MAC users it is
+suggested that it is best to shutdown OpenCPN first, then shutdown the
+Computer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_split_a_route"><a class="anchor" href="#_split_a_route"></a>Split a Route</h3>
+<div class="paragraph">
+<p>Question: How to split a long route into shorter segments with each
+segment having its own start and end waypoint? When the split function
+is used, I get a new route name with an _B suffix, but it&#8217;s still
+physically "connected" to the original route (now with a _A suffix) with
+a segment line connecting the two. I want to end up with two distinct
+routes that are not connected. How do I do that? Answer: The point where
+you did split the route exists now twice as start of one and end of the
+other route. Just hide one of the two routes and move the waypoint you
+are interested in as you like. Or insert additional waypoints and delete
+the first one.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_imported_routes_how_to_remove_duplicates_easily"><a class="anchor" href="#_imported_routes_how_to_remove_duplicates_easily"></a>Imported Routes, How to remove duplicates easily?</h3>
+<div class="paragraph">
+<p>Deleted all routes in the Route &amp; Mark Manager. Found a gpx Route File
+folder under documents on my computer. Importing all gpx routes into
+Route &amp; Mark Manager from Route folder by highlighting all the routes.
+Now multiple routes with the same name show. How can I correct this.
+Importing a route at a time is tedious.</p>
+</div>
+<div class="paragraph">
+<p>I had previously exported all visible routes and had that file in my GPX
+Route folder. What happened: I imported single listed routes by
+highlighting all the files in my GPX Route folder. However I didn&#8217;t
+notice the gpx file which had a group of routes contained in it. Once I
+removed the gpx file with a group of files, the import gpx worked as
+anticipated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_send_routes_to_gps_via_usb_or_via_nmea_serial_connection"><a class="anchor" href="#_how_to_send_routes_to_gps_via_usb_or_via_nmea_serial_connection"></a>How to send routes to GPS via USB or via NMEA Serial connection</h3>
+<div class="paragraph">
+<p>There are so many GPS models that the answer is a bit complicated. A lot
+depends on which GPS model you have. OpenCPN can communicate with many
+GPS receivers via a serial connection. Some GPS receivers have a serial
+connector that can be wired to a DB-9 serial connector. Newer ones have
+a USB port that will appear like a serial connection to your computer.
+Still newer ones appear to your computer like an external drive.</p>
+</div>
+<div class="paragraph">
+<p>If your GPS receiver shows up as a serial connection on your computer
+chances are you can upload routes and waypoints directly to it from
+within OpenCPN. The GPS and OpenCPN have to be set to the same
+communication protocol. If you normally have them set to NMEA (for
+updating the OpenCPN chart display with position data from the GPS) you
+may need to change a Garmin GPS to the GRMN proprietary protocol to
+upload routes, waypoints, and tracks. If your GPS doesn&#8217;t show up as a
+serial connection you may still be able to transfer routes and waypoints
+to it outside of OpenCPN. If the GPS appears as an external drive on
+your computer try this. Use OpenCPN to export your routes and waypoints
+to a GPX file (read the User Manual section on the Route &amp; Mark Manager
+for more details). Then use your operating system to copy the GPX file
+from your hard drive to your GPS. If that doesn&#8217;t work, try GPSBabel or
+EasyGPS for the transfer.</p>
+</div>
+<div class="paragraph">
+<p>Depending on your GPS model and the way the route was created in OpenCPN
+you may wind up with a route on your GPS or just a list of waypoints.
+The route points may or may not appear as waypoints on the GPS.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Garmin has a program called Homeport which connects to most of their
+small GPSmap and Plotters which will upload/download waypoints and
+routes. I believe it will also import gpx routes.</p>
+</li>
+<li>
+<p><a href="http://www.easygps.com/">EasyGPS</a> is a free program that allows you to
+transfer routes, waypoints, and tracks between your Windows computer and
+your Garmin, Magellan, or Lowrance GPS.</p>
+</li>
+<li>
+<p><a href="https://www.gpsbabel.org/">GPSBabel</a> is another free program that
+allows you to transfer data between your computer and your GPS. It runs
+on Windows, Mac, and Linux operating systems and supports a wide range
+of GPS models.</p>
+</li>
+<li>
+<p>There are also some helpful notes in the manual.</p>
+</li>
+<li>
+<p><a href="./../route_manager.html">route_manager</a></p>
+</li>
+<li>
+<p><a href="./../route_manager/navigation_sharing.html#_sending_routes_and_marks_to_a_gps-equipped_chartplotter">Sending
+Routes and Waypoints to a GPS-equipped Chartplotter</a></p>
+</li>
+<li>
+<p><a href="/opencpn/supplementary_hardware/gps_devices.html">Hardware GPS Devices</a></p>
+</li>
+<li>
+<p>The oBabel plugin uses GPSBabel to transfer routes without leaving
+OpenCPN.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are also some good Cruiser Forum threads about Garmin</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.cruisersforum.com/forums/f134/waypoints-uploads-opencpn-to-garmin-128119.html">Waypoints
+Uploads OpenCPN to Garmin</a></p>
+</li>
+<li>
+<p><a href="http://www.cruisersforum.com/forums/f134/route-and-waypoint-transfer-to-garmin-76xx-chartplotters-193386.html">Reload
+this Page Route and waypoint transfer to Garmin 76xx chartplotters</a></p>
+</li>
+<li>
+<p><a href="http://www.cruisersforum.com/forums/f134/waypoints-uploads-opencpn-to-garmin-128119.html">Waypoints
+Uploads OpenCPN to Garmin</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_i_converted_a_track_accidentally_to_a_route_can_i_get_the_track_back"><a class="anchor" href="#_i_converted_a_track_accidentally_to_a_route_can_i_get_the_track_back"></a>I converted a Track accidentally to a Route. Can I get the track back?</h3>
+<div class="paragraph">
+<p>This depends on what "a bit ago" actually is - (if you have since
+started OpenCPN more than 5 times, every time did some change to the
+navigation objects and did not change the default settings for backups,
+you don&#8217;t have it anymore) - If you do not have that backup anymore, you
+may still export the route as GPX file which you may later edit in a
+text editor and make a track again (But you already have lost some
+precision as during the conversion to route the points recorded in the
+original track are interpolated to limit their total number) - Later:
+your track seems to still be there as the yellow highlight it has seems
+to be visible, so you should be good just deleting the route.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_selected_tracks_only_last_track_appears_to_be_selected_in_ge"><a class="anchor" href="#_export_selected_tracks_only_last_track_appears_to_be_selected_in_ge"></a>Export Selected Tracks, only last track appears to be selected in GE?</h3>
+<div class="paragraph">
+<p>When you export multiple routes or tracks in one operation they are all
+written to a single GPX file. That might be why you think only the last
+one is being exported. When you import the GPX file all the routes or
+tracks it contains will be restored. Note: In GE the Track looks
+strange, although all are marked visible, only one track at a time is
+shown.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_join_or_combine_two_or_more_routes_into_a_single_route"><a class="anchor" href="#_how_to_join_or_combine_two_or_more_routes_into_a_single_route"></a>How to join or combine two or more Routes into a Single Route?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mark the routes in the Route&amp;Mark Manager, recording the order.</p>
+</li>
+<li>
+<p>Then export each route as a gpx file.</p>
+</li>
+<li>
+<p>Open the first file in a text editor.</p>
+</li>
+<li>
+<p>Open the next file in the text editor and copy the code between &lt;rte&gt;
+… &lt;/rte&gt; not including them.</p>
+</li>
+<li>
+<p>Then paste the code directly before the &lt;/rte&gt; at the end of the first
+file.</p>
+</li>
+<li>
+<p>Continue until done. Save the first file.</p>
+</li>
+<li>
+<p>Import the gpx file with a new name.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_use_xbox_with_opencpn"><a class="anchor" href="#_how_to_use_xbox_with_opencpn"></a>How to use XBox with OpenCPN</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cruisersforum.com/forums/f134/how-to-use-a-x-box-controller-with-opencpn-on-raspbery-pi-265836.html#post3641977">CF
+Thread Link How-to-use-a-x-box-controller-with-opencpn-on-raspbery-pi</a></p>
+</li>
+<li>
+<p><a href="https://lifepart2.info/the-boat/how-to-use-a-x-box-controller-with-opencpn">Using
+a wired x-box 360 controller. Well&#44; actually&#44; we are using a
+Logitech F310</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_can_i_import_seaclear_routes_and_waypoints_into_opencpn"><a class="anchor" href="#_can_i_import_seaclear_routes_and_waypoints_into_opencpn"></a>Can I import SeaClear routes and waypoints into OpenCPN?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Yes. I had originally created and maintained all my routes and
+waypoints in SeaClear, exported them, loaded them into GPS Utility (for
+Windows) and saved them as text files.</p>
+</li>
+<li>
+<p>To import into OpenCPN I opened all my text files (routes and
+waypoints) with GPSUtility, saved that out as one big gpx file, and
+loaded it into OpenCPN. Works like a champ.</p>
+</li>
+<li>
+<p>I&#8217;ve edited them and saved them back out as GPX files with no trouble.</p>
+</li>
+<li>
+<p>Individual routes can be edited and saved in appropriately named GPX
+files.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_can_i_import_maxsea_waypoints_and_tracks"><a class="anchor" href="#_can_i_import_maxsea_waypoints_and_tracks"></a>Can I import Maxsea Waypoints and Tracks?</h3>
+<div class="paragraph">
+<p>No, not directly, they are in different formats. But you can convert
+them with the GPS Utility Program. Here&#8217;s an older writeup
+<a href="http://yachtvalhalla.net/navigation/routeandtrackconversion.htm">Conversion
+of MaxSea Routes and Tracks</a> Use an external tool to convert the
+proprietary Maxsea data to the open GPX format. Either the free
+<a href="http://www.gdayii.ca/Downloads.php">C2GPXKML</a> or shareware
+<a href="http://www.gpsu.co.uk">GPSUtility</a> could help. Also if you have access to
+Maxsea, export all waypoints as Gpx and OpenCPN will read the gpx file.
+If different color waypoints is used, export them separately and and in
+a text editor change icon name to an icon used in OpenCPN.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_can_wpl_nema_waypoints_be_imported"><a class="anchor" href="#_can_wpl_nema_waypoints_be_imported"></a>Can WPL Nema waypoints be imported?</h3>
+<div class="paragraph">
+<p>See
+<a href="https://www.cruisersforum.com/forums/f134/adding-waypoint-from-outside-opencpn-243879-2.html#post3298890">CF
+Adding waypoint from outside OpenCPN</a></p>
+</div>
+<div class="paragraph">
+<p>Yes the NMEA WPL can be handled by OCPN but not the way you may want.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>There is a "Treat WPL sentences as APRS position reports" checkbox to
+enable this functionality in Toolbox &#8594; Ships &#8594; AIS Targets</p>
+</li>
+<li>
+<p>It can&#8217;t be used to create marks in OCPN like when sent to some
+plotters.</p>
+</li>
+<li>
+<p>It can though be used to create ARPA alike targets. One condition is
+that one variable in OpenCPN config (.ini) file is set to thrue;</p>
+</li>
+<li>
+<p>In [Settings/AIS] bWplIsAprsPositionReport=1</p>
+</li>
+<li>
+<p>When the following messages the result is as of attached picture. The
+ten "targets" will be handled as AIS targets. That&#8217;s marked as first
+undefined and finally deleted using the same time settings as for AIS.</p>
+</li>
+<li>
+<p>If not updated the WP number one target is drawn instead.</p>
+</li>
+<li>
+<p>See CF link and pict 2 and the Python script attached.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_save_waypoints_with_date_and_time"><a class="anchor" href="#_how_to_save_waypoints_with_date_and_time"></a>How to save waypoints with date and time</h3>
+<div class="paragraph">
+<p>Detail: I make videos of the seabed and I would like to be able to drop
+a mark on the gps track when the camera hit the bottom and save this
+marker with the date and time. For now I can use the Man Over Board
+marker, but I don&#8217;t think that&#8217;s how it should be used.</p>
+</div>
+<div class="paragraph">
+<p>Answer: You can drop waypoint marks using just the spacebar. No popup
+appears if you are normal zoom levels. OpenCPN records the mark and
+continues. Fishermen use this feature to mark locations of gear they
+drop. The
+<a href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:user_interface:keyboard_shortcuts">User
+Manual describes this feature</a></p>
+</div>
+<div class="paragraph">
+<p>The marks created using the spacebar are saved in a file called
+"navobj.xml". Here is how one looks:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;wpt lat="37.838435000" lon="-122.656498333"&gt;
+ &lt;time&gt;2023-03-10T06:01:33Z&lt;/time&gt;
+ &lt;sym&gt;triangle&lt;/sym&gt;
+ &lt;type&gt;WPT&lt;/type&gt;
+ &lt;extensions&gt;
+  &lt;opencpn:guid&gt;64d5ffff-1836-457e-a85f-ba7b5323ffff&lt;/opencpn:guid&gt;
+  &lt;opencpn:viz_name&gt;1&lt;/opencpn:viz_name&gt;
+  &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+  &lt;opencpn:waypoint_range_rings visible="false" number="0" step="1" units="0" colour="#FF0000" /&gt;
+  &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+  &lt;opencpn:action&gt;add&lt;/opencpn:action&gt;
+ &lt;/extensions&gt;
+&lt;/wpt&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can see the GPS coordinates at the moment the spacebar was pressed
+along with the computer UTC time. If the computer time is accurate, then
+so will the time recorded with the waypoint.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_why_doesnt_anchor_watch_appear_in_the_right_click_menu"><a class="anchor" href="#_why_doesnt_anchor_watch_appear_in_the_right_click_menu"></a>Why doesn&#8217;t Anchor Watch appear in the right click menu?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Are you connected to a GPS Signal?</p>
+</li>
+<li>
+<p>Have you zoomed in close enough?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OpenCPN/OpenCPN/pull/2571" class="bare">https://github.com/OpenCPN/OpenCPN/pull/2571</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

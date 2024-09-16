@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/route_manager/use_gpx_files.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../route_manager.html">Manage Routes and Marks</a></li>
+    <li><a href="use_gpx_files.html">Use GPX Files</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/route_manager/use_gpx_files.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_use_gpx_files"><a class="anchor" href="#_use_gpx_files"></a>Use GPX Files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>GPS Exchange Format (GPX) is a file format that enables devices to
+transfer GPS data (marks, waypoints, routes and tracks) with one
+another. GPX files are text files formatted using Extensible Markup
+Language (XML). Modern commercial chartplotters such as Garmin,
+Raymarine, Navico (B&amp;G, Simrad, Lowrance), Furuno and many applications
+such as Navionics, Coastal Explorer, PredictWind, and LuckGrib support
+GPX format. This allows route creation and editing in offline tools
+(manual or automatic weather routing), followed by a transfer to the
+boat network for use during navigation. It also allows sharing of
+routing or track information between users.</p>
+</div>
+<div class="paragraph">
+<p>Note: OpenCPN provides a feature for backing up navigation data. See
+<em><a href="./../route_manager/navigation_data_backup.html">Navigation
+Data Backup</a></em>. The most current backup file is named "navobj.xml",
+located in the OpenCPN conf/ini folder. NavObj files may be imported in
+the same manner as any gpx file, by selecting the <span class="underline">Import
+GPX</span> button in the <span class="underline">Route &amp; Mark Manager</span>.</p>
+</div>
+<div class="sect2">
+<h3 id="_tracks_routes_waypoints_marks_in_opencpn"><a class="anchor" href="#_tracks_routes_waypoints_marks_in_opencpn"></a>Tracks, Routes, Waypoints &amp; Marks in OpenCPN</h3>
+<div class="paragraph">
+<p>A <strong>track</strong> is a record of the vessel&#8217;s position as it proceeds. A trail
+is left behind the vessel on the chart display. The record includes
+distance, bearing, latitude, longitude, speed and a timestamp for each
+<strong>trackpoint</strong> recorded. OpenCPN can create them automatically for you
+when you are sailing.</p>
+</div>
+<div class="paragraph">
+<p>A <strong>route</strong> is a predefined path or passage from one point to another.
+Routes generally use a series of Marks or Waypoints at each course
+change.</p>
+</div>
+<div class="paragraph">
+<p>From tracks, you may create and save <strong>routes</strong> for making the same trip
+again sometime. Routes may also be directly created in the map canvas
+with OpenCPN&#8217;s <em><a href="./../create_routes.html">Create Routes</a></em>
+.<br>
+You may also create or manipulate routes with external (planning) tools.</p>
+</div>
+<div class="paragraph">
+<p><strong>Marks</strong> are user defined markers showing points of interest, which can
+serve many purposes. They could mark good anchorages, fishing spots, new
+navigational markers (wrecks, channel markers) or anything else of
+interest,</p>
+</div>
+<div class="paragraph">
+<p><strong>Waypoints</strong> are an element in gpx files that contain all the information
+necessary to define a point on a map, along with supporting information
+(symbol, name, description, and optional extension information).</p>
+</div>
+<div class="paragraph">
+<p><strong>OpenCPN</strong> saves tracks, routes and mark in the navobj.xml using the
+following GPX elements: &lt;rte&gt; and &lt;rtept&gt; for routes and waypoints,
+&lt;trk&gt; and &lt;trkpt&gt; for tracks and points in a track, and &lt;wpt&gt; for marks.</p>
+</div>
+<div class="paragraph">
+<p>Routes, tracks, waypoints and marks are imported, exported and saved as
+gpx (GPS Exchange Format) files, a specific XML format. OpenCPN uses the
+Garmin GPS Extensions V3 schema.</p>
+</div>
+<div class="paragraph">
+<p>See <em><a href="./../terminology/marks_waypoints.html">Terminology
+&gt; Marks and Waypoints</a></em> Technical: Routes, Marks, GPX and GUID.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gpx_file_structure"><a class="anchor" href="#_gpx_file_structure"></a>GPX File Structure</h3>
+<div class="paragraph">
+<p>Here is a generalized gpx file structure. It is important to understand
+that the Body Content can contain many elements, such as a series of
+waypoints, or all the navigation markers in an area, etc.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;?xml version="1.0"?&gt;
+- Header
+- Body  (e.g. a route)
+  - Body Extensions (for additional route properties)
+  - Body Content (e.g. route waypoints, aka route points)
+    - Body Content Extensions (for additional waypoint properties)</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_header_mandatory"><a class="anchor" href="#_header_mandatory"></a>Header (mandatory)</h4>
+<div class="paragraph">
+<p>The header contains information about the gpx file&#8217;s structure for the
+program. The header information section is mandatory. When developing
+your own layers, you can copy an OpenCPN gpx file header with the
+necessary information and “reuse” it for other layers you may produce.
+Simply use <span class="underline">Route &amp; Mark Manager&#8594;Export selected</span> and have
+a look at it in a text editor.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;gpx version="1.1" creator="OpenCPN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3"
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
+http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd"
+xmlns:opencpn="http://www.opencpn.org"&gt;
+//Body goes here//
+&lt;/gpx&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_body_route"><a class="anchor" href="#_body_route"></a>Body - Route</h4>
+<div class="paragraph">
+<p>In this Route file, the body contains the &lt;rte&gt; element, with its own
+extensions, then the content of the route which comprises a series of
+route waypoints (&lt;rtept&gt;). Splitting or joining routes is relatively
+easy to do, with the XML text.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;rte&gt;
+    &lt;name&gt;Test Route&lt;/name&gt;
+    &lt;desc&gt;My test route&lt;/desc&gt;
+    //Route Extensions goes here//
+    &lt;rtept lat="26.261414676" lon="-77.388078481"&gt;
+    //Route Point Extensions go here//
+    &lt;/rtept&gt;
+    //additional Route Points, as necessary, go here//
+&lt;/rte&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_body_route_extensions"><a class="anchor" href="#_body_route_extensions"></a>Body - Route Extensions</h4>
+<div class="paragraph">
+<p>The extensions to the Route file are specific to OpenCPN and are not
+part of the Garmin schema.</p>
+</div>
+<div class="paragraph">
+<p><em>Note: GUID (Globally Unique Identfier) - it should not be copied and
+reused as it uniquely identifies an object (in this case this route).
+GUIDs are created by the program from a combination of current time and
+current internet location. It is entirely possible to create your own by
+incrementing (in hexadecimal) an existing GUID.</em></p>
+</div>
+<div class="paragraph">
+<p><em>Note: OpenCPN will ignore GUID during import of a gpx file. Instead, it
+uses the Name and the position values (lat/lon) to determine
+uniqueness.</em></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;extensions&gt;
+    &lt;opencpn:guid&gt;29b00000-0298-4378-bb6b-2f3c7aa4ffff&lt;/opencpn:guid&gt;
+    &lt;opencpn:viz&gt;1&lt;/opencpn:viz&gt;
+    &lt;opencpn:start&gt;Key Biscayne&lt;/opencpn:start&gt;
+    &lt;opencpn:end&gt;Miami&lt;/opencpn:end&gt;
+    &lt;opencpn:planned_speed&gt;6.00&lt;/opencpn:planned_speed&gt;
+    &lt;opencpn:planned_departure&gt;2024-05-27T21:59:11Z&lt;/opencpn:planned_departure&gt;
+    &lt;opencpn:time_display&gt;PC&lt;/opencpn:time_display&gt;
+    &lt;gpxx:RouteExtension&gt;
+        &lt;gpxx:IsAutoNamed&gt;false&lt;/gpxx:IsAutoNamed&gt;
+    &lt;/gpxx:RouteExtension&gt;
+&lt;/extensions&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_body_content_route_point"><a class="anchor" href="#_body_content_route_point"></a>Body Content - Route Point</h4>
+<div class="paragraph">
+<p>The Route Point element is a waypoint with position, name, symbol
+properties. Route Points are a specific instance of Waypoint type.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;rtept lat="26.261414676" lon="-77.388078481"&gt;
+    &lt;time&gt;2024-05-27T21:51:52Z&lt;/time&gt;
+    &lt;name&gt;001&lt;/name&gt;
+    &lt;sym&gt;diamond&lt;/sym&gt;
+    &lt;type&gt;WPT&lt;/type&gt;
+    //Route Point extensions go here//
+&lt;/rtept&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_body_content_extensions_route_point_extensions"><a class="anchor" href="#_body_content_extensions_route_point_extensions"></a>Body Content Extensions - Route Point Extensions</h4>
+<div class="paragraph">
+<p>Each Route waypoint in OpenCPN gpx files has additional properties that
+are stored in the Extensions. These properties are editable in the
+right-click menu Waypoint Properties&gt;Extended as long as the waypoint is
+not in a Layer.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;extensions&gt;
+    &lt;opencpn:guid&gt;434dffff-57b0-45e6-85dd-71e62ca70000&lt;/opencpn:guid&gt;
+    &lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;
+    &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+    &lt;opencpn:waypoint_range_rings visible="false" number="0" step="1" units="0" colour="#FF0000" /&gt;
+    &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+&lt;/extensions&gt;</pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marks_or_points_of_interest"><a class="anchor" href="#_marks_or_points_of_interest"></a>Marks (or Points Of Interest)</h3>
+<div class="paragraph">
+<p>Overview <em><a href="./../route_manager/use_marks.html">Use
+Marks</a></em>.</p>
+</div>
+<div class="paragraph">
+<p>Marks are also used to represent sailing-related information like
+position of wrecks, buoys, bridges, locks and anchoring or mooring spots
+and could also contain information about less "sailing related"
+information such as a fueling station or a diving spot. An exported Mark
+will appear in the gpx file as element &lt;wpt&gt;:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;gpx version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1"&gt;
+    &lt;wpt lat="53.162153333" lon="5.931996667"&gt;
+        &lt;time&gt;2024-06-02T11:25:51Z&lt;/time&gt;
+        &lt;name&gt;Pier Pander
+        (tel: 31-1234567890)&lt;/name&gt;
+        &lt;desc&gt;Fuel Station Pier Pander
+        Different kinds of fuel and water.&lt;/desc&gt;
+        &lt;sym&gt;Service-Fuel-Pump-Diesel&lt;/sym&gt;
+        &lt;type&gt;WPT&lt;/type&gt;
+    &lt;/wpt&gt;
+&lt;/gpx&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each <em>mark</em> has supporting "connected" data, including coordinates,
+symbol, name, and text description.</p>
+</div>
+<div class="paragraph">
+<p>The coordinates of the <em>mark</em> (latitude and longitude) are expressed in
+decimal degrees using the WGS 84 datum.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>lat="53.162153333" lon="5.931996667"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Every <em>mark</em> has a symbol connected to it, to be placed on the map at
+the coordinates.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;sym&gt;Service-Fuel-Pump-Diesel&lt;/sym&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Besides the default symbol set (see <span class="underline">Mark
+Properties&#8594;Icon</span>), user-defined symbols may be created and stored in
+the UserIcons folder located under the folder where OpenCPN keeps its
+conf/ini file. See
+<em><a href="/opencpn/manual_advanced/program/usericon.html">Advanced User Manual -
+Icons Library - Use your own Icons</a></em> for more information.<br>
+If OpenCPN cannot find an icon file with the name you put in the gpx
+file, OpenCPN will substitute a circle with a dot in the middle.<br>
+If you distribute your gpx file containing custom symbol names to other
+users, please distribute the associated icon files WITH the gpx file.<br>
+When naming custom symbols, please think of a "unique" name in doing so,
+as more producers may have the same idea. For example, layers produced
+by the Openwaterkaart-project use symbols with names starting with <strong>ow_</strong>
+so please use another unique combination for your own to prevent your
+symbols being overwritten by (or overwrite) others when using layers of
+different suppliers.</p>
+</div>
+<div class="paragraph">
+<p>OpenCPN displays a name beside the Symbol. As an example, marks of
+fueling stations, you could have the name of the station and/or the
+phone number in that text. For the users of that gpx-file, the necessary
+information would be visible directly on the map. The text displayed can
+be multiline, simply by inserting new line character in the gpx file at
+the appropriate spot with an <span class="underline">Enter</span> key.</p>
+</div>
+<div class="paragraph">
+<p>In OpenCPN Layers, you can select if the mark name is visible or not by
+checking the <span class="underline">Show WPT Names</span> check box in
+<span class="underline">Route &amp; Mark Manager&#8594;Layers</span>.</p>
+</div>
+<div class="paragraph">
+<p>Beside the name displayed on the map, you can also create a description
+for a mark. This text is NOT displayed on the map, but users can view
+the properties of the mark to see it. In the example of the fueling
+station, you could add what is available at the fueling station, e.g.
+water, diesel, gas, etc.</p>
+</div>
+<div class="sect3">
+<h4 id="_optional_mark_extensions"><a class="anchor" href="#_optional_mark_extensions"></a>Optional Mark Extensions</h4>
+<div class="paragraph">
+<p>There is a way to attach some extra functionality to the marks, either
+through Route &amp; Mark Manager&#8594;Marks_Properties&#8594;Extended, or by directly
+editing the gpx file. These are OpenCPN-specific and are added to the
+standard mark properties in the form of extensions. Again, the GUID must
+be unique to each mark, unless the mark is being imported.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;extensions&gt;
+    &lt;opencpn:guid&gt;3b480000-2b02-4517-b442-48dc5e35ffff&lt;/opencpn:guid&gt;
+    &lt;opencpn:viz_name&gt;1&lt;/opencpn:viz_name&gt;
+    &lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;
+    &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+    &lt;opencpn:waypoint_range_rings visible="true" number="2" step="5" units="1" colour="#FF0000" /&gt;
+    &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+    &lt;opencpn:tidestation&gt;Pelican Harbour, Abaco Island, Bahamas&lt;/opencpn:tidestation&gt;
+&lt;/extensions&gt;</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_mark_range_rings"><a class="anchor" href="#_mark_range_rings"></a>Mark Range Rings</h5>
+<div class="paragraph">
+<p>With this extension you can put colored circles around the specific
+waypoint to make it more visible compared to other waypoints.</p>
+</div>
+<div class="paragraph">
+<p>With the <strong>visible="true"</strong> part you can switch <strong>"on"</strong> this extension.<br>
+With <strong>number="2"</strong> you create two circles around the waypoint with the
+color identified in <strong>colour="#FFFFFF"</strong>.<br>
+With <strong>units="0"</strong>, the ring size units are nautical miles, or <strong>="1"</strong> for
+kilometers. With <strong>step="1"</strong>, the there is one of the units between the
+rings, e.g. 1 km.</p>
+</div>
+<div class="paragraph">
+<p>Hexadecimal color values may be evaluated at
+<a href="https://htmlcolors.com/color-converter">Color Converter</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_dynamic_scaling"><a class="anchor" href="#_dynamic_scaling"></a>Dynamic Scaling</h5>
+<div class="paragraph">
+<p>Waypoints can be "dynamically" shown or hidden with this extension. Use
+<strong>UseScale="true"</strong> you can switch <strong>"on"</strong> this extension.<br>
+This example shows the waypoint up to scale 1:100,000 (shown in the
+lower right corner of OpenCPN).<br>
+Above a scale of 1:100,000, set by <strong>ScaleMin="100000"</strong>, the waypoint is
+suppressed and thus not visible on the map.<br>
+Apparently only ScaleMin in this extension is used by OpenCPN as the
+"upper" scale-limit for visibility of the waypoint.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tide_stations"><a class="anchor" href="#_tide_stations"></a>Tide Stations</h5>
+<div class="paragraph">
+<p>You may add a local tide station to any waypoint. Users can then check
+to tide status in
+<span class="underline">right-click&#8594;Waypoint&#8594;Properties&#8594;Extended&#8594;Tide Station</span>
+by selecting the icon.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/route-mark-gpx-tidestation.jpg" alt="/opencpn/manual_basic/route_manager/route-mark-gpx-tidestation" width="400"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_multiple_marks"><a class="anchor" href="#_example_multiple_marks"></a>Example - Multiple Marks</h3>
+<div class="paragraph">
+<p>The following is a set of marks (&lt;wpt&gt;) marking the locations of cell
+towers on Long Island, Bahamas. Each cell tower has a range ring of 10
+nm showing an approximate coverage area for the tower.</p>
+</div>
+<div class="paragraph">
+<p>The full gpx file may be downloaded here:
+<span class="image"><img src="../../_images/opencpn/manual_basic/route_manager/longislandbs_celltowers.gpx.zip" alt="Link to gpx file (remove .zip extension)"></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;gpx version="1.1" creator="OpenCPN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd" xmlns:opencpn="http://www.opencpn.org"&gt;
+  &lt;wpt lat="23.658923333" lon="-75.317818333"&gt;
+    &lt;time&gt;2021-03-15T01:10:20Z&lt;/time&gt;
+    &lt;name&gt;BTC-LI-01&lt;/name&gt;
+    &lt;desc&gt;Cell Tower&lt;/desc&gt;
+    &lt;sym&gt;boundary&lt;/sym&gt;
+    &lt;type&gt;WPT&lt;/type&gt;
+    &lt;extensions&gt;
+      &lt;opencpn:guid&gt;1a780000-8c07-42e9-887f-35322e480000&lt;/opencpn:guid&gt;
+      &lt;opencpn:viz_name&gt;1&lt;/opencpn:viz_name&gt;
+      &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+      &lt;opencpn:waypoint_range_rings visible="true" number="1" step="10" units="0" colour="#80FFFF" /&gt;
+      &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+    &lt;/extensions&gt;
+  &lt;/wpt&gt;
+  |
+  ... content removed ...
+  |
+  &lt;wpt lat="22.904406000" lon="-74.874086000"&gt;
+    &lt;time&gt;2021-03-15T01:17:23Z&lt;/time&gt;
+    &lt;name&gt;BTC-LI-11&lt;/name&gt;
+    &lt;desc&gt;Cell Tower&lt;/desc&gt;
+    &lt;sym&gt;boundary&lt;/sym&gt;
+    &lt;type&gt;WPT&lt;/type&gt;
+    &lt;extensions&gt;
+      &lt;opencpn:guid&gt;2a050000-7ba0-48f0-9592-f55b18280000&lt;/opencpn:guid&gt;
+      &lt;opencpn:viz_name&gt;1&lt;/opencpn:viz_name&gt;
+      &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+      &lt;opencpn:waypoint_range_rings visible="true" number="1" step="10" units="0" colour="#80FFFF" /&gt;
+      &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+    &lt;/extensions&gt;
+  &lt;/wpt&gt;
+&lt;/gpx&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_route"><a class="anchor" href="#_example_route"></a>Example - Route</h3>
+<div class="paragraph">
+<p>This gpx file shows how Route Points (&lt;rtept&gt;) are used to show show a
+series of <span class="underline">connected</span> waypoints.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;gpx version="1.1" creator="OpenCPN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd" xmlns:opencpn="http://www.opencpn.org"&gt;
+  &lt;rte&gt;
+    &lt;name&gt;Marsh Hbr to Man-o-war&lt;/name&gt;
+    &lt;extensions&gt;
+      &lt;opencpn:guid&gt;56fbffff-c9a7-4ae3-ac6f-22704b2fffff&lt;/opencpn:guid&gt;
+      &lt;opencpn:viz&gt;1&lt;/opencpn:viz&gt;
+      &lt;opencpn:start&gt;Marsh Harbor&lt;/opencpn:start&gt;
+      &lt;opencpn:end&gt;Man-o-War Cay&lt;/opencpn:end&gt;
+      &lt;opencpn:planned_speed&gt;6.00&lt;/opencpn:planned_speed&gt;
+      &lt;opencpn:planned_departure&gt;2024-06-04T13:41:43Z&lt;/opencpn:planned_departure&gt;
+      &lt;opencpn:time_display&gt;PC&lt;/opencpn:time_display&gt;
+      &lt;gpxx:RouteExtension&gt;
+        &lt;gpxx:IsAutoNamed&gt;false&lt;/gpxx:IsAutoNamed&gt;
+        &lt;gpxx:DisplayColor&gt;Magenta&lt;/gpxx:DisplayColor&gt;
+      &lt;/gpxx:RouteExtension&gt;
+    &lt;/extensions&gt;
+    &lt;rtept lat="26.542662105" lon="-77.062456186"&gt;
+      &lt;time&gt;2024-06-04T13:40:56Z&lt;/time&gt;
+      &lt;name&gt;001&lt;/name&gt;
+      &lt;sym&gt;diamond&lt;/sym&gt;
+      &lt;type&gt;WPT&lt;/type&gt;
+      &lt;extensions&gt;
+        &lt;opencpn:guid&gt;0ba10000-fd65-43f9-aa33-152a682dffff&lt;/opencpn:guid&gt;
+        &lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;
+        &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+        &lt;opencpn:waypoint_range_rings visible="false" number="0" step="1" units="0" colour="#FF0000" /&gt;
+        &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+      &lt;/extensions&gt;
+    &lt;/rtept&gt;
+    &lt;rtept lat="26.548755516" lon="-77.070718273"&gt;
+      &lt;time&gt;2024-06-04T13:40:59Z&lt;/time&gt;
+      &lt;name&gt;002&lt;/name&gt;
+      &lt;sym&gt;diamond&lt;/sym&gt;
+      &lt;type&gt;WPT&lt;/type&gt;
+      &lt;extensions&gt;
+        &lt;opencpn:guid&gt;6566ffff-8801-4127-a55c-c2e5737dffff&lt;/opencpn:guid&gt;
+        &lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;
+        &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+        &lt;opencpn:waypoint_range_rings visible="false" number="0" step="1" units="0" colour="#FF0000" /&gt;
+        &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+      &lt;/extensions&gt;
+    &lt;/rtept&gt;
+    &lt;rtept lat="26.555638424" lon="-77.070087579"&gt;
+      &lt;time&gt;2024-06-04T13:41:01Z&lt;/time&gt;
+      &lt;name&gt;003&lt;/name&gt;
+      &lt;sym&gt;diamond&lt;/sym&gt;
+      &lt;type&gt;WPT&lt;/type&gt;
+      &lt;extensions&gt;
+        &lt;opencpn:guid&gt;0f540000-76a4-47b3-a8ae-bb010bee0000&lt;/opencpn:guid&gt;
+        &lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;
+        &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+        &lt;opencpn:waypoint_range_rings visible="false" number="0" step="1" units="0" colour="#FF0000" /&gt;
+        &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+      &lt;/extensions&gt;
+    &lt;/rtept&gt;
+    &lt;rtept lat="26.589712317" lon="-77.006601234"&gt;
+      &lt;time&gt;2024-06-04T13:41:15Z&lt;/time&gt;
+      &lt;name&gt;004&lt;/name&gt;
+      &lt;sym&gt;diamond&lt;/sym&gt;
+      &lt;type&gt;WPT&lt;/type&gt;
+      &lt;extensions&gt;
+        &lt;opencpn:guid&gt;197b0000-c9e1-4400-9ee8-68fe30650000&lt;/opencpn:guid&gt;
+        &lt;opencpn:auto_name&gt;1&lt;/opencpn:auto_name&gt;
+        &lt;opencpn:arrival_radius&gt;0.050&lt;/opencpn:arrival_radius&gt;
+        &lt;opencpn:waypoint_range_rings visible="false" number="0" step="1" units="0" colour="#FF0000" /&gt;
+        &lt;opencpn:scale_min_max UseScale="false" ScaleMin="2147483646" ScaleMax="0" /&gt;
+      &lt;/extensions&gt;
+    &lt;/rtept&gt;
+  &lt;/rte&gt;
+&lt;/gpx&gt;</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_optional_route_extensions"><a class="anchor" href="#_optional_route_extensions"></a>Optional Route Extensions</h4>
+<div class="sect4">
+<h5 id="_route_and_track_colors"><a class="anchor" href="#_route_and_track_colors"></a>Route and Track Colors</h5>
+<div class="paragraph">
+<p>For route and track colors, OpenCPN follows this schema:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;rte&gt;
+  &lt;extensions&gt;
+    &lt;gpxx:RouteExtension&gt;
+      &lt;gpxx:DisplayColor&gt;Cyan&lt;/gpxx:DisplayColor&gt;
+    &lt;/gpxx:RouteExtension&gt;
+  &lt;/extensions&gt;
+&lt;/rte&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that hexadecimal colors are not allowed in this extension.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gpx_files_as_layers"><a class="anchor" href="#_gpx_files_as_layers"></a>GPX Files as Layers</h3>
+<div class="paragraph">
+<p>Gpx files that are not intended to be changed further may be placed in
+the Layers folder, a sub-folder of the folder containing the config/ini
+information of OpenCPN.<br>
+When placed in this specific folder, the layer is persistent (does not
+have to be imported in OpenCPN each startup). The name of the layer is
+determined from the filename of the gpx-file.<br>
+<em>NOTE: new files in the Layers folder will only be used when OpenCPN is
+restarted.</em></p>
+</div>
+<div class="paragraph">
+<p>So if you were to save the example above to a layer and call it "Fuel
+Stations Nederland.gpx" it would present itself in OpenCPN as a layer
+with the name <strong>Fuel Stations Nederland</strong>.</p>
+</div>
+<div class="paragraph">
+<p>See how a gpx file can be made into a useful Layer in
+<em><a href="/opencpn/manual_advanced/program/use_layers.html">Advanced User Manual -
+Use Layers</a></em>.</p>
+</div>
+<div class="sect3">
+<h4 id="_custom_symbols"><a class="anchor" href="#_custom_symbols"></a>Custom Symbols</h4>
+<div class="paragraph">
+<p>The waypoint symbols are the normal &lt;sym&gt; sub-element of the &lt;wpt&gt;
+element as defined by the <a href="https://www.topografix.com/GPX/1/1/">GPX
+standard</a> and OpenCPN by default supports the symbols from
+<a href="https://github.com/OpenCPN/OpenCPN/tree/master/data/svg/markicons">MarkIcons</a>,
+plus any user-defined symbols you have in the Usericons folder.</p>
+</div>
+<div class="paragraph">
+<p>In the GPX file, use the symbol&#8217;s filename without ".svg" as the value
+for &lt;sym&gt;.</p>
+</div>
+<div class="paragraph">
+<p>See <em><a href="/opencpn/manual_advanced/program/usericon.html">usericon</a></em> for
+additional pre-made symbols.<br>
+See <em><a href="/opencpn/manual_advanced/program/icons.html">icons</a></em> for more
+information on OpenCPN icons</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_gpx_editors"><a class="anchor" href="#_gpx_editors"></a>GPX Editors</h4>
+<div class="paragraph">
+<p>The key features of a good GPX editor include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Opening and importing tracks from GPX files and viewing them on a
+digital map.</p>
+</li>
+<li>
+<p>Switching views between digital maps and a geo-referenced satellite
+image.</p>
+</li>
+<li>
+<p>Drawing tracks on the map using a mouse, or stylus pen, or even a
+finger (latter two require a touchscreen platform).</p>
+</li>
+<li>
+<p>Adding, editing, moving, and removing waypoints</p>
+</li>
+<li>
+<p>Reversing track direction and re-sequencing points.</p>
+</li>
+<li>
+<p>Search capabilities to look up place names and points of interest.</p>
+</li>
+<li>
+<p>Splitting a track into two parts to remove unnecessary sections.</p>
+</li>
+<li>
+<p>Merging tracks to turn several recorded tracks into one unified track
+or a multi-track file (an advanced GPX feature).</p>
+</li>
+<li>
+<p>Exporting the track to a GPX file for use in a navigation device or
+app.</p>
+</li>
+<li>
+<p>Point-density reduction for conversion of tracks to routes.</p>
+</li>
+<li>
+<p>Self-contained (not requiring any internet connection, unless for free
+maps &amp; satellite images).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Very few tools have all these capabilities. The following sections
+provide some suggestions that may get you started.</p>
+</div>
+<div class="sect4">
+<h5 id="_online_gpx_editors"><a class="anchor" href="#_online_gpx_editors"></a>Online GPX Editors</h5>
+<div class="paragraph">
+<p><a href="http://www.gpxweaver.com/" class="bare">http://www.gpxweaver.com/</a><br>
+<a href="https://www.gpsvisualizer.com/draw/" class="bare">https://www.gpsvisualizer.com/draw/</a><br>
+<a href="https://github.com/nishizhen/gpxstudio">GPXStudio open-source projecxt</a><br>
+<a href="https://gpx.studio/" class="bare">https://gpx.studio/</a><br></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_offline_gpx_editors"><a class="anchor" href="#_offline_gpx_editors"></a>Offline GPX Editors</h5>
+<div class="paragraph">
+<p><a href="https://opencpn.org/OpenCPN/info/downloads.html">OpenCPN</a> - Reduces
+tracks (but not routes) by max error.<br>
+<a href="https://www.gpsbabel.org/" class="bare">https://www.gpsbabel.org/</a> - a master converter utility converts
+routes&lt;&#8594;tracks&lt;&#8594;waypoints. It reduces by distance or total number of
+points.<br>
+<a href="https://wiki.openstreetmap.org/wiki/GpsMaster" class="bare">https://wiki.openstreetmap.org/wiki/GpsMaster</a><br>
+<a href="https://notepad-plus-plus.org/" class="bare">https://notepad-plus-plus.org/</a> - try using the macro feature to record
+your actions, then use it repetitively.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

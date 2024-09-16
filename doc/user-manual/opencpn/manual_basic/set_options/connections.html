@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/set_options/connections.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../set_options.html">Set Options</a></li>
+    <li><a href="connections.html">Connections</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/set_options/connections.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_connections"><a class="anchor" href="#_connections"></a>Connections</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-options-connect-icon.jpg" alt="tb-options-connect-icon.jpg" width="70"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_features"><a class="anchor" href="#_features"></a>Features</h3>
+<div class="paragraph">
+<p>OpenCPN can use a number of different data sources for navigation and
+environment. All data sources are setup using this interface. OpenCPN
+core functions and plugins depend upon these sources.</p>
+</div>
+<div class="paragraph">
+<p>Network communication protocols are TCP and UDP. GPSD &amp; Signal K are
+applications that run over TCP &amp; UDP. In fact to be totally correct,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  * GPSD runs over TCP.
+  * Signal K runs over TCP and Web Sockets (Web Sockets is a higher level protocol that runs over TCP).
+  * OpenCPN only supports Signal K over Web Sockets.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>OpenCPN has a built-in multiplexer that distributes all incoming and
+outgoing data. Data from OpenCPN and plugins in the NMEA 0183 format can
+be sent out to various external consumers, for example, a connected
+autopilot. The multiplexer can also filter both inputs and outputs of
+NMEA 0183 data (but not NMEA 2000 or Signal K).</p>
+</div>
+<div class="paragraph">
+<p>OpenCPN uses a prioritization function for navigation data. Only one
+source of position data is used at a time. It is "first in, first out",
+but device data stream priorities may be adjusted by the user. See more
+details below.</p>
+</div>
+<div class="paragraph">
+<p>Set-up of incoming and outgoing data from different sources and to
+different consumers is managed using the connection window. Plugins can
+also send data internally to OpenCPN&#8217;s multiplexer. One example could be
+VDR (voyage data recorder) plugin. Such data is not handled by this
+interface.</p>
+</div>
+<div class="paragraph">
+<p>For further details, see the table of contents below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connections_window"><a class="anchor" href="#_connections_window"></a>Connections Window</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-options-connect.jpg" alt="Connections" width="500"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contents"><a class="anchor" href="#_contents"></a>Contents</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Sections</th>
+<th class="tableblock halign-left valign-top">Sections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_connections_window">Connections
+Window</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#<em>data_connections</em>-_add_and_remove">Data
+Connections - Add and Remove</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_simple_system">Simple
+System</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_add_a_serial_connection">Add
+a Serial Connection</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_older_medium_complexity_system">Older
+Medium Complexity System</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_linux_serial_connections">Linux
+Serial Connections</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_newer_medium_complexity_system">Newer
+Medium Complexity System</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_add_a_network_connection">Add
+a Network Connection</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_filter_nmea_course_and_speed_data">Filter
+NMEA Course and Speed Data</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_gpsd_connection">GPSD
+connection</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/data_priority.html#_adjust_communication_priorities">Adjust
+communication priorities</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_connections_filter">Connections
+Filter</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_show_nmea_debug_window">Show
+NMEA Debug Window</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_input_filtering">Input
+Filtering</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections.html#_output_filtering">Output
+Filtering</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Connection Sub-Sections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/data_priority.html" class="bare">./../set_options/connections/data_priority.html</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/nmea.html2000" class="bare">./../set_options/connections/nmea.html2000</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/singnalk.html">SignalK
+Server</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/sk_ikommunicate.html">SignalK
+iKommunicate Server</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/autopilot.html" class="bare">./../set_options/connections/autopilot.html</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../set_options/connections/test-troubleshoot.html">Test
+- Troubleshoot</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quick Start: New User Pages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/global_navigation_satellite_system.html">Connect
+to GNSS Global Navigation System</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/bt_pair_gnss.html">Connect
+to GNSS paired with Bluetooth</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/wifi_network.html">Connect
+to WiFi Network</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/serial_n.html0183">Connect
+to Serail + USB (N0183)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/gateway_multiplex.html">Connect
+to Gateway Multiplex</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/nmea.html2000">Connect
+to NMEA 2000</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../quick_start_guide/connect_to/signalk.html">Connect
+to Signal K</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All messages come and go from an internal "bus", and all internal
+modules have access to all messages. Any message can be received, and
+possibly re-transmitted according to the configuration established. If
+the messages get onto the bus, OpenCPN will do the right thing. For
+example, if it is an AIS message, the AIS module will get the message
+and act accordingly. Plugins also get all messages.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-in-out-filter.jpg" alt="Add Connection" width="500"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_simple_system"><a class="anchor" href="#_simple_system"></a>Simple System</h3>
+<div class="paragraph">
+<p>This is as simple a connection configuration as possible:<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/set_options/connections/network_bluetooth-gps.png" alt="Simple Connection" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-options-connections-usb-serial-gnss-puck.jpg" alt="tb-options-connections-usb-serial-gnss-puck.jpg" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>OpenCPN computer connected to a GNSS receiver via a serial connection
+(USB, Bluetooth, or RS-232).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_simple_extended_system"><a class="anchor" href="#_simple_extended_system"></a>Simple Extended System</h3>
+<div class="paragraph">
+<p>Computer with a USB hub connecting to USB devices, and with a USB
+gateway to the boat sensors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GNSS receiver puck, USB (or Bluetooth)</p>
+</li>
+<li>
+<p>AIS receiver, USB</p>
+</li>
+<li>
+<p>Instruments, USB to NMEA 0183 or Seatalk1 gateway</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/network_simple-extended2.png" alt="network_simple-extended2.png" width="450"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/simple-extended-connections.jpg" alt="simple-extended-connections.jpg" width="450"></span></p>
+</div>
+<div class="paragraph">
+<p>The Simrad term "Joiner" is a passive hub for NMEA 0183 or NMEA 2000.
+Gateways are devices that translate between two different communications
+protocols, allowing a boat network to connect with a personal computer
+or tablet.</p>
+</div>
+<div class="paragraph">
+<p>A very simple system for starting users and small boats, extended with
+USB Hub &amp; NMEA 0183 for boat instruments and dAISy AIS. USB Gateway to
+get that into the Laptop.</p>
+</div>
+<div class="paragraph">
+<p>Possible Equipment:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ublox GNSS receiver USB puck</p>
+</li>
+<li>
+<p>Daisy AIS receiver USB or Quark QK-A021 AIS receiver USB dongle</p>
+</li>
+<li>
+<p>Seatalk1 Instruments - GadgetPool Tiny Seatalk gateway</p>
+</li>
+<li>
+<p>NMEA 0183 Instruments - Actisense USG-2 gateway</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_older_medium_complexity_system"><a class="anchor" href="#_older_medium_complexity_system"></a>Older Medium Complexity System</h3>
+<div class="paragraph">
+<p>This configuration has two connections to OpenCPN:<br>
+- OpenCPN computer connected to GNSS receiver via serial link.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>OpenCPN computer connected to boat network via a NMEA 0183 to USB
+gateway.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>By using the gateway, OpenCPN now has access to all the data from the
+devices on the NMEA 0183 bus:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chartplotter</p>
+</li>
+<li>
+<p>Wind vane and anemometer</p>
+</li>
+<li>
+<p>Depth sensor</p>
+</li>
+<li>
+<p>Speed sensor (paddlewheel)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/network_medium-0183.png" alt="network_medium-0183.png" width="450"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tp-options-connect-gnss-puck-usb-nmea0183-medium.jpg" alt="tp-options-connect-gnss-puck-usb-nmea0183-medium.jpg?450" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Possible USB to NMEA 0183 Gateways for the above configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Actisense USG-2 USB to Serial Gateway, connects a PC to NMEA 0183
+network.</p>
+</li>
+<li>
+<p>Yacht Devices NMEA 2000 USB Gateway YDNU-02, supports NMEA 0183 and
+has USB.</p>
+</li>
+<li>
+<p>ShipModul MiniPlex-3Wi, two NMEA 0183 outputs or Seatalk1, a USB port
+&amp; a WiFi interface</p>
+</li>
+<li>
+<p>Quark QK-A024 AIS Receiver with NMEA Multiplexer + NMEA 0183 + WiFi<br>
+AIS + USB</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_newer_medium_complexity_system"><a class="anchor" href="#_newer_medium_complexity_system"></a>Newer Medium Complexity System</h3>
+<div class="paragraph">
+<p>This configuration is a fully-featured NMEA 2000 boat network, with AIS
+and autopilot as well as the usual sensors for a vessel. In addition,
+there is a boat network WiFi link that other devices, such as an Android
+tablet running OpenCPN, may access, providing mobility within the
+vessel. In spite of the wealth of sensors, each computing platform has a
+single interface connection to OpenCPN.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/network_medium-2000.png" alt="440"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Computer Connection Setup</strong><br>
+Laptop Computer connected to NMEA 2000 via Network UDP input/output NMEA
+2000 Gateway.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/gateway-to-serial-usb-laptop.jpg" alt="/opencpn/manual_basic/set_options/gateway-to-serial-usb-laptop" width="460"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Android Table Connection Setup</strong><br>
+Example: Main computer is below deck, an Android tablet (like a Samsung
+Galaxy Tab Active) under the dodger.</p>
+</div>
+<div class="paragraph">
+<p>Android tablet connects to NMEA 2000 via the WiFi Network, TCP
+input/output NMEA 2000 Gateway. The input port is set as UDP with the
+WiFi gateway&#8217;s sending address, allowing all the NMEA 2000 bus traffic
+to reach the tablet&#8217;s OpenCPN. The output port is set to TCP with the
+local subnet&#8217;s broadcast address, allowing the tablet to issue
+information to the Autopilot.</p>
+</div>
+<div class="paragraph">
+<p>The TCP Output (could be UDP Output) is used because we wanted the
+autopilot messages to stay within the local private network. Address
+192.168.1.255 accomplishes this.</p>
+</div>
+<div class="paragraph">
+<p>The autopilot can be controlled by a tablet from OpenCPN running a
+specific NMEA 2000 autopilot plugin intended for a specific
+manufacturer, via WiFi (in this case, through the Vesper AIS device).
+Both the autopilot control head and the tablet can send controls to the
+autopilot.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/wifi-gateway-to-nmea-2000-bus-android-tablet.jpg" alt="/opencpn/manual_basic/set_options/wifi-gateway-to-nmea-2000-bus-android-tablet" width="450"></span></p>
+</div>
+<div class="paragraph">
+<p>Possible USB &lt;&#8594; NMEA 2000 Gateways are listed in
+<a href="./../quick_start_guide/connect_to/nmea.html2000">Connect
+to &gt; NMEA 2000</a></p>
+</div>
+<div class="sect3">
+<h4 id="_use_of_udp_output_for_broadcasting"><a class="anchor" href="#_use_of_udp_output_for_broadcasting"></a>Use of UDP Output for Broadcasting</h4>
+<div class="paragraph">
+<p>OpenCPN on the receiving device receives and shows all info from input
+ports on the sending device, via the broadcast output ports and the
+Localhost output port.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The receiving device will even receive data from the VDR plugin, if
+it&#8217;s running.</p>
+</li>
+<li>
+<p>Thus all input sources are merged together and are also available to
+transmit to an external computer. Any computer on board can be used as a
+repeater to the main device!</p>
+</li>
+<li>
+<p>This avoids creating infinite data loops.</p>
+</li>
+<li>
+<p>UDP output and input is a possible configuration, but is not generally
+desirable. If a broadcast connection is read/write, all data written out
+will be read back leading to the potential for data loops that will
+"flood the bus".</p>
+</li>
+<li>
+<p>To avoid this, the priority of any read/write broadcast connection
+should be set lower than that of any other interface on which OpenCPN
+receives data for re-distribution over that interface.</p>
+</li>
+<li>
+<p>For most purposes, setting a broadcast connection to <strong>either read or
+write</strong> is the preferable solution.</p>
+</li>
+<li>
+<p>There is no advantage to using a broadcast address on the local
+network with just a few computers. It&#8217;s as easy to just specify the
+addresses of the receiving computers as outgoing connections on the
+transmitting computer. The "receivers" specify the "transmitter" as the
+address for a connection.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In real life, a common setup will include input from GPS and AIS, and
+output to an autopilot.</p>
+</div>
+<div class="paragraph">
+<p>If your GPS produces GPRMC, then this will be automatically sent to the
+autopilot.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Everything on the internal multiplex bus will be sent to the output
+port that the autopilot is connected to, even if a route is inactive.</p>
+</li>
+<li>
+<p>If a route is active, OpenCPN will create and send NMEA 0183 (EC)RMC
+sentences to output data ports.</p>
+</li>
+<li>
+<p>The only reason OpenCPN "synthesizes" an ECRMC sentence is to cover
+those odd cases when there is no other source of RMC in the system, and
+the Autopilot wants magnetic variation, SOG, etc. This might be the case
+if an older GPS produces GPGLL alone, for instance, which has no
+magnetic variation. Since there is no "new" information in the
+transmitted, OpenCPN would synthesize ECRMC.</p>
+</li>
+<li>
+<p>The autopilot might be complaining that it is getting RMC information
+from two different talkers (GP and EC) at the same time, and cannot
+decide what to do. The easiest solution if it doesn&#8217;t like the ECRMC is
+to filter it out of the output stream of the port connected to the
+autopilot. Or, choose a filter to allow only GPRMC and ECRMB for this
+port.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filter_nmea_course_and_speed_data"><a class="anchor" href="#_filter_nmea_course_and_speed_data"></a>Filter NMEA Course and Speed Data</h3>
+<div class="paragraph">
+<p>The filter provides a rolling average of COG/SOG, with configurable
+sampling period. This feature is useful, for example, if you find that
+course and speed from the GPS is varying erratically due to the sea
+state. The Dashboard plugin is not affected by this setting - COG and
+SOG are updated about once per second.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_show_nmea_debug_window"><a class="anchor" href="#_show_nmea_debug_window"></a>Show NMEA Debug Window</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-nmea-debug-window.jpg" alt="Show NMEA Debug Window" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>If you check this box, you will get a window that shows the NMEA data
+sentences into or out from OpenCPN. This is immediately useful to check
+if a particular source device port is correctly setup and is receiving
+data. The Debug Window will show messages from all enabled ports, serial
+or network, and all protocols (NMEA 0183, NMEA 2000, Signal K). Messages
+from GPSD or the Voyage Data Recorder plugin will also show up in the
+Debug Window.</p>
+</div>
+<div class="paragraph">
+<p>In the picture above we can also see color-coding at work.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Black: input message accepted</p>
+</li>
+<li>
+<p>Ocher: input message filtered, or output message filtered and dropped</p>
+</li>
+<li>
+<p>Burgundy: input message filtered and dropped</p>
+</li>
+<li>
+<p>Blue: output message transmitted</p>
+</li>
+<li>
+<p>Red: information message, or message with error(s) in transmit</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If there are NMEA sentences in the Debug Window, then OpenCPN has opened
+the port configured in the Data Connections. <em>Note: the source of each
+NMEA sentence is printed after the time stamp on each line.</em></p>
+</div>
+<div class="paragraph">
+<p>If your GPS port is configured, and there is no "red" boat, then the
+only reasons are: no GPS fix was received from a GNSS device or the GNSS
+device has sent an incorrect sentence configuration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Filter</strong>: The NMEA Debug Window content can be filtered to show only
+those messages containing a text string, e.g. 127245 (to show NMEA 2000
+PGN 127245), GPRMC (to show NMEA 0183 sentence GPRMC), rudder (to show
+any type of sentence with the word "rudder"), etc. Filtering the window
+content does not change the data in/out of OpenCPN.</p>
+</div>
+<div class="paragraph">
+<p><strong>Known issues:</strong> The Pause button only works if OpenCPN&#8217;s Options dialog
+is closed. In Linux, the Debug Window can only be closed by unticking
+the Show NMEA Debug Window checkbox, unless the OpenCPN&#8217;s Options dialog
+is closed.</p>
+</div>
+<div class="paragraph">
+<p><em>Note: Connections Priority change messages will also be printed to the
+NMEA Debug Window. AIVDM messages are both dropped and appear as a blue
+Output message because there is more than one source for this message,
+and the filter just applies to one source.</em></p>
+</div>
+<div class="paragraph">
+<p>Have a look at the page <a href="./../nmea.html0183" class="bare">./../nmea.html0183</a> to see
+which messages are understood by OpenCPN. OpenCPN generally does not
+care about the Talker ID (the first two letters in the message type).
+For $GPGGA above, GP is the talker ID (the GPS), sending a GGA =
+position message, for example. At the end of each sentence there is a
+"*" followed by a calculated checksum.</p>
+</div>
+<div class="paragraph">
+<p>To see all messages it&#8217;s important to close the Options dialog
+completely, while leaving the NMEA Debug window open. Some messages,
+e.g. the ECAPB sentences, will not appear while the Connections dialog
+box is open because autopilot output is disabled during this time.</p>
+</div>
+<div class="paragraph">
+<p>For simple NMEA data stream debugging, add the following to your
+opencpn.ini file under [Settings] add a line:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>DebugNMEA=1500</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will send up to 1500 debug messages pertaining to NMEA traffic to
+the opencpn.log.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_format_uploads_for_furunogp3xinputfiltering"><a class="anchor" href="#_format_uploads_for_furunogp3xinputfiltering"></a>Format uploads for FurunoGP3Xinputfiltering</h3>
+<div class="paragraph">
+<p>If the special Furuno GPS protocol is needed, tick this box. The reason
+is that Furuno uses their own version of NMEA for uploading routes.
+Furuno GPS users take note. It is now allowed to use a numeric, two
+digit OpenCPN route name (e.g. 10, 21, etc).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_garmin_grmn_host_mode_for_uploads"><a class="anchor" href="#_use_garmin_grmn_host_mode_for_uploads"></a>Use Garmin GRMN (Host) mode for uploads</h3>
+<div class="paragraph">
+<p>Older Garmin GPS-Map devices used a proprietary, binary communication
+protocol that is not NMEA-compliant. To support the sending of routes
+and waypoints to these Garmin devices, make sure that this box is
+ticked.</p>
+</div>
+<div class="paragraph">
+<p>Most modern Garmin GPS chartplotters now support NMEA 0183, specifically
+the the WPL (Waypoint List) sentence used for transferring routes and
+waypoints. With these devices, the checkbox may be left unchecked.</p>
+</div>
+<div class="paragraph">
+<p><strong>Detailed Explanation</strong></p>
+</div>
+<div class="paragraph">
+<p>When OpenCPN IS configured to <span class="underline">Use Garmin (GRMN) Mode for
+Input</span>, it does a couple of things: firstly after opening the serial or
+USB port, it sends a command to the GPS to determine its capabilities
+(different models use different structures for PVT (Position, Velocity,
+Time), waypoints, routes &amp; tracks and use different protocols for
+transfers). OpenCPN then sends the command to the Garmin GPS to start
+sending PVT data. Upon reception of the PVT data, OpenCPN decodes the
+binary data, updates OpenCPN&#8217;s position and generates an NMEA 0183 RMC
+sentence, which is can be seen in the NMEA Debug Window.</p>
+</div>
+<div class="paragraph">
+<p>When OpenCPN IS configured to <span class="underline">Use Garmin GRMN (Host) mode
+for uploads</span>, when you send a waypoint or a route to the GPS, OpenCPN
+does three things: Firstly it sends the Stop PVT command to the Garmin
+GPS, it then constructs the waypoint or route data and sends it to the
+Garmin GPS. There are no NMEA 0183 sentences generated or transmitted,
+so nothing is seen in the NMEA Debug Window. Finally, it sends the Start
+PVT command to resume receiving position fixes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_magnetic_bearings_in_output_sentence_ecapb"><a class="anchor" href="#_use_magnetic_bearings_in_output_sentence_ecapb"></a>Use magnetic bearings in output sentence ECAPB</h3>
+<div class="paragraph">
+<p>Some autopilots, among them Simrad, require navigational bearings
+contained in the APB sentences to be transmitted as magnetic bearings
+rather than as true bearings (OpenCPN&#8217;s default).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adjust_communication_priorities"><a class="anchor" href="#_adjust_communication_priorities"></a>Adjust Communication Priorities..</h3>
+<div class="paragraph">
+<p>Refer to
+<em><a href="./../set_options/connections/data_priority.html#_adjust_communication_priorities">Adjust
+Communication Priorities</a></em> .</p>
+</div>
+<div class="paragraph">
+<p>Within each data type, e.g. Heading, higher position equals higher
+priority. The priority is set for each NMEA sentence individually. As
+long as a higher priority stream is available, it&#8217;s used. If this fails,
+the next stream in line with lower priority is used until a higher
+priority stream appears. The present filter does not handle the case in
+which the same information is received from different sentence types.
+For instance, GPGLL and GPRMC both contain the position information. The
+last received of either message will be used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_connections_add_and_remove"><a class="anchor" href="#_data_connections_add_and_remove"></a>Data Connections - Add and Remove</h3>
+<div class="paragraph">
+<p>Two Buttons, <span class="underline">Add Connection…</span> and <span class="underline">Remove
+Connection…</span>, are the key to the <span class="underline">Connect</span> tab.</p>
+</div>
+<div class="paragraph">
+<p>The <span class="underline">Enable</span> checkbox at the start of each connection line
+is handy to maintain currently unused connections. Tick or un-tick, and
+then select "Apply", to activate the setting.</p>
+</div>
+<div class="paragraph">
+<p>A connection can be used for input and output at the same time, with the
+reservation that they have to use the same Baud rate. For more details,
+read on.</p>
+</div>
+<div class="paragraph">
+<p>When selecting <span class="underline">Add Connection…</span> two basic choices are
+given, a serial or a network connection.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_a_serial_connection"><a class="anchor" href="#_add_a_serial_connection"></a>Add a Serial Connection</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-serial.jpg" alt="Add Serial Connection" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>DataPort</strong>: Pick a port by selecting the dropdown list expander
+(<span class="image"><img src="../../_images/opencpn/manual_basic/set_options/dropdown-list-expander.jpg" alt="dropdown-list-expander.jpg" width="15"></span>)
+on the right side of the field. If the port you are looking for does not
+appear in the selection, write the correct port yourself in this field,
+e.g. "COM4".</p>
+</div>
+<div class="paragraph">
+<p><strong>Baudrate</strong>: This is normally 4800 or 9600 for GPS and 38400 for AIS, but
+check the manufacturer documentation for the connected device. It&#8217;s
+important to get this right and not just guess, otherwise the data will
+not flow.</p>
+</div>
+<div class="paragraph">
+<p><strong>Protocol</strong>: Either NMEA 0183 or NMEA 2000, depending upon the device
+type. Check the manufacturer documentation for the connected device.</p>
+</div>
+<div class="paragraph">
+<p><strong>List Position</strong>: The List position value orders the connections list, if
+desired. Lower numbers are listed before higher numbers.</p>
+</div>
+<div class="paragraph">
+<p><strong>Control Checksum</strong>: At the end of each NMEA sentence is a checksum, that
+makes sure that sentences are correctly received. This box is ticked by
+default, as OpenCPN calculates the checksum and compares it to the
+received checksum. Only sentences with a valid checksum are passed
+through. Un-ticking may help, if an application calculates checksums
+incorrectly or if the checksums are missing.</p>
+</div>
+<div class="paragraph">
+<p><strong>Use Garmin (GRMN) mode for input</strong>: Make sure that this box is ticked if
+you have a Garmin GPS, because Garmin uses their own serial protocol.</p>
+</div>
+<div class="paragraph">
+<p><strong>Receive input on this Port</strong>: Most serial ports will be configured as
+input ports. It might be the case that OpenCPN is used to send data to a
+ship&#8217;s network through a serial device, such as an Actisense NGT-1. In
+this case a separate port might be setup as Output only. If the
+connection will only be used to output to other devices it should not be
+ticked. See more below.</p>
+</div>
+<div class="paragraph">
+<p><strong>Output on this port</strong> (as Autopilot or NMEA repeater): Tick this box if
+the connection will be used for output. Common cases are to send NMEA
+0183 sentences to an Autopilot, or to repeat NMEA 0183 sentences with
+filtering, or to transfer serial data sources onto the local network.
+Example: Filtering can resolve an issue with talker ID, in which some
+"temperamental" devices which should accept given sentences irrespective
+of the talker ID, in fact accept GPRMC but not ECRMC.</p>
+</div>
+<div class="paragraph">
+<p><em>Note: Output for serial ports with NMEA 2000 protocol is not
+supported.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>APB bearing precision</strong> is greyed out unless "Output on this port" is
+checked. APB is the NMEA 0183 sentence "Autopilot Sentence 'B'". The
+precision can be set between 0-4 decimal places (3=default). Some
+autopilots require different precision than the default to work. Check
+the manufacturer documentation for the autopilot.</p>
+</div>
+<div class="paragraph">
+<p><em>Note: The <strong>APB bearing precision</strong> setting is applied to:</em></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> * //CrossTrackErrorMagnitude//
+ * //BearingOriginToDestination//
+ * //BearingPresentPositionToDestination//
+ * //HeadingToSteer//</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>they can accept in the APB message. For all other messages, and
+internally, the precision is not changed. There is no change to the XTE
+message as that was not requested at the time. "XTE - Measured cross
+track error" NMEA 0183 message is not adjusted by the APB bearing
+precision setting. Opencpn.ini setting is <span class="underline">NMEAAPBPrecision</span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_linux_serial_connections"><a class="anchor" href="#_linux_serial_connections"></a>Linux Serial Connections</h3>
+<div class="paragraph">
+<p>Please refer to
+<a href="./../quick_start_guide/connect_to/serial_n.html0183">Quick
+Start Guide &gt; Connect to &gt; Serial + USB</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_a_network_connection"><a class="anchor" href="#_add_a_network_connection"></a>Add a Network Connection</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-net.jpg" alt="Add Network Connection" width="500"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gpsd_connection"><a class="anchor" href="#_gpsd_connection"></a>GPSD connection</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-gpsd.jpg" alt="Network GPSD" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>When connecting to GPSD, running on your local computer, use the
+settings shown above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connections_filter"><a class="anchor" href="#_connections_filter"></a>Connections Filter</h3>
+<div class="paragraph">
+<p>For each source line in the data connection windows, it&#8217;s possible to
+specify exactly which NMEA 0183 sentences to receive, and which ones to
+drop. Similarly it&#8217;s possible to control exactly which NMEA 0183
+sentences to send out to, for example, an autopilot.</p>
+</div>
+<div class="paragraph">
+<p><em>Note: Connection Filters do not apply to NMEA 2000 and Signal K data.</em></p>
+</div>
+<div class="paragraph">
+<p>The applied filters for each connection are stated in the connection&#8217;s
+Data Edit window. The default for a connection is no filters at all.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The filters apply to both the core program and the plugins.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Filtering can be observed in real time, through color coding in the
+Debug Window.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-filters.jpg" alt="Filters" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Accept only sentences</strong>: Either base your filtering on which sentences
+to accept or which to ignore.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ignore sentences</strong>: Same as above. To select filters, press the button.
+The dialog below becomes available.</p>
+</div>
+<div class="paragraph">
+<p><strong>Standard Receive Filters</strong><br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-rcv-filter1.jpg" alt="Receive Filter1" width="150"></span><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-rcv-filter2.jpg" alt="Receive Filter2" width="150"></span><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-rcv-filter3.jpg" alt="Receive Filter3" width="150"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Standard Transmit Filters</strong><br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-xmt-filter1.jpg" alt="Transmit Filter1" width="150"></span><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-xmt-filter2.jpg" alt="Transmit Filter2" width="150"></span><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-xmt-filter3.jpg" alt="Transmit Filter3" width="150"></span></p>
+</div>
+<div class="paragraph">
+<p>A lot of NMEA 0183 sentences are listed. You may have to add a NMEA 0183
+sentence that is not in the list. Just tick the box to select/de-select
+a sentence. <span class="underline">Select All</span> or <span class="underline">Clear All</span> are also
+available. For sentences not listed press <span class="underline">Add</span>, and enter a
+new NMEA 0183 sentence.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-filter-add.jpg" alt="Add Filter" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Your entry must conform to the rules shown in the add NMEA 0183 sentence
+entry form, namely:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2 characters to filter by talker IDs, e.g. "GP", or "AI".</p>
+</li>
+<li>
+<p>3 characters to filter by sentence types, e.g. "RMC", "DBT", "ABP".</p>
+</li>
+<li>
+<p>5 characters to filter by talker ID &amp; sentence type, e.g "GPRMC", or
+"AIVDM".</p>
+</li>
+<li>
+<p>valid REGEX expression matching the 6 characters of &lt;$&gt;&lt;talker
+ID&gt;&lt;sentence&gt;, e.g. to filter $xxGSV, you could use "…GSV", or
+".{3}GSV", or "\$..GSV". Or to obtain only GLONASS GSV sentences, use
+"..LGSV".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Note: Test your REGEX expression using <a href="https://regex101.com/">Regex101</a></em></p>
+</div>
+<div class="paragraph">
+<p>When you are finished, select <span class="underline">OK</span>, your new entry will
+appear at the bottom of the list of NMEA 0183 sentences to filter. It
+will already be selected, so just press <span class="underline">OK</span> until you are
+back in the original <span class="underline">Connections</span> tab. Now press
+<span class="underline">Apply</span>. The implemented filtering should now be visible on
+the connection line.</p>
+</div>
+<div class="paragraph">
+<p>To delete a custom filter, scroll to the bottom of the list, select the
+filter and select <span class="underline">Delete</span>.</p>
+</div>
+<div class="paragraph">
+<p>For more, see below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_input_filtering"><a class="anchor" href="#_input_filtering"></a>Input Filtering</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Another scenario where output filtering is required is forwarding
+AIS messages to different networks or to other consumers like AIShub.
+One will just send the AIS messages and not the complete data stream.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="/opencpn/manual_basic/set_options/tb-opt-conn-add-filter-input-accept&#8212;&#8203;2.jpg" alt="tb-opt-conn-add-filter-input-accept&#8212;&#8203;2.jpg" width="500"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_example_1"><a class="anchor" href="#_example_1"></a>Example 1</h4>
+<div class="paragraph">
+<p>An input filter that prevents an AIS transceiver from providing
+duplicate location information by accepting only GNSS sentences.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-filter-input-accept-aivdm-aivdo.png" alt="tb-opt-conn-add-filter-input-accept-aivdm-aivdo.png" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_2"><a class="anchor" href="#_example_2"></a>Example 2</h4>
+<div class="paragraph">
+<p>An input filter that allows an AIS transceiver to function as a GNSS
+receiver by ignoring AIS sentences.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-input-filter-igonore.png" alt="tb-opt-conn-input-filter-igonore.png" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_3"><a class="anchor" href="#_example_3"></a>Example 3</h4>
+<div class="paragraph">
+<p>An input filter when "Clear All" is selected with Filter Menu open, hen
+Closed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-options-connections-filter-three-clear.jpg" alt="tb-options-connections-filter-three-clear.jpg" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>There are no sentences shown on the message line. When filter message
+line is empty, "no filter" is applied and all available messages are
+sent.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-options-connections-filter-three-done.png" alt="tb-options-connections-filter-three-done.png" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Input Filtering - Accept only Sentences - Blank Filtering Line - All
+sentences will be accepted.</p>
+</li>
+<li>
+<p>Input Filtering - Ignore Sentences - Blank Filtering Line - No
+sentences will be ignored.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_filtering"><a class="anchor" href="#_output_filtering"></a>Output Filtering</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-filter-output-drop.jpg" alt="tb-opt-conn-add-filter-output-drop.jpg" width="500"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_example_1_2"><a class="anchor" href="#_example_1_2"></a>Example 1</h4>
+<div class="paragraph">
+<p>An output filter that allows three sentences to transmit.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-filter-output-trans-3.jpg" alt="tb-opt-conn-add-filter-output-trans-3.jpg" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_2_2"><a class="anchor" href="#_example_2_2"></a>Example 2</h4>
+<div class="paragraph">
+<p>An output filter that drop three sentences and transmits all the rest.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-conn-add-filter-output-drop-3.jpg" alt="tb-opt-conn-add-filter-output-drop-3.jpg" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p><em>Note: It is good practice to send only the sentences that are
+definitely needed to avoid data loops and "flooding the bus".</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_3_2"><a class="anchor" href="#_example_3_2"></a>Example 3</h4>
+<div class="paragraph">
+<p>An output filter when "Clear All" is selected with Filter Menu open,
+then Closed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-options-connections-network-tcp-nmea0183-output-filter.jpg" alt="tb-options-connections-network-tcp-nmea0183-output-filter.jpg" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>There are no sentences shown on the message line. When filter message
+line is empty, no filter is applied and all available messages are sent.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-optons-connections-network-tcp-nmea0183-output-filter-done.jpg" alt="tb-optons-connections-network-tcp-nmea0183-output-filter-done.jpg" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Output Filtering - Transmit Sentences - Blank Filter Line - All
+sentences will be sent.</p>
+</li>
+<li>
+<p>Output Filtering - Drop Sentences - Blank Filter Line - No sentences
+will be dropped.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

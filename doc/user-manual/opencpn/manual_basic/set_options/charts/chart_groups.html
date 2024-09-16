@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/set_options/charts/chart_groups.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../../set_options.html">Set Options</a></li>
+    <li><a href="../charts.html">Charts</a></li>
+    <li><a href="chart_groups.html">Chart Groups</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/set_options/charts/chart_groups.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_chart_groups"><a class="anchor" href="#_chart_groups"></a>Chart Groups</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, if new charts need to be added, refer to
+<a href="./../../quick_start_guide/chart_installation.html">Quick
+Start &gt; Chart Installation</a> or
+<a href="./../../set_options/charts/chart_downloader.html">Chart
+Downloader</a></p>
+</div>
+<div class="paragraph">
+<p>Under <strong><em>Toolbar &gt; Options &gt; Charts &gt; Chart Files</em></strong> select <strong>Add
+Directory</strong> to add new "Chart Directories" as needed to create "Chart
+Groups". Enter chart directories for each Chart "set" that you want to
+"Group" together.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-files-add-directory.jpg" alt="/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-files-add-directory" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Select <strong><em>Scan Charts and Update Database</em></strong>. Wait for the update to
+finish.<br>
+Then select <strong><em>Toolbar &gt; Options &gt; Charts &gt; Chart Groups</em></strong></p>
+</div>
+<div class="paragraph">
+<p>You will see two panes. The top pane contains "All Available Charts",
+which are the charts you have installed. The bottom pane allows you to
+create, edit, and delete Groups.</p>
+</div>
+<div class="paragraph">
+<p>Note that there is always an "All Charts" group. This Group is not
+editable.</p>
+</div>
+<div class="paragraph">
+<p>New Groups which you create may have chart directories or individual
+charts added to them by selecting the item in the top pane and touching
+the "Add" button.</p>
+</div>
+<div class="paragraph">
+<p>Also displaying MBTiles maps of a certain category is possible. For
+example, grouping aatellite images, is possible only if the MBTile files
+are collected in one folder or directory, and the directory is added to
+"Chart Files" and the a "New Group" named "Sat Images" is created using
+the directory.</p>
+</div>
+<div class="paragraph">
+<p>From <strong><em>Toolbar &gt; Options &gt; Charts &gt; Chart Groups</em></strong> select <strong>New Group</strong>.
+Now, directories of charts or individual chart file(s) can be added to
+the chart group(s). New Group <strong>Arg</strong> is being added for Argentina Charts.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-group-add-group.jpg" alt="/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-group-add-group" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Next from the top pane select the Argentina file directory and <strong>Add</strong> to
+the new Chart Group.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-group-arg-added.jpg" alt="/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-group-arg-added" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>You may also remove individual charts or directories from Groups by
+selecting the desired item in the bottom pane, and touch "<strong>Remove
+Chart</strong>". Note that "removing" an item from the Group does not remove it
+from your "Available" set of charts. The item is simply made unavailable
+when the Group is in use.</p>
+</div>
+<div class="paragraph">
+<p>It is a good idea to create an <strong>Empty</strong> chart group, only the background
+Map will be shown and "Unlimited" zooming is allowed. This can be useful
+for very large scale plotting, for example.</p>
+</div>
+<div class="sect2">
+<h3 id="_chart_groups_solve_the_following_problem"><a class="anchor" href="#_chart_groups_solve_the_following_problem"></a>Chart Groups solve the following problem</h3>
+<div class="paragraph">
+<p>You may have many charts loaded in your active database. Some of them
+have overlapping coverage at the same scale, so that when quilted, the
+logic does not know which of potentially several charts at the same
+scale to choose from. Some examples:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the Bahamas there are a few publishers of charts, covering the same
+areas, with radically different presentations. Sometimes you may want to
+see one set (say planning charts of small scale), and other times you
+only want navigation charts of the best scale possible.</p>
+</li>
+<li>
+<p>Leave a Group empty, in which case only the background chart will be
+displayed, very useful sometimes.</p>
+</li>
+<li>
+<p>Pilot charts as one Group, normal navigation charts as another Group,
+makes it possible to quickly switch between them.</p>
+</li>
+<li>
+<p>You have both Raster and Vector charts of the same area and want to be
+able to display each type separately, and switch quickly between them.</p>
+</li>
+<li>
+<p>In another universe, NGA charts in one group, standard NOAA RNCs in
+another, standard NOAA ENCs in another group, British UKHO in a third
+group or even a group with both ENC and RNC of a particular USCG
+District.</p>
+</li>
+<li>
+<p>The Chart Group function allows us to define multiple Groups, with
+different chart directories in each group. The Group desired for viewing
+may be selected quickly, through the right-click menu, without adding or
+deleting charts from the Active database.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If there are no chart directories listed under <strong>All available charts
+</strong>you will not be able to <strong>"Add"</strong> Chart Groups. A newly added chart
+directory (also called a folder) cannot be added to a Chart Group unless
+the <strong><em>Chart Database has been Updated</em></strong> .</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_chart_groups"><a class="anchor" href="#_use_chart_groups"></a>Use Chart Groups</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-group-right-click-select.jpg" alt="/opencpn/manual_basic/set_options/charts/tb-options-charts-chart-group-right-click-select" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>From version 4.8.0 above, it&#8217;s possible to <strong>quickly change between the
+first 10 listed chart groups</strong>. The<strong>// numerical keys//</strong> 0,1,2……..9
+correspond to the <em>Chart Groups 1,2,3…..10</em> (whatever their name is).
+For Example: Just press "4" and the display changes to show <em>Chart Group
+#4</em> provided it exists. Note that group "0" always contains the "All
+Charts" Chart group.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/chartgroups321.png" alt="chartgroups321.png" width="600" height="387"></span></p>
+</div>
+<div class="paragraph">
+<p>In this illustration the navigator generally uses the US charts, when
+available. Coming into Baia do Porto Santo a detailed chart would be
+great, but no such US chart is available on board. A switch to the UK
+chart group solves the problem.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/chartgroups322.png" alt="chartgroups322.png" width="600" height="412"></span></p>
+</div>
+<div class="paragraph">
+<p>Select the Group you want to use, by a right-click context menu item
+called "Chart Groups". As you switch Groups the logic tries to select a
+chart and scale that closely matches the situation present before the
+switch. As you may understand, sometimes the fit is not reasonable, so
+the resulting view may be surprising.</p>
+</div>
+<div class="paragraph">
+<p>Finally, if you have no Groups defined, as in the default installation,
+all installed charts are always available.</p>
+</div>
+<div class="sect3">
+<h4 id="_chart_groups_and_chart_files"><a class="anchor" href="#_chart_groups_and_chart_files"></a>Chart Groups and Chart Files</h4>
+<div class="sect4">
+<h5 id="_improve_display_speed_and_program_response"><a class="anchor" href="#_improve_display_speed_and_program_response"></a>Improve Display Speed and program response</h5>
+<div class="paragraph">
+<p>For very large chart sets of charts, the display speed, program response
+and access and use of the charts is improved by judicious use of Chart
+Files directories and Chart Groups.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Chart Files, rather than setting a single path (eg: c:\charts) to
+the "charts" folder, set multiple paths to sub folders (eg:
+c:\charts\enc\uscg01, c:\charts\enc\uscg07, etc).</p>
+</li>
+<li>
+<p>Then assign a new Chart Group to each of those folders. You can then
+select the appropriate chart group with a right click and hovering over
+"Chart Groups" and selecting the chart group needed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In
+<em><a href="./../../set_options/charts/chart_files.html">chart_files</a></em>
+don&#8217;t include the root chart directory <em>c:/charts</em> in the list!</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>c:/users/Dave/Documents/charts/ENC/GC01/
+c:/users/Dave/Documents/charts/ENC/GC05/
+c:/users/Dave/Documents/charts/ENC/NewZealand
+c:/users/Dave/Documents/charts/RNC/GC01/
+c:/users/Dave/Documents/charts/RNC/GC05/
+c:/users/Dave/Documents/charts/RNC/NewZealand
+c:/users/Dave/Documents/charts/BSB/Canada/
+c:/users/Dave/Documents/mbtiles/NewZealand &lt;---MBtiles Files
+c:/users/Dave/Documents/sat/NewZealand     &lt;---Satellite Files
+c:/users/Dave/Documents/kap/NewZealand     &lt;---Weatherfax Files</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In <em><a href="./../../set_options/charts/chart_groups.html">Chart
+Groups Tab</a></em></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>e01   c:/users/Dave/Documents/charts/ENC/GC01/
+e05   c:/users/Dave/Documents/charts/ENC/GC05/
+eNZ   c:/users/Dave/Documents/charts/ENC/NewZealand
+r01   c:/users/Dave/Documents/charts/RNC/GC01/
+r02   c:/users/Dave/Documents/charts/RNC/GC05/
+rNZ   c:/users/Dave/Documents/charts/RNC/NewZealand
+rCan  c:/users/Dave/Documents/charts/BSB/Canada/
+mbNZ  c:/users/Dave/Documents/mbtiles/NewZealand &lt;--MBtiles Files
+msNZ  c:/users/Dave/Documents/sat/NewZealand  &lt;---Satellite Files
+kapNZ c:/users/Dave/Documents/kap/NewZealand  &lt;---Weatherfax Files</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example only, does not conform to
+<em><a href="./../../set_options/charts/chart_downloader.html">chart_downloader</a></em>
+defaults. Generally use the Chart Downloader Tab defaults when
+available.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can put the mbtiles in with your favorite charts and
+use <em>mbtiles show/hide</em> with the
+<em><a href="./../../ui_user_interface/chart_bar.html">chart_bar</a></em></p>
+</div>
+<div class="paragraph">
+<p>See the advantage of
+<em><a href="./../../set_options/charts/chart_groups.html#_use_chart_groups">Using
+Chart Groups</a></em> above.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_chart_groups_and_cm93"><a class="anchor" href="#_chart_groups_and_cm93"></a>Chart Groups and CM93</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/cm93grp.png" alt="cm93grp.png" width="600" height="165"></span></p>
+</div>
+<div class="paragraph">
+<p>Please Refer to
+<em><a href="./../../ui_user_interface/chart_bar.html">chart_bar</a></em>.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to have multiple instances of CM93v2 in different Chart
+Groups. Above we have 5 instances loaded in various chart groups. The
+view is of "All Active Charts".</p>
+</div>
+<div class="paragraph">
+<p>OpenCPN also supports multiple partial CM93 data sets.</p>
+</div>
+<div class="paragraph">
+<p>The instances are loaded, from left to right, in the order of the chart
+groups.</p>
+</div>
+<div class="paragraph">
+<p>In this situation, only the leftmost instance of CM93, that is not
+excluded from the quilt, will be displayed. Above, it is the instance
+represented by the yellow rectangle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_faq_chart_groups"><a class="anchor" href="#_faq_chart_groups"></a>FAQ Chart Groups</h4>
+<div class="sect4">
+<h5 id="_no_method_to_add_charts_to_the_group"><a class="anchor" href="#_no_method_to_add_charts_to_the_group"></a>"No method to add charts to the group."?</h5>
+<div class="paragraph">
+<p>Select the chart folder listed in the top pane. Touch "Add" to add this
+folder to the selected group. Same as OpenCPN desktop….</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_using_chart_downloader_to_maintain_charts_the_3_charts_in_the_group_folder_i_have_just_created_are_a_subset_of_the_all_charts_folder_will_chart_downloader_keep_both_folders_updated"><a class="anchor" href="#_using_chart_downloader_to_maintain_charts_the_3_charts_in_the_group_folder_i_have_just_created_are_a_subset_of_the_all_charts_folder_will_chart_downloader_keep_both_folders_updated"></a>Using Chart Downloader to maintain charts. The 3 charts in the group folder I have just created are a subset of the All Charts folder. Will Chart Downloader keep both folders updated?</h5>
+<div class="paragraph">
+<p>Chart groups and chart downloader have nothing to do with each other, if
+you have the downloader configured to update all your charts, then it
+will update all your charts and groups showing a subset of those chart
+will see updated charts.</p>
+</div>
+<div class="paragraph">
+<p>Creating a chart group does not copy the charts anywhere, it is just a
+view on a subset of your chart collection.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_is_it_possible_to_set_up_a_chart_group_by_referencing_charts_in_a_larger_folder_this_would_eliminate_the_need_to_keep_duplicate_charts_that_are_a_small_subset_of_a_larger_collection"><a class="anchor" href="#_is_it_possible_to_set_up_a_chart_group_by_referencing_charts_in_a_larger_folder_this_would_eliminate_the_need_to_keep_duplicate_charts_that_are_a_small_subset_of_a_larger_collection"></a>Is it possible to set up a Chart Group by referencing charts in a larger folder? This would eliminate the need to keep duplicate charts that are a small subset of a larger collection.</h5>
+<div class="paragraph">
+<p>You would have to define both those subfolders you want to use in the
+groups in the list of chart directories. That is possible and OpenCPN
+does handle having to go through the same chart files on the disk
+mutliple times while scanning for charts just fine.</p>
+</div>
+<div class="paragraph">
+<p>You can&#8217;t reference individual charts in the group, they must be
+organized into folders.</p>
+</div>
+<div class="paragraph">
+<p>Do not move the charts you want to keep up to date using the chart
+downloader to different locations on disk unless you are really sure you
+understand what that implies though, you will very likely end up having
+multiple versions of the same charts laying around, some of them
+outdated (= a mess).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

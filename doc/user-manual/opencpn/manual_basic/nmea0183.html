@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/nmea0183.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="nmea0183.html">NMEA Communication</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/nmea0183.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_nmea_communication"><a class="anchor" href="#_nmea_communication"></a>NMEA Communication</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_nmea_2000_pgn"><a class="anchor" href="#_nmea_2000_pgn"></a>NMEA 2000 PGN</h3>
+<div class="paragraph">
+<p><a href="https://ttlappalainen.github.io/NMEA2000/">NMEA 2000 library for C++</a>
+Timo Lappalainen&#8217;s library supports Actisense, which is used widely in
+NMEA 2000 related open source projects.</p>
+</div>
+<div class="paragraph">
+<p>The Canboat Project has good
+<a href="https://canboat.github.io/canboat/canboat.html">NMEA 2000 information
+about Reverse Engineering</a> this protocol.</p>
+</div>
+<div class="paragraph">
+<p>Refer as well to
+<em><a href="./set_options/connections/nmea.html2000">NMEA
+2000</a></em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nmea_0183_sentences"><a class="anchor" href="#_nmea_0183_sentences"></a>NMEA 0183 Sentences</h3>
+<div class="paragraph">
+<p><strong>For a comprehensive explanation of the NMEA 0183 protocol</strong> please read</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.catb.org/gpsd/NMEA.html">NMEA Revealed by Eric S. Raymond</a></p>
+</div>
+<div class="paragraph">
+<p>Please note the 2008 Obsolete Nmea Sentences list in the Eric Raymond
+document.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.hhhh.org/wiml/proj/nmeaxor.html">NMEA MTK Online Checksum
+Calculator</a></p>
+</li>
+<li>
+<p><a href="http://nmeachecksum.eqth.net/">NMEA Online Checksum Calculator</a></p>
+</li>
+<li>
+<p><a href="https://gist.github.com/maxp/1193206">Github NMEA Checksum code</a></p>
+</li>
+<li>
+<p><a href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:nmea_instruments">NMEA
+in Supplementary Software</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other References</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.gpsinformation.org/dale/nmea.htm">Explanation of NMEA
+sentences as used in GPS receivers</a></p>
+</li>
+<li>
+<p><a href="https://www.nmea.org/Assets/20190219%200183%20manufacturer%20codes.pdf">Prefix
+Sentence Characters for Sources -NMEA 0183 Manufacturer&#8217;s Mnemonic
+Codes</a></p>
+</li>
+<li>
+<p><a href="https://www.nmea.org/Assets/100108_nmea_0183_sentences_not_recommended_for_new_designs.pdf">NMEA
+0183 Sentences Not Recommended for New Designs&#44; Approved by the NMEA
+0183 Standard Committee as of October 1&#44; 2008</a></p>
+</li>
+<li>
+<p><a href="https://www.nmea.org/Assets/20190303%20nmea%200183%20talker%20identifier%20mnemonics.pdf">NMEA
+0183 Talker Identifier Mnemonics - 2019</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nmea_2000_in_opencpn_core_program"><a class="anchor" href="#_nmea_2000_in_opencpn_core_program"></a>NMEA 2000 in OpenCPN Core Program</h3>
+<div class="paragraph">
+<p>Refer to
+<em><a href="./set_options/connections/nmea.html2000#supported_nmea_2000_parameter_group_numbers</em>(pgn)">Supported
+NMEA 2000 Parameter Group Numbers (PGN)</a>_.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nmea_0183_in_opencpn_core_program"><a class="anchor" href="#_nmea_0183_in_opencpn_core_program"></a>NMEA 0183 in OpenCPN Core Program</h3>
+<div class="paragraph">
+<p>Normal prefix: "$" however AIS messages use the prefix: "!"</p>
+</div>
+<div class="sect3">
+<h4 id="_recognized_nmea_0183_sentences"><a class="anchor" href="#_recognized_nmea_0183_sentences"></a>Recognized NMEA 0183 Sentences</h4>
+<div class="sect4">
+<h5 id="_hdm_heading_magnetic"><a class="anchor" href="#_hdm_heading_magnetic"></a>HDM - Heading, Magnetic</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Heading Degrees, magnetic</p>
+</li>
+<li>
+<p>M = magnetic</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_hdg_magnetic_heading_deviation_variation"><a class="anchor" href="#_hdg_magnetic_heading_deviation_variation"></a>HDG - Magnetic heading, deviation, variation</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Magnetic Sensor heading in degrees</p>
+</li>
+<li>
+<p>Magnetic Deviation, degrees</p>
+</li>
+<li>
+<p>Magnetic Deviation direction, E = Easterly, W = Westerly</p>
+</li>
+<li>
+<p>Magnetic Variation degrees</p>
+</li>
+<li>
+<p>Magnetic Variation direction, E = Easterly, W = Westerly</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If HDG message also contains the variation and E/W flags then O will use
+that. If not then it will look in RMC message for a variation. If
+nothing there it will use WMM plugin unless user has selected the
+variation manually in options.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_hdt_heading_true"><a class="anchor" href="#_hdt_heading_true"></a>HDT - Heading, True</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Heading Degrees, true</p>
+</li>
+<li>
+<p>T = True</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_rmb_recommended_minimum_navigation_information"><a class="anchor" href="#_rmb_recommended_minimum_navigation_information"></a>RMB - Recommended Minimum Navigation Information</h5>
+<div class="paragraph">
+<p>To be sent by a navigation receiver when a destination waypoint is
+active.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>''
+                                                            14
+        1 2   3 4    5    6       7 8        9 10  11  12  13|  15
+        |   |   |   |    |   |       |   |        |   |   |   |   |   |   |
+ $--RMB,A,x.x,a,c--c,c--c,llll.ll,a,yyyyy.yy,a,x.x,x.x,x.x,A,m,*hh&lt;CR&gt;&lt;LF&gt;''</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Field Number:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Status, A= Active, V = Void</p>
+</li>
+<li>
+<p>Cross Track error - nautical miles</p>
+</li>
+<li>
+<p>Direction to Steer, Left or Right</p>
+</li>
+<li>
+<p>FROM Waypoint ID</p>
+</li>
+<li>
+<p>TO Waypoint ID</p>
+</li>
+<li>
+<p>Destination Waypoint Latitude</p>
+</li>
+<li>
+<p>N or S</p>
+</li>
+<li>
+<p>Destination Waypoint Longitude</p>
+</li>
+<li>
+<p>E or W</p>
+</li>
+<li>
+<p>Range to destination in nautical miles</p>
+</li>
+<li>
+<p>Bearing to destination in degrees True</p>
+</li>
+<li>
+<p>Destination closing velocity in knots</p>
+</li>
+<li>
+<p>Arrival Status, A = Arrival Circle Entered</p>
+</li>
+<li>
+<p>Status A - Data Valid, V - Data Invalid, FAA mode indicator (NMEA 2.3
+and later)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>RMB in a navigation sentence that combines GPS information with the
+coordinates of the Waypoint. The data it contains are the result of
+these calculations on the line that joins the position of the ship and
+the Waypoint. VMG is the right thing to do. VMG = SOG * cos (COG - BRG).
+It does not make sense to put the SOG in its place.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_rmc_recommended_minimum_navigation_information"><a class="anchor" href="#_rmc_recommended_minimum_navigation_information"></a>RMC -Recommended Minimum Navigation Information</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Time (UTC)</p>
+</li>
+<li>
+<p>Status, V = Navigation receiver warning</p>
+</li>
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>N or S</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>E or W</p>
+</li>
+<li>
+<p>Speed over ground, knots</p>
+</li>
+<li>
+<p>Track Made Good, degrees true</p>
+</li>
+<li>
+<p>Date, ddmmyy</p>
+</li>
+<li>
+<p>Magnetic variation, degrees</p>
+</li>
+<li>
+<p>E or W</p>
+</li>
+<li>
+<p>Status A - Data Valid, V - Data Invalid, FAA mode indicator (NMEA 2.3
+and later)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>RMC in a sentence created only by the GPS (Or position system) based on
+the data received only by the receiver. There is no waypoint or route
+information. COG and SOG should appear here.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_xxwpl_waypoint_location"><a class="anchor" href="#_xxwpl_waypoint_location"></a>xxWPL - Waypoint Location</h5>
+<div class="paragraph">
+<p>Used to send routes and waypoints up to a GPS receiver. OpenCPN converts
+incoming WPL messages to AIS-APRS position reports if the option "Treat
+WPL sentences as APRS position reports" under AIS settings is enabled.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>N or S (North or South)</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>E or W (East or West)</p>
+</li>
+<li>
+<p>Waypoint Name</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_xxrte_routes"><a class="anchor" href="#_xxrte_routes"></a>xxRTE - Routes</h5>
+<div class="paragraph">
+<p>Used to send routes and waypoints up to a GPS receiver.OpenCPN does not
+process these sentences as input.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Total number of messages being transmitted</p>
+</li>
+<li>
+<p>Message Number</p>
+</li>
+<li>
+<p>Message Mode</p>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    - c = complete route, all waypoints
+    - w = working route, the waypoint you just left, the waypoint you're heading to, then all the rest
+- Waypoint ID
+- More Waypoints</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_gga_global_positioning_system_fix_data"><a class="anchor" href="#_gga_global_positioning_system_fix_data"></a>GGA - Global Positioning System Fix Data</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Universal Time Coordinated (UTC)</p>
+</li>
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>GPS Quality Indicator</p>
+</li>
+<li>
+<p>Number of satellites in view, 00 - 12</p>
+</li>
+<li>
+<p>Horizontal Dilution of Precision (HDOP)</p>
+</li>
+<li>
+<p>Antenna altitude above/below mean-sea-level (geoid)</p>
+</li>
+<li>
+<p>Units of antenna altitude, meters</p>
+</li>
+<li>
+<p>Geoidal separation, the vertical difference between the WGS-84
+elipsoid and the geoid</p>
+</li>
+<li>
+<p>Units of geoidal separation, meters</p>
+</li>
+<li>
+<p>Age of differential GPS data, time in seconds since last SC104</p>
+</li>
+<li>
+<p>Differential reference station ID, 0000-102</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>GGA data is used to indicate the quality and number of satellites to fix
+the position. The boat becomes red and the 3 green bars when at maximum.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_gll_geographic_position_latitude_longitude"><a class="anchor" href="#_gll_geographic_position_latitude_longitude"></a>GLL - Geographic Position, Latitude / Longitude</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>N or S (North or South)</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>E or W (East or West)</p>
+</li>
+<li>
+<p>Time (UTC)</p>
+</li>
+<li>
+<p>Status A - Data Valid, V - Data Invalid, FAA mode indicator (NMEA 2.3
+and later)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_gsv_satellites_in_view"><a class="anchor" href="#_gsv_satellites_in_view"></a>GSV - Satellites in view</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Number of sentences for full data / sentence 1 of 2</p>
+</li>
+<li>
+<p>Number of satellites in view</p>
+</li>
+<li>
+<p>Satellite PRN number</p>
+</li>
+<li>
+<p>Elevation, degrees</p>
+</li>
+<li>
+<p>Azimuth, degrees</p>
+</li>
+<li>
+<p>SNR - higher is better / for up to 4 satellites per sentence</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_vtg_track_made_good_and_ground_speed"><a class="anchor" href="#_vtg_track_made_good_and_ground_speed"></a>VTG - Track Made Good and Ground Speed</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Track Degrees</p>
+</li>
+<li>
+<p>T = True</p>
+</li>
+<li>
+<p>Track Degrees</p>
+</li>
+<li>
+<p>M = Magnetic</p>
+</li>
+<li>
+<p>Speed Knots</p>
+</li>
+<li>
+<p>N = Knots</p>
+</li>
+<li>
+<p>Speed Kilometers Per Hour</p>
+</li>
+<li>
+<p>K = Kilometers Per Hour</p>
+</li>
+<li>
+<p>Status A - Data Valid, V - Data Invalid, FAA mode indicator (NMEA 2.3
+and later)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_gpwpl_waypoint_data"><a class="anchor" href="#_gpwpl_waypoint_data"></a>GPwpl - Waypoint Data</h5>
+<div class="paragraph">
+<p>Only when there is an active route (this is sometimes bidirectional).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_apb_autopilot_sentence_b"><a class="anchor" href="#_apb_autopilot_sentence_b"></a>APB - Autopilot Sentence "B"</h5>
+<div class="paragraph">
+<p>This is a fixed form of the APA sentence with some ambiguities removed.</p>
+</div>
+<div class="paragraph">
+<p>Note: Some autopilots, Robertson in particular, misinterpret "bearing
+from origin to destination" as "bearing from present position to
+destination". This is likely due to the difference between the APB
+sentence and the APA sentence. for the APA sentence this would be the
+correct thing to do for the data in the same field. APA only differs
+from APB in this one field and APA leaves off the last two fields where
+this distinction is clearly spelled out. This will result in poor
+performance if the boat is sufficiently off-course that the two bearings
+are different.</p>
+</div>
+<div class="paragraph">
+<p>Field Number:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Status V = LORAN-C Blink or SNR warning V = general warning flag or
+other navigation systems when a reliable fix is not available</p>
+</li>
+<li>
+<p>Status V = Loran-C Cycle Lock warning flag A = OK or not used</p>
+</li>
+<li>
+<p>Cross Track Error Magnitude</p>
+</li>
+<li>
+<p>Direction to steer, L or R</p>
+</li>
+<li>
+<p>Cross Track Units, N = Nautical Miles</p>
+</li>
+<li>
+<p>Status A = Arrival Circle Entered</p>
+</li>
+<li>
+<p>Status A = Perpendicular passed at waypoint</p>
+</li>
+<li>
+<p>Bearing origin to destination</p>
+</li>
+<li>
+<p>M = Magnetic, T = True</p>
+</li>
+<li>
+<p>Destination Waypoint ID</p>
+</li>
+<li>
+<p>Bearing, present position to Destination</p>
+</li>
+<li>
+<p>M = Magnetic, T = True</p>
+</li>
+<li>
+<p>Heading to steer to destination waypoint</p>
+</li>
+<li>
+<p>M = Magnetic, T = True</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_xte_measured_cross_track_error"><a class="anchor" href="#_xte_measured_cross_track_error"></a>XTE - Measured cross track error</h5>
+<div class="paragraph">
+<p>Measured cross track error is a part of the RMB message, for
+compatibility with some older equipment designed to work with Loran.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cross track error, measured</p>
+</li>
+<li>
+<p>General warning flag V = warning</p>
+</li>
+<li>
+<p>(Loran-C Blink or SNR warning)</p>
+</li>
+<li>
+<p>Not used for GPS (Loran-C cycle lock flag)</p>
+</li>
+<li>
+<p>Cross track error distance</p>
+</li>
+<li>
+<p>L - Steer left to correct error (or R for right)</p>
+</li>
+<li>
+<p>N- Distance units - Nautical miles</p>
+</li>
+<li>
+<p>Status A - Data Valid, V - Data Invalid, FAA mode indicator (NMEA 2.3
+and later)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_aivdm_automatic_information_system_ais"><a class="anchor" href="#_aivdm_automatic_information_system_ais"></a>AIVDM - Automatic Information System (AIS)</h5>
+<div class="paragraph">
+<p>Sent by AIS handled by the AIS Decoder as an AIS target</p>
+</div>
+<div class="paragraph">
+<p>Position and static data reports from other vessels. The body of this
+message is an encoded ASCII string that needs special logic to decode.
+it contains the following information about other ships.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Time (UTC)</p>
+</li>
+<li>
+<p>MMSI Number</p>
+</li>
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>Speed Knots</p>
+</li>
+<li>
+<p>Heading</p>
+</li>
+<li>
+<p>Course over Ground</p>
+</li>
+<li>
+<p>Rate of turn</p>
+</li>
+<li>
+<p>Ship Type</p>
+</li>
+<li>
+<p>Ship Name</p>
+</li>
+<li>
+<p>Ship Callsign</p>
+</li>
+<li>
+<p>Ship length, beam and draft</p>
+</li>
+<li>
+<p>Navigation status</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_aivdo_automatic_information_system_ais"><a class="anchor" href="#_aivdo_automatic_information_system_ais"></a>AIVDO - Automatic Information System (AIS)</h5>
+<div class="paragraph">
+<p>Sent by AIS handled by the AIS Decoder as an AIS target (option)</p>
+</div>
+<div class="paragraph">
+<p>Position reports from own vessel</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>Speed over ground</p>
+</li>
+<li>
+<p>Course over ground</p>
+</li>
+<li>
+<p>MMSI, navigational status, ship type, call sign, destination, sizes
+(in AIS target list)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_xxttm"><a class="anchor" href="#_xxttm"></a>xxTTM</h5>
+<div class="paragraph">
+<p>Sent by the Radar (ARPA / MARPA) and handled by the AIS Decoder in the
+same way as an AIS target</p>
+</div>
+<div class="paragraph">
+<p>Tracked Target Message</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Target Number (0-99)</p>
+</li>
+<li>
+<p>Target Distance</p>
+</li>
+<li>
+<p>Bearing from own ship</p>
+</li>
+<li>
+<p>Bearing Units</p>
+</li>
+<li>
+<p>Target Speed</p>
+</li>
+<li>
+<p>Target Course</p>
+</li>
+<li>
+<p>Course Units</p>
+</li>
+<li>
+<p>Distance of closest-point-of-approach</p>
+</li>
+<li>
+<p>Time until closest-point-of-approach "-" means increasing</p>
+</li>
+<li>
+<p>"-" means increasing</p>
+</li>
+<li>
+<p>Target name</p>
+</li>
+<li>
+<p>Target Status</p>
+</li>
+<li>
+<p>Reference Target</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_xxtll"><a class="anchor" href="#_xxtll"></a>xxTLL</h5>
+<div class="paragraph">
+<p>Sent by the Radar and plugin radar_pi (ARPA / MARPA) and handled by the
+AIS Decoder in the same way as an AIS target</p>
+</div>
+<div class="paragraph">
+<p>Target Latitude and Longitude</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Target Number (not used/ignored)</p>
+</li>
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Status</p>
+</li>
+<li>
+<p>Reference Target (not used/ignored)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_xxosd"><a class="anchor" href="#_xxosd"></a>xxOSD</h5>
+<div class="paragraph">
+<p>Own Ship Data</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Heading, degrees true</p>
+</li>
+<li>
+<p>Status, A = Data Valid</p>
+</li>
+<li>
+<p>Vessel Course, degrees True</p>
+</li>
+<li>
+<p>Course Reference</p>
+</li>
+<li>
+<p>Vessel Speed</p>
+</li>
+<li>
+<p>Speed Reference</p>
+</li>
+<li>
+<p>Vessel Set, degrees True</p>
+</li>
+<li>
+<p>Vessel drift (speed)</p>
+</li>
+<li>
+<p>Speed Units</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_fpros"><a class="anchor" href="#_fpros"></a>FPROS</h5>
+<div class="paragraph">
+<p>GPSGate Buddy Position Update.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Latitude</p>
+</li>
+<li>
+<p>Hemisphere N/S</p>
+</li>
+<li>
+<p>Longitude</p>
+</li>
+<li>
+<p>Hemisphere E/W</p>
+</li>
+<li>
+<p>Altitude in meters above sea level</p>
+</li>
+<li>
+<p>Speed over ground in knots</p>
+</li>
+<li>
+<p>Heading over ground in degrees</p>
+</li>
+<li>
+<p>Date</p>
+</li>
+<li>
+<p>Time UTC</p>
+</li>
+<li>
+<p>Name of buddy this position info belongs to.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Notes: CDDSC and CDSE. These standards are not fully supported by
+Opencpn.</p>
+</li>
+<li>
+<p>CDDSC - Digital Selective Calling Information (DSC)</p>
+</li>
+<li>
+<p>CDDSE - Extended Digital Selective Calling Information, including a
+more accurate position. (DSE)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * [[http://continuouswave.com/whaler/reference/DSC_Datagrams.html|Data Interface in Digital Selective Calling Class-D Radios]]
+    * [[http://www.cruisersforum.com/forums/f13/nmea-0183-sentences-dsc-dse-124887.html#post2325905|Cruiser Forum Thread]]
+    * Example Sentences:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>1      2  3          4  5  6  7          8    9  10 11 12 13
+|   |  |   |  |   |  |   |    |   |  |   |  |
+$CDDSC,12,3380400790,12,06,00,1423108312,2019, ,  , S, E  *6A</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>$CDDSC–from a DSC radio.</p>
+</li>
+<li>
+<p>12–distress alert call.</p>
+</li>
+<li>
+<p>3381581370–the MMSI of the sender.</p>
+</li>
+<li>
+<p>12–category is "distress."</p>
+</li>
+<li>
+<p>06–Nature of Distress is"adrift."</p>
+</li>
+<li>
+<p>00–preferred follow-on communication by frequency- or phase-modulated
+simplex radio telephony.</p>
+</li>
+<li>
+<p>1423108312–position, which 42-degrees 31-minutes latitude, 083-degrees
+12-minutes longitude, in North and West.</p>
+</li>
+<li>
+<p>0236–message was sent at 0236-UTC.</p>
+</li>
+<li>
+<p>3381581370–now the new information! This is a repeat of the MMSI of
+the sender. Since I know this datagram comes from receiving a distress
+alert cancelation message, the repetition of the same MMSI in this field
+as in the sender&#8217;s field must be significant. In ITU-Rec. M.493-13, in
+Table 4.2 there is a footnote, which says, "Distress acknowledgments
+where the transmitting MMSI and ship in distress MMSI are the same, the
+message should be interpreted as a self Cancel operation." This sheds
+light on the nature of this field. This field must be "the address of
+vessel in distress" if the message is a distress acknowledgement
+message.</p>
+</li>
+<li>
+<p>[null]–still no signal in this field.</p>
+</li>
+<li>
+<p>S–end of sequence.</p>
+</li>
+<li>
+<p>[null]–no expansion message to follow since no "E" here.</p>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * 20–checksum.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>1      2  3  4  5          6  7       8
+|   |  |   |  |   |  |   |
+$CDDSE,1, 1, A, 3380400790,00,45894494*1B</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>$CDDSE–from a DSC radio. Since this followed a datagram that indicated
+an expansion message would follow, this datagram is a representation on
+the wired data link of that DSC expansion message.</p>
+</li>
+<li>
+<p>1–based on similar coding seen in other datagrams, this field is
+likely to indicate the total number of datagrams that are part of this
+expansion message.</p>
+</li>
+<li>
+<p>1–as suggested above, this is likely the number of this datagram in
+the message sequence. Since this is one of a total of one, this datagram
+contains all the data for the expansion message.</p>
+</li>
+<li>
+<p>A–to be determined.</p>
+</li>
+<li>
+<p>3380400790–a ten-digit representation of the sender&#8217;s MMSI.</p>
+</li>
+<li>
+<p>00–this field of two-digits appears to be the expansion data specifier
+described in Table 1 of ITU-Rec.M821-1, but with the symbol
+representation in two-digits instead of three-digits. The leading "1"
+seems to not be used. (See modified table, above.) This field identifies
+the data that will follow in the next field. In this message, the data
+will be "enhanced position resolution."</p>
+</li>
+<li>
+<p>45894494–the data payload, which is eight digits. The first four are
+the decimal portion of the latitude minutes; the last four are the
+decimal portion of the longitude minutes. The latitude and longitude
+whole minutes were sent in the immediately preceding datagram. This is
+as specified in the ITU-Rec. M.821-1 in section 2.1.2.1</p>
+</li>
+<li>
+<p>*1B–checksum.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For more detail refer to
+<a href="http://continuouswave.com/whaler/reference/DSC_Datagrams.html">Data
+Interface in Digital Selective Calling Class-D Radios</a></p>
+</li>
+<li>
+<p>For more details on how OpenCPN interprets all recognized sentences,
+look at the <strong>"AIS_DecoderA.cpp"</strong> file in the source code. For the
+Dashboard plugin, look at the different files in the "nmea0183"
+directory.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_not_used"><a class="anchor" href="#_not_used"></a>Not Used</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>BOD - Bearing - Origin to Destination</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * Bearing angle of the line, calculated at the origin waypoint, extending to the destination waypoint from the origin waypoint for the active navigation leg of the journey.
+    * This sentence should coincide with field 11 of RMB.
+    * It is logical that OCPN does not use it, since it is irrelevant if it already sends RMB, which is more common and recommended.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dashboard_plugin"><a class="anchor" href="#_dashboard_plugin"></a>Dashboard Plugin</h3>
+<div class="paragraph">
+<p>Links use <a href="http://www.catb.org/gpsd/NMEA.html">NMEA Revealed by Eric S.
+Raymond</a></p>
+</div>
+<div class="sect3">
+<h4 id="_dashboard_plugin_recognized_nmea_0183_sentences"><a class="anchor" href="#_dashboard_plugin_recognized_nmea_0183_sentences"></a>Dashboard Plugin recognized NMEA 0183 sentences</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_rma_recommended_minimum_navigation_information">RMA</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Recommended Minimum Navigation Information</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_rmb_recommended_minimum_navigation_information">RMB</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Recommended Minimum Navigation Information</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_rmc_recommended_minimum_navigation_information">RMC</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Recommended Minimum Navigation Information</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_gsv_satellites_in_view">GSV</a> -
+Satellites in view</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_gga_global_positioning_system_fix_data">GGA</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Global Positioning System Fix Data</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_gll_geographic_position_latitudelongitude">GLL</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Geographic Position - Latitude/Longitude - Heading</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_gns_fix_data">GNS</a> - Fix data</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_alm_gps_almanac_data">ALM</a> - GPS
+Almanac Data</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_hdg_heading_deviation_variation">HDG</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Heading - Deviation &amp; Variation*</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_hdm_heading_magnetic">HDM</a> -
+Heading - Magnetic</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_hdt_heading_true">HDT</a> - Heading</p>
+<div class="ulist">
+<ul>
+<li>
+<p>True</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_dbt_depth_below_transducer">DBT</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Depth below transducer</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_dpt_depth_of_water">DPT</a> - Depth
+of Water</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_mtw_mean_temperature_of_water">MTW</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mean Temperature of Water</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_mda_meteorological_composite">MDA</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Meteorological Composite (obsolete) see XDR below</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>MTA - Air Temperature (obsolete)</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_vhw_water_speed_and_heading">VHW</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Water speed and heading</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_vlw_distance_traveled_through_water">VLW</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Distance Traveled through Water</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_vtg_track_made_good_and_ground_speed">VTG</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Track made good and Ground speed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_vdr_set_and_drift">VDR</a> - Set
+and Drift</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_rsa_rudder_sensor_angle">RSA</a> -
+Rudder Sensor Angle</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_mwd_wind_direction_speed">MWD</a> -
+Wind Direction &amp; Speed</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_mwv_wind_speed_and_angle">MWV</a> -
+Wind Speed and Angle</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_vwr_relative_wind_speed_and_angle">VWR</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Relative Wind Speed and Angle</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>VWT - True Windspeed and Angle (obsolete)</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_xdr_transducer_measurement">XDR</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Transducer Measurement See below</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_zda_time_date_utc_day_month_year_and_local_time_zone">ZDA</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Time &amp; Date - UTC, day, month, year and local time zone</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_tll_target_latitude_and_longitude">TLL</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Target Latitude and Longitude</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_vtg_track_made_good_and_ground_speed">VTG</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Track made good and Ground speed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_xte_cross_track_error_measured">XTE</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cross-Track Error, Measured</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_bww_bearing_waypoint_to_waypoint">BWW</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bearing - Waypoint to Waypoint</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_bwr_bearing_and_distance_to_waypoint_rhumb_line">BWR</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bearing and Distance to Waypoint - Rhumb Line</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_bwc_bearing_distance_to_waypoint_great_circle">BWC</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bearing &amp; Distance to Waypoint - Great Circle</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_bod_bearing_waypoint_to_waypoint">BOD</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bearing - Waypoint to Waypoint</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_apa_autopilot_sentence_a">APA</a> -
+Autopilot Sentence "A"</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_apb_autopilot_sentence_b">APB</a> -
+Autopilot Sentence "B"</p>
+</li>
+<li>
+<p><a href="https://gpsd.gitlab.io/gpsd/NMEA.html#_osd_own_ship_data">OSD</a> Own Ship
+Data</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>*</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mda"><a class="anchor" href="#_mda"></a>MDA</h4>
+<div class="paragraph">
+<p>Meteorological Composite (obsolete) This message is obsolete and NMEA
+recommends to use XDR transducer messages instead. However, old
+instruments might still sending this message. OpenCPN reads the second
+value "Barometric pressure, bars", but only if the number provided is
+between 0.8 and 1.1 All other values are ignored.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>''
+$--MDA,x.x,I,**x.x,B**,x.x,C,x.x,C,x.x,x.x,x.x,C,x.x,T,x.x,M,x.x,N,x.x,M*hh&lt;CR&gt;&lt;LF&gt; \\
+|   |        |   |    |   |    |   |    |   |    | \\
+|   |        |   |    |   |    |   |    |   |    Wind speed, meters/second \\
+|   |        |   |    |   |    |   |    |        Wind speed, knots \\
+|   |        |   |    |   |    |   |    Wind direction, degrees Magnetic     \\
+|   |        |   |    |   |    |        Wind direction, degrees True \\
+|   |        |   |    |   |    Dew point, degrees C \\
+|   |        |   |    |    Absolute humidity, percent \\
+|   |        |   |    Relative humidity, percent \\
+|   |        |        Water temperature, degrees C \\
+|   |        Air temperature, degrees C \\
+|      **//Barometric pressure, bars// ** \\
+Barometric pressure, inches of mercury''</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xdr"><a class="anchor" href="#_xdr"></a>XDR</h4>
+<div class="paragraph">
+<p>Transducer Values</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>            1 2   3 4       n
+|   |   |   |       | \\
+*  $--XDR,a,x.x,a,c--c, ..... *hh&lt;CR&gt;&lt;LF&gt; \\</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Field Number:</p>
+</li>
+<li>
+<p>1) Transducer Type</p>
+</li>
+<li>
+<p>2) Measurement Data</p>
+</li>
+<li>
+<p>3) Units of measurement</p>
+</li>
+<li>
+<p>4) Name of transducer</p>
+</li>
+<li>
+<p>x) More of the same</p>
+</li>
+<li>
+<p>n) Checksum</p>
+</li>
+<li>
+<p>Example:</p>
+</li>
+<li>
+<p>$IIXDR,C,19.52,C,TempAir*19</p>
+</li>
+<li>
+<p>$IIXDR,P,1.02481,B,Barometer*29</p>
+</li>
+<li>
+<p>Currently, OpenCPN recognizes the following transducers:</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Measured Value | Transducer Type | Measured Data   | Unit of measure | Transducer Name
+------------------------------------------------------------------------------------------------------
+barometric     | "P" pressure    | 0.8..1.1 or 800..1100           | "B" bar         | "Barometer"
+air temperature| "C" temperature |   2 decimals                    | "C" celsius     | "TempAir" or "ENV_OUTAIR_T"
+pitch          | "A" angle       |-180..0 nose down 0..180 nose up | "D" degrees     | "PTCH" or "PITCH"
+rolling        | "A" angle       |-180..0 L         0..180 R       | "D" degrees     | "ROLL"
+water temp     | "C" temperature |   2 decimals                    | "C" celsius     | "ENV_WATER_T"
+-----------------------------------------------------------------------------------------------------</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zda"><a class="anchor" href="#_zda"></a>ZDA</h4>
+<div class="paragraph">
+<p>Time &amp; Date - UTC, day, month, year and local time zone This is one of
+the sentences commonly emitted by GPS units.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        1         2  3  4    5  6  7
+        |   |  |   |    |   |  |
+ $--ZDA,hhmmss.ss,xx,xx,xxxx,xx,xx*hh&lt;CR&gt;&lt;LF&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Field Number:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>UTC time (hours, minutes, seconds, may have fractional subsecond)</p>
+</li>
+<li>
+<p>Day, 01 to 31</p>
+</li>
+<li>
+<p>Month, 01 to 12</p>
+</li>
+<li>
+<p>Year (4 digits)</p>
+</li>
+<li>
+<p>Local zone description, 00 to + - 13 hours (- means East longitude)</p>
+</li>
+<li>
+<p>Local zone minutes description, 00 to +-59 (- means East longitude)</p>
+</li>
+<li>
+<p>Example: $GPZDA,160012.71,11,03,2004,-1,00*7D</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_nmea_version_2_3"><a class="anchor" href="#_nmea_version_2_3"></a>NMEA version 2.3</h4>
+<div class="paragraph">
+<p>Added a mode indicator to many sentences to indicate what kind of fix
+the receiver has. The value can be one of</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A=autonomous</p>
+</li>
+<li>
+<p>D=differential</p>
+</li>
+<li>
+<p>E=Estimated</p>
+</li>
+<li>
+<p>N=not valid,</p>
+</li>
+<li>
+<p>S=Simulator.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Sometimes there can even be a null value as well.<br>
+The A and D are the only vales that will indicate an Active and reliable
+Sentence.<br>
+This mode character has been added to the end of RMC, RMB, VTG, and GLL
+sentences.<br>
+Optionally, to some others as well, including the BWC and XTE sentences.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_notes"><a class="anchor" href="#_notes"></a>Notes:</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>For more details on how OpenCPN interprets all recognized sentences,
+look at the “AIS_DecoderA.cpp” file in the source code. For the
+Dashboard plugin, look at the different files in the “nmea0183”
+directory.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

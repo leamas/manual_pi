@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/set_options/connections/advanced.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../../set_options.html">Set Options</a></li>
+    <li><a href="../connections.html">Connections</a></li>
+    <li><a href="advanced.html">Advanced</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/set_options/connections/advanced.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_advanced"><a class="anchor" href="#_advanced"></a>Advanced</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Table of Sections</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_connection_notes">Connection
+Notes</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_ip_addresses">Network
+Notes - IP Addresses</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_udp_protocol">Network
+Notes - UDP Protocol</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_udp_input">Input</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_udp_output">Output</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_udp_nmea_repeater">Network
+Notes - UDP NMEA Repeater</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_tcp_protocol">Network
+Notes - TCP Protocol</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_tcp_input">Input</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_tcp_output">Output</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_gpsd">Network
+Notes - GPSD</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_broadcast_and_multicast">Network
+Notes - Broadcast and Multicast</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_udp_multicast">Network
+Notes - UDP Multicast</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_udp_broadcast">Network
+Notes - UDP Broadcast</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_tcp_broadcast_multicast">Network
+Notes - TCP Broadcast + Multicast</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_finding_your_platform_private_ip_address">Finding
+Your Platform Private IP Address</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_windows">Windows</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_linux">Linux</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_raspberry_pi">RPi</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#<em>furuno</em>-_configurable_null_header_acceptance">Furuno
+- Configurable Null Header Acceptance</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./../../set_options/connections/advanced.html#_sending_waypoints_to_the_autopilot">Sending
+Waypoints to the Autopilot</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_connection_notes"><a class="anchor" href="#_connection_notes"></a>Connection Notes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>If you already have an application connected to your gps that is
+connected with a serial port, OpenCPN will not be able to connect to the
+same port.</strong> Two applications cannot use a port simultaneously.
+<span class="underline">On Linux</span>, using GPSD in such a situation will allow
+multiple connections. This only works if your "other application"
+supports the GPSD. As an alternative on Linux, you can use Kplex (also
+for Mac) or Muplex which can create pseudo terminals ("virtual serial
+ports") to share NMEA data between applications.</p>
+</div>
+<div class="paragraph">
+<p>If an NMEA 0183 sentence is filtered on an input connection and
+opencpn.conf/.ini has the following setting:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>LegacyInputCOMPortFilterBehaviour=1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then it will still enter the internal multiplexer. So, it will be
+available to output connections, unless it&#8217;s filtered there as well. If
+the setting is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>LegacyInputCOMPortFilterBehaviour=0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then the message will not be placed on the internal multiplexer. This
+will only work for serial connections. Echoing back a network
+connection, on the input port for output, will not work.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NMEA data can also come from the VDR plugin. These sentences will be
+labeled as such in the Debug Window and have "0" priority.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>No Flow Control on Serial Ports</strong>. By nature, NMEA 0183 and NMEA 2000
+don&#8217;t do flow control. If a message gets lost, it gets lost… It will be
+repeated at some point, and buffering a delayed message that has lost
+its meaning, when there is more current &amp; accurate data available is not
+useful. If interfacing the NMEA-specified way, there is no hardware flow
+control.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_networking_notes"><a class="anchor" href="#_networking_notes"></a>Networking Notes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ip_addresses"><a class="anchor" href="#_ip_addresses"></a>IP Addresses</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Localhost</em> IP Address - A special hostname that allows a computer to
+connect to and communicate with itself. The corresponding IP address for
+<em>localhost</em> is <em>127.0.0.1</em>. "'Host' typically refers to a server on the
+internet. <em>Localhost</em> represents a computer that is making a request to
+itself, in this case acting as a virtual loopback server.</p>
+</li>
+<li>
+<p>127.0.0.1 IP Address - A reserved address for local servers on
+computers. <em>Localhost</em> and 127.0.0.1 are synonymous.</p>
+</li>
+<li>
+<p>0.0.0.0 IP Address - A non-routable placeholder address, a catch-all
+and a default route address depending on context. In some cases, it
+means accept all IP addresses (incoming), while in other cases it may
+mean block all IP addresses. It can also represent the "default route"
+when configuring network interfaces.<br>
+<em>Note: OpenCPN requires a routable, non-local IP address for UDP
+outputs, e.g. an autopilot. For TCP and UDP inputs, 0.0.0.0 is used to
+listen on all interfaces.</em></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_port_numbers"><a class="anchor" href="#_port_numbers"></a>Port Numbers</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>10110 is the port number for NMEA 0183 over TCP or UDP that has been
+assigned by the Internet Engineering Task Force (IETF). In general all
+devices that support NMEA 0183 over TCP or UDP use this default number,</p>
+</li>
+<li>
+<p>Similarly, port 2947 is the IETF assigned port number for GPSD and
+3000 default port number for SignalK Server</p>
+</li>
+<li>
+<p>In all cases you should check the device vendor&#8217;s documentation or
+verify during installation to ensure all devices are using the correct
+port number.</p>
+</li>
+<li>
+<p>If you choose to use your own port number, select one from the range
+49152 to 65535 to ensure it does not interfere with other applications
+and also configure your firewall to allow your selected port.</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_udp_protocol"><a class="anchor" href="#_udp_protocol"></a>UDP Protocol</h3>
+<div class="paragraph">
+<p>User Data Protocol (UDP) is a method of transmitting data without
+negotiating a connection between two endpoints (there is no handshake
+between a server and a client). There is also no detection and
+retransmission of data lost in the network. It is less reliable, and has
+no delivery guarantee, but is faster, with prompt delivery and is
+suitable for small networks. Within a small home or boat network data
+loss should not normally occur and in any case, NMEA data is generally
+updated frequently by "talkers". UDP is suited for broadcasting to
+multiple devices at once. Two UDP connections can be configured at once,
+one for receiving and one for output, using the same address.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For UDP input no IP is required. Try just going with address
+<span class="underline">0.0.0.0</span> and the port that matches the sender&#8217;s port, e.g.
+<span class="underline">10110</span>.</p>
+</li>
+<li>
+<p>For UDP output, if you make the last octet of a Class C IP address
+<span class="underline">255</span> then messages should go to all devices on that subnet.
+EG: To reach all machines within a local network, such as a wifi router,
+use the address 192.168.x.255.</p>
+</li>
+<li>
+<p>Any router in between the sender and OpenCPN must be configured to not
+block the assigned port number.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An OpenCPN <strong>UDP data connection</strong> will listen for data destined for the
+DataPort on any system interface and on the broadcast address of any
+connected network.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiplexers and similar devices broadcast datagrams to the whole
+network without caring whether any device listens for them or not.</p>
+</li>
+<li>
+<p>In OpenCPN this scenario is usually represented by an incoming UDP
+connection with address 0.0.0.0 (equivalent to “listen for any broadcast
+received on any interface”)</p>
+</li>
+<li>
+<p>Sending data targeting the autopilot out of OpenCPN is a different,
+independent, task, which should usually be a unicast (equivalent to
+“send to only one receiver”, in some cases the multiplexer).</p>
+</li>
+<li>
+<p>In OpenCPN, this would be represented by an outgoing UDP connection
+with the multiplexer&#8217;s IP address.</p>
+</li>
+<li>
+<p>It is absolutely OK (and the correct thing to do) to configure two UDP
+connections with the same port number in OpenCPN, the input one to
+receive the broadcasts from the multiplexer and the output one to
+transmit the unicast to it.</p>
+</li>
+<li>
+<p>Any router in between the sender and OpenCPN must be configured to not
+block the assigned port number. Sometimes a high port number (like
+10110) will not be blocked.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_udp_input"><a class="anchor" href="#_udp_input"></a>UDP input</h4>
+<div class="paragraph">
+<p>If you select <span class="underline">Receive Input on this Port</span>, then the
+connection will listen for another device on the network. * For UDP
+input, no IP address is required, but the Port is required. Try just
+going with the port matching the sender&#8217;s port, for example: “<strong>0.0.0.0</strong>”
+or "<strong>localhost</strong>" and “<strong>10110</strong>”.</p>
+</div>
+<div class="paragraph">
+<p>When adding a network connection for UDP receive there is no need to
+specify the IP address. The port is required but not the IP address.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>However, if you wish to receive UDP multicast data you must enter the
+multicast IP address to which those data are being sent or the system
+will not see them.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_udp_output"><a class="anchor" href="#_udp_output"></a>UDP output</h4>
+<div class="paragraph">
+<p>If you uncheck <em>Receive Input on this Port</em> and then check <em>Output on
+this port</em>, then you are setting up a UDP output connection. The sending
+end needs to specify both IP address and port number.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter the IP address and Dataport for the UDP client you want to
+receive the data.</p>
+</li>
+<li>
+<p>If you make the last octet of the IP address “<strong>255</strong>”, then messages
+should go to all devices on that subnet.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_udp_nmea_repeater"><a class="anchor" href="#_udp_nmea_repeater"></a>UDP NMEA Repeater</h3>
+<div class="paragraph">
+<p>The purpose of this configuration is to have one computer running
+OpenCPN and interfaced with the boat&#8217;s network and any additional
+sensors. This computer will retransmit all or some received NMEA 0183
+(not NMEA 2000) data to another computer, also running OpenCPN. Thus a
+highly protected and capable computer can be inside the vessel cabin
+while a portable tablet can be located at the helm, receiving data
+wirelessly.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/quick_start_guide/connect_to/tcp-example.png" alt="tcp-example.png" width="623" height="300"></span></p>
+</div>
+<div class="paragraph">
+<p>In this case, the retransmitting computer has OpenCPN with Dataports
+configured for input and output. If the Dataports are different, or are
+on separate networks or one or both are serial, then no filtering is
+required.</p>
+</div>
+<div class="paragraph">
+<p>Here, the input is UDP on any IP address, with a Dataport of 1496, which
+is the setting a Yacht Devices YDWG has for UDP output. The output is
+UDP on the local network 192.168.4.255, which is the broadcast IP
+address. The Dataport is 10110, which being different than 1496,
+prevents looping.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/tb-opt-conn-repeater.jpg" alt="NMEA 0183 repeater on different Dataports" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>If both connection ports are on the same network and have the same
+Dataport number, then in order to prevent OpenCPN from receiving its own
+outputs and then retransmitting them, ad infinitum, the input and output
+<strong>must be filtered</strong>, such that the output messages are not allowed as
+input.</p>
+</div>
+<div class="paragraph">
+<p>The assumption is that both computers are on the same network subnet. If
+not, then any intermediary routers must pass Dataport in use through,
+and the IP address translation must be accommodated at each computer.</p>
+</div>
+<div class="paragraph">
+<p>See: <em><a href="/opencpn/manual_advanced/techniques/network_repeater.html">Advanced
+User Manual - Network Repeater (ca. 2015)</a></em><br>
+See:
+<em><a href="/opencpn/supplementary_hardware/wifi_repeater_to_tablet_pc.html">Supplemental
+Hardware - WiFi Repeater to Tablet PC (ca. 2015)</a></em><br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/imprimer_opencpn_networking_repeater_to_tablet_pcs.pdf" alt="See: &quot;OpenCPN Networking Repeater to Tablet PDF&quot;" width="(ca. 2015)"></span></p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_tcp_protocol"><a class="anchor" href="#_tcp_protocol"></a>TCP Protocol</h3>
+<div class="paragraph">
+<p>TCP is a "connection-oriented" protocol which provides a reliable link
+between two network endpoints. TCP connections are first negotiated with
+a two-way handshake and then it ensures that any network packets lost in
+transit are re-transmitted. TCP is a “one-to-one” connection and
+broadcast or multicast addresses cannot be used with TCP.</p>
+</div>
+<div class="paragraph">
+<p>Internet AIS servers normally accept TCP connections, as do many
+serial-to-network and WiFi devices.</p>
+</div>
+<div class="sect3">
+<h4 id="_tcp_input"><a class="anchor" href="#_tcp_input"></a>TCP input</h4>
+<div class="paragraph">
+<p><strong>To make a connection to a remote TCP server</strong>, enter its <em>IP address</em> or
+<em>hostname</em> in the <span class="underline">Address</span> box and the TCP port on which
+the server listens in the <span class="underline">DataPort</span> box. Many devices use a
+non-standard TCP port rather than OpenCPN&#8217;s standard of 10110, so do
+check the server&#8217;s documentation.</p>
+</div>
+<div class="paragraph">
+<p>Network TCP Input NMEA 0183 Address:192.168.1.32 DataPort:10111 with
+Filtered Input Sentences.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tcp_output"><a class="anchor" href="#_tcp_output"></a>TCP output</h4>
+<div class="paragraph">
+<p>If <strong>0.0.0.0</strong> is entered in the <span class="underline">Address</span> box, OpenCPN will
+act as a <strong>TCP server</strong>, accepting a connection from a <strong>remote TCP
+client</strong>. OpenCPN will listen on <strong>all</strong> its host computer&#8217;s network
+interfaces for TCP connections to the port specified in the
+<span class="underline">DataPort</span> field. There should normally be no reason to
+select a <span class="underline">DataPort</span> value other than the standard <strong>10110</strong>
+unless multiple servers are required.</p>
+</div>
+<div class="paragraph">
+<p>Network TCP Output NMEA 0183 Address:192.168.1.32 DataPort:10111 with
+Filtered Output Sentences.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the current implementation, a single data connection can accept
+only one client.</p>
+</li>
+<li>
+<p>If multiple clients wish to connect to OpenCPN, a dedicated data
+connection must be provided for each with different
+<span class="underline">DataPort</span> values.</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gpsd"><a class="anchor" href="#_gpsd"></a>GPSD</h3>
+<div class="paragraph">
+<p>GPS Service Daemon (GPSD) is a service daemon for Linux, OpenBSD and Mac
+OS X. GPSD connects to GPS receivers via serial, USB, Bluetooth, or to
+another GPSD service on the network. It allows multiple clients to
+access a single GPS receiver simultaneously. The clients connect to GPSD
+using TCP and port 2947. Clients include all versions of OpenCPN running
+on all of the supported Operating Systems.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/gpsd.png" alt="gpsd.png" width="636" height="400"></span></p>
+</div>
+<div class="paragraph">
+<p>To create a connection to a GPSD server, verify the IP address of the
+GPSD and the port number (usually the default port number which is
+2947). Then just add a new connection to OpenCPN using the correct
+parameters. If you are running OpenCPN on the same PC on which GPSD is
+running, you may also use "localhost" as the IP Address.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/gpsd-connection.png" alt="gpsd-connection.png" width="524" height="400"></span></p>
+</div>
+<div class="paragraph">
+<p><em>Note: <strong>Ubuntu users</strong> - If GPSD is installed - use it.</em> If you prefer to
+use a serial connection, un-install GPSD. The reason is that GPSD starts
+automatically when, for example, a USB GPS is connected. This will block
+the serial port that the GPS communicates over (/dev/ttyUSB0 in many
+cases), hence no other serial connection to the GPS is possible. So it&#8217;s
+an either-or situation.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_broadcast_and_multicast"><a class="anchor" href="#_broadcast_and_multicast"></a>Broadcast and Multicast</h3>
+<div class="paragraph">
+<p>In addition to link-local IP addresses used for point-to-point TCP
+connections, e.g. 192.168.1.x, OpenCPN users are likely to use 0.0.0.0
+(accepting TCP client connections, or for UDP), x.x.x.255 (UDP
+broadcast), "localhost" (to receive UDP, or to listen to a GPSD server
+residing on the same machine).</p>
+</div>
+<div class="paragraph">
+<p>This section is meant to provide some information regarding these
+special IP addresses, and how they are used by different protocols,
+including TCP and UDP.</p>
+</div>
+<div class="sect3">
+<h4 id="_udp_multicast"><a class="anchor" href="#_udp_multicast"></a>UDP Multicast</h4>
+<div class="paragraph">
+<p>What is Multicast, indicated by the special IP address range 224.0.0.0
+to 239.255.255.255?</p>
+</div>
+<div class="paragraph">
+<p>The IPv4 multicast address range is defined by
+<a href="https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml">IANA
+Multicast Addresses</a>. Multicast addresses are used for <em>one-to-many</em>
+communication, where a single sender transmits data to multiple
+recipients. Unlike unicast <em>(one-to-one)</em> or broadcast <em>(one-to-all)</em>
+addresses, multicast addresses allow efficient distribution of data to a
+specific group of interested receivers that must advertise to the sender
+that they want to receive the data. This avoids the issues with
+broadcast messages flooding the network. Normally, UDP is used for
+multicast transmission.</p>
+</div>
+<div class="paragraph">
+<p>Many IP addresses in this range are reserved for specific purposes and
+should be avoided by users of OpenCPN. The range 224.252.0.0 to
+224.255.255.255 is the <em>DIS Transient Group</em>, and is available for
+ad-hoc purposes.</p>
+</div>
+<div class="paragraph">
+<p>The reserved special multicast address 224.0.0.1 is known as the
+<em>"all-hosts multicast group"</em>. When a sender sends data to this address,
+it reaches all hosts on the sender&#8217;s network segment, without having to
+have the receivers subscribe. If receivers want to listen, they can. It
+is not forwarded by routers, to prevent flooding. In summary, 224.0.0.1
+is a special multicast address which reaches all hosts within a network
+segment and plays plays a crucial role in efficient group communication.
+OpenCPN users should use <em>DIS Transient Group</em> addresses for most other
+purposes, e.g. 224.255.255.255. (See above)</p>
+</div>
+<div class="paragraph">
+<p>When using <em>multicast</em> with OpenCPN we suggest to use an address in the
+range 239.192.0.0/14 specified by RFC 2365 as the "<em>Organization Local
+Scope</em>". If in doubt, try 239.194.4.4.</p>
+</div>
+<div class="paragraph">
+<p>Devices must, to some extent, process all broadcast packets on the
+network whether they are interested in them or not. <em>Multicast</em> packets
+are normally only seen by devices which have registered an interest in a
+particular <em>multicast address</em>. <em>Consequently multicast is more
+efficient than broadcast</em> although this is usually of little consequence
+in a small network.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Despite being used by <em>NMEA-over-IP protocols</em> such as IEC 61162-4 and
+the forthcoming NMEA OneNet, <em>NMEA 0183 over IP multicast</em> is far less
+widely supported in marine applications than <em>NMEA 0183 over IP
+broadcast</em>.</p>
+</li>
+<li>
+<p>There is <em>no multicast address mandated for NMEA 0183</em> data in this
+context, although you should avoid those addresses used by other
+protocols.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is no mechanism in OpenCPN to specify the network interface
+through which <em>multicast packets</em> are sent or received. This will be
+determined by your system. In some cases it may be necessary to manually
+adjust your system&#8217;s routing table to ensure that the desired network
+interface is used. Refer to your system&#8217;s documentation if this proves
+necessary.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_udp_broadcast"><a class="anchor" href="#_udp_broadcast"></a>UDP Broadcast</h4>
+<div class="paragraph">
+<p>The UDP broadcast address is a special IP address used for broadcasting
+to all devices within a specific network segment. When a sender sends
+data to this address, it reaches all hosts on the local network segment.
+Here are some details:</p>
+</div>
+<div class="paragraph">
+<p>IPv4 Broadcast Address: 255.255.255.255 is delivered to all devices on
+the local sub-network. Routers do not forward messages sent to this
+address; only hosts within the same network segment receive the
+broadcast message. Common use cases include service discovery, network
+booting, and Wake-on-LAN (WoL) requests. Not normally used by OpenCPN!</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tcp_broadcast_multicast"><a class="anchor" href="#_tcp_broadcast_multicast"></a>TCP Broadcast + Multicast?</h4>
+<div class="paragraph">
+<p>TCP provides reliable, connection-oriented communication between two
+endpoints. It ensures data integrity, sequencing, and flow control. Why
+not broadcast in TCP?</p>
+</div>
+<div class="paragraph">
+<p>TCP is designed for point-to-point communication between exactly two
+endpoints, and requires handshaking.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TCP is slower and less efficient than UDP because it relies on a
+three-way handshake for connection setup and expects acknowledgment
+(ACK) for data delivery.</p>
+</li>
+<li>
+<p><em>Broadcast</em> and <em>multicast</em> do not fit the reliability model of TCP:</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * //Broadcast//  sends, but never receives data back.
+    * //Multicast//  sends to a list of specified addresses, but does not expect individual acknowledgments.
+* Implementing TCP over //broadcast//  or //multicast//  would be challenging due to the need for acknowledgment and retransmission mechanisms.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_set_data_communications_priority"><a class="anchor" href="#_set_data_communications_priority"></a>Set Data Communications Priority</h4>
+<div class="paragraph">
+<p>When transmitting <em>UDP broadcast or multicast</em>, set the
+<a href="./../../set_options/connections/data_priority.html">Data
+Communications Priority</a> of the "real" NMEA input to be higher than the
+UDP stream. For example, set the broadcast UDP priority to "0" and real
+incoming connection to "1" or higher.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If not, prepare for problems:</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * The device broadcasting will receive the UDP message, which again will be retransmitted
+    * Duplicating the "real" incoming data, thus source priority flip-flop occurs on each message, since they have the same priority.
+    * Multicast loopback is not disabled for consistency with broadcast behavior.
+* Therefore priorities must be set as detailed above when transmitting over multicast, but multicast communication between multiple instances of OpenCPN on the same system remains possible.
+* //Note: The firewalls on some systems (e.g. OpenSuSE Linux) may block broadcast and multicast data that you wish to receive. Refer to your system's documentation to determine how to allow such data to reach OpenCPN.//</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_summary"><a class="anchor" href="#_summary"></a>SUMMARY</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>UDP supports multicast and broadcast, providing efficient <em>one-to-many
+connections</em>.</p>
+</li>
+<li>
+<p>TCP is always a <em>“one-to-one” connection</em> and is not designed for
+multicast or broadcast. TCP is not intended to process broadcast or
+multicast addresses.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>UDP supports unicast, multicast, or broadcast messages.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unicast messages are directed to a specific recipient.</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * EG: IPv4 addresses EG 192.168.1.58
+* Multicast messages are directed to a specific group of recipients.
+    * EG: IPv4 addresses from 224.0.0.0 - 239.255.255.255
+    * Recipient devices which wish to receive information on that address.
+    * OpenCPN will tell your computer to listen for datagrams on that address.
+* Broadcast messages are directed to an entire network (or subnet).
+    * EG: Local networks broadcast IP Address with 255 (at end), EG: 192.168.1.255
+    * Special Broadcast Address: 255.255.255.255 (listened to by all devices) should not normally be used to transmit data from OpenCPN.
+    * Use your local network's broadcast address instead. EG: 192.168.1.255
+* Note: more than one system may send data to broadcast or multicast addresses, so this is a //“many-to-many”//  communications medium.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That is an extremely simplified explanation.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_finding_your_platform_private_ip_address"><a class="anchor" href="#_finding_your_platform_private_ip_address"></a>Finding Your Platform Private IP Address</h3>
+<div class="paragraph">
+<p>Normally, OpenCPN will be running on a boat&#8217;s private network and we
+want to know the IPv4 address of OpenCPN&#8217;s platform.</p>
+</div>
+<div class="sect3">
+<h4 id="_windows"><a class="anchor" href="#_windows"></a>Windows</h4>
+<div class="sect4">
+<h5 id="_method_1_all_versions"><a class="anchor" href="#_method_1_all_versions"></a>Method 1 - all versions</h5>
+<div class="paragraph">
+<p>After system login, open a command shell (<span class="underline">Windows&gt;cmd</span>) and
+at the prompt, enter</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ipconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for the active network interface (Ethernet adapter, or Wireless LAN
+adapter) and then the IPv4 Address.
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/tb-opt-conn-adv-ip-windows.jpg" alt="tb-opt-conn-adv-ip-windows.jpg" width="500"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_method_2_windows_11"><a class="anchor" href="#_method_2_windows_11"></a>Method 2 - Windows 11</h5>
+<div class="paragraph">
+<p><span class="underline">For Wi-Fi connection</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Start &gt; Settings &gt; Network &amp; internet &gt; Wi-Fi and then select
+the Wi-Fi network you&#8217;re connected to.</p>
+</li>
+<li>
+<p>Under Properties, look for your IP address listed next to "IPv4
+address".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="underline">For Ethernet connection</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Start &gt; Settings &gt; Network &amp; internet &gt; Ethernet.</p>
+</li>
+<li>
+<p>Under Properties, look for your IP address listed next to "IPv4
+address".</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_linux"><a class="anchor" href="#_linux"></a>Linux</h4>
+<div class="paragraph">
+<p>After system login, if a command shell is not already open, then try a
+right-click to open a context menu in the user interface. Different
+distributions usually use a different title for command shells, such as
+New Terminal, Terminal Window, Shells, Open in Terminal, Xterm. Select
+the appropriate option and at the prompt, enter</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ip address</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/connections/ubuntu-ip-address.png" alt="ubuntu-ip-address.png" width="671" height="400"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_raspberry_pi"><a class="anchor" href="#_raspberry_pi"></a>Raspberry Pi</h4>
+<div class="paragraph">
+<p>After system login, click on the Terminal icon in the top menu bar (or
+choose Menu &gt; Accessories &gt; Terminal).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/tb-opt-conn-adv-rpi-terminal-icon.jpg" alt="tb-opt-conn-adv-rpi-terminal-icon.jpg"></span></p>
+</div>
+<div class="paragraph">
+<p>At the prompt, enter</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ip address</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and proceed as for Linux.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_furuno_configurable_null_header_acceptance"><a class="anchor" href="#_furuno_configurable_null_header_acceptance"></a>Furuno - Configurable Null Header Acceptance</h3>
+<div class="paragraph">
+<p>Most, if not all Furuno equipment sending data over UDP includes a
+binary header at the beginning of the packet payload causing the data
+not to parse as a normal NMEA 0183 datastream. It is possible to
+configure OpenCPN to handle this problem by editing the
+<em>opencpn.conf|ini</em> configuration file in the <strong>[Settings]</strong> section to add
+the line</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> EnableUDPNullHeader=1</pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_sending_waypoints_to_the_autopilot"><a class="anchor" href="#_sending_waypoints_to_the_autopilot"></a>Sending Waypoints to the Autopilot</h3>
+<div class="paragraph">
+<p>It is essential to have turned on an <em>Active Route</em> in order to send
+waypoints to the Autopilot. See the following topics for more details.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="./../../create_routes/activate_route.html#_activating_routes_and_active_route_console">Activating
+Routes and Active Route Console</a></em></p>
+</li>
+<li>
+<p><em><a href="./../../create_routes/route_autopilot.html">route_autopilot</a></em></p>
+</li>
+<li>
+<p><em><a href="/opencpn/manual_advanced/features/route_autopilot.html">Advanced Route
+to Autopilot</a></em></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

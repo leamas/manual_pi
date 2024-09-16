@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/ui_user_interface/chart_info.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../ui_user_interface.html">UI User Interface</a></li>
+    <li><a href="chart_info.html">Chart Info</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/ui_user_interface/chart_info.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_chart_info"><a class="anchor" href="#_chart_info"></a>Chart Info</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you hover the cursor above one of the segments, representing a chart,
+in the Chart Selection Bar, a chart information box pops up. The chart
+info refers to the chart in the upper right corner, outlined in red and
+with pink-ish overlay.<br>
+<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/1-accuracy_info.png" alt="/opencpn/manual_basic/user_interface/1-accuracy_info" width="550"></span><br>
+The information on a vector chart is similar.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/2-s57_info.png" alt="/opencpn/manual_basic/user_interface/2-s57_info" width="450"></span><br>
+For CM93, switch to single chart mode, to see the information.<br>
+If there seems to be a lot of information missing, it&#8217;s because the
+chart has not been viewed in the present session. Get the chart up on
+the screen, the try again.<br>
+The Chart Info Box can be inactivated by hiding the Chart Bar. Use Hot
+keys<br>
+<strong>Ctrl + B</strong> to hide/show the Chart Bar.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/3-mbtile-chart-button.png" alt="MBtiles" width="200"></span><br>
+MBtiles are shown in magenta</p>
+</div>
+<div class="sect2">
+<h3 id="_what_does_all_the_information_mean"><a class="anchor" href="#_what_does_all_the_information_mean"></a>What does all the information mean?</h3>
+<div class="literalblock">
+<div class="content">
+<pre> +
+*ChartFile:* The file on the local computer where the chart is. +
+ +
+*Name:* The Name of the Chart. Not all vector charts have names, while
+raster charts always have names. +
+ +
+*Scale:* The scale of the chart. +
+ +
+*ID:* The chart number. For raster charts this is the same as the number
+of the paper chart. Vector chart cells have their own numbering
+scheme. +
+ +
+*Depth Units:* For raster charts this is the units for the printed
+soundings. For vector charts this is the sounding units set in Options →
+Display → Units → Depth. +
+ +
+*Soundings:* The datum for soundings. It is the level that all printed
+depth figures refers to. Consult a text book on Navigation for
+details. +
+ +
+*Datum:* The geodetic datum. This will be WGS 84 for all new charts,
+compiled later than about 1993. +
+If this value is unknown to OpenCPN, or stated as "UNKNOWN", or the
+value is missing altogether, OpenCPN will load the chart using WGS84. +
+This is a potential source of errors and far from ideal. The reason is
+that a number of chart-agencies, at least in the past, failed to state
+the correct GD value. +
+See below for an example of this kind of chart. +
+ +
+*If the chart is not using WGS 84, but a named, recognized datum,
+OpenCPN will automatically add necessary corrections.* +
+ +
+*Projection:* OpenCPN accepts Mercator, Transverse Mercator, UTM or
+Polyconical projections. +
+ +
+*Source Edition:* The Chart Edition. +
+ +
+*Updated:* The date when the chart was released. Expect the chart to be
+updated to this date, unless otherwise stated. +</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_opencpn_logfile"><a class="anchor" href="#_the_opencpn_logfile"></a>The OpenCPN Logfile</h3>
+<div class="paragraph">
+<p>The opencpn.log file contains a wealth of information, and should be
+your first place to go if your chart(s) don&#8217;t load or if there is an
+error message. See <a href="./../about.html">Help-About</a> for
+opencpn.log location.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chart_accuracy"><a class="anchor" href="#_chart_accuracy"></a>Chart Accuracy</h3>
+<div class="paragraph">
+<p><strong>First… make sure your GPS is set to output positions using the WGS 84
+Geodetic Datum</strong>.<br>
+<br>
+If you see a <strong>warning</strong> like the one below:<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/4-accuracy_info2.png" alt="/opencpn/manual_basic/user_interface/4-accuracy_info2" width="500"></span><br>
+<br>
+<strong>Be careful.</strong> The warning means that the charts geographic accuracy is
+bad. <strong>The position of Own Ship may not be correct.</strong><br>
+A visual warning is that Own Ship turns from Red to Yellow when
+receiving a gps signal.<br>
+<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/5-lowprec.png" alt="5-lowprec.png" width="100"></span>
+<span class="image"><img src="../../_images/opencpn/manual_basic/ui_user_interface/ship_red.png" alt="/opencpn/manual_basic/ui_user_interface/ship_red" width="30"></span><br>
+<br>
+<br>
+First is a real scale vector version and then the default OwnShip
+bitmap<br>
+For more information about Icons see Advanced User Manual
+<a href="/opencpn/manual_advanced/program/usericon.html">usericon</a><br>
+<br>
+There is no quick fix for a bad chart, but try to switch to another
+chart if using single mode chart display. If quilting is on, right-click
+on the chart button in the chart-bar and select "Hide this chart". Both
+suggestions assumes that the bad chart can be replaced by other charts,
+which of course isn&#8217;t always possible.<br>
+The chart will probably be OK for navigation with traditional methods.
+Use bearings, vertical or horizontal sextant angles of conspicuous
+landmarks to confirm your position, as well as soundings or any other
+available resources.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_checking_a_chart_for_accuracy"><a class="anchor" href="#_checking_a_chart_for_accuracy"></a>Checking a chart for accuracy</h3>
+<div class="paragraph">
+<p>A raster chart, using WGS 84, can easily be checked for the accuracy of
+the chart grid. This does not necessarily guarantee the position of the
+individual features on the chart. Refer to Calders book.<br>
+Activate Options → Display →General → Show Grid. A Latitude and
+Longitude grid will be displayed as a layer on top of the chart. This
+grid is OpenCPNs view of how a proper WGS 84 should look like. For
+raster charts this grid can be compared to the "printed" grid on the
+chart picture. Chart errors are to complicated to be treated in a few
+sentences. Refer to Nigel Calders book "How to Read a Nautical Chart"
+for an in depth but still easy to read text.<br>
+For a quick check, we are happy with a grid error that is in the region
+of 1 mm at the chart scale. For a chart in 1:50.000 this means an error
+of 50 m.<br>
+<br>
+Use OpenCPNs ability to grossly over-zoom a chart. Home in on a printed
+lat/long crossing. Below is a test on a commercial BSB3 chart in
+1:60.000. The width of the printed grid - thick black lines - is about
+12 m. The thin gray lines is OpenCPNs grid layer. The accuracy of this
+chart is very good.<br>
+<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/7-accuracy_12m.png" alt="/opencpn/manual_basic/user_interface/7-accuracy_12m" width="150"></span><br>
+<br>
+<br>
+Another example. This time we are looking at a chart in 1:10.000. Very
+accurate.<br>
+<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/8-accuracy_10k.png" alt="/opencpn/manual_basic/user_interface/8-accuracy_10k" width="350"></span><br>
+<br>
+This method cannot be used unless the chart is WGS84. For other geodetic
+datums, expect a difference between the printed grid on a raster chart
+and OpenCPNs grid. To check for accuracy on this kind of chart find a
+wellknown object with an established position, for example a major
+Lighthouse, and compare this position with OpenCPN.<br>
+<br>
+<strong>Adjusting charts to agree with WGS 84.</strong><br>
+This is an <strong>advanced subject</strong>.<br>
+For CM 93 read <em><a href="/opencpn/manual_advanced/charts/cm.html93offsets">CM93
+Offsets</a></em>.<br>
+BSB/KAP chart can also be adjusted. For example the chart above can be
+made to agree exactly with the grid. Read the
+<em><a href="/opencpn/supplementary_software/chart_conversion_manual.html">Chart
+Conversion Manual</a></em> and make sure to understand
+<em><a href="/opencpn/supplementary_software/chart_conversion_manual/imgkap_and_kap_file.html">imgkap
+and the kap file format</a></em>.<br>
+The work flow to correct any kap chart is:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use imgkap to extract the chart picture</p>
+</li>
+<li>
+<p>Copy the text header from the kap chart to a .txt file.</p>
+</li>
+<li>
+<p>Adjust the DTM values in the .txt file</p>
+</li>
+<li>
+<p>Use the imgkap with the picture and the .txt file to produce a new
+updated kap file.</p>
+</li>
+<li>
+<p>Check for accuracy and go back to #3 if necessary.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_no_projection_chart_rejected"><a class="anchor" href="#_no_projection_chart_rejected"></a>No Projection &#8594; Chart rejected.</h3>
+<div class="paragraph">
+<p>If the chart does not contain any information about the projection,
+OpenCPN doesn&#8217;t know how to display it. Such a chart will not be loaded,
+but a note about the problem will appear in the log file.<br>
+Missing a chart? Check your OpenCPN logfile.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_no_datum_warning_chart_datum_may_be_incorrect"><a class="anchor" href="#_no_datum_warning_chart_datum_may_be_incorrect"></a>No Datum &#8594; —&lt;&lt;&lt; Warning: Chart Datum may be incorrect. &gt;&gt;&gt;—</h3>
+<div class="paragraph">
+<p>The message will be in the Chart Info Box.<br>
+This is a warning that the chart probably is not accurate enough for GPS
+navigation. It still should be OK with traditional methods. A minimum
+recommendation is to check the GPS position with traditional methods, a
+couple of compass bearings, for example.<br>
+<br>
+One example, that unfortunately have lead to problems for a few yachts,
+is DMA/NGA chart 28201, Puerto Morelos, in Mexico, from 1995. This
+chart, based on a Mexican survey from 1905, has a Datum Note, similar to
+this:<br>
+<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/9-gd_nga24390.png" alt="/opencpn/manual_basic/user_interface/9-gd_nga24390" width="400"></span><br>
+<br>
+Comparing 28201 with CM93 that is correct, in this particular case. Note
+the substantial corrections applied in CM93,<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/11-puerto_morelos1.png" alt="/opencpn/manual_basic/user_interface/11-puerto_morelos1" width="400"></span><br></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

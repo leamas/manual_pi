@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/set_options/charts/vector_display.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../../set_options.html">Set Options</a></li>
+    <li><a href="../charts.html">Charts</a></li>
+    <li><a href="vector_display.html">Vector Display</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/set_options/charts/vector_display.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_vector_display"><a class="anchor" href="#_vector_display"></a>Vector Display</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-vector-display.jpg" alt="/opencpn/manual_basic/set_options/charts/tb-options-charts-vector-display" width="550"></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>*//[[opencpn:manual_basic:set_options:charts:vector_display#Chart_information_Objects|Chart Information Objects]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#Chart_texts|Chart Texts]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#Chart_detail|Chart Detail]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#graphics_style|Graphics Style]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#boundaries|Boundaries]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#colors|Colors]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#depth_settings|Depth Settings]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#shallow,_Safety,_And_Deep_Depths|Shallow, Safety and Deep Depths]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#user_standard_objects|User Standard Objects]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#Vector Chart Hot Keys|Vector Charts Hot Keys]]//</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Additonal Notes</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>*//[[opencpn:manual_basic:set_options:charts:vector_display#Vector_Palettes|Vector Palettes]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#Practical_Use|Practical Use]]//
+*//[[opencpn:manual_basic:set_options:charts:vector_display#CM93_Detail_Level|CM93 Detail Level Use]]//</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chart_information_objects"><a class="anchor" href="#_chart_information_objects"></a>Chart Information Objects</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/charts-vector-chart-text-settings.jpg" alt="/opencpn/manual_basic/set_options/charts/charts-vector-chart-text-settings" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>There are many questions about these chart symbols, which provide
+information about the chart itself. With this switch on, an object query
+reveals such information as the buoy system for the area, the <strong>Quality
+of the Survey</strong>, and the latest NTM update and sources for the chart.</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="/opencpn/manual_basic/set_options/charts/warning.png" alt="warning.png" width="50"></span>&#8230;&#8203;<span class="image unresolved"><img src="/opencpn/manual_basic/set_options/charts/unassessed.png" alt="unassessed.png" width="100"></span>&#8230;&#8203;<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/goodsurvey.png" alt="goodsurvey.png" width="100"></span></p>
+</div>
+<div class="paragraph">
+<p>On raster-charts there is often a diagram showing the sources and age of
+surveys of the charts.</p>
+</div>
+<div class="paragraph">
+<p>On vector-charts, when activated, symbols are shown all over the screen.
+An object query of these symbols gives the details. When using "Mariners
+Standard" and "Chart Information Objects" is ticked, it is possible to
+get rid of the quality symbols covering the chart by unchecking "Quality
+of data" (M_QUAL).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/mqual.png" alt="/opencpn/manual_basic/set_options/charts/mqual" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Refer to
+<a href="./../../chart_panel/chart_panel_options/vector_charts.html#_show_chart_data_quality">Chart
+Panel Options &gt; Vector Display</a> for additional information</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_chart_texts"><a class="anchor" href="#_chart_texts"></a>Chart Texts</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/charts-vector-chart-text-settings.jpg" alt="/opencpn/manual_basic/set_options/charts/charts-vector-chart-text-settings" width="400"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_national_text_on_chart"><a class="anchor" href="#_national_text_on_chart"></a>National text on chart</h4>
+<div class="paragraph">
+<p>Vector charts may have attributes with text in the national language.
+For example a Russian chart with text in Cyrillic. With this option
+activated OpenCPN will display text in the local language and character
+set, in this case Russian written in Cyrillic.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_important_text_only"><a class="anchor" href="#_important_text_only"></a>Important Text Only</h4>
+<div class="paragraph">
+<p>Displays only a bare minimum of text essential for navigation, such as
+course and bearing in a leading line (range) and bridge clearances.
+Information such as Buoy/Light Labels will not be shown. Names of the
+objects are not considered important (by the ENC standard) so all names
+of objects is removed. Don&#8217;t tick this option unless you <strong>know</strong> it&#8217;s
+right for you.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+NOAA ENC Chart users should generally leave this unchecked. If a
+text element is not specified by the cartographer to be "important",
+then it is not shown. NOAA typically applies the "Important" tag to very
+few objects. So for NOAA Vector Charts, checking <em>Important Text Only</em>,
+results in almost no text.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_de_cluttered_text"><a class="anchor" href="#_de_cluttered_text"></a>De-Cluttered Text</h4>
+<div class="paragraph">
+<p>Even when checking Chart Detail "Reduced Detail at Small Scale", there
+are cases when text labels overlap or overwrite other labels and create
+a cluttered impression. Ticking this box attempts to clear the view,
+dropping overlapping text labels in the interest of legibility. The
+labels that get dropped are the last that would have been drawn, however
+since there is no built-in priority scheme for text labels in ENC vector
+charts, this setting may hide needed information.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chart_detail"><a class="anchor" href="#_chart_detail"></a>Chart Detail</h3>
+<div class="sect3">
+<h4 id="_reduced_detail_at_small_scale"><a class="anchor" href="#_reduced_detail_at_small_scale"></a>Reduced Detail at Small Scale</h4>
+<div class="paragraph">
+<p>A Check makes sure that a minimum scale is required before certain
+objects are shown. If this box is <strong>not checked</strong>, everything is always
+shown, leading to very cluttered view at small scale (zoomed out).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_additional_detail_reductions_at_small_scale"><a class="anchor" href="#_additional_detail_reductions_at_small_scale"></a>Additional detail reductions at Small Scale</h4>
+<div class="paragraph">
+<p>A check makes additional detail reductions at small scale.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-vector-display-graphics-boundaries-colors.jpg" alt="tb-options-charts-vector-display-graphics-boundaries-colors.jpg" width="450"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_graphics_style"><a class="anchor" href="#_graphics_style"></a>Graphics Style</h3>
+<div class="sect3">
+<h4 id="_paper_chart"><a class="anchor" href="#_paper_chart"></a>Paper chart</h4>
+<div class="paragraph">
+<p>Draw the markers and lights just like the printed paper chart.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_simplified"><a class="anchor" href="#_simplified"></a>Simplified</h4>
+<div class="paragraph">
+<p>Uses icons to represent the same. Some like the one and some the other,
+a matter of taste. Paper Chart mode closely follows the IHO standard
+standard in this area. This mode is currently more developed than the
+simplified mode, as it has a higher priority in the development effort.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boundaries"><a class="anchor" href="#_boundaries"></a>Boundaries</h3>
+<div class="sect3">
+<h4 id="_plain"><a class="anchor" href="#_plain"></a>Plain</h4>
+<div class="paragraph">
+<p>Normally just uses a dashed line.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_symbolized"><a class="anchor" href="#_symbolized"></a>Symbolized</h4>
+<div class="paragraph">
+<p>Also uses triangles pointing into the area.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_colors"><a class="anchor" href="#_colors"></a>Colors</h3>
+<div class="paragraph">
+<p>Depth on the chart can be displayed with<strong> either 2 or 4 colors</strong>. This
+setting is closely related to the "Depths Settings".</p>
+</div>
+<div class="sect3">
+<h4 id="_2_colors"><a class="anchor" href="#_2_colors"></a>2 Colors</h4>
+<div class="paragraph">
+<p>With 2 Colors and using a relatively large scale,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Areas with depth less than <strong><em>Safety Depth</em></strong> is blue</p>
+</li>
+<li>
+<p>the rest is white.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_colors"><a class="anchor" href="#_4_colors"></a>4 Colors</h4>
+<div class="paragraph">
+<p>With 4 colors, there are different colors for areas less than "Shallow
+Depth",</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Areas between <strong>Shallow Depth</strong> and <strong>Safety Depth</strong></p>
+</li>
+<li>
+<p>Areas between <strong>Safety Depth</strong> and <strong>Deep Depth</strong></p>
+</li>
+<li>
+<p>Areas deeper than <strong>Deep Depth</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vector ENC Charts allow this setting, unlike Raster Charts.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/tb-options-charts-vector-display-depth.jpg" alt="tb-options-charts-vector-display-depth.jpg" width="400"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_depth_settings"><a class="anchor" href="#_depth_settings"></a>Depth Settings</h3>
+<div class="sect3">
+<h4 id="_units"><a class="anchor" href="#_units"></a>Units</h4>
+<div class="paragraph">
+<p>Units for depths is set in <strong><em>Options &gt; Display &gt; Units</em></strong>. All depths
+units are rounded off to the nearest number. If the value is half way
+between, the nearest higher number is used. Underlined values indicates
+drying heights.<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feet"><a class="anchor" href="#_feet"></a>Feet</h4>
+<div class="paragraph">
+<p>Only whole digits are shown. A value of 12 feet covers all soundings
+between 11.5 feet and 12.4 feet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_meters"><a class="anchor" href="#_meters"></a>Meters</h4>
+<div class="paragraph">
+<p>Meters are shown as whole numbers for depths greater than 30 m. Depths
+below 30 m are shown as whole meters and decimeters as subscript, like
+this 12<sub>7</sub> This is the same as 12.7 meters and is shown for all
+soundings between 12.65 m and 12.74 m.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fathoms"><a class="anchor" href="#_fathoms"></a>Fathoms</h4>
+<div class="paragraph">
+<p>Fathoms are shown as whole numbers for depths greater than 31 fathoms.
+Depths below this value are shown as whole fathoms and tenths of fathoms
+as subscript. Compare to the notes above for meters.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shallow_safety_and_deep_depths"><a class="anchor" href="#_shallow_safety_and_deep_depths"></a>Shallow, Safety and Deep depths</h3>
+<div class="paragraph">
+<p>These user defined contour lines may help to visualize quickly depth
+information.</p>
+</div>
+<div class="paragraph">
+<p>A common definition of these contours is: a depth smaller than <strong>shallow
+depth</strong> is too shallow to navigate in, simply: there is less water depth
+than the vessel&#8217;s draught. A depth larger than <strong>safety depth</strong> is
+considered safe. At depths between <strong>shallow depth</strong> and <strong>safety depth</strong>
+navigation is possible, however not considered safe and thus should be
+avoided or done only with appropriate caution. If the depth is larger
+than <strong>deep depth</strong> the actual depth values do not play any role for
+navigational purposes any more.</p>
+</div>
+<div class="paragraph">
+<p>These three settings will affect the presentation of the safety depth
+contour line, the depth values and colouring of the areas between
+contours. Here discussed for four color mode.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>*The **safety depth contour line** will be bold (see magenta circle on image below). All others will be normal.
+* depth values larger than the **safety depth** will be in grey, otherwise black.(see magenta circle)
+* white colour is used for areas deeper than **deep depth**, grey is used between **deep depth** and **safety depth**, light blue is used between **safety depth** and **shallow depth**, and dark blue is used below **shallow depth**. Green is used for areas falling dry at low tide.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/vectorchartssafetycontour.jpg" alt="/opencpn/manual_basic/set_options/charts/vectorchartssafetycontour" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>In this example shallow depth is defined as 2m, safety depth as 5m and
+deep depth as 10m. <strong>Isolated obstructions</strong> in the safe water area with a
+depth less than safety water depth will be marked by a magenta cross
+(See orange circle and Object query of this particular obstruction).</p>
+</div>
+<div class="sect3">
+<h4 id="_note_of_caution"><a class="anchor" href="#_note_of_caution"></a>Note of caution</h4>
+<div class="paragraph">
+<p>It is to the user to decide what is considered safe, shallow or deep.
+This may depend on the vessel used, on sea state, on the time of tide,
+on the area and other facts. What is normally considered safe, could be
+too shallow if large waves are present. What is considered shallow at
+low tide, maybe safe at high tide. 25m depth may be considered deep
+water usually, except if it is the top of an underwater mountain, then
+it may even be hazardous under most conditions. If you consider this an
+constructed example, you may want to check out Gorringe Ridge between
+Madeira and the European mainland.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_technical_note"><a class="anchor" href="#_technical_note"></a>Technical Note</h4>
+<div class="paragraph">
+<p>OpenCPN can only display contour lines that are built in in a chart. If
+the <strong>safety depth</strong> is between two built in contours, the deeper one will
+be used. Which contours are built in depends on the source of the map
+and on the <strong>units</strong> used for creating this map. (NOAA maps use fathoms
+for instance, many European maps will use metric, as does OpenCPN
+internally). Which contour lines are implemented in a particular chart,
+can be seen by checking the <strong>Depth Area</strong> in Object query. In the above
+example the obstruction is located in the area between the 5.4m and 9.1m
+contour line</p>
+</div>
+<div class="paragraph">
+<p>The above example was created using a NOAA chart, which has contour
+lines at the following depths; 1fm, 2fm, 3fm, 5fm, 6fm, 10fm. This
+translates to the following metric values: 1.8m, 3.6m, 5.4m, 9.1m,
+11.0m, 18.3m. This can be seen when looking at the depth soundings in
+detail. E.g. when looking at the blue circle, there seems to be a
+contour line between the 9.1m and 9.4m sounding: the 5fm line at 9.1m.
+The safety depth is defined as 5m in this example, the next deeper
+contour line is the 3fm (5.4m) line. The 5.1m sounding (yellow circle)
+is printed in grey, since it is deeper than the safety depth, but is
+located within the safety contour line since this uses the 5.4m contour
+line.</p>
+</div>
+<div class="paragraph">
+<p>Most of the time, these subtleties will not become aware to the user and
+will most likely be irrelevant for practical navigation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_standard_objects"><a class="anchor" href="#_user_standard_objects"></a>User Standard Objects</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/tb-options-charts-vector-user-standard.jpg" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/tb-options-charts-vector-user-standard" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p><em>User Standard Objects</em> are <strong>not selectable</strong> unless
+<em><a href="./../../chart_panel/chart_panel_options/display_category.html">Chart
+Panel &gt; Hamburger &gt; Display Category</a></em> is set to <em>User STANDARD</em>. If
+<em>Display Category</em> is set to <em>BASIC, STANDARD or ALL</em> then <em>User
+STANDARD Objects</em> are fixed and not selectable.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>User Standard</em> should generally be set to <em>Reset to STANDARD</em> or
+<em>Select ALL</em> unless there is a very good reason for changes.</p>
+</li>
+<li>
+<p>Changes should only be made with the Captain or Navigator&#8217;s agreement.</p>
+</li>
+<li>
+<p>User Standard and User Standard Objects not normally changed, and are
+purposely somewhat remote and distinct from the lower right <em>Chart Panel
+Hamburger</em>, because chart characteristics should not be indiscriminately
+changed as it may result in dangerous chart settings, and will confuse
+watches that follow.</p>
+</li>
+</ol>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_vector_chart_hot_keys"><a class="anchor" href="#_vector_chart_hot_keys"></a>Vector Chart Hot Keys</h3>
+<div class="paragraph">
+<p>The <strong>Hot Keys</strong> or
+<em><a href="./../../ui_user_interface/keyboard_shortcuts.html">keyboard_shortcuts</a></em>
+below all work in "<strong>ALL</strong>" and "<strong>Users standard</strong>". The hotkeys also work
+in the other display categories, as long as the feature exists in the
+category. In "<strong>Base</strong>" for example, "<strong>S</strong>" works, but "<strong>L</strong>" does not.
+Features are toggled on-off with the keys.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> Hot Keys can be different for OS&#8217;s. See
+<em><a href="./../../ui_user_interface/keyboard_shortcuts.html">keyboard_shortcuts</a></em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>T</strong> Texts. The visible text is still affected by the settings in the
+Vector Charts settings tab.</p>
+</li>
+<li>
+<p><strong>L</strong> Lights. Lighthouses as well as buoys etc are all affected.</p>
+</li>
+<li>
+<p><strong>S</strong> Soundings.</p>
+</li>
+<li>
+<p><strong>A</strong> Anchoring. This will affect information needed when anchoring.
+Anchor berth and Anchorage areas. Submarine cables and pipelines. Type
+of bottom. Mariners Standard -Anchor berth and Anchorage area display
+categories.</p>
+</li>
+<li>
+<p><strong>O</strong> Chart Outlines.</p>
+</li>
+<li>
+<p>Watch the active GIF image below as it changes using hot keys.</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_notes"><a class="anchor" href="#_additional_notes"></a>Additional Notes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_vector_palettes"><a class="anchor" href="#_vector_palettes"></a>Vector Palettes</h3>
+<div class="paragraph">
+<p>It&#8217;s possible to change the whole look of a vector chart. One example
+below….<br>
+Detailed information is available in
+<em><a href="/opencpn/manual_advanced/charts/vector_palette.html">Advanced User
+Manual - Vector Palette</a></em><br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/swlook.png" alt="swlook.png" width="600" height="389"></span></p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_practical_use"><a class="anchor" href="#_practical_use"></a>Practical Use</h3>
+<div class="paragraph">
+<p>A general recommendation would be to use the "<strong>All</strong>" display category or
+"<strong>Users Standard (Mariners Standard)</strong>" with "<strong>Select All</strong>" marked , and
+then switch ofF certain features as required. As an example let&#8217;s look
+at passing through the British gas fields in the SW North Sea<br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/europe1.png" alt="europe1.png" width="400"></span><br>
+<br>
+This is not easy, so we want to get rid of all those red and yellow
+circles.<br>
+Double click on one of the platforms, square with a dot.<br>
+<br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/4objq.png" alt="4objq.png" width="500"></span><br>
+<br>
+At the top it reads "<strong>Light </strong> (Lights)", which means that you clicked
+on a light, which belongs to the Feature Class "Lights". Find "Light" in
+the Mariners Standard list of available filters, and uncheck it.<br>
+<br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/vector-light.png" alt="vector-light.png" width="234" height="338"></span><br>
+<br>
+Press the "Apply" button<br>
+<br>
+<span class="image"><img src="../../../_images/opencpn/manual_basic/set_options/charts/europe3.png" alt="europe3.png" width="480" height="389"></span><br>
+<br>
+Much better In this particular case, there is a shortcut, use the Hot
+Key "<strong>L</strong>" to toggle all lights on/off.<br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cm93_detail_level"><a class="anchor" href="#_cm93_detail_level"></a>CM93 Detail Level</h3>
+<div class="paragraph">
+<p>The CM93 charts slider control that allows the user to adjust the screen
+complexity to suit the actual situation as well as the available
+processor capability.<br>
+Normal settings depend on a combination of personal preferences and
+present usage of map. To see more details, the "<strong>CM93 Detail Level</strong>"
+slider, can be set to a higher positive number or for navigation in
+shipping lanes to a negative numbers. Typical zoom level 5 is good for
+fishing when as much details are possible is of interest. Zoom level of
++1, zero or -1 is usually fine for normal use.<br>
+Positive values give more detail, but at a cost:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>It simply takes longer to render larger scale charts covering more
+screen real estate.</p>
+</li>
+<li>
+<p>There will be more instances of gray (NODATA) areas surrounding the
+larger scale charts as you zoom out, unless quilting is activated.</p>
+</li>
+<li>
+<p>It can become dramatically slower if high detail is specified, and
+chart outlines are requested. In this case, the program has to read a
+lot more cells to get their outlines.</p>
+</li>
+<li>
+<p>Conversely, negative values give less detail. Zooms are faster.</p>
+</li>
+<li>
+<p>The slider can also be activated through the "d" hotkey, and displayed
+directly on the screen.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

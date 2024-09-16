@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/set_options/display.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui_user_interface/touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../set_options.html">Set Options</a></li>
+    <li><a href="display.html">Display</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/set_options/display.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_display"><a class="anchor" href="#_display"></a>Display</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general"><a class="anchor" href="#_general"></a>General</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-display-general.png" alt="/opencpn/manual_basic/set_options/tb-opt-display-general" width="400"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_controls"><a class="anchor" href="#_controls"></a>Controls</h3>
+<div class="sect3">
+<h4 id="_smooth_panningzooming"><a class="anchor" href="#_smooth_panningzooming"></a>Smooth Panning/Zooming</h4>
+<div class="paragraph">
+<p>This works best together with OpenGL. Test to see how it works with your
+graphic card. If you are using OpenGL, tick this box as well.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zoom_to_cursor"><a class="anchor" href="#_zoom_to_cursor"></a>Zoom to Cursor</h4>
+<div class="paragraph">
+<p>With this box ticked the display is centered at the location of the
+mouse pointer when you zoom using the mouse wheel. When the box is not
+ticked the center of the display remains the same when you zoom with the
+mouse wheel just as it does when you zoom with the + and - keys or the
+zoom icons on the toolbar. In either case, if you click on the screen
+the point where you clicked will be moved to the center of the display.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zoom_to_cursor_summary"><a class="anchor" href="#_zoom_to_cursor_summary"></a>Zoom to Cursor Summary</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Keyboard, Menubar, and Toolbar zooms always zoom to center screen.</p>
+</li>
+<li>
+<p>Wheel zoom behaviour changes depending on ZTC (Zoom to Cursor) and
+SmoothZoom settings.</p>
+</li>
+<li>
+<p>ZTC (Zoom to Cursor) applies only to wheel zooms.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_statusbar_options"><a class="anchor" href="#_statusbar_options"></a>Statusbar Options</h4>
+<div class="paragraph">
+<p>Tick this box to see Live ETA at Cursor using the default boat speed in
+units defined in the next tab units.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_canvas_layout"><a class="anchor" href="#_canvas_layout"></a>Canvas Layout</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/icon-tb-opt-display-canvas-single.png" alt="icon-tb-opt-display-canvas-single.png" width="40"></span>Single
+Canvas Layout<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-display-general-one-canvas.jpg" alt="/opencpn/manual_basic/set_options/tb-opt-display-general-one-canvas" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/icon-tb-opt-display-canvas-dual.png" alt="icon-tb-opt-display-canvas-dual.png" width="40"></span>Dual
+Canvas Layout</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-display-general-two-canvas.jpg" alt="/opencpn/manual_basic/set_options/tb-opt-display-general-two-canvas" width="400"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_units"><a class="anchor" href="#_units"></a>Units</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-display-units.jpg" alt="/opencpn/manual_basic/set_options/tb-opt-display-units" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Choose the units that suit your way of navigating. These settings apply
+to everything in the core program. The exception is Radar rings, where
+the unit for distance between rings is selected separately.</p>
+</div>
+<div class="paragraph">
+<p>Plugins have their own settings for units.</p>
+</div>
+<div class="sect2">
+<h3 id="_distance"><a class="anchor" href="#_distance"></a>Distance</h3>
+<div class="paragraph">
+<p>The options are: Nautical miles, Statute miles, Kilometers, and Meters.
+Short distances are less than 0.1 mile or 0.1 kilometer. If nautical
+miles or kilometers are selected short distances are shown in meters. If
+statute miles are selected short distances are shown in feet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_speed"><a class="anchor" href="#_speed"></a>Speed</h3>
+<div class="paragraph">
+<p>The options are: Knots, Mph, km/h, and m/s.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_depth"><a class="anchor" href="#_depth"></a>Depth</h3>
+<div class="paragraph">
+<p>The options are: Feet, Meters and Fathoms.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_latlong"><a class="anchor" href="#_latlong"></a>Lat/Long</h3>
+<div class="paragraph">
+<p>The options are: Degrees, Decimal Minutes; Decimal Degrees; and Degrees,
+Minutes, Seconds</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bearings"><a class="anchor" href="#_bearings"></a>Bearings</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>If "Show True bearings and headings" is ticked OpenCPN will use True
+courses and bearings.</p>
+</li>
+<li>
+<p>If "Show Magnetic bearings and headings" is ticked OpenCPN will use
+magnetic courses and bearings.</p>
+</li>
+<li>
+<p>If BOTH "Show magnetic bearings and headings" and "Show true bearings
+and headings" are ticked you will get both values displayed.</p>
+</li>
+<li>
+<p>User set magnetic variation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>OpenCPN knows nothing about deviation!<br>
+All Magnetic courses and bearings will have an (M) suffix to show they
+are magnetic.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-disp-gen-mag_show.png" alt="tb-opt-disp-gen-mag_show.png" width="146" height="48"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-disp-gen-mag-true-both-ticked.png" alt="tb-opt-disp-gen-mag-true-both-ticked.png" width="128" height="65"></span></p>
+</div>
+<div class="paragraph">
+<p>When True and Magnetic are both checked, the following settings will be
+affected:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bearings and Courses in the Route Properties dialog,</p>
+</li>
+<li>
+<p>route leg rollovers</p>
+</li>
+<li>
+<p>Active Route console will show true and (M).</p>
+</li>
+<li>
+<p>COG displayed on the bottom status line will be true COG and COG(M).</p>
+</li>
+<li>
+<p>AIS target reports will show target true COG and COG(M).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variation"><a class="anchor" href="#_variation"></a>Variation</h3>
+<div class="paragraph">
+<p>Variation will be calculated at Own Ship&#8217;s position, if possible.<br>
+AIS targets will use the targets position for variation, if possible.</p>
+</div>
+<div class="paragraph">
+<p>Variation is prioritized in the the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If a GPS receiver that reports variation as part of HDG sentence is
+available, and if the HDG message also contains the E/W flags then
+OpenCPN will use that.</p>
+</li>
+<li>
+<p>If a GPS receiver that reports variation as part of RMC sentence, is
+available, this value will be used.</p>
+</li>
+<li>
+<p>Otherwise, if the WMM plugin is activated, it will supply the
+variation, unless the user has selected the variation manually in
+options.</p>
+</li>
+<li>
+<p>Lacking the above alternatives, the manually entered "Assumed Magnetic
+variation", will be used for all calculations.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_assumed_magnetic_variation"><a class="anchor" href="#_assumed_magnetic_variation"></a>Assumed Magnetic variation</h3>
+<div class="paragraph">
+<p>This value will be used if variation is not available through the GPS or
+the WMM plugin. The default value is 0°. Positive values denote easterly
+variation, negative values denote westerly variation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced"><a class="anchor" href="#_advanced"></a>Advanced</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-display-advanced-1.jpg" alt="/opencpn/manual_basic/set_options/tb-opt-display-advanced-1" width="500"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_chart_display_show_skewed_raster_charts_as_north_up"><a class="anchor" href="#_chart_display_show_skewed_raster_charts_as_north_up"></a>Chart Display Show skewed raster charts as North Up</h3>
+<div class="paragraph">
+<p>Skewed chart are normally shown as intended by the cartographer, "Chart
+up". If this option is selected they are rotated to show North-Up. If
+you are looking for speed, don&#8217;t tick this box. It slows down the screen
+rendering. Skewed charts are a common along the US Inter-coastal
+Waterway.<br>
+More here:
+<em><a href="./../chart_panel/autofollow.html">AutoFollow</a></em> and
+<em><a href="./../chart_panel/chart_panel_options/navigation_mode.html#_change_chart_display_orientation">Chart
+Display Orientation</a></em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chart_rotation_averaging_time"><a class="anchor" href="#_chart_rotation_averaging_time"></a>Chart Rotation averaging time</h3>
+<div class="paragraph">
+<p>Controls how often the entire displayed chart is updated when Look Ahead
+and/or Course-Up mode are activated. The Own Ship and AIS icons are
+still updated every second. The default value is 15 seconds. A "zero"
+value is allowed! The default mode is North-up. It&#8217;s easy to switch
+between the two modes through the right-click menu or
+<em><a href="./../chart_panel/chart_panel_options/navigation_mode.html#_chart_display_orientation_and_gps_status_icon">Display
+Orientation Icon</a></em> next to the GPS Status Icon located upper right
+corner.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chart_zoomscale_weighting"><a class="anchor" href="#_chart_zoomscale_weighting"></a>Chart Zoom/Scale Weighting</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>With a lower value the same Zoom level shows a less detailed chart.</p>
+</li>
+<li>
+<p>With a higher value the same Zoom level shows a more detailed chart.</p>
+</li>
+<li>
+<p>Raster: Adjust from -5 to + 5</p>
+</li>
+<li>
+<p>Vector: Adjust from -5 to + 5</p>
+</li>
+<li>
+<p>CM93 Detail Level: Adjust from -5 to + 5</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The slider applies to zoom operation dynamics, not to static chart
+selection. This option is asking this question: "On zooming in, when do
+we switch to a smaller scale chart if available?" Your answer may depend
+on your screen resolution and other preferences. The slider affects
+zoom-in operations most directly.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Setting the slider to -5 delays switching to smaller scale to improve
+performance and visibility.</p>
+</li>
+<li>
+<p>Setting the slider to 0 restores the default behavior.</p>
+</li>
+<li>
+<p>Setting the slider to +5 switches sooner to a smaller scale chart to
+show more detail.</p>
+</li>
+<li>
+<p>It is not intended that a user exercise this control very often.</p>
+</li>
+<li>
+<p>Experiment, set it to your liking for average charts in your area, and
+leave it set.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_physical_screen_width"><a class="anchor" href="#_physical_screen_width"></a>Physical Screen Width</h3>
+<div class="paragraph">
+<p>Automatic sensing or Manual setting to override.<br>
+If set to “Automatic”, the default setting, OpenCPN will use the size
+that the operating system reports. Sometimes Automatic is not correct,
+leading to an incorrect scale on screen for the charts. The OpenCPN log
+will state what your operating system thinks about your screen size.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> 19:03:44 CET: Detected display size: 338 mm</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Manually enter the width of your screen by selecting “Manual” and
+entering the width in millimeters. The value shown is from a sample 17“
+screen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_accelerated_graphics"><a class="anchor" href="#_use_accelerated_graphics"></a>Use Accelerated Graphics</h3>
+<div class="paragraph">
+<p>Use Accelerated Graphics (OpenGL) checkbox</p>
+</div>
+<div class="paragraph">
+<p>The net effect of full OpenGL optimization on raster charts with
+compatible hardware is nothing short of amazing, especially with
+low-spec, low-power systems.</p>
+</div>
+<div class="paragraph">
+<p>If you have started OpenCPN without OpenGL support, this option will be
+greyed out. Confirm that your graphics board supports OpenGL and also
+make sure to install updated OpenGL drivers for your graphics adapter,
+see <em><a href="./../set_options/display/opengl.html">opengl</a></em> \\.
+Unfortunately OpenGL support on earlier Windows is sometimes
+problematic. Intel&#8217;s early Windows OpenGL graphics drivers were very
+buggy.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opengl_options"><a class="anchor" href="#_opengl_options"></a>OpenGL Options</h3>
+<div class="paragraph">
+<p><strong>Read more on the
+<em><a href="./../set_options/display/opengl.html">opengl</a></em> page!</strong></p>
+</div>
+<div class="paragraph">
+<p>For more OpenGL Graphics settings use "OpenGL Options".</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/set_options/tb-opt-disp-adv-options.jpg" alt="tb-opt-disp-adv-options.jpg" width="360"></span></p>
+</div>
+<div class="paragraph">
+<p>An expert version is available by adding a line to the opencpn.ini
+(opencpn.conf) file.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[Settings]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>OpenGLExpert=1</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>To turn the expert version off, change the value from “1” to “0”, or
+delete the line.
+
+The expert OpenGL Graphics options screen:
+
+image:/opencpn/manual_basic/set_options/tb-opt-disp-adv-option-expert.jpg[tb-opt-disp-adv-option-expert.jpg,width=360]
+
+=== Texture Compression
+
+Greatly improves the speed of raster chart display. It works by treating
+raster charts as compressed textures instead of bitmaps, and these
+textures are loaded and displayed much more efficiently by the graphics
+hardware. They also consume much less GPU memory space.
+
+=== Texture Compression with Caching
+
+A further improvement to raster chart display loading and panning. This
+option uses the system hard drive to store pre-calculated raster chart
+compressed images in a way that is optimized for direct loading into the
+graphics card. When enabled, the texture cache is created dynamically,
+as charts are visited in normal navigation. Depending on the OpenGL
+hardware capabilities, there may be some slight, but noticeable, delay
+as a chart is accessed the very first time while the textures are
+created, compressed, and written to disk. Once a particular chart
+section has been cached, subsequent accesses are very fast. If the
+OpenGL hardware texture buffer is capable, then rendering on-screen is
+virtually instantaneous.
+
+* The cache understands color scheme changes. Cache entries are
+automatically created for each of the 4 possible BSB color schemes, as
+they are encountered in normal operation. BSB Color Schemes are the four
+colour schemes (Default, Day, Dusk &amp; Night) defined in the IHO Document
+S-52, Specifications for Chart Content and Display Aspects of ECDIS.
+* The cache understands chart Edition Dates. So, if one manually updates
+a chart (thus changing the chart's Edition Date), the old cache contents
+will be discarded, and a new cache will be built automatically as the
+new chart(s) are visited.
+* Using compressed texture caching retains all the benefits described
+earlier. It is very much faster on low spec hardware, at the expense of
+more disk space usage.
+* There is a command line option which will build/update your compressed
+texture cache. You may execute opencpn like this: opencpn
+/rebuild_gl_raster_cache (-rebuild_gl_raster_cache on linux)
+* "Texture Compression" and "Texture compression caching" may actually
+slow down some machines, depending on the capabilities of the video
+system.
+* If you are using OpenGL on a low-spec machine, you will have better
+performance if you</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>disable texture caching, or</p>
+</li>
+<li>
+<p>Pre-build the texture cache in a region of interest. That is, move the boat to say Dover. Then do Options→openGLOptions→Build Texture Cache. You do not need to wait the entire time, which may be hours for a large chart set. "Skip" out when the distance reported is 100 miles or so. Eventually, after steady use, your texture cache will be filled automatically in the background, and performance will increase steadily.</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>=== Texture Memory Size (MB)
+
+* Texture Memory Size (MB) is set to 128 and just below that is a
+confirmatory "Texture Cache 275.6 MB".
+
+=== Clear Cache button.
+
+=== Rebuild Cache button.
+
+=== Polygon Smoothing
+
+* Smooths polygons.
+
+=== Line Smoothing
+
+* Smooths lines.
+
+=== Use Accelerated Panning
+
+* Works if your graphics card supports Frame Buffer Objects.
+
+== Template
+
+You can save and name display templates that use different settings,
+such as for coastal versus offshore navigation.
+
+image:/opencpn/manual_basic/set_options/tb-opt-disp-temp.jpg[/opencpn/manual_basic/set_options/tb-opt-disp-temp,width=500]
+
+=== Creating a new Template to save settings
+
+image:/opencpn/manual_basic/set_options/tp-opt-disp-temp-2.jpg[/opencpn/manual_basic/set_options/tp-opt-disp-temp-2,width=500]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCPN Manual</title>
+    <link rel="canonical" href="https://opencpn.org/opencpn/manual_basic/ui_user_interface/chart_quilt.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="navbar-brand">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-title"
+         href="https://opencpn.org"
+      >
+        OpenCPN Manual
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+       <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">OpenCPN Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic User Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">Help and About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../change_color_scheme.html">Set Color Scheme</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel.html">CHART PANEL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/autofollow.html">Autofollow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chart_panel/chart_panel_options.html">Chart Panel Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_category.html">Display Category</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/display_options.html">Display Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/navigation_mode.html">Navigation Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/tides_currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chart_panel/chart_panel_options/vector_charts.html">Vector Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/scale.html">Scale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chart_panel/zoom.html">Zoom</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/activate_route.html">Activate a Route</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create_routes.html">Create Routes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/modify_route.html">Modify a Route</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../create_routes/route_autopilot.html">Route to Autopilot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editors.html">Editors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../faq.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/ais-trouble.html">AIS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/charts-trouble.html">Chart Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/connections-trouble.html">Connection Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/crash.html">Performance Crashes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/gps-trouble.html">GNSS GPS Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/install-trouble.html">Install Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/search.html">Search for Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidbar.html">Sidebar FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/sidebar.html">FAQ Sidbar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/support-report.html">Support &amp; Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/toc_flat.html">FAQ TOC Flat</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/user-interface-trouble.html">User Interface Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../faq/waypoint-route-trouble.html">Route Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../license_authors.html">License and Authors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menubar.html">MENU BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mob.html">Drop MOB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../nmea0183.html">NMEA Communication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Plugins (Link)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide.html">Quick Start Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/chart_installation.html">Chart Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/chartdownloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/manual_install.html">Manual Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/ocharts.html">O-Charts.org</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/other.html">Chart Alternatives</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/chart_installation/s63.html">S63 Charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/connect_to.html">Connect to</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/bt_pair_gnss.html">BT Pair GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/gateway_multiplex.html">Gateways + Multiplexers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/global_navigation_satellite_system.html">Global Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/serial_n0183.html">Serial-USB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/signalk.html">SignalK Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/connect_to/wifi_network.html">Wifi + Network</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/initial_configuration.html">Initial Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_guide/installation.html">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/android.html">Android</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/flatpak.html">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/linux.html">Debian</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/macosx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/rpi.html">Raspberry Pi</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/ubuntu.html">Ubuntu</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_guide/installation/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/personalization.html">Personalization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start_guide/plugins.html">Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release.html">Release History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../route_manager.html">Manage Routes and Marks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_properties.html">Layers Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/layers_tab.html">Layers Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_properties.html">Marks Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/marks_tab.html">Marks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_data_backup.html">Navigation Data Backup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/navigation_sharing.html">Navigation Sharing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/route_properties.html">Route Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/routes_tab.html">Routes Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/track_properties.html">Track Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/tracks_tab.html">Tracks Tab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_gpx_files.html">Use GPX Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_layers.html">Use Layers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_marks.html">Use Marks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_routes.html">Use Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../route_manager/use_tracks.html">Use Tracks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options.html">Set Options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/charts.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_downloader.html">Chart Downloader</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_files.html">Chart Files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/chart_groups.html">Chart Groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/tides-currents.html">Tides and Currents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/charts/vector_display.html">Vector Display</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/connections.html">Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/advanced.html">Advanced</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/autopilot.html">Autopilots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/data_priority.html">Data Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/nmea2000.html">NMEA 2000</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/singnalk.html">Signal K Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/sk_ikommunicate.html">SK iKommunicate</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/connections/test-troubleshoot.html">Test-Troubleshoot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/display.html">Display</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/display/opengl.html">OpenGL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/plugin_manager.html">Plugin Manager</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/plugin_manager/install-enable.html">PIM Install and Enable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/ships.html">Ships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/ais_targets.html">AIS Targets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/mmsi_properties.html">MMSI Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/own_ship.html">Own Ship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/ships/routes-points.html">Routes Points</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../set_options/user_interface.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../set_options/user_interface/sound.html">Sounds Tab</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/marks_waypoints.html">Marks &amp; Waypoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../terminology/true-wind.html">True Wind Calculations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../toolbar.html">TOOL BAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tracking.html">Toggle Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui_user_interface.html">UI User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="auto_follow.html">Auto Follow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_bar.html">Chart Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chart_info.html">Chart Info</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="chart_quilt.html">Chart Quilting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="display_orient.html">Chart Display Orientation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gps_status.html">GNSS Status</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="keyboard_shortcuts.html">Keyboard Shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="right_click_menu.html">Right Click Menu</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="safe_mode.html">Safe Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="statusbar.html">Status Bar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="touch_screen.html">Touch Screen Tablets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">OpenCPN Manual</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">OpenCPN Manual</a></li>
+    <li>Basic User Manual</li>
+    <li><a href="../ui_user_interface.html">UI User Interface</a></li>
+    <li><a href="chart_quilt.html">Chart Quilting</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/nohal/source/dokuwiki/data/pages/opencpn/out/modules/ROOT/pages/manual_basic/ui_user_interface/chart_quilt.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_chart_quilting"><a class="anchor" href="#_chart_quilting"></a>Chart Quilting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/user_interface/chart-panel-options.jpg" alt="chart-panel-options.jpg" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>Chart quilting is a way to display parts of several charts together on
+the screen, redrawn to the same scale.</p>
+</div>
+<div class="paragraph">
+<p>Raster Mercator charts, Raster Transverse Mercator charts, Raster
+Polyconic charts and Raster skewed charts, of these same projections,
+may exist in the same quilt. The transition from one type of projection
+to another is seamless. Quilting the skewed charts is computationally
+heavy and can&#8217;t be used in non-OpenGL mode, make sure you have the use
+of accelerated graphics (OpenGL) enabled in Toolbox &gt; Display&gt; Advanced.</p>
+</div>
+<div class="sect2">
+<h3 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to <strong>Chart Panel Hamburger → Display Options → Enable Chart
+Quilting</strong>. Tick the box.</p>
+</li>
+<li>
+<p>Or Select MenuBar → View and check Enable Chart Quilting.</p>
+</li>
+<li>
+<p>Or use the "<strong>Q</strong>" short-cut key to toggle quilting on/off.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Zooming in, automatically brings up larger scale charts, if available.
+Panning reveals a continuous quilt of the available charts. If you
+started with a raster chart, only raster charts will, with the exception
+noted below, be in the quilt.</p>
+</div>
+<div class="paragraph">
+<p>The same logic applies to S57 and S63 Vector Charts (ENCS).</p>
+</div>
+<div class="paragraph">
+<p>Make sure you are familiar with the
+<em><a href="./../ui_user_interface/chart_bar.html">Chart Status</a></em>
+as this will help you interpret all available information.</p>
+</div>
+<div class="paragraph">
+<p>The quilt, like a single chart can be displayed North Up or Course Up</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_more_complete_information"><a class="anchor" href="#_for_more_complete_information"></a>For more complete information</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="./../chart_panel/chart_panel_options/navigation_mode.html">Display
+Orientation</a></em></p>
+</li>
+<li>
+<p><em><a href="./../ui_user_interface/chart_bar.html">chart_bar</a></em></p>
+</li>
+<li>
+<p>To Hide/Show Chart Status use: <strong>Ctrl + B</strong>.</p>
+</li>
+</ul>
+</div>
+<hr>
+<hr>
+<div class="paragraph">
+<p>FIXME Review the following sections, to determine if they should be
+moved to another page somewhere and joined, or edited and used here
+appropriately.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>The one quilting exception occurs when quilting Raster or ENC charts. If
+a Raster or ENC chart is not available to be displayed and a CM93 ver2
+chart of suitable scale is available, then the CM93 ver 2 chart will be
+added to the quilt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_the_use_of_quilting"><a class="anchor" href="#_what_is_the_use_of_quilting"></a>What is the use of Quilting?</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/quilt2.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/quilt2" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>In single chart mode, getting near the edge of the chart there is no
+information outside the chart. You manually have to change to the next
+chart, by selecting one of the charts in the chart bar.<br>
+<span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/quilt3.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/quilt3" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>The situation changes dramatically when quilting mode is activated. The
+amount of relevant information on the screen increases, and the next
+chart is automatically available.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_displaying_charts"><a class="anchor" href="#_displaying_charts"></a>Displaying charts</h3>
+<div class="paragraph">
+<p>OpenCPN has two modes of displaying charts, <strong>single chart mode</strong> and
+<strong>quilting mode</strong>. In a new installation, quilting is on by default.</p>
+</div>
+<div class="sect3">
+<h4 id="_to_activate_single_chart_mode"><a class="anchor" href="#_to_activate_single_chart_mode"></a>To activate single chart mode</h4>
+<div class="paragraph">
+<p>Go to <strong>Options&#8594;Display&#8594;General</strong> and deselect the box <strong>Enable Chart
+Quilting</strong>. This mode only shows one chart at a time, and a switch to
+other charts must be done by clicking another chart in the Chart Bar.
+All printed general chart information, outside the chart proper, can
+easily be read.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_to_activate_chart_quilting"><a class="anchor" href="#_to_activate_chart_quilting"></a>To activate chart quilting</h4>
+<div class="paragraph">
+<p>Go to <strong>Options&#8594;Display&#8594;General</strong> and tick the box <strong>Enable Chart
+Quilting</strong>, or use the shortcut key <strong>Q</strong> to toggle quilting. Tick the box
+"Show Chart Outlines" at the same time as this will help you see
+individual charts.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_to_determine_if_chart_quilting_is_on"><a class="anchor" href="#_to_determine_if_chart_quilting_is_on"></a>To determine if Chart quilting is on</h4>
+<div class="paragraph">
+<p>Use these hotkeys: Ctrl + B hide/show the Chart Bar. There are some
+visual indications on screen to confirm if quilting is on or off.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the right click menu contains the entry "Hide This Chart", quilting
+is on. Clicking the entry excludes the chart from the quilt.</p>
+</li>
+<li>
+<p>The colored rectangles in the status bar have rounded corners and the
+white borders of the charts are invisible when quilting is on. When
+quilting is off in ToolBox&#8594;Settings, the colored rectangles have
+"square" corners.r.</p>
+</li>
+<li>
+<p>When hovering with the mouse pointer over a inactive raster chart
+button in single chart mode, a thumbnail of the chart is displayed in
+the upper left corner of the screen. At the same time an information box
+pops up above the button with details about the chart. This changes with
+quilting, as the thumbnails are replaced with a transparent reddish
+high-lighting of the charts that is a part of the present quilt or has a
+larger scale than the reference chart in the quilt.</p>
+</li>
+<li>
+<p>The exception to the last rule is CM93 charts. When an area is only
+covered by CM93 charts, indicated by a long yellow chart button in the
+status bar, and in quilting mode, no info-box is displayed and no
+reddish highlighting takes place.</p>
+</li>
+<li>
+<p>CM93 individual cells are outlined in magenta.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With chart quilting more than one chart can be displayed and active at
+the same time, in the screen above, for example there are two pale blue
+buttons, as there are two raster-charts in this quilt. In single mode
+only one chart button is highlighted at a time.</p>
+</div>
+<div class="paragraph">
+<p>Depth units. that are normally shown in the upper right corner of the
+display (if activated in the toolbox), are only displayed in quilting
+mode if all participating charts uses the same unit.</p>
+</div>
+<div class="paragraph">
+<p>Many of these features are illustrated in this screen-dump.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/quilt4.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/quilt4" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>This is a quilt consisting of three raster charts, two that are actually
+displayed and one smaller scale chart that is hidden behind the larger
+scaled charts of St Croix.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/hidden-quilt.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/hidden-quilt" width="150"></span></p>
+</div>
+<div class="paragraph">
+<p>This is the button for the not displayed chart in the quilt.</p>
+</div>
+<div class="paragraph">
+<p>The mouse pointer is over the middle raster chart and the chart
+information box is shown, together with the red highlighting of the
+chart on the screen.</p>
+</div>
+<div class="paragraph">
+<p>If the chart info box contains much less info than above, just click the
+button to display the chart, then go back and hover with the cursor over
+the chart button again. The full info will now be available.</p>
+</div>
+<div class="paragraph">
+<p>No depth unit is shown in the quilt as the left chart is in Feet and the
+right in Fathoms and parts thereof. Notice the lack of zoom level in the
+status bar, a quilt , by definition, consists of several different zoom
+levels.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_which_charts_are_quilted"><a class="anchor" href="#_which_charts_are_quilted"></a>Which charts are quilted?</h4>
+<div class="paragraph">
+<p>There are several rules built into OpenCPN governing exactly how
+different chart styles reacts to the quilting mode.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Raster charts and Vector charts are quilted separately. You can quilt
+either raster charts or vector charts, but not both at the same time.</p>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    * The exception to this rule is: CM93 ver2 charts, if available, may be quilted with raster and vector charts under certain conditions e.g. the view is so far zoomed out that the rightmost (smallest scale) raster chart is too small to be useful.
+- CM93 ver2 charts can be quilted separately.
+- BSB4 and nv-charts, using plugins, quilts with other Raster Charts, following the rules above.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_user_control"><a class="anchor" href="#_user_control"></a>User control</h4>
+<div class="paragraph">
+<p>Right click on a Chart Button to hide or show a chart.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/chart-hide-this-chart.png" alt="Hide this Chart" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Hide this chart</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/hidden-quilt.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/hidden-quilt" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Hidden chart</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/chart-show-this-chart.png" alt="Show this Chart" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Add this chart to quilt</p>
+</div>
+<div class="paragraph">
+<p>Users can control if an individual chart, is allowed in the quilt or not
+"Hidden".</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Right clicking on any chart in a quilt in the chart-bar and clicking
+"Hide This Chart" on the pop up menu, removes the chart from the quilt.
+The chart button in the Status bar changes to
+<span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/not_participate.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/not_participate" width="100"></span>.</p>
+</li>
+<li>
+<p>The same thing can be achieved through the right-click menu when
+clicking on a displayed chart.</p>
+</li>
+<li>
+<p>To activate the chart again <strong>right click</strong> this button an then click
+"Add this chart to quilt"</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_controlling_the_scale_of_the_quilt_view"><a class="anchor" href="#_controlling_the_scale_of_the_quilt_view"></a>Controlling the scale of the quilt view.</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/quilt-ref.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/quilt-ref" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>The "quilt reference chart" is the left-most, largest scale chart,
+highlighted in the chart bar. This is the left of the two pale blue
+chart buttons above.</p>
+</div>
+<div class="paragraph">
+<p>Click the next chart blue button "one-to-the-right" of the of the
+current reference chart. The reference scale of the quilt will be
+decreased, but the viewpoint will not change. The same logic applies if
+clicking a chart-to-the-left of the present reference chart, except that
+the scale of the quilt will increase. Zooming in/out will also move the
+reference chart to the left/right.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_known_issue_with_some_noaa_encs"><a class="anchor" href="#_known_issue_with_some_noaa_encs"></a>Known issue with some NOAA ENC:s</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/opencpn/manual_basic/chart_panel/chart_panel_options/stxhole1.png" alt="/opencpn/manual_basic/chart_panel/chart_panel_options/stxhole1" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Some NOAA ENC:s are produced with "holes" in. OpenCPNs handles almost
+all of these cases. The picture above is from S:t Croix in the
+Caribbean, using an old version of OpenCPN. There are still some gray
+areas in this vicinity but only if the scale is larger than 1:10,000.
+Very few users are likely to notice this.<br>
+The gray rectangle above is a "hole" in a chart, where a smaller scale
+chart with coverage exists. The "hole" is due to the fact that this area
+wasn&#8217;t surveyed to the scale of the chart.<br>
+<br>
+<strong>Clipped Objects </strong><br>
+Clipped objects at the edge of quilted vector charts S57/S63 of
+different scales may not show the complete object."</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
