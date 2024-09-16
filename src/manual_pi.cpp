@@ -125,7 +125,7 @@ int Manual::GetToolbarToolCount() { return 1; }
 void Manual::OnToolbarToolCallback(int id) {
   std::string url("file://");
   url += GetPluginDataDir(PKG_NAME).ToStdString();
-  url += "/doc/plugin-manual/index.html";
+  url += "/doc/index.html";
   wxLaunchDefaultBrowser(url);
 }
 
