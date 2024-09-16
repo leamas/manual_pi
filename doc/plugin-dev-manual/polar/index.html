@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Polar :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/polar/index.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="polar" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Polar</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-dev/index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/rgleason/polar_pi/edit/master/manual/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Polar</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create your own Polar Files from Instruments</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Maintenance Source: <a href="https://github.com/rgleason/polar_pi" class="bare">https://github.com/rgleason/polar_pi</a><br></p>
+</li>
+<li>
+<p>Source: <a href="https://github.com/ptulp/polar_pi" class="bare">https://github.com/ptulp/polar_pi</a><br></p>
+</li>
+<li>
+<p>Download:https://opencpn.org/OpenCPN/plugins/polar.html<br></p>
+</li>
+<li>
+<p>Forum: <a href="http://www.cruisersforum.com/forums/f134/plugin-polar-105481.html">CF Polar_pi Thread</a><br></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_what_and_why"><a class="anchor" href="#_1_what_and_why"></a>1. What and Why</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This plugin can be used to Create, Load, View, Edit and Save polars.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_install"><a class="anchor" href="#_2_install"></a>2. Install</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OpenCPN Manual has general information in <a href="../opencpn-plugins/misc/plugin-install.html" class="xref page">Plugin Download, Install and Enable</a> for installing this plugin.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_standard_actions"><a class="anchor" href="#_3_standard_actions"></a>3. Standard actions</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/polar-pi-eliminate-zeros.png" alt="polar pi eliminate zeros">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modes_of_operation"><a class="anchor" href="#_modes_of_operation"></a>Modes of Operation</h3>
+<div class="paragraph">
+<p>The Polar plugin has 4 modes of operation:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data from logbooks: This mode will read from all logbooks found in the
+logbook/data directory. If enough data points are found, a polar will be created.</p>
+</li>
+<li>
+<p>Data from NMEA: This mode will read data from the NMEA stream and
+create a Polar from this data.</p>
+</li>
+<li>
+<p>Data from VDR File: This mode will read a given VDR file and will
+use the NMEA messages in the file to create a Polar.</p>
+</li>
+<li>
+<p>Edit Manual: This mode allows the user to create a Polar manually.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>It is possible to switch between modes. For instance edit manually a
+Polar and then switch to Data from NMEA and Start Record. This will add
+and update the data for the polar.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_collection"><a class="anchor" href="#_data_collection"></a>Data Collection</h3>
+<div class="paragraph">
+<p>Data will be collected in 5 degree wind directions and 2 knots of
+windspeed and this information will be saved.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The plugin will also interpolate middle steps, eg 6 and 7 degree will be added to the 5 degree step and 8
+and 9 will be added to 10 degree step. The windspeed is divided by 2, so
+column 2 knots hold the speeds from 2 till 3.99 and column 4 knots will
+hold the speeds 4 till 5.99. etc up to 40 knots.</p>
+</li>
+<li>
+<p>If reading in other polar files polar_pi tries to fill in the wind direction
+in 5 degree steps with 2 knots of wind similar to the input from NMEA. The same sampling will be used as above.</p>
+</li>
+<li>
+<p>Polar_pi can read badly formatted polar files with lines of all zeros and
+can save the file out with the zeros removed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_create_your_own_polar_file"><a class="anchor" href="#_4_create_your_own_polar_file"></a>4. Create your own Polar File</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Confirm that your Wind and BSP/STW instruments are properly calibrated
+and that the nmea0183 data stream is working properly with full
+sentences and good checksum. Confirm that you can record the data.</p>
+</li>
+<li>
+<p>Record Nmea0183 data while sailing in various wind conditions, at a
+wide range of wind angles, with the same set of sails trimmed properly,
+preferably with a clean bottom, average weight in the boat, and no
+current.</p>
+</li>
+<li>
+<p>Make several of these recordings for different sea states and sets of sails and reefing.</p>
+</li>
+<li>
+<p>Using Polar_pi load one of the files.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/polar-load-data.jpeg" alt="polar load data">
+</div>
+</div>
+<div class="paragraph">
+<p>Load Nmea0183 Recorded Data file</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/polar-open-file.jpeg" alt="polar open file">
+</div>
+</div>
+<div class="paragraph">
+<p>Open Nmea0183 Recorded Data file</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edit the file. You will want to normalize the data and make it regular, by eye.</p>
+</li>
+<li>
+<p>Save the file with a new name, using some version of [Boat-Sails-Conditions].pol</p>
+</li>
+<li>
+<p>Now you can use it in Weather_routing as one of your Polar files.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that in Weather__routing you can load multiple polar files such as:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Very light wind under power</p>
+</li>
+<li>
+<p>Light to medium wind under mainsail and genoa</p>
+</li>
+<li>
+<p>Heavy wind under mainsail and jib, etc.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This plugin does an excellent job of building and preparing polars for use in <a href="../weather_routing/index.html" class="xref page">Weather Routing Plugin</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_options"><a class="anchor" href="#_5_options"></a>5. Options</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/polar_preference.png" alt="polar preference">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_windows_alternative"><a class="anchor" href="#_6_windows_alternative"></a>6. Windows Alternative</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Polauto is a fully featured alternative created by by Patrick Tierclin another sailing Frenchman.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://translate.google.com/translate?hl=en&amp;sl=fr&amp;u=http://www.plaisance-pratique.com/polauto-mesurer-la-polaire-reelle">Polauto (Windows)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

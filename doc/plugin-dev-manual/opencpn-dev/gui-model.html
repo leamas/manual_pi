@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GUI - model code organization :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/gui-model.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li><a href="gui-model.html">Model - Gui code organization</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/gui-model.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">GUI - model code organization</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the time of writing the core OpenCPN codebase consists of more than
+300000 lines. A code base this large requires some kind of organization.</p>
+</div>
+<div class="paragraph">
+<p>The traditional way to organize GUI applications like OpenCPN is the
+Model - View - Controller (MVC) pattern.
+However, for various reasons OpenCPN does not follow this.
+Instead, a late push has been done to split the code into two pieces
+named Model and Gui where Model indeed corresponds to the MVC "Model"
+while Gui corresponds to the MVC "View" and "Controller" parts.</p>
+</div>
+<div class="paragraph">
+<p>The overall picture thus becomes:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>┌──────────────────────────────────┐
+│     Gui (View + Controller)      │
+└──────────────────────────────────┘</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>┌──────────────────────────────────┐
+│            Model                 │
+└──────────────────────────────────┘</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the traditional layered software approach this means:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Code in the GUI can call any code, be it in Gui or Model.</p>
+</li>
+<li>
+<p>Code in the Model can only call the Model; it can not call the GUI</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Violating these rules typically leads to linker errors when linking
+the tests and/or opencpn-cmd targets.</p>
+</div>
+<div class="paragraph">
+<p>Typical Model parts are communication drivers, databases like
+routes and configuration data, various datatypes, plugin loading,
+etc.
+Having these in a model part means that they can be updated, tested
+and used without paying attention to the Gui as long as the interface
+is kept stable.
+This considerably simplifies code maintenance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_definition_of_the_gui_and_model_parts"><a class="anchor" href="#_definition_of_the_gui_and_model_parts"></a>Definition of the Gui and Model parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At the time of writing, the Model is defined by the variable MODEL_SRC
+in the top level CMakeLists.txt.
+Remaining source file makes up the Gui.
+Work to make this more visible is likely to be done, for example
+by creating separate subdirectories like src/gui and src/model instead
+of a single src/ directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_model_gui_communication"><a class="anchor" href="#_model_gui_communication"></a>Model &#8594; Gui communication.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From time to time Model code still needs to invoke the Gui.
+One example could be a communication driver which needs some user data
+which should be retrieved using a dialog box.
+Another example could be that the same driver needs to send a message
+to all plugins using the BroadcastToAllPlugins() method which currently
+resides in the Gui.
+There are three possible ways to handle this.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Refactor the code so that the called method is moved to a Model component.</p>
+</li>
+<li>
+<p>Send an asynchronous signal to the Gui without any feedback.</p>
+</li>
+<li>
+<p>Use a callback.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Of these, moving the code to the Model is generally a good thing if feasible.
+However, things like a dialog just cannot be moved, it will always have
+Gui dependencies.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise, sending a signal is the simplest solution.
+It should be used when possible.
+The basic limitation is that this is an asynchronous fire-and-forget approach,
+the model will not get anything back from the Gui.</p>
+</div>
+<div class="paragraph">
+<p>If sending a signal does not fit the bill, a callback should be used.
+This is synchronous, and the Model can get a return value from the Gui</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_signals"><a class="anchor" href="#_using_signals"></a>Using signals</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sending signals is done using an <code><code>EventVar</code></code>.
+This is declared in the <em>observable_evtvar.h</em> header file.</p>
+</div>
+<div class="paragraph">
+<p>The Model part defines and signals to the EventVar.
+The declaration is done in the header:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#include "observable_evtvar.h"
+class ModelClass {
+public:
+  /** Notified on SomeChange with a strinng available in GetString(). */
+  EventVar some_change;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note the comment, an <code><code>EventVar</code></code> without a comment is hard to track down.</p>
+</div>
+<div class="paragraph">
+<p>In the implementation file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>void ModelClass::SomeMethod() {
+  ....
+  some_change;.Notify("this happened");
+  ...
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are many overloads for <code><code>Notify()</code></code> which could be used to carry not only
+strings but also pointers, int/bool, etc.</p>
+</div>
+<div class="paragraph">
+<p>This is basically it from the Model perspective.
+One more more Gui component could listen to SomeChange, but this does not
+affect ModelClass.</p>
+</div>
+<div class="paragraph">
+<p>The Gui performs the listening.
+First, in the header declare an ObsListener</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#include "model_class.h"</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class GuiClassn {
+  ...
+private:
+  ObsListener some_change_listener;
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And then, typically in the constructor, set up the listening in the
+implementation .cpp file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>void GuiClass::GuiClass(ModelClass&amp; model_class) {
+  auto action = [&amp;](ObservedEvt ev) {
+    wxString s = ev.GetString();
+    do something useful
+  }
+  some_change_listener.Init(model_class.some_change, action);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, GuiClass obviously needs to have access to an instance of ModelClass to
+be able to listen to it.
+In our case this is often a global variable, but this varies and could be more
+or less complicated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_a_callback"><a class="anchor" href="#_using_a_callback"></a>Using a callback</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use a callback, the model part defines it in a header, where there also
+is a accessor for the Gui to set it.
+The example assumes the function takes a string argument and returns a bool.
+This is just an example, the signature could be anything.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#include &lt;functional&gt;
+...
+class ModelClass {
+public:
+  ModelClass::ModelClass() ;
+  void SetCallback(std::function&lt;bool(const std::string&amp;)&gt; cb) {
+    m_callback = cb;
+  }
+private:
+  std::function&lt;bool(const std::string&amp;)&gt; m_callback;
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the implementation .cpp file we first ensure that m_callback always have
+a defined, default value which basically does nothing without
+crashing</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ModelClass::ModelClass()
+        : m_callback([](const std::string) { return false; }) {
+  ...
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is now possible to invoke the callback and get the result from the
+Gui (assuming that <code><code>SetCallback()</code></code> has been called):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ModelClass::SomeFunction() {
+  ...
+  bool result = m_callback("foo");
+  ...
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the Gui the callback is set, typically using a lambda in the
+constructor like</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#include "model_class.h"
+...
+GuiClass::GuiClass(ModelClass&amp; model_class) {
+  ...
+  model_class.SetCallback([&amp;](const std::string&amp; s) {
+    do something with s;
+    return true or false;
+  });</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And that&#8217;s it. The model can now effectively call a function in the Gui
+without any knowledge of it.
+This upholds the basic promise that the model is not linked to the Gui
+in any way.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

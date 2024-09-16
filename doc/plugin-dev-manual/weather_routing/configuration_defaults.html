@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuration Defaults :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/weather_routing/configuration_defaults.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="weather_routing" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Weather Routing</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-dev/index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/rgleason/weather_routing_pi/edit/master/manual/modules/ROOT/pages/configuration_defaults.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Configuration Defaults</h1>
+<div class="sect1">
+<h2 id="_weather_routing_plugin"><a class="anchor" href="#_weather_routing_plugin"></a>Weather Routing Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This lists <strong>default Configuration</strong> settings. Hitting <strong>Reset all Advanced</strong> will reset the <em>Advanced Tab</em> configuration to these default settings.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Upoin intial installation (following the instructions), the plugin should be setup to allow the user to select any of the <em>Configurations</em> from the Main Menu and then press <em>Compute</em> and the routing should <em>Complete</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are <em>learning</em> at this point and want to run the <strong>Examples</strong>, don&#8217;t change the <em>configuration defaults</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_tab"><a class="anchor" href="#_basic_tab"></a>Basic Tab</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All of these settings are set "out of the box" for the first <em>Compute</em>.</p>
+</li>
+<li>
+<p>Don&#8217;t tough anything.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_start_position"><a class="anchor" href="#_start_position"></a>Start Position</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make Weather Route Position by right-click in Opencpn on the chart and select "Weather Route position"</p>
+</li>
+<li>
+<p>Select Start Position by selection from the dropdown.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_start_time"><a class="anchor" href="#_start_time"></a>Start Time</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select Start Date &amp; Time -User Selection</p>
+</li>
+<li>
+<p>Must within the grib file time window unless climatology is working too.</p>
+</li>
+<li>
+<p>Two options <em>Grib Time</em> and <em>Current Time</em></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_end_position"><a class="anchor" href="#_end_position"></a>End Position</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make Weather Route Position by right-click in Opencpn on the chart and select "Weather Route position"</p>
+</li>
+<li>
+<p>Select Start Position by selection from the dropdown.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_time_step"><a class="anchor" href="#_time_step"></a>Time Step</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Intially this is set to 12 hours to have a fast calculation.</p>
+</li>
+<li>
+<p>Select between 30 min and 12 hours.</p>
+</li>
+<li>
+<p>For routing failures first try setting this for a shorter time step.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boat"><a class="anchor" href="#_boat"></a>Boat</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Boat.xml path  - For startup examples, select <em>plugins\weather_routing\boats\Boat-Climatology.xml</em></p>
+</li>
+<li>
+<p>Boat.xml edit  - View and get familiar with this interface.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In <em>Boat-Climatology.xml</em> 4 Sample Polar files have been added.</p>
+</li>
+<li>
+<p>Highlight one of the Polars and select from the Tabs (Plot, Cross Over and Stats)</p>
+</li>
+<li>
+<p>At the bottom select how to view the polar True/Apparent, etc.</p>
+</li>
+<li>
+<p>In the Right menu select <em>Edit</em> to see how Editing a polar works.</p>
+</li>
+<li>
+<p>Close or Save this menu.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_constraints_defaults"><a class="anchor" href="#_constraints_defaults"></a>Constraints - Defaults</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Max Diverted Course 76 degrees</p>
+</li>
+<li>
+<p>Max True Wind 100 knots</p>
+</li>
+<li>
+<p>Max Apparent Wind 100 knots</p>
+</li>
+<li>
+<p>Max Swell 20 meters</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_options_defaults"><a class="anchor" href="#_options_defaults"></a>Options - Defaults</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Time step: 1 hour 0 min 0 sec</p>
+</li>
+<li>
+<p>Detect Land: Checked (when first starting, uncheck it, requires High Res GSHHS)</p>
+</li>
+<li>
+<p>Detect Boundary: Unchecked</p>
+</li>
+<li>
+<p>Currents: Unchecked</p>
+</li>
+<li>
+<p>Optimize tacking: Unchecked</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_source_defaults"><a class="anchor" href="#_data_source_defaults"></a>Data Source - Defaults</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Default Examples</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The wind data source used for these examples is Climatology.</p>
+</li>
+<li>
+<p>Climatology must be installed and enabled.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>For your own use</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Download a fresh grib of the entire route area (a little
+larger than then route), making sure that it is for a big enough time
+interval.</p>
+</li>
+<li>
+<p>Then set the Grib_pi at least one frame later than the start time.</p>
+</li>
+<li>
+<p>Grib Unchecked - You will need to check this.</p>
+</li>
+<li>
+<p>Climatology - Leave disabled or enabled depending..</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Use Climatology alone.</p>
+</li>
+<li>
+<p>Use Climatology (30 year Noaa data averages) to extend long trip calcs both at the start and finish.</p>
+</li>
+<li>
+<p>When data sources change there will be a color indication.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Last Valid if Data Deficient - Uncheck. If your grib file is not long enough checking this can help.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_tab"><a class="anchor" href="#_advanced_tab"></a>Advanced Tab</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Generally the default constraints work well.</p>
+</li>
+<li>
+<p>These constraints speed up calculations.</p>
+</li>
+<li>
+<p>Some adjustments may be necessary if a route does not complete.</p>
+</li>
+<li>
+<p>However first decrease <em>Time Step</em> and increase <em>Max Diverted Course</em></p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_constraints_defaults_2"><a class="anchor" href="#_constraints_defaults_2"></a>Constraints - Defaults</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Max Latitude: 90 degrees</p>
+</li>
+<li>
+<p>Wind vs Current: 0 (disabled) Factor for waves and hobby horsing</p>
+</li>
+<li>
+<p>Max Course Angle: 180 degrees</p>
+</li>
+<li>
+<p>Max Search Angle: 120 degrees</p>
+</li>
+<li>
+<p>Cyclones Avoid Crossing Cyclone Tracks: Unchecked  (Climatology needed)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>within X months X  days: within 1 month 0 days</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_options_defaults_2"><a class="anchor" href="#_options_defaults_2"></a>Options - Defaults</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Inverted Regions: Unchecked</p>
+</li>
+<li>
+<p>Integrator: Newton</p>
+</li>
+<li>
+<p>Anchoring: Unchecked</p>
+</li>
+<li>
+<p>Wind Strength: 100 percent</p>
+</li>
+<li>
+<p>Tacking Time: 0 (disabled)</p>
+</li>
+<li>
+<p>Safety Margin from land: 0 nm</p>
+</li>
+<li>
+<p>Courses Relative to True Wind:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>From 0 degrees to 180 degrees</p>
+</li>
+<li>
+<p>by 5 degrees steps</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you are having trouble, set the Configuration to these defaults or
+select <strong>Configuration &gt; Reset all Advanced</strong>:</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

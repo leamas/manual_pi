@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Automatic Metadata Git Push :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/AlternativeWorkflow/InstallConfigure/Catalog-Github-Integration.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="AlternativeWorkflow" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Overview.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Metadata-Flow.html">Metadata Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Plugin-Adaptation.html">Adapting the Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../usage.html">Local Builds</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Local-Build.html">Build Dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../InstallConfigure.html">CI Services Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="GithubPreps.html">Github OpenCPN/plugins fork</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Cloudsmith.html">Cloudsmith</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Builders/IntroBuilders.html">Builders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="Builders/Appveyor.html">Appveyor</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="Builders/CircleCI.html">CircleCI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="Builders/Travis.html">Travis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="BuilderEnv.html">Builder environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="GitHub.html">Final checks and testing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="Catalog-Github-Integration.html">Creating a catalog PR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Useful-Stuff.html">Useful information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Local-ci-build.html">Local CI builds (experimental)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Shipdriver Managed Workflow for the OpenCPN plugins</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../opencpn-dev/index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a></li>
+    <li><a href="Catalog-Github-Integration.html">Creating a catalog PR</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/Rasbats/managed_plugins/edit/main/manual/modules/ROOT/pages/InstallConfigure/Catalog-Github-Integration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Automatic Metadata Git Push</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Shipdriver-based plugins supports pushing metadata
+to a remote git repository. The goal is to simplify the process for
+creating pull requests against
+<a href="https://github.com/opencpn/plugins">OpenCPN/plugins</a>.</p>
+</div>
+<div class="paragraph">
+<p>When enabled, all metadata files created when the plugin is built are
+replicated to a fork of OpenCPN/plugins set up by the user. This fork
+can be used to make a PR against OpenCPN/plugins. In particular, there
+is no need to download metadata files from Cloudsmith in order to make a
+PR.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>1. Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The configuration is documented in the <a href="GithubPreps.html" class="xref page">
+plugins fork configuration page</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_during_the_build"><a class="anchor" href="#_during_the_build"></a>2. During the build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the builders are run, the git-push part will</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make a clone of the OpenCPN/plugins fork repository</p>
+</li>
+<li>
+<p>Add the new metadata file.</p>
+</li>
+<li>
+<p>Commit and push the change to the auto branch in the OpenCPN/plugins
+fork</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As mentioned, the changes are pushed to the 'auto' branch by default.
+The branch name can be tweaked using the GIT_BRANCH environment variable
+in the builder.</p>
+</div>
+<div class="paragraph">
+<p>If GIT_KEY_PASSWORD or GIT_REPO is missing git-push will not do anything
+besides some logging.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="make-PR"><a class="anchor" href="#make-PR"></a>3. Making the Pull Request (PR) to OpenCPN/plugins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The builders have made commits in the OpenCPN/plugins fork&#8217;s auto
+branch, one for each build. These commits are the metadata files which
+work with the plugin installer of the main OpenCPN program. In beta and
+production mode they become part of the beta and master catalogs of
+plugins in OpenCPN.</p>
+</div>
+<div class="sect2">
+<h3 id="_merging_the_auto_branch"><a class="anchor" href="#_merging_the_auto_branch"></a>3.1. Merging the auto branch</h3>
+<div class="paragraph">
+<p>The files in the auto branch needs to be merged into either master, Beta
+or Alpha branch. When done, the branch could be used to make a PR against
+<a href="https://github.com/opencpn/plugins">the plugins project</a>. The workflow
+is somehat different if working with master or Beta branch.</p>
+</div>
+<div class="paragraph">
+<p>Using Alpha is basically the same as Beta, substituting Beta with Alpha.</p>
+</div>
+<div class="sect3">
+<h4 id="_using_master"><a class="anchor" href="#_using_master"></a>3.1.1. Using master</h4>
+<div class="paragraph">
+<p>First: sync the local master branch with upstream using
+<a href="https://rick.cogley.info/post/update-your-forked-repository-directly-on-github/">this guide</a>
+or on the command line:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git remote update upstream
+$ git checkout master
+$ git rebase upstream/master</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the files in the auto branch to master using:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git fetch origin auto:auto
+$ git checkout auto
+$ git rebase master
+$ git checkout master
+$ git merge --squash auto
+$ git commit -m "Merging auto branch into master"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The rebase operation should not be strictly necessary, but will pick up
+possible errors if the metadata has been changed by other means.
+The <code>--squash</code> option lumps the too many commits in the auto branch (one for
+each build) to a single one, keeping the master branch tidy.</p>
+</div>
+<div class="paragraph">
+<p>A PR (pull request) can then be made from the master branch for updating
+the master catalog of OpenCPN/plugins.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_using_beta"><a class="anchor" href="#_using_beta"></a>3.1.2. Using Beta</h4>
+<div class="paragraph">
+<p>First: sync the local Beta branch with upstream using
+<a href="https://rick.cogley.info/post/update-your-forked-repository-directly-on-github/">this guide</a>
+or on the command line:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git remote update upstream
+$ git checkout --track origin/Beta
+$ git rebase upstream/Beta</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the files in the auto branch to Beta using:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git fetch origin auto:auto
+$ git checkout auto
+$ git rebase Beta
+$ git checkout Beta
+$ git merge --squash auto
+$ git commit -m "Merging auto branch into Beta"</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleaning_up_old_metadata"><a class="anchor" href="#_cleaning_up_old_metadata"></a>3.2. Cleaning up old metadata</h3>
+<div class="paragraph">
+<p>Some metadata for older versions is "frozen".
+This means that these versions are kept as-is without changes when new
+versions are built.</p>
+</div>
+<div class="paragraph">
+<p>However, for other versions normally only the last version should be used.
+The command</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    $ ls -lt metadata/my-plugin*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>lists all metadata files for given plugin in date order.
+Use <code>git rm</code> to remove all older files besides those which are frozen.
+When completed, commit using for example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    $ git commit -m "Removing obsoleted metadata."</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_metadata_and_push"><a class="anchor" href="#_check_metadata_and_push"></a>3.3. Check metadata and push</h3>
+<div class="paragraph">
+<p>Create a catalog and check it against the xsd specification:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    $ tools/ocpn-metadata  generate --userdir metadata/ \
+        --destfile ocpn-plugins.xml --force
+    $ xmllint --noout ocpn-plugins.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This xmllint check is not strictly necessary, it&#8217;s done automatically on
+every PR when pushed. However, it shortcuts handling of problems.</p>
+</div>
+<div class="paragraph">
+<p>When testing is complete or just not deemed necessary: push using<br>
+<code>git push origin master</code> or <code>git push origin Beta</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>4. Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <em>ci/git-push</em> script can be run manually for debugging purposes
+as described in the <a href="../Local-ci-build.html" class="xref page">Local CI build page</a></p>
+</div>
+<div class="paragraph">
+<p>If metadata from builds does not show up in the auto branch:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First check the build logs: does the git-push step complete? Last
+part of a successful git-push message should contain something like</p>
+<div class="literalblock">
+<div class="content">
+<pre>To github.com:leamas/plugins.git
+   6beead5..8c0a9a9  auto -&gt; auto</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which means that auto branch is updated to 8c0a9a9 . Remember that commit</p>
+</div>
+</li>
+<li>
+<p>In the OpenCPN/plugins clone check that commit:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ git fetch origin
+$ git show 8c0a9a9</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will display the actual changes to the metadata file. Are they sound?</p>
+</div>
+</li>
+<li>
+<p>Checkout the auto branch (<code>git checkout auto</code>) and check the metadata file using
+some editor. It lives in the metadata directory. If it&#8217;s fine: done.</p>
+</li>
+<li>
+<p>If it&#8217;s not as expected: check the log for the metadata file. Assuming this is
+about o-charts-plugin-raspbian-armhf-10.xml:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ git log --oneline  metadata/o-charts-plugin-raspbian-armhf-10.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This should give a hint about what has happened to the file after 8c0a9a9</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security"><a class="anchor" href="#_security"></a>5. Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The private ssh key created by new-credentials is encrypted using a
+standard DES alghorithm. There is probably some room to crack this given
+the fact that part of ciphertext is known. The encryption would be
+stronger if the header and trailer of the key wasn&#8217;t encrypted.</p>
+</div>
+<div class="paragraph">
+<p>That said, given the context this should be reasonably safe. At least, a
+separate ssh key is used for this purpose, a key which could be easily
+revoked.</p>
+</div>
+<div class="paragraph">
+<p><a href="../Overview.html" class="xref page">&#8592; Shipdriver template overview</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

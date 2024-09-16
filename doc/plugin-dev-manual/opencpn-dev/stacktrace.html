@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Creating a stack trace :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/stacktrace.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li><a href="stacktrace.html">Creating a stack trace</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/stacktrace.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Creating a stack trace</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Fow Windows and MacOS these docs are not useful until after the 5.8
+release and related download urls for pdb and dSYM files. OTOH, the
+descriptions for Debian/Ubuntu and Flatpak are usable at the time of writing.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Occasionally, if OpenCPN crashes a stack trace carries valuable information
+about the crash which often is needed to find out the reason. The procedure
+to create a stack trace is depends on platform, but the general steps are</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install necessary tools</p>
+</li>
+<li>
+<p>Download or install debug symbols.</p>
+</li>
+<li>
+<p>Start opencpn controlled by a debugger and make it crash</p>
+</li>
+<li>
+<p>Display the stack trace in the debugger and submit it in a bug report</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_windows"><a class="anchor" href="#_windows"></a>Windows</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_install_windbg"><a class="anchor" href="#_install_windbg"></a>Install windbg</h3>
+<div class="paragraph">
+<p>The tool to use is windbg. It is part of a large set of debugging tools,
+but can be installed separately as described in
+<a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools" class="bare">https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_download_pdb_file"><a class="anchor" href="#_download_pdb_file"></a>Download pdb file</h3>
+<div class="paragraph">
+<p>Debugging symbols in Windows are contained in a pdb file. Pdb files for
+OpenCPN can be downloaded from the latest github release artifacts directory,
+currently  <a href="https://github.com/OpenCPN/OpenCPN/releases/tag/Release_5.8.4" class="bare">https://github.com/OpenCPN/OpenCPN/releases/tag/Release_5.8.4</a>.
+This file should be downloaded and installed in the same directory as OpenCPN, by default
+<em>C:\Program Files (x86)\OpenCPN\</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_start_opencpn_and_make_it_crash"><a class="anchor" href="#_start_opencpn_and_make_it_crash"></a>Start OpenCPN and make it crash</h3>
+<div class="paragraph">
+<p>After installing windbg, start it after typing <em>windbg</em> in the bottom-left
+Windows search bar. Use the 32-bit x86 variant for user-space code
+if there are alternatives.</p>
+</div>
+<div class="paragraph">
+<p>In windbg, use <em>File</em> | <em>Open Executable</em> to open the opencpn program. In a
+default installation, it can be found in
+<em>C:\Program Files (x86)\OpenCPN\opencpn.exe</em>.
+Opencpn starts executing, but stops at an very early stage. This is normal.</p>
+</div>
+<div class="paragraph">
+<p>The pane at the bottom of windbg is a command window. Here, give the command
+<em>g</em> followed by a return. OpenCPN then resumes execution. Make the actions
+which triggers a crash.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_display_stack_trace_and_submit_it"><a class="anchor" href="#_display_stack_trace_and_submit_it"></a>Display stack trace and submit it.</h3>
+<div class="paragraph">
+<p>After the crash put focus on windbg again. In the command window, give the
+command <em>kp</em> followed by a return. The stack trace is printed in the main
+window, like this:
+:<span class="image"><img src="_images/windows-trace.png" alt="Stack trace"></span></p>
+</div>
+<div class="paragraph">
+<p>A more detailed look (some long lines wrapped):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>0:000&gt; kp
+00 012ff248 007b9db3     opencpn!make_certificate(
+                           class std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;
+                               ipv4 = "10.0.2.15",
+                            class std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;
+                               destination_dir = "C:\ProgramData\opencpn\")+0x153
+                         [N:\src\certificates.cpp @ 237]
+01 012ffc60 712eea0a     opencpn!MyApp::OnInit(void)+0x5423 [N:\src\ocpn_app.cpp @ 2031]
+WARNING: Stack unwind information not available. Following frames may be wrong.
+02 012ffc8c 71396da3     wxbase32u_vc14x!wxEntry+0x13a
+03 012ffcc4 71528e40     wxbase32u_vc14x!wxEntry+0x53
+04 012ffcec 00bdd14c     wxmsw32u_core_vc14x!wxEntry+0x30
+05 (Inline) --------     opencpn!invoke_main(void)+0x1a [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 102]
+06 012ffd38 760c00f9     opencpn!__scrt_common_main_seh(void)+0xf8 [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 288]
+07 012ffd48 77bb7bbe     KERNEL32!BaseThreadInitThunk+0x19
+08 012ffda4 77bb7b8e     ntdll!__RtlUserThreadStart+0x2f
+09 012ffdb4 00000000     ntdll!_RtlUserThreadStart+0x1b</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Copy the first 10-20 lines like above from the stacktrace and submit
+it in a bug report.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_note_for_developers"><a class="anchor" href="#_note_for_developers"></a>Note for developers:</h3>
+<div class="paragraph">
+<p>The paths in the pdb file are rooted in a virtual N: drive, for example
+<em>N:\src\catalog_mgr.cpp</em>. If there is a need to map the paths in the pdb
+file to the developer&#8217;s complete source, this can be done using the MSDOS
+<em>subst</em> command. For example, if the developer&#8217;s clone lives in
+<em>\Users\foo\src\OpenCPN</em> it can be mapped to the paths in the pdb file using
+<code>subst N: \Users\foo\src\OpenCPN</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="debian-trace"><a class="anchor" href="#debian-trace"></a>Debian/Ubuntu</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Either use debuginfod or install a debug package, see
+<a href="#debian-debugsyms">below</a></p>
+</li>
+<li>
+<p>Install gdb using  <code>sudo apt update; sudo apt install gdb</code>.</p>
+</li>
+<li>
+<p>Start the debugger</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ gdb /usr/bin/opencpn
+.... (lot's of output)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start opencpn in the debugger using the command <em>run</em>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>(gdb) run
+Starting program: /usr/bin/opencpn</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Make opencpn crash. The debugger prints a lot of text and a new <em>(gdb)</em>
+prompt</p>
+<div class="literalblock">
+<div class="content">
+<pre>[...]
+(gdb)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the stacktrace using the command  <em>bt</em>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>(gdb) bt
+#0  CacheSizer::on_clear_btn_clicked() (this=0x5555597f40e0) at ./src/cat_settings.cpp:213
+#1  CacheSizer::CacheSizer(wxWindow*)::{lambda(wxCommandEvent&amp;)#1}::operator()(wxCommandEvent&amp;) const
+    (e=&lt;optimized out&gt;, __closure=&lt;optimized out&gt;) at ./src/cat_settings.cpp:203
+#2  wxEventFunctorFunctor&lt;wxEventTypeTag&lt;wxCommandEvent&gt;, CacheSizer::CacheSizer(wxWindow*)
+     ::{lambda(wxCommandEvent&amp;)#1}&gt;::operator()(wxEvtHandler*, wxEvent&amp;)
+     (this=&lt;optimized out&gt;, event=&lt;optimized out&gt;)
+    at /usr/include/wx-3.0/wx/event.h:537
+#3  0x00007ffff71a3241 in wxEvtHandler::ProcessEventIfMatchesId(
+       wxEventTableEntryBase const&amp;, wxEvtHandler*, wxEvent&amp;) ()
+       at /lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0
+#4  0x00007ffff71a35ba in wxEvtHandler::SearchDynamicEventTable(wxEvent&amp;) ()
+    at /lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0
+#5  0x00007ffff71a3650 in wxEvtHandler::TryHereOnly(wxEvent&amp;) ()
+    at /lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0
+#6  0x00007ffff71a3703 in wxEvtHandler::ProcessEventLocally(wxEvent&amp;) ()
+    at /lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0
+#7  0x00007ffff71a37a1 in wxEvtHandler::ProcessEvent(wxEvent&amp;) ()
+    at /lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0
+#8  0x00007ffff71a3537 in wxEvtHandler::SafelyProcessEvent(wxEvent&amp;) ()
+    at /lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0
+#9  0x00007ffff755e3d7 in  () at /lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0
+#10 0x00007ffff53662ee in  () at /lib/x86_64-linux-gnu/libgobject-2.0.so.0</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Copy the stacktrace and submit it  in a bug report.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flatpak"><a class="anchor" href="#_flatpak"></a>Flatpak</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install development tools: <code>flatpak install --user org.freedesktop.Sdk</code></p>
+</li>
+<li>
+<p>Install debug symbols: <code>flatpak install --user org.opencpn.OpenCPN.Debug</code></p>
+</li>
+<li>
+<p>Start the flatpak sandbox:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ flatpak run --devel --command=bash org.opencpn.OpenCPN
+[📦 org.opencpn.OpenCPN]$</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start the debugger in the sandbox (note that opencpn lives in
+/app/bin). Gdb prints a lot of text. In the end the debug symbols are
+loaded and a <em>(gdb)</em> prompt is written:</p>
+<div class="literalblock">
+<div class="content">
+<pre>[📦 org.opencpn.OpenCPN]$ gdb /app/bin/opencpn
+[...]
+Reading symbols from /app/bin/opencpn...
+Reading symbols from /usr/lib/debug//app/bin/opencpn.debug...
+(gdb)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start opencpn in the debugger using the command <em>run</em>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>(gdb) run
+Starting program: /app/bin/opencpn
+[...]</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Make opencpn crash. The debugger prints a lot of text and a new prompt:</p>
+<div class="literalblock">
+<div class="content">
+<pre>[....]
+(gdb)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In gdb, create the stacktrace using the command <em>bt</em>. This is copied and
+submitted in a bug:</p>
+<div class="literalblock">
+<div class="content">
+<pre>(gdb) bt
+#0  CacheSizer::on_clear_btn_clicked() (this=0x55555bc2e1f0)
+       at /run/build/opencpn/src/cat_settings.cpp:212
+#1  CacheSizer::CacheSizer(wxWindow*)::{lambda(wxCommandEvent&amp;)#1}
+        ::operator()(wxCommandEvent&amp;) const (e=&lt;optimized out&gt;,
+        __closure=&lt;optimized out&gt;)
+    at /run/build/opencpn/src/cat_settings.cpp:202
+#2  wxEventFunctorFunctor&lt;wxEventTypeTag&lt;wxCommandEvent&gt;, CacheSizer::CacheSizer(wxWindow*)
+        ::{lambda(wxCommandEvent&amp;)#1}&gt;::operator()(wxEvtHandler*, wxEvent&amp;)
+    (this=&lt;optimized out&gt;, event=&lt;optimized out&gt;) at /app/include/wx-3.2/wx/event.h:547
+#3  0x00007ffff70425c2 in wxEvtHandler
+       ::ProcessEventIfMatchesId(wxEventTableEntryBase const&amp;, wxEvtHandler*, wxEvent&amp;)
+        (entry=..., handler=&lt;optimized out&gt;, event=...)
+       at ./src/common/event.cpp:1431
+#4  0x00007ffff7042a8d in wxEvtHandler
+       ::SearchDynamicEventTable(wxEvent&amp;) (this=this@entry=0x55555b0abc50, event=...)
+       at ./src/common/event.cpp:1901
+#5  0x00007ffff7042ded in wxEvtHandler
+       ::TryHereOnly(wxEvent&amp;) (this=this@entry=0x55555b0abc50, event=...)
+       at ./src/common/event.cpp:1624
+#6  0x00007ffff7042e9f in wxEvtHandler
+       ::TryBeforeAndHere(wxEvent&amp;) (event=..., this=0x55555b0abc50)
+       at ./include/wx/event.h:4007
+#7  wxEvtHandler::ProcessEventLocally(wxEvent&amp;) (this=0x55555b0abc50, event=...)
+       at ./src/common/event.cpp:1561
+#8  0x00007ffff7042fa2 in wxEvtHandler::ProcessEvent(wxEvent&amp;) (this=0x55555b0abc50, event=...)
+       at ./src/common/event.cpp:1534
+#9  0x00007ffff70447f3 in wxEvtHandler
+       ::SafelyProcessEvent(wxEvent&amp;) (this=&lt;optimized out&gt;, event=...)
+       at ./src/common/event.cpp:1650
+#10 0x00007ffff77cd550 in wxWindowBase
+       ::HandleWindowEvent(wxEvent&amp;) const (this=this@entry=0x55555b0abc50, event=...)
+       at ./src/common/wincmn.cpp:1553</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_macos"><a class="anchor" href="#_macos"></a>MacOS</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_install_the_lldb_debugger"><a class="anchor" href="#_install_the_lldb_debugger"></a>Install the lldb debugger</h3>
+<div class="paragraph">
+<p>If Xcode is installed lldb is already in place. Otherwise, see for
+example <a href="https://stackoverflow.com/questions/34680789" class="bare">https://stackoverflow.com/questions/34680789</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_download_and_install_debug_symbols"><a class="anchor" href="#_download_and_install_debug_symbols"></a>Download and install debug symbols</h3>
+<div class="paragraph">
+<p>On MacOS, debug symbols lives in a dSYM bundle. dSYM bundles for released
+OpenCPN versions can be downloaded from TBD.</p>
+</div>
+<div class="paragraph">
+<p>Download and uncompress that file and store it in
+<em>/Applications/OpenCPN/Contents/MacOS</em>, something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>   $ wget https://dl.cloudsmith.io/public/alec-leamas/opencpn/raw/files/OpenCPN-deadbeef.dSYM.tar.gz
+   $ tar xf OpenCPN-deadbeef.dSYM.tar.gz
+   $ sudo mv OpenCPN.dSYM Applications/OpenCPN/Contents/MacOS</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_start_debugging"><a class="anchor" href="#_start_debugging"></a>Start debugging</h3>
+<div class="paragraph">
+<p>Easiest is to start from the installation directory, YMMV:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    $ cd /Applications/OpenCPN/Contents/MacOS
+    $ lldb  OpenCPN
+    (lldb) target symbols add OpenCPN.dSYM
+    (lldb) run</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After starting OpenCPN, make it crash.</p>
+</div>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If OpenCPN hasn&#8217;t been started before (fresh installation) one needs to first
+open it using ctrl-right-click in order to work around unsigned developer
+checks.</p>
+</li>
+<li>
+<p>Watch out for error messages when loading symbol file (<code>target symbols add</code>).</p>
+</li>
+<li>
+<p>If possible, resize OpenCPN so it does not cover the command window&#8201;&#8212;&#8201;the
+command window does <strong>not</strong> become on top  after the crash causing an
+interesting situation.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_display_the_stack_trace"><a class="anchor" href="#_display_the_stack_trace"></a>Display the stack trace</h3>
+<div class="paragraph">
+<p>After the crash, control returns to the debugger. Here, give the command <em>bt</em>
+which displays the trace. Copy the first 10-20 lines and submit in a bug report.</p>
+</div>
+<div class="paragraph">
+<p>:<span class="image"><img src="_images/macos-stacktrace.png" alt="Stack trace"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="debian-debugsyms"><a class="anchor" href="#debian-debugsyms"></a>Debian/Ubuntu debug symbols</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first step on Debian and Ubuntu is to install debug symbols, see
+<a href="#debian-trace">above</a>.
+This can be done using  either using <em>debuginfod</em> or by installing the
+opencpn-dbgsym package.</p>
+</div>
+<div class="paragraph">
+<p>Using <em>debuginfod</em> is simple and works almost the same way in Ubuntu and
+Debian.
+It creates a stacktrace with symbols for all files involved (for example
+wxWidgets), not only opencpn.
+The drawback is a large, gigabyte download.</p>
+</div>
+<div class="paragraph">
+<p>Installing a debug package is somewhat more complicated, but avoids the
+large debuginfod download.
+It only provides debug symbols for openpcn, but this is usually all that
+is required.
+The package installation differs between Ubuntu and Debian</p>
+</div>
+<div class="sect2">
+<h3 id="_using_debuginfod"><a class="anchor" href="#_using_debuginfod"></a>Using debuginfod.</h3>
+<div class="paragraph">
+<p>To use debuginfod on Debian run before invoking gdb:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    $ export DEBUGINFOD_URLS="https://debuginfod.debian.net"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On Ubuntu, use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    $ export DEBUGINFOD_URLS="https://debuginfod.ubuntu.com"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See also: <a href="https://wiki.debian.org/Debuginfod" class="bare">https://wiki.debian.org/Debuginfod</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_debug_package_on_debian"><a class="anchor" href="#_installing_debug_package_on_debian"></a>Installing debug package on Debian</h3>
+<div class="paragraph">
+<p>Add to <em>/etc/apt/sources.list</em> a line like below, adjusting bullseye
+to the actual distribution used :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>      deb http://deb.debian.org/debian-debug/ bullseye-debug main</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then install the package using</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>      $ sudo apt update
+      $ sudo apt install opencpn-dbgsym</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_debug_package_on_ubuntu"><a class="anchor" href="#_installing_debug_package_on_ubuntu"></a>Installing debug package on Ubuntu</h3>
+<div class="paragraph">
+<p>If you installed the <code>opencpn</code> package from the official Ubuntu repositories, use these instructions</p>
+</div>
+<div class="paragraph">
+<p>Create a file named <em>/etc/apt/sources.list.d/ddebs.list</em> like below,
+substituting jammy with the actual distribution like bionic or focal.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>deb http://ddebs.ubuntu.com jammy main restricted universe multiverse
+deb http://ddebs.ubuntu.com jammy-updates main restricted universe multiverse
+deb http://ddebs.ubuntu.com jammy-proposed main restricted universe multiverse</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Import the debug symbol archive signing key from the Ubuntu server using</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    $ sudo apt install ubuntu-dbgsym-keyring</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and install package using</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    $ sudo apt update
+    $ sudo apt install opencpn-dbgsym</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See also: <a href="https://wiki.ubuntu.com/Debug%20Symbol%20Packages" class="bare">https://wiki.ubuntu.com/Debug%20Symbol%20Packages</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_debug_package_from_the_launchpad_ppa"><a class="anchor" href="#_installing_debug_package_from_the_launchpad_ppa"></a>Installing debug package from the Launchpad PPA</h3>
+<div class="paragraph">
+<p>If you installed the <code>opencpn</code> package from the Launchpad PPA of the OpenCPN development team, use these instructions</p>
+</div>
+<div class="paragraph">
+<p>Add the following line to <code>/etc/apt/sources.list.d/opencpn-ubuntu-opencpn-jammy.list</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>deb https://ppa.launchpadcontent.net/opencpn/opencpn/ubuntu/ jammy main/debug</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and install package using</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    $ sudo apt update
+    $ sudo apt install opencpn-dbgsym</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

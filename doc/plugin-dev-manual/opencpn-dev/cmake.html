@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CMake Usage and Options :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/cmake.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li>Compiling</li>
+    <li><a href="cmake.html">CMake</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/cmake.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">CMake Usage and Options</h1>
+<div class="sect1">
+<h2 id="_general"><a class="anchor" href="#_general"></a>General</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenCPN is configured using cmake. The build is done
+out-of-tree according to</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mkdir build
+cd build
+cmake [Options] ..
+build command</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>build command</strong> part is platform dependent whereas the rest is
+identical on all platforms.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Options</strong> part refers to various CMake parameters. They are
+too many to be documented, this documentation just mentions a few.
+The best way to get an overview over the available options is to
+invoke <em>ccmake</em> which displays a comprehensive list of all options,
+their current values and a short help string.</p>
+</div>
+<div class="paragraph">
+<p>The goal is that all options should have sane default values, and that
+a basic build should work without using any of them.</p>
+</div>
+<div class="paragraph">
+<p>Three kind of options are heavily used by OpenCPN:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Standard CMake variables, documented in <a href="https://cmake.org/documentation/" class="bare">https://cmake.org/documentation/</a>,
+often but not always with a CMAKE_ prefix.</p>
+</li>
+<li>
+<p>OpenCPN specific variables, often with a OCPN_ prefix. Documented in the
+code which can be viewed using <em>ccmake</em> or something like
+<code>cmake -LH  | grep -B1 OCPN_</code>.</p>
+</li>
+<li>
+<p>wxWidgets-specific options with a wxWidgets_ prefix, documented in
+<a href="https://cmake.org/cmake/help/latest/module/FindwxWidgets.html" class="bare">https://cmake.org/cmake/help/latest/module/FindwxWidgets.html</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_build_typecmake_build_type"><a class="anchor" href="#_build_typecmake_build_type"></a>Build Type&#8201;&#8212;&#8201;CMAKE_BUILD_TYPE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The default build type is <em>RelWithDebInfo</em>. A common alternative is <em>Debug</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation_paths"><a class="anchor" href="#_installation_paths"></a>Installation paths</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since 5.0.0 OpenCPN supports the GNU install paths, see
+<a href="https://cmake.org/cmake/help/v3.0/module/GNUInstallDirs.html" class="bare">https://cmake.org/cmake/help/v3.0/module/GNUInstallDirs.html</a></p>
+</div>
+<div class="paragraph">
+<p>CMAKE_INSTALL_PREFIX governs the path where files are installed in thei
+installation package. Default is platform-dependent. It&#8217;s not uncommon to
+change this to some other location.</p>
+</div>
+<div class="paragraph">
+<p>Use CMAKE_INSTALL_LIBDIR to change the base directory for plugins;
+defaults to library location on most platforms, but is 'lib' on Debian.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_include_git_data_in_package_nameocpn_ci_build"><a class="anchor" href="#_include_git_data_in_package_nameocpn_ci_build"></a>Include git data in package name&#8201;&#8212;&#8201;OCPN_CI_BUILD</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default off. If enabled, makes latest git commit part of generated
+installation files; simplifies when having several test builds.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explicit_target_specificationocpn_target_tuple"><a class="anchor" href="#_explicit_target_specificationocpn_target_tuple"></a>Explicit target specification&#8201;&#8212;&#8201;OCPN_TARGET_TUPLE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenCPN is built for a combination of operating system and hardware. This
+is crucial to determine if a plugin is compatible with the main OpenCPN
+program or not.</p>
+</div>
+<div class="paragraph">
+<p>On most targets this is computed automatically. In some situations,
+notably when cross-compiling, this is not possible and must be set
+in this option. The syntax  is <code>target;version;arch</code> like
+<code>flatpak;20.08;aarch64</code> or <code>debian:11:x86_64</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_system_librariesocpn_use_bundled_libs"><a class="anchor" href="#_use_system_librariesocpn_use_bundled_libs"></a>Use system libraries&#8201;&#8212;&#8201;OCPN_USE_BUNDLED_LIBS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenCPN bundles some libraries which can be found also as system libraries
+on for example Linux. This option governs whether the bundled libs should
+be used  (OCPN_USE_BUNDLED_LIBS=ON) or the system ones
+(OCPN_USE_BUNDLED_LIBS=OFF). It can also be set to a comma-separated list
+of libraries for which the bundled libs should be used. Only code can
+tell which libraries, though.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bundled_documentation"><a class="anchor" href="#_bundled_documentation"></a>Bundled documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The package can be built without bundling any documentation
+using <em>OCPN_BUNDLE_DOCS=OFF</em>. This has the benefit of a
+considerably smaller package.</p>
+</div>
+<div class="paragraph">
+<p>Also, unfortunately current documentation is non-free in the
+open-source sence since the sources are not available for
+technical reasons. Thus, using  <em>OCPN_BUNDLE_DOCS=OFF</em> avoids
+bundling non-free stuff in generated package</p>
+</div>
+<div class="paragraph">
+<p>The documentation is available as a separate download from
+<a href="https://www.opencpn.org" class="bare">https://www.opencpn.org</a> for installations built without the bundled
+docs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_and_tide_datatcdata"><a class="anchor" href="#_current_and_tide_datatcdata"></a>Current and Tide Data&#8201;&#8212;&#8201;TCDATA</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bundling this data is governed by the OCPN_BUNDLE_TCDATA parameter,
+a boolean. By bundling it the need to install separate tcdata packages
+can be avoided.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_shoreline_world_wide_background_chartgshhs"><a class="anchor" href="#_shoreline_world_wide_background_chartgshhs"></a>Shoreline World Wide Background Chart&#8201;&#8212;&#8201;GSHHS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If enabled, the boolean option OCPN_BUNDLE_GSHHS bundles the crude GSHHS
+data. To use more detailed higher levels the chartdldr plugin is always
+available for user.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sound"><a class="anchor" href="#_sound"></a>Sound</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>On Android the native AndroidSound backend is always used.</p>
+</li>
+<li>
+<p>On Windows, the  MswSound backend is the default.
+OCPN_ENABLE_SYSTEM_CMD_SOUND can be used to use the SystemCmdSound
+backend, OCPN_ENABLE_PORTAUDIO to enable possible existing portaudio.</p>
+</li>
+<li>
+<p>On Linux, portaudio is used if found, else SystemCmdSound.
+OCPN_ENABLE_PORTAUDIO can be used to disable portaudio, and
+OCPN_ENABLE_SYSTEM_CMD_SOUND to disable SystemCmdSound in which case
+the wxWidgets wxSound backend is used.</p>
+</li>
+<li>
+<p>MacOS works basically as Linux, but portaudio is normally not available</p>
+</li>
+<li>
+<p>On all platforms OCPN_SOUND_CMD can be used to preset the command used
+in SystemCmdSound. The default is computed by probing the build  host
+for commands like aplay, afplay or omxplayer.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

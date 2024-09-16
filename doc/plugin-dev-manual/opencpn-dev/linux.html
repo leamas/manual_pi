@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Compiling on Linux :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/linux.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li>Compiling</li>
+    <li><a href="linux.html">Linux</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/linux.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Compiling on Linux</h1>
+<div class="sect1">
+<h2 id="_documented_platforms"><a class="anchor" href="#_documented_platforms"></a>Documented platforms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The documentation here covers Debian/Ubuntu and Flatpak. Debian .deb
+packages and Flatpaks are the primary deployment platforms for Linux.
+It is certainly possible to compile OpenCPN on other Linux distributions
+by adapting these instructions.</p>
+</div>
+<div class="paragraph">
+<p>The instructions are based on the files in the <em>ci/</em> directory, at the
+time of writing <em>ci/generic_build_debian.sh</em> and
+<em>ci/generic_build_flatpak.sh</em>. These files which are continously tested
+is the ultimate source for how to build on Linux.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build_debian"><a class="anchor" href="#build_debian"></a>Debian/Ubuntu</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_download_source_code"><a class="anchor" href="#_1_download_source_code"></a>1. Download source code</h3>
+<div class="literalblock">
+<div class="content">
+<pre>$ git clone git://github.com/OpenCPN/OpenCPN.git
+$ cd OpenCPN</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_install_build_dependencies"><a class="anchor" href="#_2_install_build_dependencies"></a>2. Install build dependencies</h3>
+<div class="literalblock">
+<div class="content">
+<pre>$ sudo apt install devscripts equivs
+$ sudo mk-build-deps -i -r ci/control
+$ sudo apt-get --allow-unauthenticated install -f</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On old systems like Debian Buster and Ubuntu Bionic it is possible to build
+OpenCPN linked against gtk2 or gtk3. The default alternative is to use gtk3.</p>
+</li>
+<li>
+<p>The build setup is generally updated for Debian and Ubuntu LTS
+releases.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_optional_remove_old_installation"><a class="anchor" href="#_3_optional_remove_old_installation"></a>3. Optional: Remove old installation</h3>
+<div class="literalblock">
+<div class="content">
+<pre>$ sudo apt-get remove opencpn</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_build_it"><a class="anchor" href="#_4_build_it"></a>4. Build it</h3>
+<div class="paragraph">
+<p>We&#8217;ll build everything in a subdirectory to keep the codebase clean
+(easier to catch changes).</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ mkdir build
+$ cd build
+$ cmake ..
+$ make</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="paragraph">
+<p>Default install dir is /usr/local, this can be changed by providing
+the appropriate option to cmake:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cmake -DCMAKE_INSTALL_PREFIX=/usr ..</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>cmake</em> is only required when building source code for the first time,
+then running <em>make</em> is enough even if the source code is updated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_install_it_or_create_a_package"><a class="anchor" href="#_5_install_it_or_create_a_package"></a>5. Install it or create a package</h3>
+<div class="literalblock">
+<div class="content">
+<pre>$ sudo make install</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, to create a .deb package:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ make package</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flatpak"><a class="anchor" href="#_flatpak"></a>Flatpak</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_install_flatpak"><a class="anchor" href="#_1_install_flatpak"></a>1. Install flatpak</h3>
+<div class="paragraph">
+<p>Install flatpak and flatpak-builder as described in <a href="https://flatpak.org/setup/" class="bare">https://flatpak.org/setup/</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_install_runtime_and_sdk"><a class="anchor" href="#_2_install_runtime_and_sdk"></a>2. Install runtime and SDK</h3>
+<div class="paragraph">
+<p>At the time of writing version 22.08 is used. Check
+<em>flatpak/org.opencpn.OpenCPN.yaml</em> for the version actually used, look for
+<em>runtime-version:</em>. Install the proper runtime and Sdk, for example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ sudo flatpak install flathub org.freedesktop.Platform//22.08
+$ sudo flatpak install flathub org.freedesktop.Sdk//22.08</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_build_and_install"><a class="anchor" href="#_3_build_and_install"></a>3. Build and install:</h3>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd build
+$ make -f ../flatpak/Makefile build</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The makefile will build the flatpak version and also install it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_run"><a class="anchor" href="#_4_run"></a>4. Run</h3>
+<div class="literalblock">
+<div class="content">
+<pre>$ flatpak run org.opencpn.OpenCPN</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_debugging"><a class="anchor" href="#_5_debugging"></a>5. Debugging</h3>
+<div class="paragraph">
+<p>The flatpak&#8217;ed OpenCPN runs in a sandbox, so specialized debugging techniques
+must be applied.
+See  <a href="https://docs.flatpak.org/en/latest/debugging.html">The flatpak site</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_compiling_for_raspberry_pi_rpi"><a class="anchor" href="#_compiling_for_raspberry_pi_rpi"></a>Compiling for Raspberry Pi (RPi)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From RPi 4 the board has resources enough to run a native build, which is
+performed according to the instructions for <a href="#build_debian">Debian</a>.</p>
+</div>
+<div class="paragraph">
+<p>For RPi 3 with 1GB of ram builds are usually done utilizing cross-compiling on Linux,
+often using docker and, for 32-bit armhf builds, also qemu.
+A description of these builds is out of scope for this document.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fedora"><a class="anchor" href="#_fedora"></a>Fedora</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To install the dependencies required to build OpenCPN from source on Fedora
+(Tested on 38), run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">sudo dnf install wxGTK-devel cmake gcc-c++ git glew-devel openssl-devel \
+libcurl-devel libarchive-devel elfutils-libelf-devel redhat-lsb-core \
+libusb1-devel tinyxml-devel systemd-devel portaudio-devel libsndfile-devel \
+gtest-devel sqlite-devel rapidjson-devel</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then use whichever build method you prefer.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ides"><a class="anchor" href="#_ides"></a>IDEs</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_visual_studio_code"><a class="anchor" href="#_visual_studio_code"></a><a href="https://code.visualstudio.com">Visual Studio Code</a></h3>
+<div class="paragraph">
+<p>Visual Studio Code provides very decent support for C development.
+Install the language support for C, cmake and Git and open the root
+folder of the OpenCPN source tree.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eclipse"><a class="anchor" href="#_eclipse"></a><a href="https://github.com/eclipse-cdt/">Eclipse</a></h3>
+<div class="paragraph">
+<p>The current version has native support for cmake projects.
+It is thus possible to just create a new CMake project based on current
+sources out of the box. There is thus no need to use the
+unmaintained <code>cmake -G "Eclipse CDT4 - Unix Makefiles" ../</code> cmake
+project generation.</p>
+</div>
+<div class="paragraph">
+<p>However, this version suffers from
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=400073" class="bare">https://bugs.eclipse.org/bugs/show_bug.cgi?id=400073</a> which makes it
+impossible to index the sources. Without indexing, eclipse does not
+add that much value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kdevelop"><a class="anchor" href="#_kdevelop"></a><a href="https://www.kdevelop.org/">KDevelop</a></h3>
+<div class="paragraph">
+<p>Current version  5.6.2 has native support for CMake project. There
+is thus no need to use the unmaintained
+<code>cmake -G "KDevelop3 - Unix Makefiles" ../</code> cmake project generation
+tools.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_clion"><a class="anchor" href="#_clion"></a><a href="https://www.jetbrains.com/clion/">CLion</a></h3>
+<div class="paragraph">
+<p>The CLion IDE is currently used by some of the core project developers
+with good results.</p>
+</div>
+<div class="paragraph">
+<p>CLion is commercial software, but are giving out free licenses for open
+source development in certain cases.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wxformbuilder"><a class="anchor" href="#_wxformbuilder"></a><a href="https://github.com/wxFormBuilder/wxFormBuilder">wxFormBuilder</a></h3>
+<div class="paragraph">
+<p>Initially, many of the dialogs was developed using
+<a href="https://github.com/wxFormBuilder/wxFormBuilder">wxFormBuilder</a>.
+However, the sources has since long been patched "manually" and it is
+not possible to maintain them using this tool which basically has
+been abandoned in the project.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_inside_an_ide"><a class="anchor" href="#_running_inside_an_ide"></a>Running inside an IDE</h3>
+<div class="paragraph">
+<p>In order to be able to run OpenCPN from inside the IDE
+installed data needs to be copied to the build/ folder according to</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd build
+$ for d in gshhs s57data tcdata; do; cp -ar ../data/$d .; done
+$ mkdir uidata
+$ cp ../src/bitmaps/*.xml ../src/bitmaps/*.png ../src/bitmaps/*.svg uidata
+$ cp ../data/authors.html ../data/license.html .</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>opencpn should be run with the -p options which sets it into 'portable'
+mode and therefore looks in the location the 'opencpn' executable is run
+from, i.e. the 'build' directory.</p>
+</div>
+<div class="paragraph">
+<p>Creating a working IDE setup is somewhat complex, and the details varies
+between different IDEs.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

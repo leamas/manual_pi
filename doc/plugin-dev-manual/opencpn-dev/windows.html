@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Compiling on Windows :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/windows.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li>Compiling</li>
+    <li><a href="windows.html">Windows</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/windows.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Compiling on Windows</h1>
+<div class="sect1">
+<h2 id="_5_8_0_fast_track"><a class="anchor" href="#_5_8_0_fast_track"></a>5.8.0+ Fast Track</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From version 5.8.0 the windows build system has been revised.
+The fast track described here is simplified and without all the options
+provided by the procedure described from next section.
+To set up a complete directly usable local development environment,
+you should probably prefer the workflow implemented by the
+<code>winConfig.bat</code> script described in the next chapter.</p>
+</div>
+<div class="paragraph">
+<p>Steps to to make a build:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get Visual Studio Community 2022,  either the command line tools or the
+complete environment, from <a href="https://visualstudio.microsoft.com/vs/community/" class="bare">https://visualstudio.microsoft.com/vs/community/</a></p>
+</li>
+<li>
+<p>Install the choco package manager, <a href="https://chocolatey.org/install" class="bare">https://chocolatey.org/install</a></p>
+</li>
+<li>
+<p>Clone the sources and move into them:<br></p>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; git clone https://github.com/OpenCPN/OpenCPN.git
+&gt; cd OpenCPN</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run the script <em>buildwin\win_deps.bat</em>. First time script installs programs
+and should be invoked with administrative privileges using the Visual Studio
+Command Line Interface. Following runs can (i. e., should) be run as a
+regular user.</p>
+</li>
+<li>
+<p>Run the script <em>ci\appveyor.bat</em>. This will configure the project using
+cmake and make an initial build.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After the first build, new builds can be done using in the <em>build</em> directory
+using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">    &gt; cmake --build . --target opencpn --config Release</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Notes:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>--target opencpn</code> creates the main executable. Other targets which can be
+built include</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>--target opencpn-cmd</code>&#8201;&#8212;&#8201;Command line tool</p>
+</li>
+<li>
+<p><code>--target opencpn-glutil</code>&#8201;&#8212;&#8201;Command line tool for testing OpenGL capabilities of the system
+(The <code>opencpn-glutil.exe</code> build product is required in the runtime folder for OpenGL to work)</p>
+</li>
+<li>
+<p><code>--target tests</code>&#8201;&#8212;&#8201;Command line unit tests</p>
+</li>
+<li>
+<p><code>--target package</code>&#8201;&#8212;&#8201;NSIS installer</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>It is perfectly possible to use <code>--config Debug</code> to create an executable with
+debugging symbols etc. However, doing so will make the plugins in the
+catalog incompatible as it is not possible to load optimized libraries into
+an opencpn debug build. Prefer <code>RelWithDebInfo</code> configuration in most cases.</p>
+</li>
+<li>
+<p><em>win_deps.bat</em> stores files in the <em>cache</em> directory. This can be removed
+safely,  it is re-created from scratch by <em>win_deps.bat</em></p>
+</li>
+<li>
+<p>The correct options to invoke cmake manually can be found  in
+<em>ci\appveyor.bat</em></p>
+</li>
+<li>
+<p>Both <em>win_deps.bat</em> and <em>appveyor.bat</em> are used in the ci builds and should
+thus be reasonably tested. However, user environment (in particular PATH))
+can make them fail.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_complete_builds_using_visual_studio_2022_community_edition_or_visual_studio_2019_community_edition"><a class="anchor" href="#_complete_builds_using_visual_studio_2022_community_edition_or_visual_studio_2019_community_edition"></a>Complete builds using Visual Studio 2022 Community Edition or Visual Studio 2019 Community Edition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The steps here describe an alternative to the "Fast Track" scenario above.  It is much
+ simpler to make a complete build in Visual Studio, including full source debugging
+ with Intellisense&#174;.</p>
+</div>
+<div class="paragraph">
+<p>Quick start:</p>
+</div>
+<div class="paragraph">
+<p>From the Windows Desktop open <em>x86 Native Tools Command Prompt for VS 2022</em> (or 2019). Then
+ enter these 4 commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ git clone https://github.com/opencpn/opencpn
+$ cd opencpn
+$ ".\buildwin\winConfig.bat"
+$ ".\build\opencpn.sln"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When Visual Studio opens, select the desired build configuration (Debug, Release, etc.) and you
+are ready to edit and build. Click the Debug button to build and open OpenCPN in the VS debugger.</p>
+</div>
+<div class="paragraph">
+<p>Here are more details with explanations of each step.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install Visual Studio 2022 Community Edition
+<a href="https://visualstudio.microsoft.com/downloads/" class="bare">https://visualstudio.microsoft.com/downloads/</a>. Be sure to select components:</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> <code><code>Desktop development with C++</code></code></p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> <code><code>C++ CMake tools for windows</code></code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Install git for Windows: <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a></p>
+</li>
+<li>
+<p>Open <em>x86 Native Tools Command Prompt for Visual Studio 2022</em></p>
+</li>
+<li>
+<p>Create folder where you want to work with OpenCPN sources, something
+like this:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ mkdir \Users\myname\projects
+$ cd \Users\myname\projects</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Clone Opencpn, for example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd \Users\myname\projects
+$ git clone https://github.com/opencpn/opencpn</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure and build OpenCPN then open solution file in Visual Studio:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd opencpn
+$ ".\buildwin\winConfig.bat"
+$ ".\build\opencpn.sln"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can browse the code, run &amp; debug OpenCPN from Visual Studio.  Select
+  the desired build configuration (Debug, Release, etc.) and click the Debug button.</p>
+</div>
+<div class="paragraph">
+<p>After you close Visual Studio and the command prompt you can return to Visual Studio
+  using just 2 commands. From an <em>x86 Native Tools Command Prompt</em> run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ ".\buildwin\configDev.bat"
+$ ".\build\opencpn.sln"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Notes:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed plugins are only supplied as Release builds. Thus, if you want to
+debug OpenCPN when any managed plugins are installed, you must debug OpenCPN in
+Release or RelWithDebInfo mode.  If you build your own plugin in Debug configuration, then
+you can debug both OpenCPN and your plugin at the same time using the same Visual Studio
+Debug session.</p>
+</li>
+<li>
+<p>You can use msbuild as the command line builder instead of CMake.  The reasons for doing so are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>msbuild is faster than CMake or CMake w/Ninja</p>
+</li>
+<li>
+<p>msbuild gives full access to every type of build and project</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>We also recommend installing the latest powershell version.  It is more
+powerful and visually friendly.  Install like this:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ winget install --id Microsoft.Powershell --source winget</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>It is important to have a 'clean' environment.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure there are no permanent environment variables related to
+wxWidgets (these all begin with WX).  If you have any it is safe to delete them.</p>
+</li>
+<li>
+<p>Remove all references to wxWidgets from the permanent PATH environment variables.</p>
+</li>
+<li>
+<p>It is ok to install tools such as NSIS but not required.  Any tools required to
+build or package will be automatically installed by the 'buildwin\winConfig.bat' script.</p>
+</li>
+<li>
+<p>The 'winConfig.bat' script does not install Visual Studio. Neither does it install
+tools such as git or npm as these are not used by the build system.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The 'winConfig.bat' script sets up 4 folders beneath the 'build' folder that house 4 different
+runtime configurations based on the 4 standard build types. Since each configuration is a
+standalone local instance of OpenCPN, they have to be run in 'portable' mode.
+To manually launch a particular configruation (e.g. RelWithDebInfo) set the working
+folder to OpenCPN\build\RelWithDebInfo then launch OpenCPN in portable mode. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd OpenCPN
+$ ".\buildwin\configdev.bat"
+$ cd ".\build\RELWITHDEBINFO"
+$ ".\opencpn" -p</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The 'winConfig.bat' script also has the ability to automatically clean before building.
+The full list of command line options are as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console"> --clean :: clean and reinitialize the build folder
+ --rebuild :: rebuild all sources
+ --help :: print helpful text
+ --relwithdebinfo :: build relwithdebinfo configuration
+ --debug :: build debug configuration
+ --release :: build release configuration
+ --minsizerel :: build release configuration
+ --all :: setup and build all four standard configurations (this is the default)</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Useful msbuild command line examples follow. Type these commands after running
+'.\buildwin\configdev.bat' from the root opencpn git managed folder.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Clean and build entire OpenCPN project to create debug build</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ msbuild /m -t:Rebuild -p:Configuration=Debug opencpn.sln</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Build Release version of the installer package</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ msbuild /v:m /m -p:Configuration=Release PACKAGE.vcxproj</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Clean and build every project as a Release build with debug info</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ msbuild /m -t:Rebuild -p:Configuration=RelWithDebInfo All_BUILD.vcxproj</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Build debug version of OpenCPN core</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ msbuild /m -t:Build -p:Configuration=Debug opencpn.vcxproj</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Clean opencpn-cmd.exe</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ msbuild /m -t:Clean -p:Configuration=Debug opencpn-cmd.vcxproj</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Clean and build chart downloader plugin</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ msbuild /m -t:Rebuild -p:Configuration=Debug plugins\chartdldr_pi\chartdldr_pi.vcxproj</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You can use still use CMake if you like. This example will build a Windows installer</p>
+</li>
+<li>
+<p>executable with debug configuration. This can be useful to find otherwise hidden debug asserts.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX="C:\Program Files (x86)\OpenCPN" ..
+$ cmake --build . --config Debug --target Package</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>This will clean and build a Release build</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cd build
+$ cmake --build . --config Release --clean-first</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>It is possible to <code>attach</code> the Visual Studio debugger to a running instance.
+This is useful if you create an installer, install and run OpenCPN from the start menu.
+Once OpenCPN is running in its native enviroment the Visual Studio debugger can attach
+itself to the running instance.  Find <code><code>Attach to process&#8230;&#8203;</code></code> under the Debug menu item.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

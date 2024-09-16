@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Creating a Debian/Ubuntu package :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/create-deb-package.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li>Compiling</li>
+    <li><a href="create-deb-package.html">Create Debian packages</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/create-deb-package.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Creating a Debian/Ubuntu package</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is provisionary docs, these things are far from stable.
+You have been warned!
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general"><a class="anchor" href="#_general"></a>General</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page describes how to create .deb packages usable on Debian
+based distros like vanilla Debian, Ubuntu, Raspbian, Mint, etc.</p>
+</div>
+<div class="paragraph">
+<p>Work is done on a Debian or Ubuntu host.
+Uploading an ubuntu  package must be done from an Ubuntu host.</p>
+</div>
+<div class="paragraph">
+<p>Here are five main tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#import-version">Importing new opencpn releases into the packaging
+branches</a>.</p>
+</li>
+<li>
+<p><a href="#src-release">Creating a new downstream release</a>.</p>
+</li>
+<li>
+<p><a href="#publish">Upload a downstream release to an Ubuntu PPA</a></p>
+</li>
+<li>
+<p><a href="#test-build">Local test build of the package from existing release</a></p>
+</li>
+<li>
+<p><a href="#master-build">Local test build of the package from master</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here, the term "downstream release" refers to a release based on the
+same opencpn release but where the packaging has been modified.</p>
+</div>
+<div class="paragraph">
+<p>There is also some support tasks, see the right panel.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup"><a class="anchor" href="#setup"></a>Setting up the environment</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Creating releases requires a working gpg secret key including the
+password is available.
+Verify using something like
+<code>gpg --export-secret-keys E2EA41DCE2F8A99AD17A1E463A67D5D966D15C5C</code>.
+This key must be registered on the PPA about the be used.</p>
+</li>
+<li>
+<p>Create a file <em>~/.devscripts</em> with contents like:</p>
+<div class="literalblock">
+<div class="content">
+<pre>DEBSIGN_KEYID=E2EA41DCE2F8A99AD17A1E463A67D5D966D15C5C
+DEBEMAIL="leamas.alec@gmail.com"
+DEBFULLNAME="Alec Leamas"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Of course, all values here are personal.
+DEBSIGN_KEYID is the secret key verified above.
+This key is only required when uploading source packages to an ubuntu
+PPA.</p>
+</div>
+</li>
+<li>
+<p>Install development tools</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ sudo apt install devscripts git-buildpackage equivs</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create-clone"><a class="anchor" href="#create-clone"></a>Make a fresh OpenCPN clone.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Debian tools creates things in the parent directory. To handle this,
+create  new, empty directory and put the OpenCPN tree there. Then,
+get all necessary three branches:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ mkdir OpenCPN
+$ cd OpenCPN
+$ git clone --origin upstream  https://github.com/OpenCPN/OpenCPN.git
+$ cd OpenCPN
+$ git fetch upstream upstream/latest:upstream/latest
+$ git fetch upstream pristine-tar:pristine-tar
+$ git fetch upstream ubuntu/numbat:ubuntu/numbat
+$ git checkout ubuntu/numbat</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>ubuntu/numbat</code> is the branch to use when building Ubuntu Numbat (24.04)
+packages.
+Alternatives includes  <code>ubuntu/jammy</code>, <code>ubuntu/focal</code> and <code>debian/master</code>.
+The latter builds packages for the rolling Sid distribution.</p>
+</div>
+<div class="paragraph">
+<p>To update an existing clone:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git fetch upstream upstream/latest:upstream/latest
+$ git fetch upstream pristine-tar:pristine-tar
+$ git checkout ubuntu/numbat
+$ git pull upstream ubuntu/numbat</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="import-version"><a class="anchor" href="#import-version"></a>Import a new opencpn version into packaging branches.</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_initiate_the_changelog_with_a_new_version"><a class="anchor" href="#_initiate_the_changelog_with_a_new_version"></a>Initiate the changelog with a new version</h3>
+<div class="paragraph">
+<p><em>debian/changelog</em> is picky about the format. Editing by hand is hard. Instead,
+use the <code>dch</code> tool. It has a multitude of options.In preparation of importing a
+new version, first update <strong>debian/changelog</strong> with a new version, something like
+<code>dch -v 1:5.9.3-beta3+dfsg</code></p>
+</div>
+<div class="paragraph">
+<p><code>dch</code> throws you in an editor loaded with <em>debian/changelog</em>.
+Complete the entry as you consider best.
+The standard message for a new version is "New upstream Release".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_import_a_release_tag_into_upstreamlatest"><a class="anchor" href="#_import_a_release_tag_into_upstreamlatest"></a>Import a release tag into upstream/latest</h3>
+<div class="paragraph">
+<p>Create an archive based on a tag.
+Using the tag v5.9.3-beta3 as example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git archive --prefix opencpn-5.9.3-beta3/ --output ../opencpn.tar.gz v5.9.3-beta3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>--prefix</code> part should be modified to reflect current version, but is not
+critical. Note the trailing slash!</p>
+</div>
+<div class="paragraph">
+<p>Next step is to convert the tarball to a formal debian source tarball. This
+is about renaming and stripping files not used  in the Debian build. Do:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git checkout ubuntu/numbat.
+$ mk-origtargz ../opencpn.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where <em>../opencpn.tar.gz</em>  is the file created by <code>git archive</code> above. This
+creates something like  <em>../opencpn</em>.5.10.920.orig.tar.gz_. The version in
+the filename is taken from debian/changelog.</p>
+</div>
+<div class="paragraph">
+<p><code>ubuntu/numbat</code> is just an example,
+see Make a fresh clone <a href="#create-clone">above</a>.</p>
+</div>
+<div class="paragraph">
+<p>Nest step is to import this tarball into upstream/latest. Using the
+tarball created by git-archive above do:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ gbp import-orig ../opencpn_5.9.3~beta3+dfsg.orig.tar.xz</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_push_upstream_changes"><a class="anchor" href="#_push_upstream_changes"></a>Push upstream changes</h3>
+<div class="paragraph">
+<p>Final step is to push these changes:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ gbp push</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-release"><a class="anchor" href="#src-release"></a>Create a downstream release</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assuming the new upstream (opencpn) release is available as of <a href="#import-version">above</a> creating a downstream release goes like:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Initiate the environment as described <a href="#setup">above</a>.</p>
+</li>
+<li>
+<p>Clone and checkout all branches, see <a href="#create-clone">above</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For each release do:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Checkout the actual branch like ubuntu/jammy.
+Work on ubuntu branches must be done on an ubuntu host</p>
+</li>
+<li>
+<p>Create a provisional version entry in <em>debian/changelog</em> using
+something like <code>dch -v 1:5.10.2+dfsg-1ubuntu1~bpo20.04+2</code>.</p>
+</li>
+<li>
+<p>Create a orig.tar.xz tarball in .. using <code>gbp export-orig</code>.</p>
+</li>
+<li>
+<p>Merge upstream changes using <code>gbp import-ref -u5.9.3-beta3</code>.
+The -u argument is the last part of an upstream tag like
+<code>upstream/5.9.3-beta3</code>.</p>
+</li>
+<li>
+<p>Do possible changes in the new release.
+Note that only files in the <em>debian/</em> directory can be modified;
+changes in other files are handled using patches in <em>debian/patches</em>.
+See Modifying Sources <a href="#edit-src">below</a></p>
+</li>
+<li>
+<p>Commit all changes.</p>
+</li>
+<li>
+<p>Finalize the changelog entry using <code>dch -r</code>.</p>
+</li>
+<li>
+<p>Commit the change in <em>debian/changelog</em></p>
+</li>
+<li>
+<p>Push the actual branch, for example <code>git push upstream ubuntu/jammy</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="publish"><a class="anchor" href="#publish"></a>Publish existing downstream release to PPA</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Initiate the environment as described <a href="#setup">above</a>.</p>
+</li>
+<li>
+<p>Clone and checkout all branches, or update existing clone.
+See <a href="#create-clone">above</a>.</p>
+</li>
+<li>
+<p>Make sure the repo is synchronized: <code>git clean -fxd; git checkout .</code></p>
+</li>
+<li>
+<p>Create the upstream source tarball: <code>gbp export-orig</code></p>
+</li>
+<li>
+<p>Create the source package: <code>debuild --no-lintian -S</code></p>
+</li>
+<li>
+<p>List all available source packages using <code>ls -lt ../*source.changes</code>.</p>
+</li>
+<li>
+<p>Push the most recent package to a PPA using something like:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">  $ dput ppa:leamas-alec/opencpn \
+       ../opencpn_5.9.4~beta4+dfsg-1ubuntu1~bpo24.04+1_source.changes</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, a more generic oneliner pushing the most recent <em>source.changes</em> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">  $ dput ppa:leamas-alec/opencpn $(ls -t ../*source.changes | head -1)</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="test-build"><a class="anchor" href="#test-build"></a>Local test build from existing upstream tag.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First step is to setup the environment, see <a href="#setup">above</a>.
+However, no gpg key is required.</p>
+</div>
+<div class="paragraph">
+<p>Then, create a fresh clone as described <a href="#create-clone">above</a>.</p>
+</div>
+<div class="paragraph">
+<p>Install build dependencies:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ mk-build-deps
+$ sudo dpkg -i *deb     # Expect error messages, ignore them
+$ sudo apt install -f
+$ git clean -fxd</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List available upstream tags using <code>git tag -l | grep upstream/</code>.
+Normally use the most recent one like:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git clean -fxd; git checkout .
+$ gbp buildpackage --git-upstream-tag=upstream/whatever -us -uc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This builds testable .deb packages in <em>..</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="master-build"><a class="anchor" href="#master-build"></a>Local test build from master</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First step is to setup the environment, see <a href="#setup">above</a>.
+However, no gpg key is required.</p>
+</div>
+<div class="paragraph">
+<p>Make sure the build dependencies are in place, see <a href="#test-build">above</a></p>
+</div>
+<div class="paragraph">
+<p>Work is done in a clean clone of the master branch.
+Make sure the remote "upstream" exists and update it:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git config remote.upstream.url &gt; /dev/null || \
+     git remote add upstream https://github.com/OpenCPN/OpenCPN.git
+$ git remote update upstream</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Checkout  the debian/ directory from the packaging branch. At the time of
+writing, this is only possible for Bookworm:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git fetch upstream ci/bookworm-backports:ci/bookworm-backports
+$ git checkout ci/bookworm-backports debian
+$ git commit -m "Add debian/ packaging directory from ci/bookworm-backports"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a debian changelog entry. This is an example of building a post 5.10 package
+for the bookworm release, YMMV:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ version="1:5.11.0~$(date "+%Y%m%d%H%m").$(git rev-parse --short HEAD)-1"
+$ dch --distribution bookworm -v "$version" "Test build from master"
+$ git add debian/changelog
+$ git commit -m "d/changelog: $version"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create orig tarball.
+The name of the orig tarball created by <code>mk-origtargz</code> reflects the changelog
+version.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git archive --prefix opencpn-5.11.0/ --output ../opencpn.tar.gz HEAD
+$ mk-origtargz ../opencpn.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extract the orig tarball and work in the sources it provides:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd ..
+$ tar xf opencpn-5.11.0*orig*xz
+$ cd opencpn-5.11.0*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And build package. -j4 builds in  four parallel pipes, depending on processor
+you might want to use another value (I typically use -j12).</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$  debuild -us -uc -j4</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="edit-src"><a class="anchor" href="#edit-src"></a>Modifying sources in a downstream release.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One cannot change the opencpn sources when creating a release.
+However, it is possible to add or modify a patch in <em>debian/patches</em>.
+These patches are applied when building the opencpn package.</p>
+</div>
+<div class="paragraph">
+<p>The basic workflow starts in a fresh, clean clone and goes like</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ gbp pq import --force
+#     All the patches in debian/patches are applied.
+#     Edit sources as desired and do:
+$ git commit -am "Reason for this change"
+$ gbp pq export
+$ git add debian/patches/*
+$ git commit -m "d/patches: new patch: patch description"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After <code>gbp pq import</code> actually all sorts of changes can be done.
+As usual, several small changes can and should be committed one
+by one rather than as a big patch.</p>
+</div>
+<div class="paragraph">
+<p>It is also possible to edit existing patches using the standard
+git tools, in particular <code>git rebase -i</code></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

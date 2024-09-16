@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Engine Dashboard :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/engine-dash/0.1/index.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="engine-dash" data-version="0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">EngineDashboard</span>
+    <span class="version">0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../opencpn-dev/index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/TwoCanPlugin/EngineDashboard/edit/master/manual/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Engine Dashboard</h1>
+<div class="paragraph">
+<p><span class="image"><img src="_images/engine32.png" alt="engine32"></span></p>
+</div>
+<div class="paragraph">
+<p>by Steven Adler [Stevead]</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/twoCanPlugin/EngineDashboard">GitHub Repository</a></p>
+</div>
+<div class="paragraph">
+<p>The Engine Dashboard Plugin displays engine parameters, fluid levels and
+battery status in OpenCPN. It accepts NMEA 0183 RPM (Revolutions), RSA
+(Rudder Sensor Angle) and XDR (Transducer Measurement) sentences as its
+input.</p>
+</div>
+<div class="paragraph">
+<p>For sailors with NMEA2000® engine and tank sensors, there are two options:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Any release of the TwoCan plugin later then version 1.6 can convert the appropriate
+messages from NMEA2000® networks to their NMEA 0183 equivalents which can then be
+displayed by the Engine Dashboard.</p>
+</li>
+<li>
+<p>The current version of OpenCPN (5.8) which has built-in support for NMEA2000® is
+also supported.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In addition, the dashboard also supports SignalK Server and consumes the propulsion,
+electrical and tanks namespaces. (eg. tanks.freshWater.0.currentLevel)</p>
+</div>
+<div class="paragraph">
+<p>The Engine Dashboard displays the following data:</p>
+</div>
+<div class="paragraph">
+<p>Engine RPM, Oil Pressure, Coolant Temperature, Exhaust Temperature, Engine Hours &amp; Alternator
+Voltage for either single or dual engine vessels.</p>
+</div>
+<div class="paragraph">
+<p>Fluid levels for Fuel, Water, Oil, Live Well, Grey and Black Waste.</p>
+</div>
+<div class="paragraph">
+<p>Battery status (voltage and current) for the Start and House batteries.</p>
+</div>
+<div class="paragraph">
+<p>and Rudder Angle.</p>
+</div>
+<div class="paragraph">
+<p>It supports both dual and single engine vessels, can display voltage
+ranges for either 12 or 24 volts DC systems and supports a user
+configurable maximum RPM range.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/engine02.png" alt="engine02"></span></p>
+</div>
+<div class="paragraph">
+<p>The engine dashboard consumes a subset of NMEA 0183 sentences. For
+engine speed it may use either RPM or XDR sentences. For Rudder Angle it
+uses RSA sentences. For XDR sentences, it supports three different
+transducer naming formats:</p>
+</div>
+<div class="paragraph">
+<p><strong>TwoCan Plugin</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Measurement</th>
+<th class="tableblock halign-left valign-top">Transducer</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Measurement Unit</th>
+<th class="tableblock halign-left valign-top">Transducer Name<sup>1</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine RPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAIN, PORT or STBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oil pressure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pascals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAIN, PORT or STBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Water Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Celsius</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAIN, PORT or STBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternator Voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAIN, PORT or STBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hours<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAIN, PORT or STBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluid Levels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent<sup>3</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FUEL, H2O, OIL, LIVE, GREY, BLK</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STRT (Start or Main), HOUS (House or
+Auxilliary)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Current</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amperes<sup>4</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STRT (Start or Main), HOUS (House or
+Auxilliary)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>NMEA 0183 v 4.11</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Measurement</th>
+<th class="tableblock halign-left valign-top">Transducer</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Measurement Unit</th>
+<th class="tableblock halign-left valign-top">Transducer Name<sup>1</sup><sup>,</sup><sup>5</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine RPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGINE#0, ENGINE#1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oil pressure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pascals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGINEOIL#0, ENGINEOIL#1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Water Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Celsius</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGINE#0, ENGINE#1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exhaust Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Celsius</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGINEEXHAUST#0, ENGINEEXHAUST#1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternator Voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ALTERNATOR#0, ALTERNATOR#1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGINE#0, ENGINE#1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluid Levels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FUEL#0, FRESHWATER#0, OIL#0,
+LIVEWELLWATER#0, WASTEWATER#0, BLACKWATER#0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluid Levels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FUEL#0, FRESHWATER#0, OIL#0,
+LIVEWELLWATER#0, WASTEWATER#0, BLACKWATER#0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BATTERY#0 (Start), BATTERY#1 (House</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Current</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amperes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BATTERY#0 (Start), BATTERY#1 (House)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Shipmodul</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Measurement</th>
+<th class="tableblock halign-left valign-top">Transducer</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Measurement Unit</th>
+<th class="tableblock halign-left valign-top">Transducer Name<sup>1</sup><sup>,</sup><sup>5</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine RPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGINE0, ENGINE1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oil pressure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pascals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGOILP0, ENGOILP1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Water Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Celsius</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGTEMP0, ENGTEMP1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternator Voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ALTVOLT0, ALTVOLT1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENGHRS0, ENGHRS1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluid Levels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FUEL0, FRESHWATER0, OIL0, LIVEWELL0,
+WASTEWATER0, BLACKWATER0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluid Levels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FUEL0, FRESHWATER0, OIL0, LIVEWELL0,
+WASTEWATER0, BLACKWATER0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BATVOLT0 (Start), BATVOLT1 (House)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Current</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amperes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BATCURR0 (Start), BATCURR1 (House)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>1.These names are hardcoded in the Engine Dashboard and mate with the
+output produced by the TwoCan plugin, Shipmodul gateways and other
+gateways that support NMEA 0183 v4.11 transducer naming such as
+Actisense and Maretron. If users receive data from other sources with
+different transducer names then the NMEA Converter plugin could be used
+to modify these fields.</p>
+</div>
+<div class="paragraph">
+<p>2.The use of 'H' to indicate hours is a customised use of the generic
+transducer type.</p>
+</div>
+<div class="paragraph">
+<p>3.This originally deviated from the the standard volume measurement unit
+which is 'M' cubic metres, but is now supported by NMEA 0183 v4.11. In
+addition NMEA 0183 v4.11 also introduced the measurement unit 'E' using
+'P' as percentage capacity.</p>
+</div>
+<div class="paragraph">
+<p>4.Note this extends the usage of the “U” (Voltage Transducer) to include
+current measured in Amps.</p>
+</div>
+<div class="paragraph">
+<p>5. For single engine vessels, instance 0 (eg. ENGINE#0) refers to
+the main engine. For dual engine vessels instance 0 (eg. ENGINE#0)
+refers to the port engine and instance 1 (eg. ENGINE#1) refers to the
+starboard engine.</p>
+</div>
+<div class="paragraph">
+<p><strong>NMEA 2000</strong></p>
+</div>
+<div class="paragraph">
+<p>The following Parameter Groups Numbers (PGN&#8217;s) are supported when using OpenCPN 5.8 built-in NMEA2000® support</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">PGN</th>
+<th class="tableblock halign-left valign-top">Measurement <sup>1</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127488</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine RPM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127489</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oil Pressure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine Temperature</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine Hours</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127505</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluid Levels</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127508</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Current</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130312</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exhaust Temperature</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In single engine mode, instance 0 refers to the main engine. In dual engine mode instance 0 refers to the port engine and instance 1 the starboard engine</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Installation</strong></p>
+</div>
+<div class="paragraph">
+<p>The engine dashboard is installed from the OpenCPN Preferences dialog
+under the Plugins tab.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/engine01.png" alt="engine01"></span></p>
+</div>
+<div class="paragraph">
+<p>Similar to the existing Dashboard and Tactics-Dashboard plugins, the
+Engine Dashboard display can be configured to display a number of
+different gauges.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/engine03.png" alt="engine03"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/engine04.png" alt="engine04"></span></p>
+</div>
+<div class="paragraph">
+<p>Examples of NMEA 0183 XDR sentences that may be used by the engine
+plugin are:</p>
+</div>
+<div class="paragraph">
+<p><strong>TwoCan format:</strong></p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,P,158300.00,P,MAIN,C,23.11,C,MAIN,U,13.86,V,MAIN*6A</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,T,804.50,R,MAIN*54</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,G,1.16,H,MAIN*52</p>
+</div>
+<div class="paragraph">
+<p><strong>NMEA 0183 v4.11 format:</strong></p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,P,100300.00,P,ENGINEOIL#0,C,85.0,C,ENGINE#0,U,26.44,V,ALTERNATOR#0*09</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,P,123000.00,P,ENGINEOIL#1,C,95.0,C,ENGINE#1,U,25.00,V,ALTERNATOR#1*08</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,G,200,,ENGINE#0,G,250,,ENGINE#1*4A</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,T,800.0,R,ENGINE#0*73</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,T,900.0,R,ENGINE#1*73</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,U,27.5,V,BATTERY#0,U,26.0,V,BATTERY#1*4B</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,E,50.00,P,FUEL#0*79</p>
+</div>
+<div class="paragraph">
+<p>$IIXDR,E,75.00,P,FRESHWATER#0*7B</p>
+</div>
+<div class="paragraph">
+<p><strong>Shipmodul format:</strong></p>
+</div>
+<div class="paragraph">
+<p>$ERXDR,P,100300.00,P,ENGOILP0,C,85.0,C,ENGTEMP0,U,25.44,V,ALTVOLT0*32</p>
+</div>
+<div class="paragraph">
+<p>$ERXDR,G,300,,ENGHRS0*18</p>
+</div>
+<div class="paragraph">
+<p>$ERXDR,T,800.0,R,ENGINE0*47</p>
+</div>
+<div class="paragraph">
+<p>$ERXDR,U,25.4,V,BATVOLT0,I,4.5,A,BATCURR0*77</p>
+</div>
+<div class="paragraph">
+<p>$ERXDR,E,50.00,P,FUEL0*4D</p>
+</div>
+<div class="paragraph">
+<p>$ERXDR,E,75.00,P,FRESHWATER0*4F</p>
+</div>
+<div class="paragraph">
+<p>Note that the Engine Dashboard is agnostic to the two character NMEA
+talkerID prefix.</p>
+</div>
+<div class="paragraph">
+<p>If you have any problems, please post questions on the OpenCPN forum or
+send an email to <a href="mailto:twocanplugin@hotmail.com">twocanplugin@hotmail.com</a></p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

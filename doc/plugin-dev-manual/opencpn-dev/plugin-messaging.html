@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Handling Communications Messages in Plugins :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/plugin-messaging.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li><a href="plugin-messaging.html">New Message Plugin API</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/plugin-messaging.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Handling Communications Messages in Plugins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since 5.8.0 opencpn has a new system for handling messages in plugins.
+The new model is based on that a plugin subscribes to the messages it is
+interested in rather then the old model where plugins get all messages.</p>
+</div>
+<div class="paragraph">
+<p>The new system is the only way to handle the new NMEA2000 devices.
+For N0183 devices a compatiblity layer is installed which makes things work
+as earlier.
+However, the new system can be used also for nmea0183 where it offers more
+flexibility and performance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_receiving_messages"><a class="anchor" href="#_receiving_messages"></a>Receiving messages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Receiving messages is done in six steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Define the type of message to work with</p>
+</li>
+<li>
+<p>Declare a listening object.</p>
+</li>
+<li>
+<p>Declare an event which will carry the message.</p>
+</li>
+<li>
+<p>Declare a method which handles the message.</p>
+</li>
+<li>
+<p>Subscribe to this message i. e., start listening to it</p>
+</li>
+<li>
+<p>Handle the messages as they arrives.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The code handling messages must live in a wxEventClass instance.
+In almost all cases this means that the code should be implemented in a wxWindow.
+If there is a wxWindow available with a suitable lifespan, this could be used.
+If there is no such window, it needs to be created (it can be hidden) or an
+existing one can be modified to alwasy exist, using Show()/Hide() to enable and
+disable.</p>
+</div>
+<div class="paragraph">
+<p>As an example, the <strong>ShipDrivergui_impl</strong>  class is used.
+First, in the header declare a listener on the class level, here with the shipdriver
+plugin <em>ShipDrivergui_impl.h</em> header as an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>        class Dlg : public ShipDriverBase {
+        public:
+            ...
+        private:
+     ②      std::shared_ptr&lt;ObservableListener&gt; listener;
+            ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, in the implementation (.cpp) file  declare a method which handles the
+message, something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>     ④ static void HandleGPGA(ObservedEvt ev) {
+     ①      NMEA0183 id("GPGGA");
+            std::string payload = GetN0183Payload(id, ev)
+            ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, still in the .cpp file, set up the listening in the window constructor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>         Dlg::Dlg(wxWindow* parent, ...)
+
+         {
+         ...
+     ①   NMEA0183Id id("GPGGA");
+     ③   wxDEFINE_EVENT(EVT_SHIPDRIVER, ObservedEvt);
+     ⑤   listener = GetListener(id, EVT_SHIPDRIVER, this);
+     ⑥   Bind(EVT_SHIPDRIVER, [&amp;](ObservedEvt ev) { HandleGPGA(ev); });</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">①</dt>
+<dd>
+<p>This is the type of message we are listening to. There are similar types
+for NMEA2000, SignalK and decoded navigation data (lat, long, etc.). Check
+<strong>ocpn_plugin.h</strong> for details.</p>
+</dd>
+<dt class="hdlist1">②</dt>
+<dd>
+<p>Boiler-plate code, makes sure the listener is destroyed together with
+the plugin. It is important that the listener is declared in the class,
+a variable defined in a method will not work.</p>
+</dd>
+<dt class="hdlist1">③</dt>
+<dd>
+<p>This is the event generated for our message which we will listen to.
+It should have a unique name, including the plugin name is a good habit.
+However the name, here <em>EVT_SHIPDRIVER</em>, could be anything.</p>
+</dd>
+<dt class="hdlist1">④</dt>
+<dd>
+<p>The <code>GetN0183Payload()</code> method  gets the payload of the message into the
+<code>payload</code> string. From here it can be processed as required. There are similar
+ methods for Nmea2000 and SignalK messages (signalK from upcoming 5.10.0).</p>
+</dd>
+<dt class="hdlist1">⑤</dt>
+<dd>
+<p>This activates the listener. From this point system sends us an
+<em>EVT_SHIPDRIVER</em> for each received GPGGA message.</p>
+</dd>
+<dt class="hdlist1">⑥</dt>
+<dd>
+<p>This is the final piece in the puzzle. It defines what should happen when
+the <em>EVT_SHIPDRIVER</em> arrives.  From this point all incoming GPGGA
+messages will land in the <code>HandleGPGGA()</code> method and be processed.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_simplified_workflow_using_a_helper_class"><a class="anchor" href="#_simplified_workflow_using_a_helper_class"></a>Simplified workflow using a helper class</h3>
+<div class="paragraph">
+<p>The workflow above means quite a lot of typing for each message. Using a
+helper class can automate a lot of this.
+An example class called <code>MsgListener</code> is provided <a href="msg_listen.html" class="xref page">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>With this class available in a header listening to a message is simplified to</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Declare a MsgListener listener object</p>
+</li>
+<li>
+<p>Declare a method which handles the message.</p>
+</li>
+<li>
+<p>Initiate the listener to invoke the method  when message arrives.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The MsgListener object normally lives in the class context, like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>     class Dlg : public ShipDriverBase {
+     public:
+         ...
+     private:
+         MsgListener&lt;NMEA0183Id&gt; listener;
+         ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Other available types includes <code>MsgListener&lt;NMEA2000Id&gt;</code> and
+ <code>MsgListener&lt;SignalkId&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>The method is declared  as above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    static void HandleGPGA(ObservedEvt ev) {
+        NMEA0183Id id("GPGGA");
+        std::string payload = GetN0183Payload(id, ev)
+        ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Similar methods exist to extract NMEA2000 and SignalK data:
+<code>GetN2000Payload(NMEA2000Id id, ObservedEvt ev)</code> and
+<code>GetSignalkPayload(ObservedEvt ev)</code>.</p>
+</div>
+<div class="paragraph">
+<p>To invoke this method when a GPGGA message arrives, initiate the
+MsgListener like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    listener.Init(NMEA0183Id("GPGGA"),
+                  [&amp;](ObservedEvt ev) { HandleGPGA(ev); });</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_epilog_using_the_lambda"><a class="anchor" href="#_epilog_using_the_lambda"></a>Epilog: Using the lambda</h3>
+<div class="paragraph">
+<p>The last step above was
+<code>Bind(EVT_SHIPDRIVER [](wxCommandEvent ev) { HandleGPGA(ev); })</code>.
+The part between the curly braces is actually a C++ lambda expression.
+There is no need to dive into this to get something running, but it offers
+far larger possibilities than to just call a function.
+Actually, if written like
+ <code>Bind(EVT_SHIPDRIVER, [&amp;](wxCommandEvent ev) { &#8230;&#8203; })</code> any code could
+be written between the braces.</p>
+</div>
+<div class="paragraph">
+<p>The interesting part here is that the <code>[&amp;]</code> prefix makes this code "see"
+anything defined in the plugin.
+This is a convenient way to access plugin variables in the handler,
+something which otherwise is a problem.</p>
+</div>
+<div class="paragraph">
+<p>To get the feeling one need to experiment.
+But then again, C++ lambdas is a complex step which is not necessary
+to get something running.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_receiving_signalk_messages"><a class="anchor" href="#_receiving_signalk_messages"></a>Receiving SignalK messages</h3>
+<div class="paragraph">
+<p>Handling signalk messages goes like</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">    auto payload = GetSignalkPayload(ev);
+    const auto msg = *std::static_pointer_cast&lt;const wxJSONValue&gt;(payload);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>msg</code> is a const json map containing at least</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Data": the parsed json message.</p>
+</li>
+<li>
+<p>"ErrorCount": int, the number of parsing errors.</p>
+</li>
+<li>
+<p>"WarningCount": int, the number of parsing warnings.</p>
+</li>
+<li>
+<p>"Errors": list of strings, error messages.</p>
+</li>
+<li>
+<p>"Warnings": list of strings, warning messages.</p>
+</li>
+<li>
+<p>"Context": string, message context.</p>
+</li>
+<li>
+<p>"ContextSelf": string, own ship context.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since the map is const, expressions like <code>msg["Data"]</code> are not possible
+(the [] operator is not const since it potentially inserts data into the
+map if the index does not exist). Use <code>msg.ItemAt("Data")</code> instead.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sending_messages"><a class="anchor" href="#_sending_messages"></a>Sending messages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Plugin API supporting direct access to comm drivers for output purposes</p>
+</div>
+<div class="paragraph">
+<p>Plugins may access comm ports for direct output.
+The general program flow for a plugin may look something like this
+pseudo-code:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Plugin will query OCPN core for a list of active comm drivers.</p>
+</li>
+<li>
+<p>Plugin will inspect the list, and query OCPN core for driver attributes.</p>
+</li>
+<li>
+<p>Plugin will select a comm driver with appropriate attributes for output.</p>
+</li>
+<li>
+<p>Plugin will register a list of PGNs expected to be transmitted (N2K
+specific)</p>
+</li>
+<li>
+<p>Plugin may then send a payload buffer to a specific comm driver for
+output as soon as possible.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The mechanism for specifying a particular comm driver uses the notion of
+"handles". Each active comm driver has an associated opaque handle, managed
+by OCPN core. All references by a plugin to a driver are by means of its
+handle. Handles should be considered to be "opaque", meaning that the exact
+contents of the handle are of no specific value to the plugin, and only have
+meaning to the OCPN core management of drivers.</p>
+</div>
+<div class="paragraph">
+<p>Some example code sending <code>payload_msg</code> to the <strong>/dev/ttyUSB0</strong> port:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>using namespace std;
+string payload_msg("$GPRMC, some data \r\n");
+string my_port("/dev/ttyUSB0");</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>for (const auto&amp; handle : GetActiveDrivers()) {
+  const auto&amp; attributes = GetAttributes(handle);
+  if (attributes.find("protocol") == attributes.end()) continue;
+  if (attributes.at("protocol") != "nmea0183") continue;
+  if (attributes.find("commPort") == attributes.end()) continue;
+  if (attributes.at("commPort").find(my_port) == string::npos) continue;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  auto payload = make_shared&lt;std::vector&lt;uint8_t&gt;&gt;();
+  for (const auto&amp; ch : payload_msg) payload-&gt;push_back(ch);
+  CommDriverResult result = WriteCommDriver(handle, payload);
+  return result;
+}
+return RESULT_COMM_INVALID_PARMS;   // no such driver</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

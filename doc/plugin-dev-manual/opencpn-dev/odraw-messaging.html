@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API :: OpenCPN</title>
+    <link rel="canonical" href="https://opencpn-manuals.github.io/main/opencpn-dev/odraw-messaging.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <div class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/main">OpenCPN</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <div class="ocpn-logo"> </div>
+      <a class="navbar-item" 
+         href="https://opencpn-manuals.github.io/main"
+      >
+        OpenCPN
+        </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://www.opencpn.org/">
+                OpenCPN.org
+              </a>
+              <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+                Github Site
+              </a>
+              <a class="navbar-item" href="https://opencpn.org/flyspray/">
+                Bugtracker
+              </a>
+            <a class="navbar-item" href="https://www.opencpn.org">OpenCPN.org</a>
+            <a class="navbar-item"
+               href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual"
+            >
+               User Manual
+               </a>
+            <a class="navbar-item" href="https://github.com/opencpn/OpenCPN">
+               Github Site
+               </a>
+            <a class="navbar-item" href="https://opencpn.org/flyspray/">
+               Bugtracker
+               </a>
+            <a class="navbar-item"
+                href="https://rasbats.github.io/ocpn-manuals-test/">
+                    Plugin Manual (pre-alpha)
+               </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="opencpn-dev" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OpenCPN Programming Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Developer Manual</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compiling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cmake.html">CMake</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="linux.html#_flatpak">Flatpak</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mac-osx.html">MacOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docker.html">Docker container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-deb-package.html">Create Debian packages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unit-tests.html">Unit tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest-interface.html">REST server</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="odraw-messaging.html">ODraw Messaging API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugin-messaging.html">New Message Plugin API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gui-model.html">Model - Gui code organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comm-overview.html">Communication Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-formatting.html">Code Formatting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-interface-styling.html">User Interface Styling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="stacktrace.html">Creating a stack trace</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OpenCPN Programming Manual</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../admiralty/index.html">Admiralty Tide Tables</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rtlsdr/index.html">AIS RTLsdr USB</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ais-vd/0.1/index.html">AIS-vd</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../aisradar/index.html">AISradar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot-rm/0.1/index.html">Autopilot Raymarine</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autopilot_route/index.html">Autopilot Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../autotrackraymarine/index.html">AutoTrackRaymarine Evo</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../calculator/index.html">Calculator</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../celestial_navigation/index.html">Celestial Navigation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartdldr/index.html">Chart Downloader Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../chartscale/index.html">ChartScale</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../climatology/index.html">Climatology</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard/index.html">Dashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboard_tactics/index.html">Dashboard Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dashboardsk/index.html">DashboardSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../debugger/0.1/index.html">Debugger</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../deviation/index.html">Deviation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../dead_reckoning/index.html">DR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../earthexplorer/index.html">EarthExplorer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../engine-dash/0.1/index.html">EngineDashboard</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../findit/index.html">FindIt</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../frcurrents/index.html">frcurrents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../gps-odometer/index.html">GPS-Odometer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../route/index.html">Great Circle Route</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../grib/index.html">Grib Weather Data Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../javascript/index.html">Javascript Plugin Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../launcher/0.1/index.html">Launcher</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../logbook/index.html">Logbook</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ncdf/index.html">NCDF Tidal Currents</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nmea_converter/index.html">NMEA Converter</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nsk/index.html">NSK</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../nv_charts/index.html">nv_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../o-charts/index.html">o-charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../objsearch/0.1/index.html">ObjSearch</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../odraw/index.html">Ocpn_Draw</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../oesenc/0.1/index.html">oesenc</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../ocpn-dev-manual/0.1/index.html">OpenCPN Developer Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../manuals/index.html">OpenCPN Manuals</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../opencpn-plugins/index.html">OpenCPN Plugins</a>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">OpenCPN Programming Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otcurrent/index.html">oTcurrent</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalplan/index.html">oTidalPlan</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../otidalroute/index.html">oTidalRoute</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../photolayer/index.html">PhotoLayer</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plots/index.html">Plots</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../plugin-installer/Home.html">Plugin Installer Documentation</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../polar/index.html">Polar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../projections/0.1/index.html">Projections</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../pypilot/index.html">Pypilot Autopilot</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../race-start/0.1/index.html">RaceStart</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../radar/0.1/index.html">Radar Manual</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../rotationctrl/index.html">Rotation Control</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../s63_vector_charts/0.1/index.html">s63_vector_charts</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sailawaynmea/index.html">SailawayNMEA</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../sar/index.html">SAR</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../shipdriver/index.html">ShipDriver</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../AlternativeWorkflow/index.html">Shipdriver Managed Workflow for the OpenCPN plugins</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../squiddio/0.1/index.html">sQuiddio</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../statusbar/index.html">Statusbar</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../survey/index.html">Survey</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tactics/index.html">Tactics</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../tidefinder/index.html">TideFinder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../twocan/0.1/index.html">TwoCan Plugin</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../uktides/index.html">UKtides</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vfkaps/index.html">VFkaps</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../vdr/index.html">Voyage Data Recorder</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../watchdog/index.html">Watchdog</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weather_routing/index.html">Weather Routing</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../weatherfax/index.html">WeatherFax</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../windvane/0.1/index.html">Windvane</a>
+    </li>
+    <li class="component">
+      <a class="title" href="../wmm/index.html">WMM magnetic variations</a>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../manuals/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenCPN Programming Manual</a></li>
+    <li>Core Developer Manual</li>
+    <li><a href="odraw-messaging.html">ODraw Messaging API</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/opencpn/OpenCPN/edit/master/manual/modules/ROOT/pages/odraw-messaging.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">API</h1>
+<div class="paragraph">
+<p>There are two methods of interacting programatically with Ocpn_Draw_pi (OD),
+json messages via the OpenCPN message procees and binary, exposed API.
+All interactions have to start with a json message to ascertain critical
+information abou the API, after this json messages can continue to be used
+or access to the binary API can be sought. For all interactions there
+will always be the json messages, but for performance the binary API
+is preferred if it is usable. Both API&#8217;s uses the same information and
+for simplicity in the descriptions the json message will be used.</p>
+</div>
+<div class="paragraph">
+<p>Currently the OD API is used by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Watchdog_pi (WD)</p>
+</li>
+<li>
+<p>Weather_routing_pi (WR)</p>
+</li>
+<li>
+<p>Squiddio_pi (SQ)</p>
+</li>
+<li>
+<p>Testplugin_pi (TP, FE2)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>TP and FE2 refer to the same plugin but for two different purposes. <strong>TP</strong> is
+for testing the OD API, it can also be used as a template to create another
+pluign as it is complete and interacts with all the required OCPN API&#8217;s to
+establish a toolbar icon, have preferences in the main <strong>settings/plugins</strong>
+tab for the plugin and to use the OD API. <strong>FE2</strong> is the name given to plugin
+when used for the templated build environment which trys to simplify the
+whole build process. The template allows local builds and installs for initial
+builds, testing and changes. It also gives a build process which will
+generate packages for all the currrent supported environments and create
+the cloudsmith objects that allow yourself and others to install and test
+the plugin.</p>
+</div>
+<div class="paragraph">
+<p>WD and WR both use the binary API if it is available, SQ only uses the json
+API as it is used infrequently. TP uses the binary API exclusively apart
+from the initial contact with OD which uses the json API.</p>
+</div>
+<div class="paragraph">
+<p>The binary API assumes that the caller has all the correct information as
+there are no checks on the parameters passed. The json API uses a json
+schema to check for validity so can be more robust of the two.</p>
+</div>
+<div class="paragraph">
+<p>It is important to understand that OD only provides the information about
+geo-referenced objects (lines, points, straight lined areas and
+circles), or allows though the API&#8217;s the management of
+these objects. The plugins using the API know what they are trying
+todo with this information. So WD knows when and how to sound alarms,
+WR knows what to do with areas that are exclusions and builds
+appropriate routes, and SQ knows about location information which
+it loads into OD through the API so it can be displayed, but SQ
+has the information which is used.<br>
+<br>
+<strong>Ocpn_Draw and Watchdog</strong><br>
+<br>
+<strong>User aspects</strong><br></p>
+</div>
+<div class="paragraph">
+<p>In OD, a graphical indication (crosshatching or shading) may be added to
+areas, to indicate whether these are intended to avoid (crosshatched
+inside) or to stay within (crosshatched outside), or whatever other
+meaning you want to give to those graphical indications.<br></p>
+</div>
+<div class="paragraph">
+<p>In WD you can select whether (certain types of) alarms should react only
+for areas that are flagged (in OD) as to avoid or to stay within, or for
+all areas. On top of that, in WD you can indicate whether this should be
+done only for areas labeled in OD as active, or inactive, or both.<br></p>
+</div>
+<div class="paragraph">
+<p>The WD Boundary Alarm has 4 different types:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Alarm when approaching an area from outside (based on distance);</p>
+</li>
+<li>
+<p>Alarm when approaching an area from outside (based on time);</p>
+</li>
+<li>
+<p>Alarm to indicate whether your boat is inside or outside an area
+(Inclusion Alarm, another type of anchor alarm);</p>
+</li>
+<li>
+<p>Alarm to indicate whether AIS objects are present in an area.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For the first two alarms the WD uses the same terms for the boundary
+that OD does as well as allowing a check for the state of the boundary.
+The third alarm only looks at a specific boundary which is identified by
+the boundaries GUID. The fourth alarm specifies a boundary to check if
+an AIS target is inside it.<br></p>
+</div>
+<div class="paragraph">
+<p>Beside the 4 types of Boundary Alarms mentioned above, WD has the
+following alarm functionality:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Alarm when approaching coastlines (Landfall AFirst of all, we should see OD and WD as separate plugins. In OD you can
+draw geo-referenced objects (lines, points, straight lined areas and
+circles). WD knows when and how to sound alarms. +larm; 2 types: time and
+distance)</p>
+</li>
+<li>
+<p>Alarm when NMEA-data stream stops (NMEA Alarm)</p>
+</li>
+<li>
+<p>Deadman Alarm</p>
+</li>
+<li>
+<p>Alarm when distance to reference position exceeds a set value (Anchor
+Alarm)</p>
+</li>
+<li>
+<p>Alarm when course over ground deviates more than set (Course Alarm; 3
+types: only port deviation, only starboard deviation or a general
+deviation);</p>
+</li>
+<li>
+<p>Alarms when speed deviates more then set (Speed Alarm; two types:
+overspeed for more than set maximum, and underspeed for less than set
+minimum).First of all, we should see OD and WD as separate plugins. In OD you can
+draw geo-referenced objects (lines, points, straight lined areas and
+circles). WD knows when and how to sound alarms.<br></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In total there are 14 different types of alarms.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Technical aspects</strong></p>
+</div>
+<div class="paragraph">
+<p>WD and OD are independent plugins. OD knows about drawing geo-referenced
+objects, WD knows how to sound alarms. Now the two can work together by
+passing and receiving messages, in this case JSON messages (basically a
+text string of elements and values), or by using the binary API provided.<br></p>
+</div>
+<div class="paragraph">
+<p>For the alarms, when WD needs boundary information, WD asks OD, via a
+message, whether a Lat/Lon is inside a boundary. WD can add further
+requirements asking for boundaries in a particular state and a
+particular type. Both the state and type are the same as what OD uses,
+i.e. Active/Inactive and Exclusion/Inclusion/Neither, or the inclusive
+'Any' (meaning any type and/or any state, not being as selective).<br></p>
+</div>
+<div class="paragraph">
+<p>In OD the boundaries checked are both an OD Boundary and an OD Boundary
+Point with range rings showing. Boundaries and Boundary Point Range
+Rings are both considered boundaries. The type of boundary applies to
+both, but the state (active/inactive) currently only applies to
+Boundaries, not Boundary Points. This is because there is currently no
+state for a Boundary Point. This may change in future updates to the
+plugins for consistency.<br></p>
+</div>
+<div class="paragraph">
+<p>When OD completes its check of Lat/Lon inside boundaries it replies with
+a single message containing the first boundary that the Lat/Lon is
+inside AND which matches the type and state requested. The response
+message contains the Name, Description, GUID, Type and State of the
+boundary found.<br></p>
+</div>
+<div class="paragraph">
+<p>WD uses the returned message to decide whether to sound the alarm and
+uses some of the information in the messages that are then displayed to
+the user, i.e. a change in text in the watchdog window and a message
+box, if requested.<br></p>
+</div>
+<div class="paragraph">
+<p>Messaging in OCPN is synchronous, broadcast such that every plugin that
+registers for messages and the main program, OpenCPN, will receive every
+message sent. All processing of messages is synchronous, i.e. each
+plugin has to process each message completely and return to OCPN (the
+controller) before the next plugin can process the message. For the
+WD/OD message stream WD sends a message to OD, OD processes the message
+and sends a response message to WD, WD mainline processes the response
+message and stores the information, then returns control to OD which
+then returns control to WD at the point that WD created the first
+message. Now WD can process the saved information from OD, and the
+controller, OpenCPN can process the next message.<br></p>
+</div>
+<div class="paragraph">
+<p>OD messages can be used by any plugin and OCPN itself to obtain
+information. For the OD messaging there is a “structure” for the content
+of the message, specifying the source requester, the type of message
+(Request/Response), the message i.e. FindPointInAnyBoundary, the message
+id (may contain an identifier for the source requester) and then the
+message contents, i.e. Lat, Lon, Type, etc.<br></p>
+</div>
+<div class="paragraph">
+<p>So a request looks like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Source: "WATCHDOG_PI"
+Type: "Request"
+Msg: "FindPointInAnyBoundary"
+MsgId: "distance"
+lat: 54.0001
+lon: -30.1001
+BoundaryType: "Exclusion"
+BoundaryState: "Active"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This message is then given a 'destination', in this case "OCPN_DRAW_PI",
+when the call to the OCPN messaging process is made.<br></p>
+</div>
+<div class="paragraph">
+<p>The response will look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Source: "OCPN_DRAW_PI"
+Type: "Response"
+Msg: "FindPointInAnyBoundary"
+MsgId: "distance"
+GUID: "62ec7520-b58f-4087-b077-ae1c581dfec1"
+lat: 54.0001
+lon: -30.1001
+Name: "Rocks"
+Description: "Good fishing"
+Found: false
+BoundaryObjectType: "Boundary"
+BoundaryType: "Exclusion"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This message is then given a “destination” of the originator, in the
+case above "WATCHDOG_PI", when the call to the OCPN messaging process is
+made.
+The “destination” is used so that each recipient of the broadcast
+message can easily check if the message is meant for it. There is no
+filtering provided by OCPN messaging on this value.<br></p>
+</div>
+<div class="paragraph">
+<p>Using this construct there are validation checks to make sure messages
+are valid to process. If they are not valid there will be error messages
+entered into the "opencpn.log" file with relevant information.<br></p>
+</div>
+<div class="paragraph">
+<p>Currently this message construct is used by OD, WD, WR (Ocpn_Draw_pi,
+Watchdog_pi, Weather_Routing_pi) and the AIS processing in OCPN when it
+broadcasts AIS information to OCPN and the plugins. In some cases there
+is no response message expected, i.e. AIS just sends messages, but in
+others the response is important.<br></p>
+</div>
+<div class="paragraph">
+<p>OD is not concerned where the message came from or why, it will just
+respond to message requests with what is found from inspection of OD
+objects. WD just wants to know if it should sound an alarm or not, so it
+sends message requests to OD to determine certain conditions. WR just
+wants to know if the current Lat/Lon is valid for further processing or
+not, so it sends message requests to OD to determine certain conditions.
+AIS just provides information on each target it is dealing with.<br></p>
+</div>
+<div class="paragraph">
+<p>Now the check frequency in the WD alarm screen determines how often to
+check for a Lat/Lon being in a boundary. One other item which should be
+mentioned, is that for each boundary check based on time there are up to
+11 Lat/Lon messages sent to OD, for each distance check there are up to
+163 Lat/Lon messages to OD. Therefore the amount of this message traffic
+is something to watch.</p>
+</div>
+<div class="paragraph">
+<p>Please note that a JSON message does not have a “structure” per se, the
+message consists of element/value pairs written as delimited strings.
+The elements can occur in any order. So “structure” in the sense used in
+this document really refers to required elements.</p>
+</div>
+<div class="paragraph">
+<p><strong>API Definitions</strong></p>
+</div>
+<div class="paragraph">
+<p>There is an API json definition and an API binary header file available in
+<strong>opencpn-libs/odapi</strong>,
+* ODJSONSchemas.h
+* ODAPI.h</p>
+</div>
+<div class="paragraph">
+<p>The <strong>ODJSONSchemas.h</strong> contains the definition against which the input
+json message will be validated. If the validation fails the json message
+will be rejected.<br></p>
+</div>
+<div class="paragraph">
+<p>The <strong>ODAPI.h</strong> should be included in any cpp file that you are going to
+use to call  the OD binary API. It gives all the definitions for
+the calls and expected contents of the parameter lists and return
+parameter lists.<br></p>
+</div>
+<div class="paragraph">
+<p>For and example of how these calls are structured you can look
+in the three current plugins that make use of the API, or you
+can look in <a href="https://github.com/jongough/testplugin_pi">testplugin_pi</a>
+which was used in the development of this API and is also the
+base for the Front End 2 (FE2) build process for plugins.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://gitlab.com/leamas/antora-ui-default
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
