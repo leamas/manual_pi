@@ -1,0 +1,22 @@
+{
+   "Toc":[
+      "@LOCAL_ROOT@/doc/index.html",
+      "@ONLINE_ROOT@/index.html"
+   ],
+   "Chartdldr":[
+      "@LOCAL_ROOT@/doc/plugin-dev-manual/chartdldr/index.html",
+      "@ONLINE_PLUGROOT@/chart_downloader_tab/chart_downloader_tab.html"
+   ],
+   "Wmm":[
+      "@LOCAL_ROOT@/doc/plugin-dev-manual/wmm/index.html",
+      "@ONLINE_PLUGROOT@/wmm/wmm.html"
+   ],
+   "Dashboard":[
+      "@LOCAL_ROOT@/doc/plugin-dev-manual/dashboard/index.html",
+      "@ONLINE_PLUGROOT@/dashboard/dashboard.html"
+   ],
+   "Grib":[
+      "@LOCAL_ROOT@/doc/plugin-dev-manual/grib/index.html",
+      "@ONLINE_PLUGROOT@/grib_weather/grib_weather.html"
+   ]
+}
