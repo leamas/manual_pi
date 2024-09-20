@@ -4,4 +4,5 @@
    "Grib": "@LOCAL_ROOT@/doc/plugin-dev-manual/grib/index.html",
    "Toc": "@LOCAL_ROOT@/doc/index.html",
    "Wmm": "@LOCAL_ROOT@/doc/plugin-dev-manual/wmm/index.html"
+   "Hotkeys": "@LOCAL_ROOT@/doc/user-manual/opencpn/manual_basic/ui_user_interface/keyboard_shortcuts.html"
 }
