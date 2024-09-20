@@ -39,8 +39,8 @@ set(DISPLAY_NAME Manual)    # Dialogs, installer artifacts, ...
 set(PLUGIN_API_NAME manual) # As of GetCommonName() in plugin API
 set(PKG_SUMMARY "Plugin and developer manual")
 set(PKG_DESCRIPTION [=[
-Off-line copy of the plugin and developer manual available at
-https://opencpn-manuals.github.io/main
+Off-line copies of the user, plugin and developer manuals
+available at https://opencpn-manuals.github.io/main
 
 This is a large download, currently around 170 Mb.
 ]=])
