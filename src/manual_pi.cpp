@@ -123,10 +123,17 @@ wxString Manual::GetLongDescription() { return PKG_DESCRIPTION; }
 int Manual::GetToolbarToolCount() { return 1; }
 
 void Manual::OnToolbarToolCallback(int id) {
+#ifdef __WXOSX__
+  std::string url("open '");
+  url += GetPluginDataDir(PKG_NAME).ToStdString();
+  url += "/doc/index.html'";
+  wxExecute(url);
+#else
   std::string url("file://");
   url += GetPluginDataDir(PKG_NAME).ToStdString();
   url += "/doc/index.html";
   wxLaunchDefaultBrowser(url);
+#endif
 }
 
 bool Manual::LoadConfig() {
